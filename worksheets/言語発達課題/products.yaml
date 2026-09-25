@@ -1,0 +1,13 @@
+# 複数テンプレートの商品パックを一括生成する例。
+#   python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
+# 各パックは out/<TYPE>/ に分かれ、パック内で問題・使用語の重複なしを保証します。
+products:
+  - { type: IV, level: 1, count: 9, name: "放射状連想 Lv1" }
+  - { type: IV, level: 2, count: 14, name: "放射状連想 Lv2" }
+  - { type: IV, level: 3, count: 13, name: "放射状連想 Lv3" }
+  - { type: VI, level: 1, count: 7, name: "カテゴリー流暢性 Lv1" }
+  - { type: VI, level: 2, count: 24, name: "カテゴリー流暢性 Lv2" }
+  - { type: VI, level: 3, count: 22, name: "カテゴリー流暢性 Lv3" }
+  - { type: VIII, level: 2, count: 6, name: ベン図パック }
+  - { type: VII,  level: 1, count: 5, name: 音韻パック }
+  - { type: III,  level: 1, count: 5, name: ペアパック }

@@ -1,0 +1,192 @@
+{
+  "type": "II",
+  "title": "意味ネットワーク照合",
+  "name": "type_II",
+  "level": null,
+  "seed": 7,
+  "count": 6,
+  "pages": [
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "winter",
+          "center": "冬",
+          "related": [
+            "雪",
+            "こたつ",
+            "手袋",
+            "マフラー",
+            "みかん"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "train",
+          "center": "電車",
+          "related": [
+            "線路",
+            "駅",
+            "切符",
+            "ホーム",
+            "車内"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fireworks",
+          "center": "花火",
+          "related": [
+            "夏",
+            "夜",
+            "光",
+            "音",
+            "浴衣"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "rain_day",
+          "center": "雨",
+          "related": [
+            "かさ",
+            "長ぐつ",
+            "雲",
+            "かっぱ",
+            "水たまり"
+          ]
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "bath",
+          "center": "おふろ",
+          "related": [
+            "せっけん",
+            "シャワー",
+            "タオル",
+            "おゆ",
+            "シャンプー"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "morning",
+          "center": "朝",
+          "related": [
+            "朝日",
+            "目覚まし",
+            "朝ごはん",
+            "あいさつ",
+            "通学"
+          ]
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "farm",
+          "center": "牧場",
+          "related": [
+            "牛",
+            "牛乳",
+            "さく",
+            "牧草",
+            "馬"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "school",
+          "center": "学校",
+          "related": [
+            "先生",
+            "こくばん",
+            "給食",
+            "ランドセル",
+            "チャイム"
+          ]
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "hospital",
+          "center": "病院",
+          "related": [
+            "薬",
+            "医者",
+            "看護師",
+            "注射",
+            "診察"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "park",
+          "center": "公園",
+          "related": [
+            "ブランコ",
+            "すべり台",
+            "砂場",
+            "ベンチ",
+            "鳩"
+          ]
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "sea",
+          "center": "海",
+          "related": [
+            "波",
+            "魚",
+            "砂浜",
+            "泳ぐ",
+            "塩"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "birthday",
+          "center": "誕生日",
+          "related": [
+            "ケーキ",
+            "ろうそく",
+            "プレゼント",
+            "風船",
+            "カード"
+          ]
+        }
+      ],
+      "page": 6
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

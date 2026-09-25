@@ -1,0 +1,53 @@
+{
+  "type": "VIII",
+  "display_title": "どんなものがあるかな",
+  "clinical_title": "属性交差",
+  "name": "type_VIII",
+  "level": null,
+  "seed": 42,
+  "count": 2,
+  "pages": [
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "cold_eat",
+          "left_attr": "つめたいもの",
+          "right_attr": "食べるもの",
+          "intersection": "つめたくて食べるもの"
+        },
+        {
+          "n": 2,
+          "id": "small_insect",
+          "left_attr": "小さいもの",
+          "right_attr": "むし",
+          "intersection": "小さいむし"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "big_animal",
+          "left_attr": "大きいもの",
+          "right_attr": "どうぶつ",
+          "intersection": "大きいどうぶつ"
+        },
+        {
+          "n": 2,
+          "id": "yellow_fruit",
+          "left_attr": "黄色いもの",
+          "right_attr": "くだもの",
+          "intersection": "黄色いくだもの"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

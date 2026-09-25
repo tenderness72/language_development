@@ -1,0 +1,139 @@
+{
+  "type": "VI",
+  "display_title": "仲間をたくさん探そう",
+  "clinical_title": "カテゴリー流暢性",
+  "name": "カテゴリー流暢性 Lv1",
+  "level": 1,
+  "seed": 45,
+  "count": 7,
+  "pages": [
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_011b",
+          "category": "休むことに関係することば",
+          "example": "睡眠"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_020b",
+          "category": "職業で使う道具",
+          "example": "はさみ"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_020b",
+          "category": "過去に関係することば",
+          "example": "思い出"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_005b",
+          "category": "約束が必要なもの",
+          "example": "集合時間"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "kitchen_item",
+          "category": "台所にあるもの",
+          "example": "なべ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_012a",
+          "category": "季節",
+          "example": "夏"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_006b",
+          "category": "似た意味のことば（例：うれしい＝たのしい）",
+          "example": "悲しい"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_002a",
+          "category": "天気",
+          "example": "晴れ"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_020a",
+          "category": "職業",
+          "example": "先生"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_019b",
+          "category": "甘いもの",
+          "example": "ケーキ"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_013b",
+          "category": "競うことに関係することば",
+          "example": "試合"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_004b",
+          "category": "花",
+          "example": "さくら"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "drink",
+          "category": "のみもの",
+          "example": "ぎゅうにゅう"
+        },
+        {
+          "n": 2,
+          "id": "color",
+          "category": "色",
+          "example": "あか"
+        }
+      ],
+      "page": 7
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

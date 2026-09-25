@@ -1,0 +1,409 @@
+{
+  "type": "VI",
+  "display_title": "仲間をたくさん探そう",
+  "clinical_title": "カテゴリー流暢性",
+  "name": "カテゴリー流暢性 Lv3",
+  "level": 3,
+  "seed": 47,
+  "count": 22,
+  "pages": [
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_019a",
+          "category": "生き物が生きるために必要なもの",
+          "example": "水"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_020a",
+          "category": "未来に関係することば",
+          "example": "目標"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_012a",
+          "category": "伝えることに関係することば",
+          "example": "言葉"
+        },
+        {
+          "n": 2,
+          "id": "country",
+          "category": "国",
+          "example": "にほん"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_006b",
+          "category": "似た意味のことば（例：うれしい＝たのしい）",
+          "example": "悲しい"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_018b",
+          "category": "考えることに関係することば",
+          "example": "計画"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_009a",
+          "category": "環境に関係することば",
+          "example": "森"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_010b",
+          "category": "気持ちが高ぶるもの・こと",
+          "example": "試合"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_011b",
+          "category": "休むことに関係することば",
+          "example": "睡眠"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_016a",
+          "category": "お金に関係することば",
+          "example": "給料"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_011a",
+          "category": "働くことに関係することば",
+          "example": "給料"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_016b",
+          "category": "買い物に関係することば",
+          "example": "値段"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_015a",
+          "category": "五感（見る・聞く・触れるなど）に関係することば",
+          "example": "見る"
+        },
+        {
+          "n": 2,
+          "id": "round_things",
+          "category": "まるいもの",
+          "example": "ボール"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_014a",
+          "category": "変わらないもの",
+          "example": "山"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_002b",
+          "category": "道具（調べるとき使うもの）",
+          "example": "虫めがね"
+        }
+      ],
+      "page": 8
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_014b",
+          "category": "変わりやすいもの",
+          "example": "天気"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_002a",
+          "category": "道具（何かを作るとき使うもの）",
+          "example": "はさみ"
+        }
+      ],
+      "page": 9
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_008a",
+          "category": "時間を表すことば",
+          "example": "朝"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_017a",
+          "category": "社会のルールに関係することば",
+          "example": "法律"
+        }
+      ],
+      "page": 10
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_013a",
+          "category": "助け合いに関係することば",
+          "example": "ボランティア"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_003a",
+          "category": "季節のイベント",
+          "example": "お正月"
+        }
+      ],
+      "page": 11
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_018a",
+          "category": "記憶・覚えることに関係することば",
+          "example": "メモ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_015b",
+          "category": "体を動かすことに関係することば",
+          "example": "走る"
+        }
+      ],
+      "page": 12
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_001b",
+          "category": "体の感覚を表すことば",
+          "example": "痛い"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_003b",
+          "category": "学校のイベント",
+          "example": "運動会"
+        }
+      ],
+      "page": 13
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_008b",
+          "category": "場所を表すことば",
+          "example": "駅"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_006a",
+          "category": "反対の意味のことば（例：大きい↔小さい）",
+          "example": "長い"
+        }
+      ],
+      "page": 14
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "job",
+          "category": "しごと",
+          "example": "せんせい"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_010a",
+          "category": "気持ちが落ち着くもの・こと",
+          "example": "音楽"
+        }
+      ],
+      "page": 15
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_004a",
+          "category": "人を表すことば（性格）",
+          "example": "優しい"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_019b",
+          "category": "人が社会で生きるために必要なもの",
+          "example": "お金"
+        }
+      ],
+      "page": 16
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_012b",
+          "category": "聞くことに関係することば",
+          "example": "耳"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_009b",
+          "category": "エネルギーに関係することば",
+          "example": "太陽"
+        }
+      ],
+      "page": 17
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_004b",
+          "category": "人を表すことば（様子）",
+          "example": "元気な"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_005b",
+          "category": "約束が必要なもの",
+          "example": "集合時間"
+        }
+      ],
+      "page": 18
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_007a",
+          "category": "危ないもの・こと",
+          "example": "火"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_001a",
+          "category": "気持ちを表すことば",
+          "example": "うれしい"
+        }
+      ],
+      "page": 19
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_013b",
+          "category": "競うことに関係することば",
+          "example": "試合"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_007b",
+          "category": "安全を守るもの",
+          "example": "ヘルメット"
+        }
+      ],
+      "page": 20
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_020b",
+          "category": "過去に関係することば",
+          "example": "思い出"
+        },
+        {
+          "n": 2,
+          "id": "weather",
+          "category": "お天気",
+          "example": "はれ"
+        }
+      ],
+      "page": 21
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv3_005a",
+          "category": "ルールがあるもの",
+          "example": "信号"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv3_017b",
+          "category": "マナーに関係することば",
+          "example": "あいさつ"
+        }
+      ],
+      "page": 22
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

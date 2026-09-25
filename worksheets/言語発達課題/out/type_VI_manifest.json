@@ -1,0 +1,49 @@
+{
+  "type": "VI",
+  "display_title": "仲間をたくさん探そう",
+  "clinical_title": "カテゴリー流暢性",
+  "name": "type_VI",
+  "level": null,
+  "seed": 42,
+  "count": 2,
+  "pages": [
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "body",
+          "category": "からだのぶぶん",
+          "example": "て"
+        },
+        {
+          "n": 2,
+          "id": "bird",
+          "category": "とり",
+          "example": "すずめ"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "insect",
+          "category": "むし",
+          "example": "ちょう"
+        },
+        {
+          "n": 2,
+          "id": "round_things",
+          "category": "まるいもの",
+          "example": "ボール"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

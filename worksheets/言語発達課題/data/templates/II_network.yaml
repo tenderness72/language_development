@@ -1,0 +1,85 @@
+# Ⅱ 意味ネットワーク照合
+# center: 中心語 / related: 関連語5 / distractors: 無関連ダミー5
+# related と distractors は重複させないこと。
+type: II
+items:
+  - id: sea
+    center: 海
+    related: [波, 魚, 砂浜, 泳ぐ, 塩]
+    distractors: [山, 時計, ねこ, 鉛筆, 雪]
+    level: 1
+  - id: hospital
+    center: 病院
+    related: [薬, 医者, 看護師, 注射, 診察]
+    distractors: [ケーキ, 花火, ピアノ, すべり台, バット]
+    level: 1
+  - id: kitchen
+    center: 台所
+    related: [包丁, なべ, まな板, ガス, 食器]
+    distractors: [ふとん, クレヨン, タイヤ, さいふ, 切手]
+    level: 1
+  - id: winter
+    center: 冬
+    related: [雪, こたつ, 手袋, マフラー, みかん]
+    distractors: [せみ, うちわ, プール, あさがお, スイカ]
+    level: 2
+  - id: school
+    center: 学校
+    related: [先生, こくばん, 給食, ランドセル, チャイム]
+    distractors: [冷蔵庫, 釣りざお, 信号, ヨット, ふとん]
+    level: 1
+  - id: park
+    center: 公園
+    related: [ブランコ, すべり台, 砂場, ベンチ, 鳩]
+    distractors: [黒板, 救急車, レジ, まくら, ろうそく]
+    level: 2
+  - id: rain_day
+    center: 雨
+    related: [かさ, 長ぐつ, 雲, かっぱ, 水たまり]
+    distractors: [たいよう, さばく, らくだ, こおり, たき火]
+    level: 2
+  - id: birthday
+    center: 誕生日
+    related: [ケーキ, ろうそく, プレゼント, 風船, カード]
+    distractors: [包丁, スコップ, 体温計, タイヤ, 黒板]
+    level: 2
+  - id: farm
+    center: 牧場
+    related: [牛, 牛乳, さく, 牧草, 馬]
+    distractors: [電車, 信号, 図書館, パソコン, 消しゴム]
+    level: 1
+  - id: bath
+    center: おふろ
+    related: [せっけん, シャワー, タオル, おゆ, シャンプー]
+    distractors: [えんぴつ, じてんしゃ, 黒板, さいふ, 地図]
+    level: 1
+  - id: post
+    center: 郵便局
+    related: [切手, はがき, ポスト, 手紙, 小包]
+    distractors: [フライパン, ボール, ぞうきん, 太鼓, バケツ]
+    level: 2
+  - id: fireworks
+    center: 花火
+    related: [夏, 夜, 光, 音, 浴衣]
+    distractors: [雪だるま, こたつ, スキー, 手袋, つらら]
+    level: 3
+  - id: library
+    center: 図書館
+    related: [本, 本だな, 司書, しずか, 貸し出し]
+    distractors: [なべ, ホース, ボール, タイヤ, バット]
+    level: 2
+  - id: morning
+    center: 朝
+    related: [朝日, 目覚まし, 朝ごはん, あいさつ, 通学]
+    distractors: [星, 月, ろうそく, ふくろう, 寝ぶくろ]
+    level: 3
+  - id: train
+    center: 電車
+    related: [線路, 駅, 切符, ホーム, 車内]
+    distractors: [波, 砂浜, 山小屋, 牧場, 花畑]
+    level: 2
+  - id: vegetable
+    center: 野菜
+    related: [にんじん, きゃべつ, トマト, 畑, 包丁]
+    distractors: [えんぴつ, ボール, でんち, くつ, かさ]
+    level: 1

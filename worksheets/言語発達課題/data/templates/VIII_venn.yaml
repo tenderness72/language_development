@@ -1,0 +1,22 @@
+# Ⅷ 属性交差（ベン図・自由記述）
+# left_attr: 左円の条件 / right_attr: 右円の条件
+# intersection: 交差条件（省略時は「左・右」を自動表示）
+# level: 1=具体的で交わりが見つけやすい 〜 3=抽象的
+type: VIII
+items:
+  - {id: red_eat, left_attr: 赤いもの, right_attr: 食べるもの, intersection: 赤くて食べるもの, level: 1}
+  - {id: round_school, left_attr: 丸いもの, right_attr: 学校にあるもの, intersection: 丸くて学校にあるもの, level: 2}
+  - {id: white_eat, left_attr: 白いもの, right_attr: 食べるもの, intersection: 白くて食べるもの, level: 1}
+  - {id: square_home, left_attr: 四角いもの, right_attr: 家にあるもの, intersection: 四角くて家にあるもの, level: 2}
+  - {id: sweet_drink, left_attr: あまいもの, right_attr: 飲みもの, intersection: あまい飲みもの, level: 1}
+  - {id: yellow_fruit, left_attr: 黄色いもの, right_attr: くだもの, intersection: 黄色いくだもの, level: 1}
+  - {id: long_tool, left_attr: 長いもの, right_attr: 道具, intersection: 長い道具, level: 2}
+  - {id: cold_eat, left_attr: つめたいもの, right_attr: 食べるもの, intersection: つめたくて食べるもの, level: 1}
+  - {id: big_animal, left_attr: 大きいもの, right_attr: どうぶつ, intersection: 大きいどうぶつ, level: 1}
+  - {id: small_insect, left_attr: 小さいもの, right_attr: むし, intersection: 小さいむし, level: 2}
+  - {id: green_vege, left_attr: みどりのもの, right_attr: やさい, intersection: みどりのやさい, level: 1}
+  - {id: hard_kitchen, left_attr: かたいもの, right_attr: 台所にあるもの, intersection: かたくて台所にあるもの, level: 2}
+  - {id: soft_animal, left_attr: ふわふわのもの, right_attr: どうぶつ, intersection: ふわふわのどうぶつ, level: 2}
+  - {id: shine_sky, left_attr: 光るもの, right_attr: 空にあるもの, intersection: 光って空にあるもの, level: 3}
+  - {id: round_eat, left_attr: 丸いもの, right_attr: 食べるもの, intersection: 丸くて食べるもの, level: 1}
+  - {id: fast_vehicle, left_attr: はやいもの, right_attr: のりもの, intersection: はやいのりもの, level: 2}

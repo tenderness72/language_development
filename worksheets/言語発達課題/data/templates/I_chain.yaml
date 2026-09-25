@@ -1,0 +1,90 @@
+# Ⅰ 連想チェーン
+# chain: [start, 列2, 列3, 列4, goal]（連想で1本につながる正解列）
+# distractors: 各列(col2/col3/col4)のダミー語3つ以上。正解語と重複させないこと。
+# level: 1=遠いダミー(易) 2=中 3=近いダミー(難)
+type: I
+items:
+  - id: rain_use
+    chain: [雨, ふる, かさ, さす, 使う]
+    distractors:
+      col2: [はしる, わらう, ねむる]
+      col3: [バナナ, とけい, ボール]
+      col4: [たべる, およぐ, うたう]
+    level: 1
+  - id: school_book
+    chain: [学校, 勉強, 教科書, 読む, 本]
+    distractors:
+      col2: [そうじ, さんぽ, りょこう]
+      col3: [りんご, ぼうし, でんしゃ]
+      col4: [なげる, はしる, とぶ]
+    level: 1
+  - id: fire_warm
+    chain: [火, もえる, たきび, あたる, あたたかい]
+    distractors:
+      col2: [こおる, ひえる, ぬれる]
+      col3: [プール, れいぞうこ, ゆきだるま]
+      col4: [なげる, はかる, きる]
+    level: 2
+  - id: seed_flower
+    chain: [たね, まく, め, そだつ, 花]
+    distractors:
+      col2: [やぶる, おとす, わる]
+      col3: [いし, くるま, かさ]
+      col4: [ころぶ, ねむる, わらう]
+    level: 2
+  - id: milk_cheese
+    chain: [牛, しぼる, 牛乳, つくる, チーズ]
+    distractors:
+      col2: [なでる, はしる, とぶ]
+      col3: [ジュース, ガソリン, インク]
+      col4: [すてる, こわす, なくす]
+    level: 2
+  - id: wind_kite
+    chain: [風, ふく, たこ, あがる, 空]
+    distractors:
+      col2: [もえる, こおる, とける]
+      col3: [いす, かばん, コップ]
+      col4: [しずむ, おちる, とまる]
+    level: 1
+  - id: rice_onigiri
+    chain: [米, たく, ごはん, にぎる, おにぎり]
+    distractors:
+      col2: [あらう, なげる, ほる]
+      col3: [みそしる, サラダ, パン]
+      col4: [きる, やく, ゆでる]
+    level: 2
+  - id: cloud_umbrella
+    chain: [くも, ひろがる, ゆうだち, ぬれる, タオル]
+    distractors:
+      col2: [ちぢむ, かたまる, きえる]
+      col3: [はれ, にじ, ほし]
+      col4: [かわく, もえる, こおる]
+    level: 3
+  - id: tree_paper
+    chain: [木, きる, 板, けずる, 紙]
+    distractors:
+      col2: [そだてる, うえる, みずやり]
+      col3: [いし, てつ, ガラス]
+      col4: [もやす, うめる, ぬる]
+    level: 3
+  - id: egg_chick
+    chain: [たまご, あたためる, ひな, そだつ, にわとり]
+    distractors:
+      col2: [わる, ゆでる, やく]
+      col3: [こねこ, こいぬ, きんぎょ]
+      col4: [とぶ, およぐ, はう]
+    level: 2
+  - id: snow_snowman
+    chain: [雪, つもる, ゆきだま, ころがす, ゆきだるま]
+    distractors:
+      col2: [とける, ながれる, かわく]
+      col3: [すなやま, どろだんご, おちば]
+      col4: [なげる, たべる, かくす]
+    level: 2
+  - id: grape_wine
+    chain: [ぶどう, つむ, しぼる, おく, ジュース]
+    distractors:
+      col2: [なげる, うえる, ほる]
+      col3: [きざむ, やく, こおらせる]
+      col4: [すてる, こわす, わる]
+    level: 3

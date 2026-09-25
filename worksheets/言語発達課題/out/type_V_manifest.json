@@ -1,0 +1,49 @@
+{
+  "type": "V",
+  "display_title": "つづき歌をつくろう",
+  "clinical_title": "つづき歌",
+  "name": "type_V",
+  "level": null,
+  "seed": 42,
+  "count": 2,
+  "pages": [
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "festival",
+          "start": "おまつり",
+          "slots": 5
+        },
+        {
+          "n": 2,
+          "id": "sea",
+          "start": "うみ",
+          "slots": 5
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "travel",
+          "start": "りょこう",
+          "slots": 5
+        },
+        {
+          "n": 2,
+          "id": "summer",
+          "start": "なつ",
+          "slots": 5
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

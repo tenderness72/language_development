@@ -1,0 +1,53 @@
+# Ⅲ ペア対応づけ
+# relation: 関係の種類（例: 職業→道具, 動物→鳴き声）
+# pairs: [左, 右] を5組。左右それぞれ重複させないこと（一意に解ける）。
+type: III
+items:
+  - id: job_tool
+    relation: 職業→道具
+    pairs: [[大工, かなづち], [美容師, はさみ], [写真家, カメラ], [料理人, 包丁], [医者, 聴診器]]
+    level: 1
+  - id: animal_sound
+    relation: 動物→鳴き声
+    pairs: [[いぬ, ワンワン], [ねこ, ニャー], [うし, モー], [からす, カーカー], [にわとり, コケコッコー]]
+    level: 1
+  - id: animal_home
+    relation: 動物→すみか
+    pairs: [[とり, す], [はち, すばこ], [くも, くもの巣], [かい, から], [きつね, あな]]
+    level: 2
+  - id: food_ingredient
+    relation: 料理→材料
+    pairs: [[おにぎり, 米], [みそしる, みそ], [サラダ, やさい], [たまごやき, たまご], [パン, 小麦]]
+    level: 1
+  - id: place_action
+    relation: 場所→すること
+    pairs: [[プール, およぐ], [図書館, 本をよむ], [食堂, ごはんをたべる], [病院, みてもらう], [公園, あそぶ]]
+    level: 1
+  - id: weather_item
+    relation: 天気→持ち物
+    pairs: [[雨, かさ], [雪, 手袋], [晴れ, ぼうし], [風, ウインドブレーカー], [くもり, うわぎ]]
+    level: 2
+  - id: sport_gear
+    relation: スポーツ→道具
+    pairs: [[やきゅう, バット], [テニス, ラケット], [サッカー, ボール], [すいえい, ゴーグル], [スキー, ストック]]
+    level: 1
+  - id: animal_baby
+    relation: 動物→こども
+    pairs: [[いぬ, こいぬ], [ねこ, こねこ], [うし, こうし], [うま, こうま], [ライオン, こライオン]]
+    level: 2
+  - id: instrument
+    relation: 楽器→鳴らし方
+    pairs: [[たいこ, たたく], [ふえ, ふく], [ギター, はじく], [ピアノ, おす], [すず, ふる]]
+    level: 3
+  - id: shop_buy
+    relation: お店→買うもの
+    pairs: [[パンや, パン], [はなや, 花], [さかなや, 魚], [くすりや, 薬], [ほんや, 本]]
+    level: 1
+  - id: season_thing
+    relation: 季節→もの
+    pairs: [[春, さくら], [夏, すいか], [秋, もみじ], [冬, ゆきだるま], [梅雨, あじさい]]
+    level: 2
+  - id: part_use
+    relation: 体→はたらき
+    pairs: [[目, みる], [耳, きく], [鼻, におう], [口, たべる], [手, つかむ]]
+    level: 2

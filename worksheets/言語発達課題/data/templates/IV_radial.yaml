@@ -1,0 +1,73 @@
+# Ⅳ 放射状連想（自由記述）
+# center: 中心語 / hint: ヒントとして1個の丸に書いておく語
+# level: 1=具体物(易) 〜 3=抽象概念(難)
+type: IV
+items:
+  - {id: summer, center: 夏, hint: プール, level: 1}
+  - {id: birthday, center: 誕生日, hint: ケーキ, level: 1}
+  - {id: school, center: 学校, hint: 先生, level: 1}
+  - {id: sea, center: 海, hint: 波, level: 1}
+  - {id: winter, center: 冬, hint: 雪, level: 1}
+  - {id: park, center: 公園, hint: ブランコ, level: 1}
+  - {id: zoo, center: どうぶつえん, hint: ぞう, level: 1}
+  - {id: kitchen, center: 台所, hint: なべ, level: 1}
+  - {id: rain, center: 雨, hint: かさ, level: 2}
+  - {id: morning, center: 朝, hint: 朝ごはん, level: 2}
+  - {id: festival, center: おまつり, hint: たいこ, level: 2}
+  - {id: hospital, center: 病院, hint: 薬, level: 2}
+  - {id: train_station, center: 駅, hint: 電車, level: 2}
+  - {id: newyear, center: お正月, hint: おもち, level: 2}
+  - {id: red, center: 赤いもの, hint: トマト, level: 3}
+  - {id: round, center: 丸いもの, hint: ボール, level: 3}
+  - {id: warm, center: あたたかいもの, hint: こたつ, level: 3}
+  - {id: loud, center: 音がするもの, hint: たいこ, level: 3}
+  - {id: fast, center: はやいもの, hint: 新幹線, level: 3}
+  - {id: soft, center: やわらかいもの, hint: わたあめ, level: 3}
+  - {id: sky, center: 空, hint: くも, level: 2}
+  - {id: spring, center: 春, hint: さくら, level: 1}
+  - {id: shopping, center: かいもの, hint: おかね, level: 2}
+  - {id: cooking, center: りょうり, hint: ほうちょう, level: 2}
+
+  # ---- 追加 Lv2（中頻度の具体物・行事・場所） ----
+  - {id: iv_lv2_001, center: 公園, hint: すべり台, level: 2}
+  - {id: iv_lv2_002, center: 病院, hint: 先生, level: 2}
+  - {id: iv_lv2_003, center: 給食, hint: ごはん, level: 2}
+  - {id: iv_lv2_004, center: 運動会, hint: かけっこ, level: 2}
+  - {id: iv_lv2_005, center: 図書館, hint: 本, level: 2}
+  - {id: iv_lv2_006, center: スーパー, hint: 買い物, level: 2}
+  - {id: iv_lv2_007, center: 海, hint: 波, level: 2}
+  - {id: iv_lv2_008, center: 山, hint: 木, level: 2}
+  - {id: iv_lv2_009, center: お風呂, hint: シャンプー, level: 2}
+  - {id: iv_lv2_010, center: 朝ごはん, hint: パン, level: 2}
+  - {id: iv_lv2_011, center: 誕生日, hint: ケーキ, level: 2}
+  - {id: iv_lv2_012, center: 遠足, hint: お弁当, level: 2}
+  - {id: iv_lv2_013, center: 駅, hint: 電車, level: 2}
+  - {id: iv_lv2_014, center: 夏祭り, hint: 花火, level: 2}
+  - {id: iv_lv2_015, center: 教室, hint: 黒板, level: 2}
+  - {id: iv_lv2_016, center: キャンプ, hint: テント, level: 2}
+  - {id: iv_lv2_017, center: 冬, hint: 雪, level: 2}
+  - {id: iv_lv2_018, center: 朝, hint: 目覚まし, level: 2}
+  - {id: iv_lv2_019, center: 雨の日, hint: かさ, level: 2}
+  - {id: iv_lv2_020, center: お正月, hint: おもち, level: 2}
+
+  # ---- 追加 Lv3（抽象語・感情・社会的場面） ----
+  - {id: iv_lv3_001, center: 自由, hint: 休み, level: 3}
+  - {id: iv_lv3_002, center: がんばる, hint: 練習, level: 3}
+  - {id: iv_lv3_003, center: 別れ, hint: 卒業, level: 3}
+  - {id: iv_lv3_004, center: 安心, hint: 家族, level: 3}
+  - {id: iv_lv3_005, center: 失敗, hint: やり直す, level: 3}
+  - {id: iv_lv3_006, center: 成長, hint: 練習, level: 3}
+  - {id: iv_lv3_007, center: 友だち, hint: 一緒に遊ぶ, level: 3}
+  - {id: iv_lv3_008, center: 緊張, hint: 発表, level: 3}
+  - {id: iv_lv3_009, center: 責任, hint: 約束, level: 3}
+  - {id: iv_lv3_010, center: 挑戦, hint: 新しいこと, level: 3}
+  - {id: iv_lv3_011, center: 平和, hint: 争わない, level: 3}
+  - {id: iv_lv3_012, center: 信頼, hint: 秘密を守る, level: 3}
+  - {id: iv_lv3_013, center: 孤独, hint: 一人, level: 3}
+  - {id: iv_lv3_014, center: 我慢, hint: 気持ちを抑える, level: 3}
+  - {id: iv_lv3_015, center: 夢, hint: 将来, level: 3}
+  - {id: iv_lv3_016, center: 協力, hint: 助け合う, level: 3}
+  - {id: iv_lv3_017, center: 変化, hint: 季節, level: 3}
+  - {id: iv_lv3_018, center: 思いやり, hint: 気にかける, level: 3}
+  - {id: iv_lv3_019, center: 後悔, hint: あのときこうすれば, level: 3}
+  - {id: iv_lv3_020, center: 時間, hint: 待つ, level: 3}

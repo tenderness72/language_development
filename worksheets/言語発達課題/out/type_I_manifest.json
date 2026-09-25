@@ -1,0 +1,69 @@
+{
+  "type": "I",
+  "display_title": "ことばつなぎ",
+  "clinical_title": "連想チェーン",
+  "name": "type_I",
+  "level": null,
+  "seed": 42,
+  "count": 2,
+  "pages": [
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "cloud_umbrella",
+          "chain": [
+            "くも",
+            "ひろがる",
+            "ゆうだち",
+            "ぬれる",
+            "タオル"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "wind_kite",
+          "chain": [
+            "風",
+            "ふく",
+            "たこ",
+            "あがる",
+            "空"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "rice_onigiri",
+          "chain": [
+            "米",
+            "たく",
+            "ごはん",
+            "にぎる",
+            "おにぎり"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "seed_flower",
+          "chain": [
+            "たね",
+            "まく",
+            "め",
+            "そだつ",
+            "花"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

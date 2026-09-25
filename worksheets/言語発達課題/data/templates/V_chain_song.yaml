@@ -1,0 +1,29 @@
+# Ⅴ つづき歌（自由記述）
+# start: 開始語 / slots: 空欄の数（既定5）
+# level: 1=具体物(易) 〜 3=抽象概念(難)
+type: V
+items:
+  - {id: curry, start: カレー, slots: 5, level: 1}
+  - {id: snow, start: 雪, slots: 5, level: 1}
+  - {id: apple, start: りんご, slots: 5, level: 1}
+  - {id: train, start: でんしゃ, slots: 5, level: 1}
+  - {id: dog, start: いぬ, slots: 5, level: 1}
+  - {id: sea, start: うみ, slots: 5, level: 1}
+  - {id: school, start: がっこう, slots: 5, level: 1}
+  - {id: rain, start: あめ, slots: 5, level: 2}
+  - {id: summer, start: なつ, slots: 5, level: 2}
+  - {id: park, start: こうえん, slots: 5, level: 2}
+  - {id: cake, start: ケーキ, slots: 5, level: 1}
+  - {id: fire, start: ひ, slots: 5, level: 2}
+  - {id: flower, start: はな, slots: 5, level: 2}
+  - {id: morning, start: あさ, slots: 5, level: 2}
+  - {id: bath, start: おふろ, slots: 5, level: 1}
+  - {id: festival, start: おまつり, slots: 5, level: 2}
+  - {id: wind, start: かぜ, slots: 5, level: 3}
+  - {id: red, start: あか, slots: 5, level: 3}
+  - {id: music, start: おんがく, slots: 5, level: 3}
+  - {id: travel, start: りょこう, slots: 5, level: 3}
+  - {id: milk, start: ぎゅうにゅう, slots: 5, level: 2}
+  - {id: mountain, start: やま, slots: 5, level: 2}
+  - {id: bird, start: とり, slots: 5, level: 1}
+  - {id: shop, start: おみせ, slots: 5, level: 2}

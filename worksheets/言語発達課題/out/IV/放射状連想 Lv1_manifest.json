@@ -1,0 +1,175 @@
+{
+  "type": "IV",
+  "display_title": "思いつくことばを集めよう",
+  "clinical_title": "放射状連想",
+  "name": "放射状連想 Lv1",
+  "level": 1,
+  "seed": 42,
+  "count": 9,
+  "pages": [
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "cooking",
+          "center": "りょうり",
+          "hint": "ほうちょう"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_002",
+          "center": "病院",
+          "hint": "先生"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "morning",
+          "center": "朝",
+          "hint": "朝ごはん"
+        },
+        {
+          "n": 2,
+          "id": "summer",
+          "center": "夏",
+          "hint": "プール"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "school",
+          "center": "学校",
+          "hint": "先生"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_017",
+          "center": "冬",
+          "hint": "雪"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_015",
+          "center": "夢",
+          "hint": "将来"
+        },
+        {
+          "n": 2,
+          "id": "rain",
+          "center": "雨",
+          "hint": "かさ"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "round",
+          "center": "丸いもの",
+          "hint": "ボール"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_005",
+          "center": "失敗",
+          "hint": "やり直す"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "shopping",
+          "center": "かいもの",
+          "hint": "おかね"
+        },
+        {
+          "n": 2,
+          "id": "zoo",
+          "center": "どうぶつえん",
+          "hint": "ぞう"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_010",
+          "center": "朝ごはん",
+          "hint": "パン"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_007",
+          "center": "海",
+          "hint": "波"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_007",
+          "center": "友だち",
+          "hint": "一緒に遊ぶ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_011",
+          "center": "平和",
+          "hint": "争わない"
+        }
+      ],
+      "page": 8
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "park",
+          "center": "公園",
+          "hint": "ブランコ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_004",
+          "center": "安心",
+          "hint": "家族"
+        }
+      ],
+      "page": 9
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

@@ -1,0 +1,265 @@
+{
+  "type": "IV",
+  "display_title": "思いつくことばを集めよう",
+  "clinical_title": "放射状連想",
+  "name": "放射状連想 Lv2",
+  "level": 2,
+  "seed": 43,
+  "count": 14,
+  "pages": [
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_020",
+          "center": "お正月",
+          "hint": "おもち"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_018",
+          "center": "朝",
+          "hint": "目覚まし"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "morning",
+          "center": "朝",
+          "hint": "朝ごはん"
+        },
+        {
+          "n": 2,
+          "id": "hospital",
+          "center": "病院",
+          "hint": "薬"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "cooking",
+          "center": "りょうり",
+          "hint": "ほうちょう"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_019",
+          "center": "雨の日",
+          "hint": "かさ"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_002",
+          "center": "病院",
+          "hint": "先生"
+        },
+        {
+          "n": 2,
+          "id": "rain",
+          "center": "雨",
+          "hint": "かさ"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_006",
+          "center": "スーパー",
+          "hint": "買い物"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_012",
+          "center": "遠足",
+          "hint": "お弁当"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_005",
+          "center": "図書館",
+          "hint": "本"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_011",
+          "center": "誕生日",
+          "hint": "ケーキ"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "newyear",
+          "center": "お正月",
+          "hint": "おもち"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_015",
+          "center": "教室",
+          "hint": "黒板"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_004",
+          "center": "運動会",
+          "hint": "かけっこ"
+        },
+        {
+          "n": 2,
+          "id": "shopping",
+          "center": "かいもの",
+          "hint": "おかね"
+        }
+      ],
+      "page": 8
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_014",
+          "center": "夏祭り",
+          "hint": "花火"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_016",
+          "center": "キャンプ",
+          "hint": "テント"
+        }
+      ],
+      "page": 9
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_017",
+          "center": "冬",
+          "hint": "雪"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_007",
+          "center": "海",
+          "hint": "波"
+        }
+      ],
+      "page": 10
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_001",
+          "center": "公園",
+          "hint": "すべり台"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_010",
+          "center": "朝ごはん",
+          "hint": "パン"
+        }
+      ],
+      "page": 11
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_009",
+          "center": "お風呂",
+          "hint": "シャンプー"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_008",
+          "center": "山",
+          "hint": "木"
+        }
+      ],
+      "page": 12
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_013",
+          "center": "駅",
+          "hint": "電車"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_003",
+          "center": "給食",
+          "hint": "ごはん"
+        }
+      ],
+      "page": 13
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "train_station",
+          "center": "駅",
+          "hint": "電車"
+        },
+        {
+          "n": 2,
+          "id": "festival",
+          "center": "おまつり",
+          "hint": "たいこ"
+        }
+      ],
+      "page": 14
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

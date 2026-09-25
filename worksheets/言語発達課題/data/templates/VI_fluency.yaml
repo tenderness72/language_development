@@ -1,0 +1,110 @@
+# Ⅵ カテゴリー流暢性（自由記述）
+# category: 見出し / example: 例語（記入済み） / lines: 記入罫線の本数(8〜10)
+# 1ページ＝問題1・問題2の2カテゴリーを使用。
+# level: 1=身近で具体的(易) 〜 3=抽象的(難)
+type: VI
+items:
+  - {id: animal, category: どうぶつ, example: うさぎ, lines: 10, level: 1}
+  - {id: fruit, category: くだもの, example: りんご, lines: 10, level: 1}
+  - {id: vehicle, category: のりもの, example: でんしゃ, lines: 10, level: 1}
+  - {id: vegetable, category: やさい, example: にんじん, lines: 10, level: 1}
+  - {id: flower, category: 花, example: チューリップ, lines: 10, level: 2}
+  - {id: bird, category: とり, example: すずめ, lines: 10, level: 2}
+  - {id: fish, category: さかな, example: さば, lines: 10, level: 2}
+  - {id: sport, category: スポーツ, example: やきゅう, lines: 9, level: 2}
+  - {id: color, category: 色, example: あか, lines: 9, level: 1}
+  - {id: food, category: たべもの, example: ごはん, lines: 10, level: 1}
+  - {id: country, category: 国, example: にほん, lines: 9, level: 3}
+  - {id: job, category: しごと, example: せんせい, lines: 9, level: 3}
+  - {id: insect, category: むし, example: ちょう, lines: 10, level: 2}
+  - {id: stationery, category: ぶんぼうぐ, example: えんぴつ, lines: 10, level: 2}
+  - {id: kitchen_item, category: 台所にあるもの, example: なべ, lines: 10, level: 2}
+  - {id: round_things, category: まるいもの, example: ボール, lines: 9, level: 3}
+  - {id: school_item, category: 学校にあるもの, example: こくばん, lines: 10, level: 2}
+  - {id: drink, category: のみもの, example: ぎゅうにゅう, lines: 9, level: 1}
+  - {id: weather, category: お天気, example: はれ, lines: 9, level: 3}
+  - {id: body, category: からだのぶぶん, example: て, lines: 10, level: 2}
+
+  # ---- 追加 Lv2（元データの2カテゴリーを a/b に分割） ----
+  - {id: vi_lv2_001a, category: 文房具, example: えんぴつ, lines: 10, level: 2}
+  - {id: vi_lv2_001b, category: スポーツ, example: サッカー, lines: 10, level: 2}
+  - {id: vi_lv2_002a, category: 天気, example: 晴れ, lines: 10, level: 2}
+  - {id: vi_lv2_002b, category: 色, example: 赤, lines: 10, level: 2}
+  - {id: vi_lv2_003a, category: 野菜, example: にんじん, lines: 10, level: 2}
+  - {id: vi_lv2_003b, category: 魚, example: さんま, lines: 10, level: 2}
+  - {id: vi_lv2_004a, category: 虫, example: アリ, lines: 10, level: 2}
+  - {id: vi_lv2_004b, category: 花, example: さくら, lines: 10, level: 2}
+  - {id: vi_lv2_005a, category: 家の中にあるもの, example: テレビ, lines: 10, level: 2}
+  - {id: vi_lv2_005b, category: 外にあるもの, example: 木, lines: 10, level: 2}
+  - {id: vi_lv2_006a, category: 食べ物, example: カレー, lines: 10, level: 2}
+  - {id: vi_lv2_006b, category: 飲み物, example: 牛乳, lines: 10, level: 2}
+  - {id: vi_lv2_007a, category: 乗り物, example: バス, lines: 10, level: 2}
+  - {id: vi_lv2_007b, category: 建物, example: 学校, lines: 10, level: 2}
+  - {id: vi_lv2_008a, category: 体の部分, example: 手, lines: 10, level: 2}
+  - {id: vi_lv2_008b, category: 顔の部分, example: 目, lines: 10, level: 2}
+  - {id: vi_lv2_009a, category: 国, example: 日本, lines: 10, level: 2}
+  - {id: vi_lv2_009b, category: 都市, example: 東京, lines: 10, level: 2}
+  - {id: vi_lv2_010a, category: 楽器, example: ピアノ, lines: 10, level: 2}
+  - {id: vi_lv2_010b, category: スポーツ用具, example: ボール, lines: 10, level: 2}
+  - {id: vi_lv2_011a, category: 洋服, example: Tシャツ, lines: 10, level: 2}
+  - {id: vi_lv2_011b, category: 靴, example: スニーカー, lines: 10, level: 2}
+  - {id: vi_lv2_012a, category: 季節, example: 夏, lines: 10, level: 2}
+  - {id: vi_lv2_012b, category: 月, example: 1月, lines: 10, level: 2}
+  - {id: vi_lv2_013a, category: 形, example: 丸, lines: 10, level: 2}
+  - {id: vi_lv2_013b, category: 大きさを表すことば, example: 大きい, lines: 10, level: 2}
+  - {id: vi_lv2_014a, category: 動物の鳴き声, example: ワンワン, lines: 10, level: 2}
+  - {id: vi_lv2_014b, category: 動作を表すことば, example: 走る, lines: 10, level: 2}
+  - {id: vi_lv2_015a, category: 料理, example: ラーメン, lines: 10, level: 2}
+  - {id: vi_lv2_015b, category: お菓子, example: チョコレート, lines: 10, level: 2}
+  - {id: vi_lv2_016a, category: 学校でする勉強, example: 算数, lines: 10, level: 2}
+  - {id: vi_lv2_016b, category: 学校の場所, example: 体育館, lines: 10, level: 2}
+  - {id: vi_lv2_017a, category: 鳥, example: すずめ, lines: 10, level: 2}
+  - {id: vi_lv2_017b, category: 海の生き物, example: タコ, lines: 10, level: 2}
+  - {id: vi_lv2_018a, category: 夏に関係することば, example: 海, lines: 10, level: 2}
+  - {id: vi_lv2_018b, category: 冬に関係することば, example: こたつ, lines: 10, level: 2}
+  - {id: vi_lv2_019a, category: 果物, example: りんご, lines: 10, level: 2}
+  - {id: vi_lv2_019b, category: 甘いもの, example: ケーキ, lines: 10, level: 2}
+  - {id: vi_lv2_020a, category: 職業, example: 先生, lines: 10, level: 2}
+  - {id: vi_lv2_020b, category: 職業で使う道具, example: はさみ, lines: 10, level: 2}
+
+  # ---- 追加 Lv3（抽象・機能カテゴリー / a/b に分割） ----
+  - {id: vi_lv3_001a, category: 気持ちを表すことば, example: うれしい, lines: 10, level: 3}
+  - {id: vi_lv3_001b, category: 体の感覚を表すことば, example: 痛い, lines: 10, level: 3}
+  - {id: vi_lv3_002a, category: 道具（何かを作るとき使うもの）, example: はさみ, lines: 10, level: 3}
+  - {id: vi_lv3_002b, category: 道具（調べるとき使うもの）, example: 虫めがね, lines: 10, level: 3}
+  - {id: vi_lv3_003a, category: 季節のイベント, example: お正月, lines: 10, level: 3}
+  - {id: vi_lv3_003b, category: 学校のイベント, example: 運動会, lines: 10, level: 3}
+  - {id: vi_lv3_004a, category: 人を表すことば（性格）, example: 優しい, lines: 10, level: 3}
+  - {id: vi_lv3_004b, category: 人を表すことば（様子）, example: 元気な, lines: 10, level: 3}
+  - {id: vi_lv3_005a, category: ルールがあるもの, example: 信号, lines: 10, level: 3}
+  - {id: vi_lv3_005b, category: 約束が必要なもの, example: 集合時間, lines: 10, level: 3}
+  - {id: vi_lv3_006a, category: 反対の意味のことば（例：大きい↔小さい）, example: 長い, lines: 10, level: 3}
+  - {id: vi_lv3_006b, category: 似た意味のことば（例：うれしい＝たのしい）, example: 悲しい, lines: 10, level: 3}
+  - {id: vi_lv3_007a, category: 危ないもの・こと, example: 火, lines: 10, level: 3}
+  - {id: vi_lv3_007b, category: 安全を守るもの, example: ヘルメット, lines: 10, level: 3}
+  - {id: vi_lv3_008a, category: 時間を表すことば, example: 朝, lines: 10, level: 3}
+  - {id: vi_lv3_008b, category: 場所を表すことば, example: 駅, lines: 10, level: 3}
+  - {id: vi_lv3_009a, category: 環境に関係することば, example: 森, lines: 10, level: 3}
+  - {id: vi_lv3_009b, category: エネルギーに関係することば, example: 太陽, lines: 10, level: 3}
+  - {id: vi_lv3_010a, category: 気持ちが落ち着くもの・こと, example: 音楽, lines: 10, level: 3}
+  - {id: vi_lv3_010b, category: 気持ちが高ぶるもの・こと, example: 試合, lines: 10, level: 3}
+  - {id: vi_lv3_011a, category: 働くことに関係することば, example: 給料, lines: 10, level: 3}
+  - {id: vi_lv3_011b, category: 休むことに関係することば, example: 睡眠, lines: 10, level: 3}
+  - {id: vi_lv3_012a, category: 伝えることに関係することば, example: 言葉, lines: 10, level: 3}
+  - {id: vi_lv3_012b, category: 聞くことに関係することば, example: 耳, lines: 10, level: 3}
+  - {id: vi_lv3_013a, category: 助け合いに関係することば, example: ボランティア, lines: 10, level: 3}
+  - {id: vi_lv3_013b, category: 競うことに関係することば, example: 試合, lines: 10, level: 3}
+  - {id: vi_lv3_014a, category: 変わらないもの, example: 山, lines: 10, level: 3}
+  - {id: vi_lv3_014b, category: 変わりやすいもの, example: 天気, lines: 10, level: 3}
+  - {id: vi_lv3_015a, category: 五感（見る・聞く・触れるなど）に関係することば, example: 見る, lines: 10, level: 3}
+  - {id: vi_lv3_015b, category: 体を動かすことに関係することば, example: 走る, lines: 10, level: 3}
+  - {id: vi_lv3_016a, category: お金に関係することば, example: 給料, lines: 10, level: 3}
+  - {id: vi_lv3_016b, category: 買い物に関係することば, example: 値段, lines: 10, level: 3}
+  - {id: vi_lv3_017a, category: 社会のルールに関係することば, example: 法律, lines: 10, level: 3}
+  - {id: vi_lv3_017b, category: マナーに関係することば, example: あいさつ, lines: 10, level: 3}
+  - {id: vi_lv3_018a, category: 記憶・覚えることに関係することば, example: メモ, lines: 10, level: 3}
+  - {id: vi_lv3_018b, category: 考えることに関係することば, example: 計画, lines: 10, level: 3}
+  - {id: vi_lv3_019a, category: 生き物が生きるために必要なもの, example: 水, lines: 10, level: 3}
+  - {id: vi_lv3_019b, category: 人が社会で生きるために必要なもの, example: お金, lines: 10, level: 3}
+  - {id: vi_lv3_020a, category: 未来に関係することば, example: 目標, lines: 10, level: 3}
+  - {id: vi_lv3_020b, category: 過去に関係することば, example: 思い出, lines: 10, level: 3}

@@ -1,0 +1,73 @@
+{
+  "type": "II",
+  "display_title": "関係のあることばを結ぼう",
+  "clinical_title": "意味ネットワーク照合",
+  "name": "type_II",
+  "level": null,
+  "seed": 42,
+  "count": 2,
+  "pages": [
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "birthday",
+          "center": "誕生日",
+          "related": [
+            "ケーキ",
+            "ろうそく",
+            "プレゼント",
+            "風船",
+            "カード"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "bath",
+          "center": "おふろ",
+          "related": [
+            "せっけん",
+            "シャワー",
+            "タオル",
+            "おゆ",
+            "シャンプー"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "farm",
+          "center": "牧場",
+          "related": [
+            "牛",
+            "牛乳",
+            "さく",
+            "牧草",
+            "馬"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "park",
+          "center": "公園",
+          "related": [
+            "ブランコ",
+            "すべり台",
+            "砂場",
+            "ベンチ",
+            "鳩"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

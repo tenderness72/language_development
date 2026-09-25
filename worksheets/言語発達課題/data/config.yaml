@@ -1,0 +1,15 @@
+# 全体設定（編集可）。語・関係データは data/templates/*.yaml にあります。
+font:
+  regular: fonts/NotoSansJP-Regular.ttf
+  bold: fonts/NotoSansJP-Bold.ttf
+
+# ヘッダーに出るテンプレート表示名（「関連語の想起課題 ― 〇〇」）。
+titles:
+  I: 連想チェーン
+  II: 意味ネットワーク照合
+  III: ペア対応づけ
+  IV: 放射状連想
+  V: つづき歌
+  VI: カテゴリー流暢性
+  VII: 語頭音＋モーラ数
+  VIII: 属性交差

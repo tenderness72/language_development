@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import pypdf; r=pypdf.PdfReader\\('related_words_worksheets_revised.pdf'\\); print\\('pages:', len\\(r.pages\\)\\); p=r.pages[0]; print\\('mediabox:', p.mediabox\\)\")",
+      "Bash(pip list *)",
+      "Bash(python -c \"import fitz; print\\('pymupdf ok'\\)\")"
+    ]
+  }
+}

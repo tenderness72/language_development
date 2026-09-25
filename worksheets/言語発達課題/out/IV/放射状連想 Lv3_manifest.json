@@ -1,0 +1,247 @@
+{
+  "type": "IV",
+  "display_title": "思いつくことばを集めよう",
+  "clinical_title": "放射状連想",
+  "name": "放射状連想 Lv3",
+  "level": 3,
+  "seed": 44,
+  "count": 13,
+  "pages": [
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_015",
+          "center": "夢",
+          "hint": "将来"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_006",
+          "center": "成長",
+          "hint": "練習"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_014",
+          "center": "我慢",
+          "hint": "気持ちを抑える"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_007",
+          "center": "友だち",
+          "hint": "一緒に遊ぶ"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fast",
+          "center": "はやいもの",
+          "hint": "新幹線"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_009",
+          "center": "責任",
+          "hint": "約束"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "warm",
+          "center": "あたたかいもの",
+          "hint": "こたつ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_004",
+          "center": "安心",
+          "hint": "家族"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_008",
+          "center": "緊張",
+          "hint": "発表"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_005",
+          "center": "失敗",
+          "hint": "やり直す"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_003",
+          "center": "別れ",
+          "hint": "卒業"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_017",
+          "center": "変化",
+          "hint": "季節"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "soft",
+          "center": "やわらかいもの",
+          "hint": "わたあめ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_018",
+          "center": "思いやり",
+          "hint": "気にかける"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_020",
+          "center": "時間",
+          "hint": "待つ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_001",
+          "center": "自由",
+          "hint": "休み"
+        }
+      ],
+      "page": 8
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "round",
+          "center": "丸いもの",
+          "hint": "ボール"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_012",
+          "center": "信頼",
+          "hint": "秘密を守る"
+        }
+      ],
+      "page": 9
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_011",
+          "center": "平和",
+          "hint": "争わない"
+        },
+        {
+          "n": 2,
+          "id": "red",
+          "center": "赤いもの",
+          "hint": "トマト"
+        }
+      ],
+      "page": 10
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_002",
+          "center": "がんばる",
+          "hint": "練習"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_016",
+          "center": "協力",
+          "hint": "助け合う"
+        }
+      ],
+      "page": 11
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_019",
+          "center": "後悔",
+          "hint": "あのときこうすれば"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_013",
+          "center": "孤独",
+          "hint": "一人"
+        }
+      ],
+      "page": 12
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "loud",
+          "center": "音がするもの",
+          "hint": "たいこ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_010",
+          "center": "挑戦",
+          "hint": "新しいこと"
+        }
+      ],
+      "page": 13
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

@@ -1,0 +1,133 @@
+{
+  "type": "VIII",
+  "display_title": "どんなものがあるかな",
+  "clinical_title": "属性交差",
+  "name": "ベン図パック",
+  "level": 2,
+  "seed": 48,
+  "count": 6,
+  "pages": [
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "yellow_fruit",
+          "left_attr": "黄色いもの",
+          "right_attr": "くだもの",
+          "intersection": "黄色いくだもの"
+        },
+        {
+          "n": 2,
+          "id": "fast_vehicle",
+          "left_attr": "はやいもの",
+          "right_attr": "のりもの",
+          "intersection": "はやいのりもの"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "cold_eat",
+          "left_attr": "つめたいもの",
+          "right_attr": "食べるもの",
+          "intersection": "つめたくて食べるもの"
+        },
+        {
+          "n": 2,
+          "id": "green_vege",
+          "left_attr": "みどりのもの",
+          "right_attr": "やさい",
+          "intersection": "みどりのやさい"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "round_eat",
+          "left_attr": "丸いもの",
+          "right_attr": "食べるもの",
+          "intersection": "丸くて食べるもの"
+        },
+        {
+          "n": 2,
+          "id": "round_school",
+          "left_attr": "丸いもの",
+          "right_attr": "学校にあるもの",
+          "intersection": "丸くて学校にあるもの"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "shine_sky",
+          "left_attr": "光るもの",
+          "right_attr": "空にあるもの",
+          "intersection": "光って空にあるもの"
+        },
+        {
+          "n": 2,
+          "id": "hard_kitchen",
+          "left_attr": "かたいもの",
+          "right_attr": "台所にあるもの",
+          "intersection": "かたくて台所にあるもの"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "red_eat",
+          "left_attr": "赤いもの",
+          "right_attr": "食べるもの",
+          "intersection": "赤くて食べるもの"
+        },
+        {
+          "n": 2,
+          "id": "square_home",
+          "left_attr": "四角いもの",
+          "right_attr": "家にあるもの",
+          "intersection": "四角くて家にあるもの"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "big_animal",
+          "left_attr": "大きいもの",
+          "right_attr": "どうぶつ",
+          "intersection": "大きいどうぶつ"
+        },
+        {
+          "n": 2,
+          "id": "small_insect",
+          "left_attr": "小さいもの",
+          "right_attr": "むし",
+          "intersection": "小さいむし"
+        }
+      ],
+      "page": 6
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

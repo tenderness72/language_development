@@ -1,0 +1,49 @@
+{
+  "type": "IV",
+  "display_title": "思いつくことばを集めよう",
+  "clinical_title": "放射状連想",
+  "name": "type_IV",
+  "level": null,
+  "seed": 42,
+  "count": 2,
+  "pages": [
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "round",
+          "center": "丸いもの",
+          "hint": "ボール"
+        },
+        {
+          "n": 2,
+          "id": "park",
+          "center": "公園",
+          "hint": "ブランコ"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "soft",
+          "center": "やわらかいもの",
+          "hint": "わたあめ"
+        },
+        {
+          "n": 2,
+          "id": "rain",
+          "center": "雨",
+          "hint": "かさ"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}
