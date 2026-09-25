@@ -1,0 +1,299 @@
+<title>ワークシート修正チェック</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDGothic:wght@400&display=swap">
+<style>
+:root{
+  --bg:#f4f6f5; --surface:#ffffff; --surface-2:#eef2f1; --line:#d5dddb;
+  --ink:#1c2627; --ink-2:#4b5a5c; --ink-3:#6f7e80;
+  --accent:#2c6a70; --accent-soft:#dcebec;
+  --ok:#2e7a4d; --ok-soft:#dff0e5;
+  --fix:#b3412c; --fix-soft:#f8e2dc;
+  --hold:#8a6410; --hold-soft:#f5ead0;
+  --before:#8a4a3a; --after:#205f47;
+  --shadow:0 1px 2px rgba(20,40,40,.06);
+  --font:"BIZ UDPGothic","Hiragino Sans","Yu Gothic UI","Meiryo",system-ui,sans-serif;
+  --mono:"BIZ UDGothic","Hiragino Sans","Meiryo",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#131a1b; --surface:#1b2426; --surface-2:#223033; --line:#314245;
+    --ink:#e6eeee; --ink-2:#b3c2c3; --ink-3:#8b9c9e;
+    --accent:#7fc1c6; --accent-soft:#1f3a3d;
+    --ok:#7fcf9c; --ok-soft:#1c3727;
+    --fix:#f0957f; --fix-soft:#43241d;
+    --hold:#e2bb62; --hold-soft:#3b3017;
+    --before:#e6a291; --after:#8fd7b3;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#131a1b; --surface:#1b2426; --surface-2:#223033; --line:#314245;
+  --ink:#e6eeee; --ink-2:#b3c2c3; --ink-3:#8b9c9e;
+  --accent:#7fc1c6; --accent-soft:#1f3a3d;
+  --ok:#7fcf9c; --ok-soft:#1c3727;
+  --fix:#f0957f; --fix-soft:#43241d;
+  --hold:#e2bb62; --hold-soft:#3b3017;
+  --before:#e6a291; --after:#8fd7b3;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:880px;margin:0 auto}
+header.top{padding-block:28px 12px;display:grid;gap:10px}
+h1{font-size:1.55rem;line-height:1.35;margin:0;text-wrap:balance;letter-spacing:.02em}
+.sub{color:var(--ink-2);margin:0;max-width:62ch}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:grid;gap:10px}
+.meter{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--surface-2)}
+.meter span{display:block;height:100%;transition:width .25s}
+.meter .m-ok{background:var(--ok)} .meter .m-fix{background:var(--fix)} .meter .m-hold{background:var(--hold)}
+.counts{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:.9rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.counts b{color:var(--ink);font-weight:700}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:.05em}
+.d-ok{background:var(--ok)} .d-fix{background:var(--fix)} .d-hold{background:var(--hold)} .d-none{background:var(--line)}
+.save{margin-left:auto;font-size:.82rem;color:var(--ink-3)}
+.save.shared{color:var(--accent)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:inherit;font-size:.86rem;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:3px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn{font:inherit;font-size:.86rem;border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:6px;padding:3px 12px;cursor:pointer}
+.chip:focus-visible,.btn:focus-visible,.seg button:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section.sec{margin-top:30px}
+section.sec>h2{font-size:1.12rem;margin:0 0 2px;text-wrap:balance}
+.lead{color:var(--ink-2);margin:0 0 12px;font-size:.92rem;max-width:66ch}
+.secmeta{font-size:.8rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.items{display:grid;gap:10px}
+.item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:10px;box-shadow:var(--shadow)}
+.item[data-status="ok"]{border-left-color:var(--ok)}
+.item[data-status="fix"]{border-left-color:var(--fix)}
+.item[data-status="hold"]{border-left-color:var(--hold)}
+.item h3{font-size:1rem;margin:0;line-height:1.5}
+.diff{display:grid;gap:4px;font-size:.93rem}
+.diff div{display:grid;grid-template-columns:4.2em 1fr;gap:8px;align-items:baseline}
+.diff .k{font-size:.74rem;letter-spacing:.08em;color:var(--ink-3);padding-top:2px}
+.diff .v{white-space:pre-wrap;overflow-wrap:anywhere}
+.diff .before .v{color:var(--before);text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--before) 55%,transparent)}
+.diff .after .v{color:var(--after);font-weight:700}
+.ask{font-size:.85rem;color:var(--ink-2);background:var(--surface-2);border-radius:6px;padding:4px 10px;margin:0}
+.ask::before{content:"確認点：";color:var(--ink-3)}
+.ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden;flex:none}
+.seg button{font:inherit;font-size:.88rem;border:0;background:var(--surface);color:var(--ink-2);padding:5px 14px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"][data-v="ok"]{background:var(--ok-soft);color:var(--ok);font-weight:700}
+.seg button[aria-pressed="true"][data-v="fix"]{background:var(--fix-soft);color:var(--fix);font-weight:700}
+.seg button[aria-pressed="true"][data-v="hold"]{background:var(--hold-soft);color:var(--hold);font-weight:700}
+textarea{flex:1 1 260px;min-width:0;font:inherit;font-size:.9rem;line-height:1.6;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:6px 10px;min-height:2.4em;resize:vertical}
+.item[data-status="fix"] textarea:placeholder-shown{border-color:var(--fix)}
+details.figs{margin-top:34px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 16px}
+details.figs summary{cursor:pointer;font-weight:700}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:12px}
+.fig{margin:0;display:grid;gap:4px}
+.fig img{width:100%;height:auto;border:1px solid var(--line);border-radius:4px;background:#fff}
+.fig figcaption{font-size:.8rem;color:var(--ink-3)}
+.empty{color:var(--ink-3);font-size:.9rem;padding:8px 0}
+.foot{margin-top:28px;font-size:.82rem;color:var(--ink-3)}
+.foot code{font-family:var(--mono)}
+@media (prefers-reduced-motion:reduce){.meter span{transition:none}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>ワークシート修正チェック</h1>
+    <p class="sub">優先度Aの修正と、新しく追加した問題の一覧です。各項目で「承認」「要修正」「保留」を選び、必要ならコメントを書いてください。判定はこのページに保存され、Claude が読み取って次の修正に反映します。</p>
+  </header>
+
+  <div class="bar" role="region" aria-label="進み具合">
+    <div class="meter" aria-hidden="true"><span class="m-ok"></span><span class="m-fix"></span><span class="m-hold"></span></div>
+    <div class="counts">
+      <span><span class="dot d-ok"></span>承認 <b id="c-ok">0</b></span>
+      <span><span class="dot d-fix"></span>要修正 <b id="c-fix">0</b></span>
+      <span><span class="dot d-hold"></span>保留 <b id="c-hold">0</b></span>
+      <span><span class="dot d-none"></span>未確認 <b id="c-none">0</b></span>
+      <span class="save" id="save">読み込み中…</span>
+    </div>
+    <div class="row" role="group" aria-label="表示の絞り込み">
+      <button class="chip" data-f="all" aria-pressed="true">すべて</button>
+      <button class="chip" data-f="none" aria-pressed="false">未確認</button>
+      <button class="chip" data-f="fix" aria-pressed="false">要修正</button>
+      <button class="chip" data-f="hold" aria-pressed="false">保留</button>
+      <button class="btn" id="copy" style="margin-left:auto">結果をコピー</button>
+    </div>
+  </div>
+
+  <main id="list"></main>
+
+  <details class="figs">
+    <summary>生成PDFの見本（修正後）</summary>
+    <div class="figgrid">
+<!--__FIGURES__-->
+    </div>
+  </details>
+
+  <p class="foot">データ元：<code>worksheets/言語発達課題/data/templates/*.yaml</code>、生成PDF：<code>out/</code>。ページの再生成は <code>evaluation/review/build_review.py</code>。</p>
+</div>
+
+<script>
+const SECTIONS = /*__DATA__*/[];
+const LABEL = {ok:"承認", fix:"要修正", hold:"保留"};
+const state = {};          // id -> {status, note}
+let filter = "all";
+let db = null, coll = null;
+const writing = {};        // id -> Promise（同じ文書への書き込みを直列化）
+const noteTimers = {};
+const LS_KEY = "ws-review-v1";
+
+const allItems = SECTIONS.flatMap(s => s.items.map(it => ({...it, section: s.key, sectionTitle: s.title})));
+
+function el(tag, attrs = {}, kids = []) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "text") e.textContent = v; else if (k === "cls") e.className = v; else e.setAttribute(k, v);
+  }
+  for (const k of [].concat(kids)) if (k) e.append(k);
+  return e;
+}
+
+function build() {
+  const list = document.getElementById("list");
+  list.textContent = "";
+  for (const s of SECTIONS) {
+    const sec = el("section", {cls: "sec", "data-sec": s.key});
+    sec.append(el("h2", {text: s.title}), el("p", {cls: "lead", text: s.lead}), el("div", {cls: "secmeta", "data-meta": s.key}));
+    const box = el("div", {cls: "items"});
+    for (const it of s.items) {
+      const card = el("article", {cls: "item", "data-id": it.id, "data-status": ""});
+      card.append(el("h3", {text: it.label}));
+      const diff = el("div", {cls: "diff"});
+      if (it.before) diff.append(el("div", {cls: "before"}, [el("span", {cls: "k", text: "修正前"}), el("span", {cls: "v", text: it.before})]));
+      diff.append(el("div", {cls: "after"}, [el("span", {cls: "k", text: it.before ? "修正後" : "内容"}), el("span", {cls: "v", text: it.after})]));
+      card.append(diff);
+      if (it.ask) card.append(el("p", {cls: "ask", text: it.ask}));
+      const seg = el("div", {cls: "seg", role: "group", "aria-label": it.label + " の判定"});
+      for (const v of ["ok", "fix", "hold"]) {
+        const b = el("button", {type: "button", "data-v": v, "aria-pressed": "false", text: LABEL[v]});
+        b.addEventListener("click", () => setStatus(it, state[it.id]?.status === v ? "" : v));
+        seg.append(b);
+      }
+      const ta = el("textarea", {id: "note-" + it.id, rows: "1", placeholder: "コメント（要修正のときは直し方を）", "aria-label": it.label + " へのコメント"});
+      ta.addEventListener("input", () => {
+        state[it.id] = {...(state[it.id] || {status: ""}), note: ta.value};
+        clearTimeout(noteTimers[it.id]);
+        noteTimers[it.id] = setTimeout(() => { noteTimers[it.id] = null; save(it); }, 900);
+      });
+      ta.addEventListener("blur", () => { if (noteTimers[it.id]) { clearTimeout(noteTimers[it.id]); noteTimers[it.id] = null; save(it); } });
+      card.append(el("div", {cls: "ctl"}, [seg, ta]));
+      box.append(card);
+    }
+    sec.append(box);
+    list.append(sec);
+  }
+}
+
+function render() {
+  const c = {ok: 0, fix: 0, hold: 0, none: 0};
+  for (const it of allItems) {
+    const st = state[it.id]?.status || "";
+    c[st || "none"]++;
+    const card = document.querySelector(`.item[data-id="${it.id}"]`);
+    card.dataset.status = st;
+    card.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === st)));
+    const ta = card.querySelector("textarea");
+    if (document.activeElement !== ta) ta.value = state[it.id]?.note || "";
+    card.hidden = !(filter === "all" || (filter === "none" ? !st : st === filter));
+  }
+  for (const s of SECTIONS) {
+    const done = s.items.filter(it => state[it.id]?.status).length;
+    document.querySelector(`[data-meta="${s.key}"]`).textContent = `${done} / ${s.items.length} 件 判定済み`;
+    const sec = document.querySelector(`[data-sec="${s.key}"]`);
+    sec.hidden = ![...sec.querySelectorAll(".item")].some(x => !x.hidden);
+  }
+  for (const k of Object.keys(c)) document.getElementById("c-" + k).textContent = c[k];
+  const n = allItems.length;
+  document.querySelector(".m-ok").style.width = (c.ok / n * 100) + "%";
+  document.querySelector(".m-fix").style.width = (c.fix / n * 100) + "%";
+  document.querySelector(".m-hold").style.width = (c.hold / n * 100) + "%";
+}
+
+function setStatus(it, v) {
+  state[it.id] = {...(state[it.id] || {note: ""}), status: v};
+  render();
+  save(it);
+}
+
+function setSave(text, shared) {
+  const s = document.getElementById("save");
+  s.textContent = text;
+  s.classList.toggle("shared", !!shared);
+}
+
+function save(it) {
+  const cur = state[it.id] || {status: "", note: ""};
+  if (!db) {
+    try {
+      const all = JSON.parse(localStorage.getItem(LS_KEY) || "{}");
+      all[it.id] = cur; localStorage.setItem(LS_KEY, JSON.stringify(all));
+      setSave("この端末にだけ保存しました（Claude からは読めません）");
+    } catch { setSave("保存できません（ブラウザの保存が無効です）"); }
+    return;
+  }
+  const body = {status: cur.status || "", note: cur.note || "", label: it.label, section: it.sectionTitle,
+                after: it.after, updatedAt: new Date().toISOString()};
+  setSave("保存中…", true);
+  writing[it.id] = (writing[it.id] || Promise.resolve())
+    .then(() => coll.doc(it.id).set(body))
+    .then(() => setSave("保存しました（Claude が読めます）", true))
+    .catch(e => {
+      if (e && e.code === "invalid_argument") setSave("このページを編集する権限がないため保存できません");
+      else if (e && e.code === "unavailable") setSave("通信が不安定です。少し待ってからもう一度選んでください");
+      else setSave("保存に失敗しました（" + (e && e.code || "不明") + "）");
+    });
+}
+
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  render();
+}));
+
+document.getElementById("copy").addEventListener("click", async () => {
+  const lines = [];
+  for (const s of SECTIONS) {
+    lines.push("■ " + s.title);
+    for (const it of s.items) {
+      const st = state[it.id]?.status, note = state[it.id]?.note;
+      lines.push(`- ${it.label}：${st ? LABEL[st] : "未確認"}${note ? "／" + note : ""}`);
+    }
+  }
+  const text = lines.join("\n");
+  const btn = document.getElementById("copy");
+  try { await navigator.clipboard.writeText(text); btn.textContent = "コピーしました"; }
+  catch {
+    const ta = el("textarea", {"aria-label": "結果"}); ta.value = text; ta.style.width = "100%"; ta.rows = 8;
+    btn.closest(".bar").append(ta); ta.select(); btn.textContent = "下の欄を選択しました";
+  }
+  setTimeout(() => (btn.textContent = "結果をコピー"), 2500);
+});
+
+build();
+try { Object.assign(state, JSON.parse(localStorage.getItem(LS_KEY) || "{}")); } catch {}
+render();
+setSave("この端末にだけ保存されます（共有保存に接続中…）");
+
+(async () => {
+  const cl = window.claude;
+  db = cl && cl.use ? await cl.use("db") : null;
+  if (!db) { setSave("この端末にだけ保存されます（Claude からは読めません）"); return; }
+  coll = db.collection("reviews");
+  coll.onSnapshot(snap => {
+    for (const d of snap.docs) {
+      const v = d.data() || {};
+      if (!noteTimers[d.id]) state[d.id] = {status: v.status || "", note: v.note || ""};
+    }
+    render();
+    setSave("共有保存に接続済み（Claude が読めます）", true);
+  }, e => setSave("共有保存との接続が切れました。ページを開き直してください（" + e.code + "）"));
+})();
+</script>
