@@ -10,8 +10,16 @@ KEY = "VII"
 TITLE = "語頭音＋モーラ数"                        # 内部の臨床名（PDFには出さない）
 # 子ども向け表示タイトル。問題ごとに語頭音が変わるため特定の音は入れず固定文言。
 DISPLAY_TITLE = "決めた音からはじまることば"
-INSTRUCTION = ("決められた音から始まり、マスの数に合うことばを考えて書きましょう。"
-               "小さい「ゃ・ゅ・ょ」は1マスに入れても構いません。")
+INSTRUCTION = "決められた音から始まり、マスの数に合うことばを考えて書きましょう。"
+# マスの書き方（1マス＝1拍）。拗音は2文字で1拍なので前の字と同じマスに入れる。
+# 促音・長音・撥音はそれぞれ1拍＝1マス（原, 2001 の拍の定義に準拠）。
+RULE_NOTE = [
+    "【マスの書き方】1マスに1つの音を書きます。",
+    "・小さい「ゃ・ゅ・ょ」は、前の字といっしょに1マスに書きます（例：「きゃ」で1マス）。",
+    "・小さい「っ」、のばす音、「ん」は、それぞれ1マスです（例：「らっぱ」「ケーキ」「みかん」はどれも3マス）。",
+]
+ANSWER_NOTE = "※解答は答えの例です。始まりの音とマスの数が合っていれば、ほかのことばも正解です。"
+NOTE_Y = 205.0
 HAS_ANSWER = True
 
 # 問題1=左, 問題2=右
@@ -64,8 +72,20 @@ def _draw_problem(c, ctx, half, top, item, answers):
                                     ctx=ctx, where="VII.ans")
 
 
+def _draw_notes(c, answers):
+    y = NOTE_Y
+    for i, line in enumerate(RULE_NOTE):
+        layout.text(c, layout.CONTENT_X, y, line, size=10,
+                    font=layout.BOLD if i == 0 else layout.REG, align="l")
+        y += 6.0
+    if answers:
+        layout.text(c, layout.CONTENT_X, y + 3.0, ANSWER_NOTE, size=10,
+                    font=layout.BOLD, align="l")
+
+
 def draw_page(c, ctx, items, lrng, answers=False):
     body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
+    _draw_notes(c, answers)
     mani = {"type": KEY, "problems": []}
     for n, (item, half) in enumerate(zip(items, HALVES), start=1):
         layout.problem_label(c, half["label_x"] - 2, body_y + 2, n)

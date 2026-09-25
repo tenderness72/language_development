@@ -2,6 +2,8 @@
 # category: 見出し / example: 例語（記入済み） / lines: 記入罫線の本数(8〜10)
 # 1ページ＝問題1・問題2の2カテゴリーを使用。
 # level: 1=身近で具体的(易) 〜 3=抽象的(難)
+# 同じカテゴリーを重複させないこと（漢字/かなの書き分けも同じものとみなす）。
+# 自動判定できない書き分けは `key:` に同じ値を入れると重複として検出される。
 type: VI
 items:
   - {id: animal, category: どうぶつ, example: うさぎ, lines: 10, level: 1}
@@ -26,23 +28,10 @@ items:
   - {id: body, category: からだのぶぶん, example: て, lines: 10, level: 2}
 
   # ---- 追加 Lv2（元データの2カテゴリーを a/b に分割） ----
-  - {id: vi_lv2_001a, category: 文房具, example: えんぴつ, lines: 10, level: 2}
-  - {id: vi_lv2_001b, category: スポーツ, example: サッカー, lines: 10, level: 2}
-  - {id: vi_lv2_002a, category: 天気, example: 晴れ, lines: 10, level: 2}
-  - {id: vi_lv2_002b, category: 色, example: 赤, lines: 10, level: 2}
-  - {id: vi_lv2_003a, category: 野菜, example: にんじん, lines: 10, level: 2}
-  - {id: vi_lv2_003b, category: 魚, example: さんま, lines: 10, level: 2}
-  - {id: vi_lv2_004a, category: 虫, example: アリ, lines: 10, level: 2}
-  - {id: vi_lv2_004b, category: 花, example: さくら, lines: 10, level: 2}
   - {id: vi_lv2_005a, category: 家の中にあるもの, example: テレビ, lines: 10, level: 2}
   - {id: vi_lv2_005b, category: 外にあるもの, example: 木, lines: 10, level: 2}
-  - {id: vi_lv2_006a, category: 食べ物, example: カレー, lines: 10, level: 2}
-  - {id: vi_lv2_006b, category: 飲み物, example: 牛乳, lines: 10, level: 2}
-  - {id: vi_lv2_007a, category: 乗り物, example: バス, lines: 10, level: 2}
   - {id: vi_lv2_007b, category: 建物, example: 学校, lines: 10, level: 2}
-  - {id: vi_lv2_008a, category: 体の部分, example: 手, lines: 10, level: 2}
   - {id: vi_lv2_008b, category: 顔の部分, example: 目, lines: 10, level: 2}
-  - {id: vi_lv2_009a, category: 国, example: 日本, lines: 10, level: 2}
   - {id: vi_lv2_009b, category: 都市, example: 東京, lines: 10, level: 2}
   - {id: vi_lv2_010a, category: 楽器, example: ピアノ, lines: 10, level: 2}
   - {id: vi_lv2_010b, category: スポーツ用具, example: ボール, lines: 10, level: 2}
@@ -58,13 +47,10 @@ items:
   - {id: vi_lv2_015b, category: お菓子, example: チョコレート, lines: 10, level: 2}
   - {id: vi_lv2_016a, category: 学校でする勉強, example: 算数, lines: 10, level: 2}
   - {id: vi_lv2_016b, category: 学校の場所, example: 体育館, lines: 10, level: 2}
-  - {id: vi_lv2_017a, category: 鳥, example: すずめ, lines: 10, level: 2}
   - {id: vi_lv2_017b, category: 海の生き物, example: タコ, lines: 10, level: 2}
   - {id: vi_lv2_018a, category: 夏に関係することば, example: 海, lines: 10, level: 2}
   - {id: vi_lv2_018b, category: 冬に関係することば, example: こたつ, lines: 10, level: 2}
-  - {id: vi_lv2_019a, category: 果物, example: りんご, lines: 10, level: 2}
   - {id: vi_lv2_019b, category: 甘いもの, example: ケーキ, lines: 10, level: 2}
-  - {id: vi_lv2_020a, category: 職業, example: 先生, lines: 10, level: 2}
   - {id: vi_lv2_020b, category: 職業で使う道具, example: はさみ, lines: 10, level: 2}
 
   # ---- 追加 Lv3（抽象・機能カテゴリー / a/b に分割） ----

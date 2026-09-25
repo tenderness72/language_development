@@ -32,10 +32,10 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
     if errs:
         raise ValueError("データ不備:\n  " + "\n  ".join(errs))
 
-    pool, broadened = data.build_pool(items, level, needed=count * 2)
+    pool, broadened = data.build_pool(items, level, needed=count * 2, type_key=type_key)
     rng = random.Random(seed)
     if sampler is None:
-        sampler = data.Sampler(pool, rng)
+        sampler = data.Sampler(pool, rng, type_key=type_key)
 
     os.makedirs(out_dir, exist_ok=True)
     stem = name or f"type_{type_key}"

@@ -2,10 +2,12 @@
 # chain: [start, 列2, 列3, 列4, goal]（連想で1本につながる正解列）
 # distractors: 各列(col2/col3/col4)のダミー語3つ以上。正解語と重複させないこと。
 # level: 1=遠いダミー(易) 2=中 3=近いダミー(難)
+# 近いダミーを使うときは、ダミーを通っても start→goal が意味の上でつながって
+# しまわないか（正解以外の経路がないか）を人が確認すること。
 type: I
 items:
-  - id: rain_use
-    chain: [雨, ふる, かさ, さす, 使う]
+  - id: rain_boots
+    chain: [雨, ふる, みずたまり, ふむ, ながぐつ]
     distractors:
       col2: [はしる, わらう, ねむる]
       col3: [バナナ, とけい, ボール]
@@ -49,23 +51,23 @@ items:
   - id: rice_onigiri
     chain: [米, たく, ごはん, にぎる, おにぎり]
     distractors:
-      col2: [あらう, なげる, ほる]
+      col2: [なげる, ほる, かぞえる]
       col3: [みそしる, サラダ, パン]
-      col4: [きる, やく, ゆでる]
+      col4: [きる, ゆでる, むく]
     level: 2
   - id: cloud_umbrella
     chain: [くも, ひろがる, ゆうだち, ぬれる, タオル]
     distractors:
-      col2: [ちぢむ, かたまる, きえる]
+      col2: [ちぢむ, かたまる, しずむ]
       col3: [はれ, にじ, ほし]
-      col4: [かわく, もえる, こおる]
+      col4: [もえる, こおる, とける]
     level: 3
-  - id: tree_paper
-    chain: [木, きる, 板, けずる, 紙]
+  - id: tree_blocks
+    chain: [木, きる, 板, けずる, つみき]
     distractors:
       col2: [そだてる, うえる, みずやり]
       col3: [いし, てつ, ガラス]
-      col4: [もやす, うめる, ぬる]
+      col4: [もやす, うめる, ながす]
     level: 3
   - id: egg_chick
     chain: [たまご, あたためる, ひな, そだつ, にわとり]
@@ -81,10 +83,10 @@ items:
       col3: [すなやま, どろだんご, おちば]
       col4: [なげる, たべる, かくす]
     level: 2
-  - id: grape_wine
-    chain: [ぶどう, つむ, しぼる, おく, ジュース]
+  - id: grape_sherbet
+    chain: [ぶどう, しぼる, ジュース, こおらせる, シャーベット]
     distractors:
       col2: [なげる, うえる, ほる]
-      col3: [きざむ, やく, こおらせる]
-      col4: [すてる, こわす, わる]
+      col3: [はっぱ, たね, かわ]
+      col4: [やく, にる, きる]
     level: 3

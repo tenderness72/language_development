@@ -1,6 +1,8 @@
 """品質保証チェック。
 
 - 閉課題（I・II・III）の正解が一意か（正解語とダミー語の衝突検査）
+  ※文字列の衝突のみ検査する。意味の上で別の経路が成り立たないかは人が確認すること。
+- データ内に同じ中身の問題がないか（data.dedup_key による表記ゆれ込みの判定）
 - ページ内の文字はみ出し（ctx.warnings）
 は generate 側で集約し、満たさなければ再サンプリング→上限超で停止する。
 """
@@ -52,9 +54,17 @@ def check_item(type_key, item):
 
 def validate_items(type_key, items):
     """データ全件を検査し、問題のあるメッセージ一覧を返す。"""
+    from .data import dedup_key
     errs = []
+    seen = {}
     for it in items:
         msg = check_item(type_key, it)
         if msg:
             errs.append(msg)
+        # 同じ中身の問題がレベルをまたいで重複していないか
+        k = dedup_key(type_key, it)
+        if k in seen:
+            errs.append(f"[{type_key}:{it['id']}] '{seen[k]}' と同じ問題（重複）")
+        else:
+            seen[k] = it["id"]
     return errs
