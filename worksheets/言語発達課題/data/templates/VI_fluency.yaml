@@ -53,16 +53,16 @@ items:
   - {id: vi_lv2_019b, category: 甘いもの, example: ケーキ, lines: 10, level: 2}
   - {id: vi_lv2_020b, category: 職業で使う道具, example: はさみ, lines: 10, level: 2}
 
-  # ---- 追加 Lv2 その2（重複削除の補充。身近で具体的なカテゴリー。要確認） ----
+  # ---- 追加 Lv2 その2（重複削除の補充。身近で具体的なカテゴリー。2026-09-25 確認済み） ----
   - {id: vi_lv2_021, category: 家具, example: つくえ, lines: 10, level: 2}
-  - {id: vi_lv2_022, category: 木, example: まつ, lines: 10, level: 2}
+  - {id: vi_lv2_022, category: 木, example: さくら, lines: 10, level: 2}
   - {id: vi_lv2_023, category: おもちゃ, example: つみき, lines: 10, level: 2}
   - {id: vi_lv2_024, category: 公園にあるもの, example: ブランコ, lines: 10, level: 2}
   - {id: vi_lv2_025, category: お店, example: パンや, lines: 10, level: 2}
   - {id: vi_lv2_026, category: 川の生き物, example: めだか, lines: 10, level: 2}
-  - {id: vi_lv2_027, category: 雨の日に使うもの, example: かさ, lines: 10, level: 2}
+  - {id: vi_lv2_027, category: 雨の日に使うもの, example: かっぱ, lines: 10, level: 2}
   - {id: vi_lv2_028, category: 電気で動くもの, example: せんぷうき, lines: 10, level: 2}
-  - {id: vi_lv2_029, category: 冷たいもの, example: アイス, lines: 10, level: 2}
+  - {id: vi_lv2_029, category: 冷たいもの, example: こおり, lines: 10, level: 2}
   - {id: vi_lv2_030, category: 赤いもの, example: りんご, lines: 10, level: 2}
   - {id: vi_lv2_031, category: 遊び, example: おにごっこ, lines: 10, level: 2}
   - {id: vi_lv2_032, category: 空を飛ぶもの, example: ひこうき, lines: 10, level: 2}

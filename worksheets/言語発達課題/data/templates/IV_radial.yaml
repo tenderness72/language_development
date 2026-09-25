@@ -44,7 +44,7 @@ items:
   - {id: iv_lv2_015, center: 教室, hint: 黒板, level: 2}
   - {id: iv_lv2_016, center: キャンプ, hint: テント, level: 2}
 
-  # ---- 追加 Lv2 その2（重複削除の補充。身近な場所・行事。要確認） ----
+  # ---- 追加 Lv2 その2（重複削除の補充。身近な場所・行事。2026-09-25 確認済み） ----
   - {id: iv_lv2_021, center: 水族館, hint: イルカ, level: 2}
   - {id: iv_lv2_022, center: クリスマス, hint: プレゼント, level: 2}
   - {id: iv_lv2_023, center: 歯医者, hint: はブラシ, level: 2}
