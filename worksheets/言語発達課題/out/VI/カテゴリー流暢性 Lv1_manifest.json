@@ -18,9 +18,9 @@
         },
         {
           "n": 2,
-          "id": "vi_lv2_020b",
-          "category": "職業で使う道具",
-          "example": "はさみ"
+          "id": "vi_lv2_036",
+          "category": "スーパーで売っているもの",
+          "example": "たまご"
         }
       ],
       "page": 1
@@ -54,9 +54,9 @@
         },
         {
           "n": 2,
-          "id": "vi_lv2_012a",
-          "category": "季節",
-          "example": "夏"
+          "id": "vi_lv2_019b",
+          "category": "甘いもの",
+          "example": "ケーキ"
         }
       ],
       "page": 3
@@ -72,9 +72,9 @@
         },
         {
           "n": 2,
-          "id": "vi_lv2_002a",
-          "category": "天気",
-          "example": "晴れ"
+          "id": "vi_lv2_007b",
+          "category": "建物",
+          "example": "学校"
         }
       ],
       "page": 4
@@ -84,15 +84,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_020a",
-          "category": "職業",
-          "example": "先生"
+          "id": "vi_lv2_035",
+          "category": "しっぽがある動物",
+          "example": "ねこ"
         },
         {
           "n": 2,
-          "id": "vi_lv2_019b",
-          "category": "甘いもの",
-          "example": "ケーキ"
+          "id": "vi_lv2_034",
+          "category": "おふろにあるもの",
+          "example": "せっけん"
         }
       ],
       "page": 5
@@ -108,9 +108,9 @@
         },
         {
           "n": 2,
-          "id": "vi_lv2_004b",
-          "category": "花",
-          "example": "さくら"
+          "id": "vi_lv2_011a",
+          "category": "洋服",
+          "example": "Tシャツ"
         }
       ],
       "page": 6

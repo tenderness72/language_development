@@ -12,15 +12,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "body",
-          "category": "からだのぶぶん",
-          "example": "て"
+          "id": "vi_lv2_019b",
+          "category": "甘いもの",
+          "example": "ケーキ"
         },
         {
           "n": 2,
-          "id": "bird",
-          "category": "とり",
-          "example": "すずめ"
+          "id": "vi_lv2_018b",
+          "category": "冬に関係することば",
+          "example": "こたつ"
         }
       ],
       "page": 1
@@ -30,15 +30,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "insect",
-          "category": "むし",
-          "example": "ちょう"
+          "id": "vi_lv2_026",
+          "category": "川の生き物",
+          "example": "めだか"
         },
         {
           "n": 2,
-          "id": "round_things",
-          "category": "まるいもの",
-          "example": "ボール"
+          "id": "vi_lv3_014a",
+          "category": "変わらないもの",
+          "example": "山"
         }
       ],
       "page": 2

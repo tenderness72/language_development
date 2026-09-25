@@ -12,15 +12,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "round",
-          "center": "丸いもの",
-          "hint": "ボール"
+          "id": "iv_lv2_030",
+          "center": "畑",
+          "hint": "やさい"
         },
         {
           "n": 2,
-          "id": "park",
-          "center": "公園",
-          "hint": "ブランコ"
+          "id": "iv_lv3_011",
+          "center": "平和",
+          "hint": "争わない"
         }
       ],
       "page": 1
@@ -30,15 +30,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "soft",
-          "center": "やわらかいもの",
-          "hint": "わたあめ"
+          "id": "iv_lv2_010",
+          "center": "朝ごはん",
+          "hint": "パン"
         },
         {
           "n": 2,
-          "id": "rain",
-          "center": "雨",
-          "hint": "かさ"
+          "id": "park",
+          "center": "公園",
+          "hint": "ブランコ"
         }
       ],
       "page": 2

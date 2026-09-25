@@ -19,10 +19,10 @@
         },
         {
           "n": 2,
-          "id": "small_insect",
-          "left_attr": "小さいもの",
-          "right_attr": "むし",
-          "intersection": "小さいむし"
+          "id": "soft_eat",
+          "left_attr": "やわらかいもの",
+          "right_attr": "食べるもの",
+          "intersection": "やわらかくて食べるもの"
         }
       ],
       "page": 1

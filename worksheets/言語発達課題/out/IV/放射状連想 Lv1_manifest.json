@@ -12,108 +12,18 @@
       "problems": [
         {
           "n": 1,
-          "id": "cooking",
-          "center": "りょうり",
-          "hint": "ほうちょう"
+          "id": "iv_lv2_030",
+          "center": "畑",
+          "hint": "やさい"
         },
         {
           "n": 2,
-          "id": "iv_lv2_002",
-          "center": "病院",
-          "hint": "先生"
+          "id": "iv_lv3_011",
+          "center": "平和",
+          "hint": "争わない"
         }
       ],
       "page": 1
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "morning",
-          "center": "朝",
-          "hint": "朝ごはん"
-        },
-        {
-          "n": 2,
-          "id": "summer",
-          "center": "夏",
-          "hint": "プール"
-        }
-      ],
-      "page": 2
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "school",
-          "center": "学校",
-          "hint": "先生"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv2_017",
-          "center": "冬",
-          "hint": "雪"
-        }
-      ],
-      "page": 3
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "iv_lv3_015",
-          "center": "夢",
-          "hint": "将来"
-        },
-        {
-          "n": 2,
-          "id": "rain",
-          "center": "雨",
-          "hint": "かさ"
-        }
-      ],
-      "page": 4
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "round",
-          "center": "丸いもの",
-          "hint": "ボール"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_005",
-          "center": "失敗",
-          "hint": "やり直す"
-        }
-      ],
-      "page": 5
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "shopping",
-          "center": "かいもの",
-          "hint": "おかね"
-        },
-        {
-          "n": 2,
-          "id": "zoo",
-          "center": "どうぶつえん",
-          "hint": "ぞう"
-        }
-      ],
-      "page": 6
     },
     {
       "type": "IV",
@@ -126,9 +36,99 @@
         },
         {
           "n": 2,
-          "id": "iv_lv2_007",
-          "center": "海",
-          "hint": "波"
+          "id": "park",
+          "center": "公園",
+          "hint": "ブランコ"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "birthday",
+          "center": "誕生日",
+          "hint": "ケーキ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv2_024",
+          "center": "消防署",
+          "hint": "しょうぼうしゃ"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_020",
+          "center": "時間",
+          "hint": "待つ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_019",
+          "center": "後悔",
+          "hint": "次はこうしたい"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_026",
+          "center": "川",
+          "hint": "さかな"
+        },
+        {
+          "n": 2,
+          "id": "zoo",
+          "center": "どうぶつえん",
+          "hint": "ぞう"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_018",
+          "center": "思いやり",
+          "hint": "気にかける"
+        },
+        {
+          "n": 2,
+          "id": "summer",
+          "center": "夏",
+          "hint": "プール"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv2_008",
+          "center": "山",
+          "hint": "木"
+        },
+        {
+          "n": 2,
+          "id": "fast",
+          "center": "はやいもの",
+          "hint": "新幹線"
         }
       ],
       "page": 7
@@ -138,15 +138,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv3_007",
-          "center": "友だち",
-          "hint": "一緒に遊ぶ"
+          "id": "cooking",
+          "center": "りょうり",
+          "hint": "ほうちょう"
         },
         {
           "n": 2,
-          "id": "iv_lv3_011",
-          "center": "平和",
-          "hint": "争わない"
+          "id": "sea",
+          "center": "海",
+          "hint": "波"
         }
       ],
       "page": 8
@@ -156,15 +156,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "park",
-          "center": "公園",
-          "hint": "ブランコ"
+          "id": "iv_lv2_028",
+          "center": "ひなまつり",
+          "hint": "ひなにんぎょう"
         },
         {
           "n": 2,
-          "id": "iv_lv3_004",
-          "center": "安心",
-          "hint": "家族"
+          "id": "iv_lv2_014",
+          "center": "夏祭り",
+          "hint": "花火"
         }
       ],
       "page": 9
