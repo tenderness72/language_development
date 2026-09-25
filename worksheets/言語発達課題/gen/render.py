@@ -25,6 +25,9 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
                  base_dir=".", name=None, sampler=None, verbose=True):
     """1テンプレートを count 枚生成。manifest(dict) を返す。"""
     fonts.register(data.load_config(base_dir).get("font"), base_dir=base_dir)
+    from . import layout
+    layout.set_furigana(data.load_furigana(base_dir))
+    layout.MISSING_FURIGANA.clear()
     mod = templates.get(type_key)
 
     items = data.load_items(type_key, base_dir)
@@ -72,6 +75,9 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
         page_mani["page"] = page_idx + 1
         manifest["pages"].append(page_mani)
 
+    if layout.MISSING_FURIGANA:
+        raise ValueError("ふりがな未登録の文字列があります（data/furigana.yaml に追加してください）:\n  "
+                         + "\n  ".join(sorted(layout.MISSING_FURIGANA)))
     qc.save()
     if do_answers:
         ac.save()

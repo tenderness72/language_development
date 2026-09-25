@@ -30,6 +30,15 @@ def load_config(base_dir="."):
     return {}
 
 
+def load_furigana(base_dir="."):
+    """data/furigana.yaml（無ければ空）。キー: 描く文字列 → 値: 漢字《よみ》 形式。"""
+    path = os.path.join(base_dir, "data", "furigana.yaml")
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
+
+
 def load_items(type_key, base_dir="."):
     fname = TEMPLATE_FILE[type_key]
     path = os.path.join(base_dir, "data", "templates", f"{fname}.yaml")
