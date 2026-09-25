@@ -12,15 +12,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_019b",
-          "category": "甘いもの",
-          "example": "ケーキ"
+          "id": "vi_lv2_028",
+          "category": "電気で動くもの",
+          "example": "せんぷうき"
         },
         {
           "n": 2,
-          "id": "vi_lv2_018b",
-          "category": "冬に関係することば",
-          "example": "こたつ"
+          "id": "food",
+          "category": "たべもの",
+          "example": "ごはん"
         }
       ],
       "page": 1
@@ -30,15 +30,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_026",
-          "category": "川の生き物",
-          "example": "めだか"
+          "id": "vi_lv2_012b",
+          "category": "月",
+          "example": "1月"
         },
         {
           "n": 2,
-          "id": "vi_lv3_014a",
-          "category": "変わらないもの",
-          "example": "山"
+          "id": "vi_lv3_003a",
+          "category": "季節のイベント",
+          "example": "お正月"
         }
       ],
       "page": 2

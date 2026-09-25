@@ -12,15 +12,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv3_011b",
-          "category": "休むことに関係することば",
-          "example": "睡眠"
+          "id": "vehicle",
+          "category": "のりもの",
+          "example": "でんしゃ"
         },
         {
           "n": 2,
-          "id": "vi_lv2_036",
-          "category": "スーパーで売っているもの",
-          "example": "たまご"
+          "id": "vi_lv1_002",
+          "category": "ねるときに使うもの",
+          "example": "まくら"
         }
       ],
       "page": 1
@@ -30,90 +30,18 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv3_020b",
-          "category": "過去に関係することば",
-          "example": "思い出"
+          "id": "vi_lv1_005",
+          "category": "おべんとうにはいっているもの",
+          "example": "たまごやき"
         },
         {
           "n": 2,
-          "id": "vi_lv3_005b",
-          "category": "約束が必要なもの",
-          "example": "集合時間"
+          "id": "color",
+          "category": "色",
+          "example": "あか"
         }
       ],
       "page": 2
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "kitchen_item",
-          "category": "台所にあるもの",
-          "example": "なべ"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_019b",
-          "category": "甘いもの",
-          "example": "ケーキ"
-        }
-      ],
-      "page": 3
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv3_006b",
-          "category": "似た意味のことば（例：うれしい＝たのしい）",
-          "example": "悲しい"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_007b",
-          "category": "建物",
-          "example": "学校"
-        }
-      ],
-      "page": 4
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_035",
-          "category": "しっぽがある動物",
-          "example": "ねこ"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_034",
-          "category": "おふろにあるもの",
-          "example": "せっけん"
-        }
-      ],
-      "page": 5
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv3_013b",
-          "category": "競うことに関係することば",
-          "example": "試合"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_011a",
-          "category": "洋服",
-          "example": "Tシャツ"
-        }
-      ],
-      "page": 6
     },
     {
       "type": "VI",
@@ -126,9 +54,81 @@
         },
         {
           "n": 2,
-          "id": "color",
-          "category": "色",
-          "example": "あか"
+          "id": "vi_lv1_004",
+          "category": "あさごはんにたべるもの",
+          "example": "パン"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv1_007",
+          "category": "どうぶつえんにいるどうぶつ",
+          "example": "ぞう"
+        },
+        {
+          "n": 2,
+          "id": "vegetable",
+          "category": "やさい",
+          "example": "にんじん"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fruit",
+          "category": "くだもの",
+          "example": "りんご"
+        },
+        {
+          "n": 2,
+          "id": "animal",
+          "category": "どうぶつ",
+          "example": "うさぎ"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv1_008",
+          "category": "えをかくときに使うもの",
+          "example": "クレヨン"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv1_001",
+          "category": "ペット",
+          "example": "いぬ"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv1_003",
+          "category": "たべるときに使うもの",
+          "example": "おはし"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv1_006",
+          "category": "おまつりにあるもの",
+          "example": "わたあめ"
         }
       ],
       "page": 7

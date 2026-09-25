@@ -27,7 +27,7 @@ HALVES = [
     {"heading_cx": 59.0, "label_x": 19.0, "sq_x0": 31.0},
     {"heading_cx": 150.0, "label_x": 109.0, "sq_x0": 121.0},
 ]
-MORA_ROWS = [2, 3, 4, 5]
+MORA_ROWS = [2, 3, 4, 5]   # 既定の行。item の `moras:` で上書きできる（例: Lv1 は [2, 3, 4]）
 SQ = 14.0
 ROW_STEP = 30.0
 SMALL = set("ゃゅょャュョぁぃぅぇぉァィゥェォ")
@@ -51,7 +51,7 @@ def _draw_problem(c, ctx, half, top, item, answers):
                 size=12, font=layout.BOLD, align="c")
 
     rows_top = top + 12
-    for i, mora in enumerate(MORA_ROWS):
+    for i, mora in enumerate(item.get("moras") or MORA_ROWS):
         ry = rows_top + i * ROW_STEP
         layout.text(c, half["label_x"], ry + SQ / 2, f"{mora}音", size=10,
                     font=layout.REG, align="c", vcenter=True)
@@ -92,6 +92,7 @@ def draw_page(c, ctx, items, lrng, answers=False):
         _draw_problem(c, ctx, half, body_y + 14, item, answers)
         mani["problems"].append({
             "n": n, "id": item["id"], "initial": item["initial"],
+            "moras": item.get("moras") or MORA_ROWS,
             "answers": item.get("answers", {}),
         })
     return mani

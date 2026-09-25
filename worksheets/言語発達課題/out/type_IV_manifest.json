@@ -12,15 +12,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv2_030",
-          "center": "畑",
-          "hint": "やさい"
+          "id": "iv_lv2_022",
+          "center": "クリスマス",
+          "hint": "プレゼント"
         },
         {
           "n": 2,
-          "id": "iv_lv3_011",
-          "center": "平和",
-          "hint": "争わない"
+          "id": "fast",
+          "center": "はやいもの",
+          "hint": "新幹線"
         }
       ],
       "page": 1
@@ -30,15 +30,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv2_010",
-          "center": "朝ごはん",
-          "hint": "パン"
+          "id": "cooking",
+          "center": "りょうり",
+          "hint": "ほうちょう"
         },
         {
           "n": 2,
-          "id": "park",
-          "center": "公園",
-          "hint": "ブランコ"
+          "id": "soft",
+          "center": "やわらかいもの",
+          "hint": "わたあめ"
         }
       ],
       "page": 2

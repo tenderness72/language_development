@@ -31,6 +31,18 @@ items:
   - {id: shopping, center: かいもの, hint: おかね, level: 2}
   - {id: cooking, center: りょうり, hint: ほうちょう, level: 2}
 
+  # ---- 追加 Lv1（身近な具体物・季節。2026-09-25 追加・要確認） ----
+  - {id: iv_lv1_001, center: 秋, hint: おちば, level: 1}
+  - {id: iv_lv1_002, center: いぬ, hint: しっぽ, level: 1}
+  - {id: iv_lv1_003, center: ねこ, hint: ひげ, level: 1}
+  - {id: iv_lv1_004, center: くるま, hint: タイヤ, level: 1}
+  - {id: iv_lv1_005, center: でんしゃ, hint: せんろ, level: 1}
+  - {id: iv_lv1_006, center: 花, hint: ちょうちょ, level: 1}
+  - {id: iv_lv1_007, center: 雪, hint: ゆきだるま, level: 1}
+  - {id: iv_lv1_008, center: おべんとう, hint: おにぎり, level: 1}
+  - {id: iv_lv1_009, center: おかし, hint: チョコレート, level: 1}
+  - {id: iv_lv1_010, center: おもちゃ, hint: つみき, level: 1}
+
   # ---- 追加 Lv2（中頻度の具体物・行事・場所） ----
   - {id: iv_lv2_003, center: 給食, hint: ごはん, level: 2}
   - {id: iv_lv2_004, center: 運動会, hint: かけっこ, level: 2}

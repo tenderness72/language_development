@@ -49,6 +49,14 @@ def check_item(type_key, item):
     elif type_key == "VII":
         if not item.get("initial"):
             return f"[VII:{item['id']}] initial（語頭音）が必要"
+        from .templates.t7_mora import MORA_ROWS, split_mora
+        rows = item.get("moras") or MORA_ROWS
+        for k, words in (item.get("answers") or {}).items():
+            if int(k) not in rows:
+                return f"[VII:{item['id']}] answers の {k}音 が moras {rows} にない"
+            for w in words:
+                if not w.startswith(item["initial"]) or len(split_mora(w)) != int(k):
+                    return f"[VII:{item['id']}] 解答例 '{w}' が語頭音または{k}音と合わない"
     return None
 
 

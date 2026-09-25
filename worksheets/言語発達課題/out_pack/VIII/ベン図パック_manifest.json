@@ -12,17 +12,17 @@
       "problems": [
         {
           "n": 1,
-          "id": "cold_eat",
-          "left_attr": "つめたいもの",
+          "id": "hard_eat",
+          "left_attr": "かたいもの",
           "right_attr": "食べるもの",
-          "intersection": "つめたくて食べるもの"
+          "intersection": "かたくて食べるもの"
         },
         {
           "n": 2,
-          "id": "soft_eat",
-          "left_attr": "やわらかいもの",
-          "right_attr": "食べるもの",
-          "intersection": "やわらかくて食べるもの"
+          "id": "fast_vehicle",
+          "left_attr": "はやいもの",
+          "right_attr": "のりもの",
+          "intersection": "はやいのりもの"
         }
       ],
       "page": 1
@@ -32,17 +32,17 @@
       "problems": [
         {
           "n": 1,
-          "id": "big_animal",
-          "left_attr": "大きいもの",
-          "right_attr": "どうぶつ",
-          "intersection": "大きいどうぶつ"
+          "id": "square_school",
+          "left_attr": "四角いもの",
+          "right_attr": "学校にあるもの",
+          "intersection": "四角くて学校にあるもの"
         },
         {
           "n": 2,
-          "id": "yellow_fruit",
-          "left_attr": "黄色いもの",
-          "right_attr": "くだもの",
-          "intersection": "黄色いくだもの"
+          "id": "long_animal",
+          "left_attr": "長いもの",
+          "right_attr": "どうぶつ",
+          "intersection": "長いどうぶつ"
         }
       ],
       "page": 2
@@ -52,30 +52,10 @@
       "problems": [
         {
           "n": 1,
-          "id": "shine_sky",
-          "left_attr": "光るもの",
-          "right_attr": "空にあるもの",
-          "intersection": "光って空にあるもの"
-        },
-        {
-          "n": 2,
-          "id": "square_home",
-          "left_attr": "四角いもの",
-          "right_attr": "家にあるもの",
-          "intersection": "四角くて家にあるもの"
-        }
-      ],
-      "page": 3
-    },
-    {
-      "type": "VIII",
-      "problems": [
-        {
-          "n": 1,
-          "id": "white_eat",
-          "left_attr": "白いもの",
-          "right_attr": "食べるもの",
-          "intersection": "白くて食べるもの"
+          "id": "hot_drink",
+          "left_attr": "あついもの",
+          "right_attr": "飲みもの",
+          "intersection": "あつい飲みもの"
         },
         {
           "n": 2,
@@ -85,6 +65,26 @@
           "intersection": "ふわふわのどうぶつ"
         }
       ],
+      "page": 3
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "square_home",
+          "left_attr": "四角いもの",
+          "right_attr": "家にあるもの",
+          "intersection": "四角くて家にあるもの"
+        },
+        {
+          "n": 2,
+          "id": "sound_toy",
+          "left_attr": "音が出るもの",
+          "right_attr": "おもちゃ",
+          "intersection": "音が出るおもちゃ"
+        }
+      ],
       "page": 4
     },
     {
@@ -92,17 +92,17 @@
       "problems": [
         {
           "n": 1,
-          "id": "round_school",
-          "left_attr": "丸いもの",
-          "right_attr": "学校にあるもの",
-          "intersection": "丸くて学校にあるもの"
+          "id": "white_animal",
+          "left_attr": "白いもの",
+          "right_attr": "どうぶつ",
+          "intersection": "白いどうぶつ"
         },
         {
           "n": 2,
-          "id": "red_eat",
-          "left_attr": "赤いもの",
-          "right_attr": "食べるもの",
-          "intersection": "赤くて食べるもの"
+          "id": "long_tool",
+          "left_attr": "長いもの",
+          "right_attr": "道具",
+          "intersection": "長い道具"
         }
       ],
       "page": 5
@@ -112,17 +112,17 @@
       "problems": [
         {
           "n": 1,
-          "id": "long_tool",
-          "left_attr": "長いもの",
-          "right_attr": "道具",
-          "intersection": "長い道具"
-        },
-        {
-          "n": 2,
           "id": "hard_kitchen",
           "left_attr": "かたいもの",
           "right_attr": "台所にあるもの",
           "intersection": "かたくて台所にあるもの"
+        },
+        {
+          "n": 2,
+          "id": "soft_eat",
+          "left_attr": "やわらかいもの",
+          "right_attr": "食べるもの",
+          "intersection": "やわらかくて食べるもの"
         }
       ],
       "page": 6

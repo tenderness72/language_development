@@ -99,7 +99,8 @@ python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
 
 - 閉じた課題（Ⅰ・Ⅱ・Ⅲ）: ダミー語の近接度（遠い=易 / 近い=難）。
 - 自由記述（Ⅳ・Ⅴ・Ⅵ）: 中心語・カテゴリーの抽象度（具体物=易 / 抽象=難）。
-- Ⅶ: モーラ数の上限。
+- Ⅶ: Lv1 は直音（小さい字・っ・ー・ん・のばす音を含まない）の語例だけで、マスは2〜4音（item の `moras:`）。
+  Lv2・3 は2〜5音で、特殊音節を含む語例もある。解答例の音数と語頭音は生成時に自動検査。
 
 各itemの `level:` で水準をタグ付けしています。
 
@@ -120,7 +121,7 @@ python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
 - **Ⅳ** `center` ／ `hint`
 - **Ⅴ** `start` ／ `slots`
 - **Ⅵ** `category` ／ `example` ／ `lines`
-- **Ⅶ** `initial` ／ `answers{2,3,4,5: [語例]}`（解答面用）
+- **Ⅶ** `initial` ／ `answers{2,3,4,5: [語例]}`（解答面用）／ `moras`（マスの音数。省略時 `[2, 3, 4, 5]`、Lv1 は `[2, 3, 4]`）
 - **Ⅷ** `left_attr` ／ `right_attr` ／ `intersection`
 
 `--count` 枚（＝`2×count` 問）に対し、使用するレベルの（重複を除いた）item数が

@@ -27,6 +27,16 @@ items:
   - {id: weather, category: お天気, example: はれ, lines: 9, level: 3}
   - {id: body, category: からだのぶぶん, example: て, lines: 10, level: 2}
 
+  # ---- 追加 Lv1（生活の場面で使う具体的なカテゴリー。2026-09-25 追加・要確認） ----
+  - {id: vi_lv1_001, category: ペット, example: いぬ, lines: 10, level: 1}
+  - {id: vi_lv1_002, category: ねるときに使うもの, example: まくら, lines: 10, level: 1}
+  - {id: vi_lv1_003, category: たべるときに使うもの, example: おはし, lines: 10, level: 1}
+  - {id: vi_lv1_004, category: あさごはんにたべるもの, example: パン, lines: 10, level: 1}
+  - {id: vi_lv1_005, category: おべんとうにはいっているもの, example: たまごやき, lines: 10, level: 1}
+  - {id: vi_lv1_006, category: おまつりにあるもの, example: わたあめ, lines: 10, level: 1}
+  - {id: vi_lv1_007, category: どうぶつえんにいるどうぶつ, example: ぞう, lines: 10, level: 1}
+  - {id: vi_lv1_008, category: えをかくときに使うもの, example: クレヨン, lines: 10, level: 1}
+
   # ---- 追加 Lv2（元データの2カテゴリーを a/b に分割） ----
   - {id: vi_lv2_005a, category: 家の中にあるもの, example: テレビ, lines: 10, level: 2}
   - {id: vi_lv2_005b, category: 外にあるもの, example: 木, lines: 10, level: 2}

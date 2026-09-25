@@ -163,11 +163,58 @@ SECTIONS.append({
                "after": f"カテゴリー：{it['category']}　例：{it['example']}", "ask": ""} for it in new_vi],
 })
 
+# ---- 第2回：不足レベルの補充（先頭に表示） ----
+def added(d, prefix_or_ids):
+    return [it for k, it in d.items() if (k in prefix_or_ids if isinstance(prefix_or_ids, set) else k.startswith(prefix_or_ids))]
+
+
+ROUND2 = [
+    {
+        "key": "r2-iv", "title": "追加：Ⅳ 放射状連想 Lv1（10問）",
+        "lead": "Lv1 パック（9枚＝18問）に足りなかった分です。身近な具体物・季節から選びました。",
+        "items": [{"id": "r2-" + it["id"].replace("_", "-"), "label": it["center"], "before": "",
+                   "after": f"中心語：{it['center']}　ヒント：{it['hint']}", "ask": ""} for it in added(IV, "iv_lv1_")],
+    },
+    {
+        "key": "r2-vi", "title": "追加：Ⅵ カテゴリー流暢性 Lv1（8問）",
+        "lead": "Lv1 パック（7枚＝14問）に足りなかった分です。生活の場面で使う、具体的なカテゴリーにしました。",
+        "items": [{"id": "r2-" + it["id"].replace("_", "-"), "label": it["category"], "before": "",
+                   "after": f"カテゴリー：{it['category']}　例：{it['example']}", "ask": ""} for it in added(VI, "vi_lv1_")],
+    },
+    {
+        "key": "r2-vii", "title": "追加：Ⅶ 語頭音＋モーラ数 Lv1（11問）",
+        "lead": "音韻パック（Lv1）には該当する問題がありませんでした。Lv1 は直音の語だけで作れる語頭音にし、マスを2〜4音にしています（Lv2・3 は従来どおり2〜5音）。語例は解答PDFに出る「答えの例」です。",
+        "items": [{"id": "r2-" + it["id"].replace("_", "-"), "label": "「" + it["initial"] + "」から始まることば", "before": "",
+                   "after": "　".join(f"{k}音：{'・'.join(v)}" for k, v in it["answers"].items()),
+                   "ask": "直音だけの語として適切か、年少の子どもになじみのある語か"} for it in added(VII, "_lv1") or
+                  [x for k, x in VII.items() if k.endswith("_lv1")]],
+    },
+    {
+        "key": "r2-iii", "title": "追加：Ⅲ ペア対応づけ Lv1（4問）",
+        "lead": "ペアパック（Lv1、5枚＝10問）に足りなかった分です。意味の上でも1対1に決まる組にしました。",
+        "items": [{"id": "r2-iii-" + it["id"].replace("_", "-"), "label": it["relation"], "before": "",
+                   "after": pairs(it), "ask": "1対1で決まるか、Lv1として妥当か"}
+                  for it in added(III, {"body_wear", "opposite_adj", "worker_place", "animal_move"})],
+    },
+    {
+        "key": "r2-viii", "title": "追加：Ⅷ 属性交差 Lv2（6問）",
+        "lead": "ベン図パック（Lv2、6枚＝12問）に足りなかった分です。左だけ・右だけ・両方の3領域すべてに答えがある組にしました。",
+        "items": [{"id": "r2-viii-" + it["id"].replace("_", "-"), "label": it["intersection"], "before": "",
+                   "after": f"{it['left_attr']} ／ {it['right_attr']}（両方：{it['intersection']}）",
+                   "ask": "3つの領域すべてに答えがあるか"}
+                  for it in added(VIII, {"hard_eat", "square_school", "long_animal", "white_animal", "hot_drink", "sound_toy"})],
+    },
+]
+for sec in SECTIONS:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND2
+
 FIGURES = [
     ("Ⅳ Lv3（信頼・丸いもの）", page_png("out/IV/放射状連想 Lv3.pdf", 9)),
     ("Ⅲ ペアパック（体→はたらき・生き物→こども）", page_png("out/III/ペアパック.pdf", 4)),
     ("Ⅰ 連想チェーン（くも・風）", page_png("out/type_I.pdf", 1)),
     ("Ⅶ 解答（マスの書き方と注記）", page_png("out/type_VII_answers.pdf", 1)),
+    ("Ⅶ Lv1 解答（直音・2〜4音）", page_png("out/VII/音韻パック_answers.pdf", 1)),
 ]
 
 data_json = json.dumps(SECTIONS, ensure_ascii=False).replace("</", "<\\/")
