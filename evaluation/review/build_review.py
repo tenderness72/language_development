@@ -209,6 +209,69 @@ for sec in SECTIONS:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND2
 
+# ---- 第3回：Ⅵ の課題の型とレベルの整理（先頭に表示） ----
+def vi(i):
+    return VI[i]
+
+
+ROUND3 = [
+    {
+        "key": "r3-vi-remove", "title": "Ⅵ から外したもの（課題の型が違う・語を探す課題にならない）",
+        "lead": "対の語を作る課題はⅢへ移し、成員が少数に決まっている閉じた集合は削除しました。",
+        "items": [
+            {"id": "r3-vi-pair-tasks", "label": "反対の意味のことば／似た意味のことば（Lv3）",
+             "before": "Ⅵ Lv3 のカテゴリーとして出題（1行に1語）",
+             "after": "Ⅵ から削除し、Ⅲ ペア対応づけに「反対のことば（うごき）」Lv2・「似た意味のことば」Lv3 を新設",
+             "ask": "仲間集めではなく対の語の課題として扱う判断でよいか"},
+            {"id": "r3-vi-closed-sets", "label": "季節（例：夏）／月（例：1月）（Lv2）",
+             "before": "Ⅵ Lv2 のカテゴリーとして出題", "after": "削除（成員が4つ・12個に決まっていて、語を探す課題にならない）",
+             "ask": "削除でよいか"},
+        ],
+    },
+    {
+        "key": "r3-vi-relevel", "title": "Ⅵ のレベル変更",
+        "lead": "国立国語研究所（1981）の連想語彙の集計と、課題の性質に合わせて付け直しました。",
+        "items": [
+            {"id": "r3-vi-sounds", "label": "動物の鳴き声", "before": "Lv2", "after": "Lv1（擬音語で易しい）", "ask": ""},
+            {"id": "r3-vi-furniture", "label": "家具", "before": "Lv2",
+             "after": "Lv3（上位語として難しい。連想語彙表の集計で小1でも約半数が無反応）", "ask": ""},
+            {"id": "r3-vi-action-words", "label": "動作を表すことば", "before": "Lv2",
+             "after": "Lv3（ことばの種類そのものを考えるメタ言語的な課題）", "ask": ""},
+            {"id": "r3-vi-size-words", "label": "大きさを表すことば", "before": "Lv2", "after": "Lv3（同上）", "ask": ""},
+        ],
+    },
+    {
+        "key": "r3-vi-adult", "title": "Ⅵ Lv3 の大人向けの語の差し替え",
+        "lead": "子どもの生活から離れたカテゴリー・例を、子どもが考えられるものに替えました。",
+        "items": [
+            {"id": "r3-vi-energy", "label": "カテゴリーの差し替え①", "before": "エネルギーに関係することば（例：太陽）",
+             "after": f"{vi('vi_lv3_009b')['category']}（例：{vi('vi_lv3_009b')['example']}）", "ask": "Lv3 として妥当か"},
+            {"id": "r3-vi-social-rule", "label": "カテゴリーの差し替え②", "before": "社会のルールに関係することば（例：法律）",
+             "after": f"{vi('vi_lv3_017a')['category']}（例：{vi('vi_lv3_017a')['example']}）",
+             "ask": "「ルールがあるもの」「約束が必要なもの」「マナー」と重なっていたため差し替え。Lv3 として妥当か"},
+            {"id": "r3-vi-salary", "label": "例の差し替え", "before": "働くことに関係することば（例：給料）／お金に関係することば（例：給料）",
+             "after": f"働くことに関係することば（例：{vi('vi_lv3_011a')['example']}）／お金に関係することば（例：{vi('vi_lv3_016a')['example']}）",
+             "ask": "例として適切か"},
+        ],
+    },
+    {
+        "key": "r3-vi-new", "title": "追加：Ⅵ Lv2（6問）",
+        "lead": "Lv2 から外した分の補充です。身近な場所・料理などの具体的なカテゴリーにしました。",
+        "items": [{"id": "r3-" + it["id"].replace("_", "-"), "label": it["category"], "before": "",
+                   "after": f"カテゴリー：{it['category']}　例：{it['example']}", "ask": ""}
+                  for k, it in VI.items() if k in {f"vi_lv2_{n:03d}" for n in range(37, 43)}],
+    },
+    {
+        "key": "r3-iii-new", "title": "追加：Ⅲ ペア対応づけ（Ⅵ から移した対の語の課題）",
+        "lead": "意味の上でも1対1に決まる組にしました。",
+        "items": [{"id": "r3-iii-" + k.replace("_", "-"), "label": III[k]["relation"] + f"（Lv{III[k]['level']}）", "before": "",
+                   "after": pairs(III[k]), "ask": "1対1で決まるか、レベルは妥当か"} for k in ("opposite_verb", "synonym")],
+    },
+]
+for sec in ROUND2:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND3
+
 FIGURES = [
     ("Ⅳ Lv3（信頼・丸いもの）", page_png("out/IV/放射状連想 Lv3.pdf", 9)),
     ("Ⅲ ペアパック（体→はたらき・生き物→こども）", page_png("out/III/ペアパック.pdf", 4)),

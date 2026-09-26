@@ -12,9 +12,9 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_028",
-          "category": "電気で動くもの",
-          "example": "せんぷうき"
+          "id": "vi_lv2_032",
+          "category": "空を飛ぶもの",
+          "example": "ひこうき"
         },
         {
           "n": 2,
@@ -30,15 +30,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_012b",
-          "category": "月",
-          "example": "1月"
+          "id": "vi_lv2_014b",
+          "category": "動作を表すことば",
+          "example": "走る"
         },
         {
           "n": 2,
-          "id": "vi_lv3_003a",
-          "category": "季節のイベント",
-          "example": "お正月"
+          "id": "vi_lv2_008b",
+          "category": "顔の部分",
+          "example": "目"
         }
       ],
       "page": 2
