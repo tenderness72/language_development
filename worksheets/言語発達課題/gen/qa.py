@@ -54,9 +54,27 @@ def check_item(type_key, item):
         for k, words in (item.get("answers") or {}).items():
             if int(k) not in rows:
                 return f"[VII:{item['id']}] answers の {k}音 が moras {rows} にない"
+            fx = {int(i): ch for i, ch in ((item.get("fixed") or {}).get(int(k)) or {}).items()}
             for w in words:
-                if not w.startswith(item["initial"]) or len(split_mora(w)) != int(k):
+                units = split_mora(w)
+                if not w.startswith(item["initial"]) or len(units) != int(k):
                     return f"[VII:{item['id']}] 解答例 '{w}' が語頭音または{k}音と合わない"
+                if units[0] != item["initial"]:
+                    return f"[VII:{item['id']}] 解答例 '{w}' の1マス目が語頭音「{item['initial']}」と合わない"
+                for i, ch in fx.items():
+                    if not (0 < i < int(k)) or units[i] != ch:
+                        return f"[VII:{item['id']}] 解答例 '{w}' の{i + 1}マス目が書いておく字「{ch}」と合わない"
+                lv = int(item.get("level", 1))
+                if lv == 1 and any(ch in w for ch in "ゃゅょぁぃぅぇぉっんー"):
+                    return f"[VII:{item['id']}] Lv1 の解答例 '{w}' に特殊音節がある"
+                if lv == 2 and any(ch in w for ch in "ゃゅょぁぃぅぇぉっ"):
+                    return f"[VII:{item['id']}] Lv2 の解答例 '{w}' に拗音・促音がある"
+        lv = int(item.get("level", 1))
+        fixed_chars = {ch for row in (item.get("fixed") or {}).values() for ch in row.values()}
+        if lv == 2 and not fixed_chars:
+            return f"[VII:{item['id']}] Lv2 は「ん」または長音の字を書いておく行（fixed）が必要"
+        if lv == 3 and len(split_mora(item["initial"])[0]) < 2 and "っ" not in fixed_chars:
+            return f"[VII:{item['id']}] Lv3 は語頭音が拗音か、「っ」を書いておく行が必要"
     return None
 
 

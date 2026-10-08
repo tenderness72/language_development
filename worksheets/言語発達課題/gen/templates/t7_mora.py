@@ -13,11 +13,19 @@ DISPLAY_TITLE = "決めた音からはじまることば"
 INSTRUCTION = "決められた音から始まり、マスの数に合うことばを考えて書きましょう。"
 # マスの書き方（1マス＝1拍）。拗音は2文字で1拍なので前の字と同じマスに入れる。
 # 促音・長音・撥音はそれぞれ1拍＝1マス（原, 2001 の拍の定義に準拠）。
-RULE_NOTE = [
-    "【マスの書き方】1マスに1つの音を書きます。",
-    "・小さい「ゃ・ゅ・ょ」は、前の字といっしょに1マスに書きます（例：「きゃ」で1マス）。",
-    "・小さい「っ」、のばす音、「ん」は、それぞれ1マスです（例：「らっぱ」「ケーキ」「みかん」はどれも3マス）。",
-]
+# レベル別の【マスの書き方】（ページ内の最も高いレベルに合わせて表示）
+_FIXED_NOTE = "・はじめから書いてある字は、そのまま使ってことばを作ります。"
+RULE_NOTES = {
+    1: ["【マスの書き方】1マスに1つの音を書きます。"],
+    2: ["【マスの書き方】1マスに1つの音を書きます。",
+        "・「ん」と、のばす音（「くうき」の「う」、「ケーキ」の「ー」）は、それぞれ1マスです。",
+        _FIXED_NOTE],
+    3: ["【マスの書き方】1マスに1つの音を書きます。",
+        "・小さい「ゃ・ゅ・ょ」は、前の字といっしょに1マスに書きます（例：「しゃ」で1マス）。",
+        "・小さい「っ」、「ん」、のばす音は、それぞれ1マスです（例：「らっぱ」は3マス）。",
+        _FIXED_NOTE],
+}
+RULE_NOTE = RULE_NOTES[3]
 ANSWER_NOTE = "※解答は答えの例です。始まりの音とマスの数が合っていれば、ほかのことばも正解です。"
 NOTE_Y = 205.0
 HAS_ANSWER = True
@@ -58,23 +66,28 @@ def _draw_problem(c, ctx, half, top, item, answers):
         for j in range(mora):
             cx = half["sq_x0"] + j * SQ
             layout.box(c, cx, ry, SQ, SQ, line=0.9)
-        # 先頭マスに語頭音
-        layout.text_fit(c, half["sq_x0"] + SQ / 2, ry + SQ / 2, initial, SQ - 4,
-                        max_size=13, font=layout.BOLD, ctx=ctx, where="VII.initial")
+        # 先頭マスに語頭音、fixed の位置に特殊音節（あらかじめ書いておく字）
+        printed = {0: initial}
+        printed.update({int(k): v for k, v in (item.get("fixed") or {}).get(mora, {}).items()})
+        for j, ch in printed.items():
+            layout.text_fit(c, half["sq_x0"] + j * SQ + SQ / 2, ry + SQ / 2, ch, SQ - 4,
+                            max_size=13, font=layout.BOLD, ctx=ctx, where="VII.printed")
         if answers:
             examples = ans.get(mora) or ans.get(str(mora)) or []
             if examples:
                 units = split_mora(examples[0])[:mora]
                 for j, u in enumerate(units):
+                    if j in printed:
+                        continue
                     cx = half["sq_x0"] + j * SQ
                     layout.text_fit(c, cx + SQ / 2, ry + SQ / 2, u, SQ - 3,
                                     max_size=12, font=layout.REG,
                                     ctx=ctx, where="VII.ans")
 
 
-def _draw_notes(c, answers):
+def _draw_notes(c, answers, level=3):
     y = NOTE_Y
-    for i, line in enumerate(RULE_NOTE):
+    for i, line in enumerate(RULE_NOTES.get(level, RULE_NOTE)):
         layout.text(c, layout.CONTENT_X, y, line, size=10,
                     font=layout.BOLD if i == 0 else layout.REG, align="l")
         y += 6.0
@@ -85,7 +98,7 @@ def _draw_notes(c, answers):
 
 def draw_page(c, ctx, items, lrng, answers=False):
     body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
-    _draw_notes(c, answers)
+    _draw_notes(c, answers, max(int(it.get("level", 1)) for it in items))
     mani = {"type": KEY, "problems": []}
     for n, (item, half) in enumerate(zip(items, HALVES), start=1):
         layout.problem_label(c, half["label_x"] - 2, body_y + 2, n)
@@ -93,6 +106,7 @@ def draw_page(c, ctx, items, lrng, answers=False):
         mani["problems"].append({
             "n": n, "id": item["id"], "initial": item["initial"],
             "moras": item.get("moras") or MORA_ROWS,
+            "fixed": item.get("fixed") or {},
             "answers": item.get("answers", {}),
         })
     return mani

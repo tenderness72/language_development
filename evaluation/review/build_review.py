@@ -305,12 +305,55 @@ for sec in ROUND3:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND4
 
+# ---- 第5回：Ⅶ Lv2・Lv3 を特殊音節で段階化（先頭に表示） ----
+def _vii_after(it):
+    return "　".join(f"{k}音：{'・'.join(v)}" for k, v in it["answers"].items())
+
+
+_r5_lv2 = [it for it in VII.values() if it["level"] == 2]
+_r5_lv3 = [it for it in VII.values() if it["level"] == 3]
+ROUND5 = [
+    {
+        "key": "r5-vii-design", "title": "Ⅶ レベルの作り方（特殊音節で段階化）",
+        "lead": "解答例を替えるだけでは子どもが取り組む課題が変わらないため、マスの中に特殊音節を1つ書いておき、その音を含むことばを考える形にしました。",
+        "items": [
+            {"id": "r5-vii-levels", "label": "レベルの定義",
+             "before": "Lv2・Lv3 とも2〜5音のマスで、解答例に拗音・長音・撥音が段階なく混在（例：はくちょう、やきゅう、まんが）",
+             "after": ("Lv1：直音の語だけ（2〜4音）\nLv2：撥音・長音。1行に「ん」または長音の字（う・い）を書いておく。拗音・促音の語は使わない\n"
+                       "Lv3：拗音・促音。語頭音が拗音（しゃ・ちょ・きゅ など。1マスに2文字）、または1行に「っ」を書いておく"),
+             "ask": "段階の順（直音 → 撥音・長音 → 拗音・促音）と、マスに字を書いておく形でよいか"},
+            {"id": "r5-vii-notes", "label": "【マスの書き方】をレベル別に",
+             "before": "全レベル同じ説明（小さい字・っ・のばす音・ん をすべて説明）",
+             "after": ("Lv1：1マスに1つの音を書きます。\nLv2：＋「ん」と、のばす音は、それぞれ1マス。はじめから書いてある字は、そのまま使う。\n"
+                       "Lv3：＋小さい「ゃゅょ」は前の字と1マス。小さい「っ」「ん」のばす音は、それぞれ1マス。はじめから書いてある字は、そのまま使う。"),
+             "ask": "子どもに伝わる言い方か"},
+        ],
+    },
+    {
+        "key": "r5-vii-lv2", "title": "Ⅶ Lv2（撥音・長音）14問",
+        "lead": "既存の14の語頭音を作り直しました。マスに書いておく字に合う語が実際にあるか、なじみのある語かを見てください。",
+        "items": [{"id": "r5-vii-" + it["id"].replace("_", "-"), "label": f"「{it['initial']}」から始まることば",
+                   "before": "", "after": _vii_after(it), "ask": ""} for it in _r5_lv2],
+    },
+    {
+        "key": "r5-vii-lv3", "title": "Ⅶ Lv3（拗音・促音）12問",
+        "lead": "新しく作りました。拗音の語頭音7つ（しゃ・ちょ・きゅ・じゃ・ちゃ・しょ・きょ）と、「っ」を書いておく5つ（ら・こ・し・せ・そ）です。語が少ない語頭音はマスの行数を減らしています。",
+        "items": [{"id": "r5-vii-" + it["id"].replace("_", "-"), "label": f"「{it['initial']}」から始まることば",
+                   "before": "", "after": _vii_after(it), "ask": ""} for it in _r5_lv3],
+    },
+]
+for sec in ROUND4:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND5
+
 FIGURES = [
     ("Ⅳ Lv3（抽象語・感情語）", page_png("out/IV/放射状連想 Lv3.pdf", 1)),
     ("Ⅲ ペアパック（体→はたらき・生き物→こども）", page_png("out/III/ペアパック.pdf", 4)),
     ("Ⅰ 連想チェーン（くも・風）", page_png("out/type_I.pdf", 1)),
     ("Ⅶ 解答（マスの書き方と注記）", page_png("out/type_VII_answers.pdf", 1)),
     ("Ⅶ Lv1 解答（直音・2〜4音）", page_png("out/VII/音韻パック_answers.pdf", 1)),
+    ("Ⅶ Lv2 問題（ん・長音を書いておく行）", page_png("out/VII/音韻 Lv2 見本（撥音・長音）.pdf", 1)),
+    ("Ⅶ Lv3 問題（拗音の語頭音・っ を書いておく行）", page_png("out/VII/音韻 Lv3 見本（拗音・促音）.pdf", 1)),
 ]
 
 # ---- 課題の説明（どの課題の、どんな問題の中の表現か） ----
@@ -356,7 +399,9 @@ def sc_i(it):
 
 def sc_vii(it):
     rows = it.get("moras") or [2, 3, 4, 5]
-    return f"「{it['initial']}」から始まることば。{rows[0]}〜{rows[-1]}音のマス目の先頭に「{it['initial']}」（Lv{it['level']}）。"
+    fx = "".join(f"{k}音の行は{i + 1}マス目に「{ch}」を書いておく。" for k, r in (it.get("fixed") or {}).items() for i, ch in r.items())
+    return (f"「{it['initial']}」から始まることば。{'・'.join(map(str, rows))}音のマス目の先頭に「{it['initial']}」。"
+            + fx + f"（Lv{it['level']}）")
 
 
 def sc_viii(it):
@@ -369,7 +414,8 @@ _SC = {"I": (I, sc_i), "III": (III, sc_iii), "IV": (IV, sc_iv), "VI": (VI, sc_vi
 SEC_TASK = {"safety": ["IV"], "pairs": ["III"], "chain": ["I"], "mora": ["VII"], "venn": ["VIII"], "removed": ["IV", "VI"],
             "new-iv": ["IV"], "new-vi": ["VI"], "r2-iv": ["IV"], "r2-vi": ["VI"], "r2-vii": ["VII"], "r2-iii": ["III"],
             "r2-viii": ["VIII"], "r3-vi-remove": ["VI", "III"], "r3-vi-relevel": ["VI"], "r3-vi-adult": ["VI"],
-            "r3-vi-new": ["VI"], "r3-iii-new": ["III"], "r4-iv-move": ["IV"], "r4-iv-hint": ["IV"], "r4-iv-new": ["IV"]}
+            "r3-vi-new": ["VI"], "r3-iii-new": ["III"], "r4-iv-move": ["IV"], "r4-iv-hint": ["IV"], "r4-iv-new": ["IV"],
+            "r5-vii-design": ["VII"], "r5-vii-lv2": ["VII"], "r5-vii-lv3": ["VII"]}
 MANUAL = {
     "iv-hint-trust": sc_iv(_IVc["信頼"]), "iv-hint-relief": sc_iv(_IVc["安心"]),
     "iv-hint-regret": sc_iv(_IVc["後悔"]), "iv-hint-patience": sc_iv(_IVc["我慢"]),
@@ -392,12 +438,14 @@ MANUAL = {
     "r3-vi-salary": sc_vi(VI["vi_lv3_011a"]) + "\n" + sc_vi(VI["vi_lv3_016a"]),
     "r4-iv-move": "Lv2 のパックで、中央の円に「赤いもの」などが出る（例：" + sc_iv(_IVc["赤いもの"]) + "）",
     "r4-iv-hint-regret": sc_iv(_IVc["後悔"]),
+    "r5-vii-levels": "Ⅶ の各問題のマス目。例：Lv2「か」の3音の行は「か□ん」（→かばん）、Lv3「ら」の3音の行は「ら っ□」（→らっぱ）。",
+    "r5-vii-notes": "Ⅶ の各ページ下部の【マスの書き方】。ページ内でいちばん高いレベルの説明を表示する。",
 }
 
 
 def _lookup(item_id, task):
     d, fn = _SC[task]
-    for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r2-", "r3-", "r4-"):
+    for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r5-vii-", "r2-", "r3-", "r4-"):
         if item_id.startswith(pre):
             key = item_id[len(pre):].replace("-", "_")
             if key in d:
