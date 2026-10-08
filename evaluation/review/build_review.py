@@ -272,8 +272,41 @@ for sec in ROUND2:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND3
 
+# ---- 第4回：Ⅳ Lv3 の整理（先頭に表示） ----
+_hint_changes = [("友だち", "一緒に遊ぶ"), ("挑戦", "新しいこと"), ("平和", "争わない"), ("信頼", "約束を守る"),
+                 ("我慢", "順番を待つ"), ("思いやり", "気にかける"), ("成長", "練習"), ("責任", "約束")]
+_iv_by_center = {it["center"]: it for it in IV.values()}
+ROUND4 = [
+    {
+        "key": "r4-iv-move", "title": "Ⅳ 属性で集める語を Lv3 → Lv2 へ",
+        "lead": "Lv3 に混ざっていた「赤いもの」などの属性で集める語を、Ⅵ（赤いもの・冷たいもの は Lv2）と同じ扱いにして Lv2 へ移しました。Lv3 は抽象語・感情語だけになります。",
+        "items": [{"id": "r4-iv-move", "label": "Lv2 へ移した6問", "before": "Lv3",
+                   "after": "Lv2：赤いもの・丸いもの・あたたかいもの・音がするもの・はやいもの・やわらかいもの",
+                   "ask": "属性で集める語を Lv2 とする判断でよいか"}],
+    },
+    {
+        "key": "r4-iv-hint", "title": "Ⅳ Lv3 ヒントを1語に（重複も解消）",
+        "lead": "文になっていたヒントを1語にしました。「練習」「約束」が2つの中心語で重なっていたので、片方を替えています。",
+        "items": [{"id": "r4-iv-hint-" + str(n), "label": c, "before": old, "after": _iv_by_center[c]["hint"], "ask": ""}
+                  for n, (c, old) in enumerate(_hint_changes)]
+                 + [{"id": "r4-iv-hint-regret", "label": "後悔（変更せず）", "before": "次はこうしたい",
+                     "after": "次はこうしたい（1語の候補「はんせい」は自責につながりうるため、前回承認の言い方を残しました）",
+                     "ask": "このまま残すか、1語（例：はんせい）にするか"}],
+    },
+    {
+        "key": "r4-iv-new", "title": "追加：Ⅳ Lv3（6問）",
+        "lead": "Lv3 パック（13枚＝26問）を Lv3 の語だけで作るための補充です。前向きな抽象語を選びました。",
+        "items": [{"id": "r4-" + k.replace("_", "-"), "label": it["center"], "before": "",
+                   "after": f"中心語：{it['center']}　ヒント：{it['hint']}", "ask": ""}
+                  for k, it in IV.items() if k in {f"iv_lv3_{n:03d}" for n in range(21, 27)}],
+    },
+]
+for sec in ROUND3:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND4
+
 FIGURES = [
-    ("Ⅳ Lv3（信頼・丸いもの）", page_png("out/IV/放射状連想 Lv3.pdf", 9)),
+    ("Ⅳ Lv3（抽象語・感情語）", page_png("out/IV/放射状連想 Lv3.pdf", 1)),
     ("Ⅲ ペアパック（体→はたらき・生き物→こども）", page_png("out/III/ペアパック.pdf", 4)),
     ("Ⅰ 連想チェーン（くも・風）", page_png("out/type_I.pdf", 1)),
     ("Ⅶ 解答（マスの書き方と注記）", page_png("out/type_VII_answers.pdf", 1)),

@@ -12,126 +12,18 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv3_015",
-          "center": "夢",
-          "hint": "将来"
+          "id": "iv_lv3_021",
+          "center": "勇気",
+          "hint": "ヒーロー"
         },
         {
           "n": 2,
-          "id": "iv_lv3_006",
-          "center": "成長",
-          "hint": "練習"
+          "id": "iv_lv3_012",
+          "center": "信頼",
+          "hint": "やくそく"
         }
       ],
       "page": 1
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "iv_lv3_014",
-          "center": "我慢",
-          "hint": "順番を待つ"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_007",
-          "center": "友だち",
-          "hint": "一緒に遊ぶ"
-        }
-      ],
-      "page": 2
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "fast",
-          "center": "はやいもの",
-          "hint": "新幹線"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_009",
-          "center": "責任",
-          "hint": "約束"
-        }
-      ],
-      "page": 3
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "warm",
-          "center": "あたたかいもの",
-          "hint": "こたつ"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_004",
-          "center": "安心",
-          "hint": "ほっとする"
-        }
-      ],
-      "page": 4
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "iv_lv3_008",
-          "center": "緊張",
-          "hint": "発表"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_005",
-          "center": "失敗",
-          "hint": "やり直す"
-        }
-      ],
-      "page": 5
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "iv_lv3_003",
-          "center": "別れ",
-          "hint": "卒業"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_017",
-          "center": "変化",
-          "hint": "季節"
-        }
-      ],
-      "page": 6
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "soft",
-          "center": "やわらかいもの",
-          "hint": "わたあめ"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_018",
-          "center": "思いやり",
-          "hint": "気にかける"
-        }
-      ],
-      "page": 7
     },
     {
       "type": "IV",
@@ -144,48 +36,120 @@
         },
         {
           "n": 2,
-          "id": "iv_lv3_001",
-          "center": "自由",
-          "hint": "休み"
+          "id": "iv_lv3_013",
+          "center": "孤独",
+          "hint": "一人"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_005",
+          "center": "失敗",
+          "hint": "やり直す"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_015",
+          "center": "夢",
+          "hint": "将来"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_003",
+          "center": "別れ",
+          "hint": "卒業"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_010",
+          "center": "挑戦",
+          "hint": "はじめて"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_014",
+          "center": "我慢",
+          "hint": "じゅんばん"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_011",
+          "center": "平和",
+          "hint": "なかよし"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_009",
+          "center": "責任",
+          "hint": "とうばん"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_023",
+          "center": "楽しみ",
+          "hint": "えんそく"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_006",
+          "center": "成長",
+          "hint": "しんちょう"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_024",
+          "center": "仲直り",
+          "hint": "あくしゅ"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_026",
+          "center": "想像",
+          "hint": "えほん"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_007",
+          "center": "友だち",
+          "hint": "なかま"
         }
       ],
       "page": 8
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "round",
-          "center": "丸いもの",
-          "hint": "ボール"
-        },
-        {
-          "n": 2,
-          "id": "iv_lv3_012",
-          "center": "信頼",
-          "hint": "約束を守る"
-        }
-      ],
-      "page": 9
-    },
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "iv_lv3_011",
-          "center": "平和",
-          "hint": "争わない"
-        },
-        {
-          "n": 2,
-          "id": "red",
-          "center": "赤いもの",
-          "hint": "トマト"
-        }
-      ],
-      "page": 10
     },
     {
       "type": "IV",
@@ -198,9 +162,45 @@
         },
         {
           "n": 2,
-          "id": "iv_lv3_016",
-          "center": "協力",
-          "hint": "助け合う"
+          "id": "iv_lv3_018",
+          "center": "思いやり",
+          "hint": "やさしさ"
+        }
+      ],
+      "page": 9
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_017",
+          "center": "変化",
+          "hint": "季節"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_001",
+          "center": "自由",
+          "hint": "休み"
+        }
+      ],
+      "page": 10
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv3_008",
+          "center": "緊張",
+          "hint": "発表"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv3_022",
+          "center": "感謝",
+          "hint": "ありがとう"
         }
       ],
       "page": 11
@@ -210,15 +210,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv3_019",
-          "center": "後悔",
-          "hint": "次はこうしたい"
+          "id": "iv_lv3_025",
+          "center": "発見",
+          "hint": "むしめがね"
         },
         {
           "n": 2,
-          "id": "iv_lv3_013",
-          "center": "孤独",
-          "hint": "一人"
+          "id": "iv_lv3_019",
+          "center": "後悔",
+          "hint": "次はこうしたい"
         }
       ],
       "page": 12
@@ -228,15 +228,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "loud",
-          "center": "音がするもの",
-          "hint": "たいこ"
+          "id": "iv_lv3_004",
+          "center": "安心",
+          "hint": "ほっとする"
         },
         {
           "n": 2,
-          "id": "iv_lv3_010",
-          "center": "挑戦",
-          "hint": "新しいこと"
+          "id": "iv_lv3_016",
+          "center": "協力",
+          "hint": "助け合う"
         }
       ],
       "page": 13

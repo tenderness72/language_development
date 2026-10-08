@@ -1,6 +1,8 @@
 # Ⅳ 放射状連想（自由記述）
 # center: 中心語 / hint: ヒントとして1個の丸に書いておく語
 # level: 1=具体物(易) 〜 3=抽象概念(難)
+# Lv2 は場所・行事と「赤いもの」のような属性で集める語、Lv3 は抽象語・感情語だけにする。
+# ヒントは1語にする（文にしない）。同じヒントを複数の中心語で使い回さない。
 # 同じ中心語をレベルをまたいで重複させないこと（generate 時に検査）。
 # Lv3 の感情・社会的な語のヒントは、子どもの安全教育と矛盾しないもの・
 # 家庭環境を前提にしないものを選ぶ（例: 信頼に「秘密を守る」は使わない）。
@@ -20,12 +22,12 @@ items:
   - {id: hospital, center: 病院, hint: 薬, level: 2}
   - {id: train_station, center: 駅, hint: 電車, level: 2}
   - {id: newyear, center: お正月, hint: おもち, level: 2}
-  - {id: red, center: 赤いもの, hint: トマト, level: 3}
-  - {id: round, center: 丸いもの, hint: ボール, level: 3}
-  - {id: warm, center: あたたかいもの, hint: こたつ, level: 3}
-  - {id: loud, center: 音がするもの, hint: たいこ, level: 3}
-  - {id: fast, center: はやいもの, hint: 新幹線, level: 3}
-  - {id: soft, center: やわらかいもの, hint: わたあめ, level: 3}
+  - {id: red, center: 赤いもの, hint: トマト, level: 2}
+  - {id: round, center: 丸いもの, hint: ボール, level: 2}
+  - {id: warm, center: あたたかいもの, hint: こたつ, level: 2}
+  - {id: loud, center: 音がするもの, hint: たいこ, level: 2}
+  - {id: fast, center: はやいもの, hint: 新幹線, level: 2}
+  - {id: soft, center: やわらかいもの, hint: わたあめ, level: 2}
   - {id: sky, center: 空, hint: くも, level: 2}
   - {id: spring, center: 春, hint: さくら, level: 1}
   - {id: shopping, center: かいもの, hint: おかね, level: 2}
@@ -74,18 +76,26 @@ items:
   - {id: iv_lv3_003, center: 別れ, hint: 卒業, level: 3}
   - {id: iv_lv3_004, center: 安心, hint: ほっとする, level: 3}
   - {id: iv_lv3_005, center: 失敗, hint: やり直す, level: 3}
-  - {id: iv_lv3_006, center: 成長, hint: 練習, level: 3}
-  - {id: iv_lv3_007, center: 友だち, hint: 一緒に遊ぶ, level: 3}
+  - {id: iv_lv3_006, center: 成長, hint: しんちょう, level: 3}
+  - {id: iv_lv3_007, center: 友だち, hint: なかま, level: 3}
   - {id: iv_lv3_008, center: 緊張, hint: 発表, level: 3}
-  - {id: iv_lv3_009, center: 責任, hint: 約束, level: 3}
-  - {id: iv_lv3_010, center: 挑戦, hint: 新しいこと, level: 3}
-  - {id: iv_lv3_011, center: 平和, hint: 争わない, level: 3}
-  - {id: iv_lv3_012, center: 信頼, hint: 約束を守る, level: 3}
+  - {id: iv_lv3_009, center: 責任, hint: とうばん, level: 3}
+  - {id: iv_lv3_010, center: 挑戦, hint: はじめて, level: 3}
+  - {id: iv_lv3_011, center: 平和, hint: なかよし, level: 3}
+  - {id: iv_lv3_012, center: 信頼, hint: やくそく, level: 3}
   - {id: iv_lv3_013, center: 孤独, hint: 一人, level: 3}
-  - {id: iv_lv3_014, center: 我慢, hint: 順番を待つ, level: 3}
+  - {id: iv_lv3_014, center: 我慢, hint: じゅんばん, level: 3}
   - {id: iv_lv3_015, center: 夢, hint: 将来, level: 3}
   - {id: iv_lv3_016, center: 協力, hint: 助け合う, level: 3}
   - {id: iv_lv3_017, center: 変化, hint: 季節, level: 3}
-  - {id: iv_lv3_018, center: 思いやり, hint: 気にかける, level: 3}
+  - {id: iv_lv3_018, center: 思いやり, hint: やさしさ, level: 3}
   - {id: iv_lv3_019, center: 後悔, hint: 次はこうしたい, level: 3}
   - {id: iv_lv3_020, center: 時間, hint: 待つ, level: 3}
+
+  # ---- 追加 Lv3（前向きな抽象語。属性語を Lv2 へ移した分の補充。2026-10-08 追加・要確認） ----
+  - {id: iv_lv3_021, center: 勇気, hint: ヒーロー, level: 3}
+  - {id: iv_lv3_022, center: 感謝, hint: ありがとう, level: 3}
+  - {id: iv_lv3_023, center: 楽しみ, hint: えんそく, level: 3}
+  - {id: iv_lv3_024, center: 仲直り, hint: あくしゅ, level: 3}
+  - {id: iv_lv3_025, center: 発見, hint: むしめがね, level: 3}
+  - {id: iv_lv3_026, center: 想像, hint: えほん, level: 3}
