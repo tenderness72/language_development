@@ -22,7 +22,7 @@ def load(name):
         return {it["id"]: it for it in yaml.safe_load(f)["items"]}
 
 
-def page_png(pdf, page_no, dpi=62):
+def page_png(pdf, page_no, dpi=62):  # noqa: E302
     doc = pymupdf.open(os.path.join(WS, pdf))
     png = doc[page_no - 1].get_pixmap(dpi=dpi).tobytes("png")
     return "data:image/png;base64," + base64.b64encode(png).decode()
@@ -313,14 +313,126 @@ FIGURES = [
     ("Ⅶ Lv1 解答（直音・2〜4音）", page_png("out/VII/音韻パック_answers.pdf", 1)),
 ]
 
+# ---- 課題の説明（どの課題の、どんな問題の中の表現か） ----
+import importlib
+import sys
+sys.path.insert(0, WS)
+_MOD = {"I": "t1_chain", "II": "t2_network", "III": "t3_pairs", "IV": "t4_radial",
+        "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn"}
+_NAME = {"I": "Ⅰ 連想チェーン", "II": "Ⅱ 意味ネットワーク照合", "III": "Ⅲ ペア対応づけ", "IV": "Ⅳ 放射状連想",
+         "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）"}
+_FORMAT = {
+    "I": "左のスタート語から右のゴール語まで、2〜4列目の楕円（各列に正解1つ＋ダミー3つ）から1つずつ選び、線でつなぐ。1枚に2問。",
+    "III": "見出しに関係名（例：動物→鳴き声）。左に5語、右に順番を入れかえた5語。左右の語を線で結ぶ。1枚に2問。",
+    "IV": "中央の円に中心語。まわりの8つの丸のうち1つにヒントの語が書いてあり、残り7つに子どもが思いつくことばを書く。1枚に2問。",
+    "VI": "見出しにカテゴリー名、その下に例の語。続く約10本の線に、子どもが仲間のことばを書く（時間制限なし）。1枚に2問。",
+    "VII": "「〇」から始まることば。2〜5音（Lv1 は2〜4音）のマス目の先頭に語頭音が印字され、残りのマスに書く。1枚に2問。",
+    "VIII": "上に重なりの見出し（例：赤くて食べるもの）、左右の円に属性。左だけ・右だけ・重なりの3か所に書く。1枚に2問。",
+}
+TASKS = {}
+for k in ("I", "III", "IV", "VI", "VII", "VIII"):
+    m = importlib.import_module("gen.templates." + _MOD[k])
+    TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
+                "format": _FORMAT[k], "img": page_png(f"out/type_{k}.pdf", 1, dpi=48)}
+
+
+def sc_iv(it):
+    return f"中央の円に「{it['center']}」。まわりの丸の1つにヒント「{it['hint']}」（Lv{it['level']}）。"
+
+
+def sc_vi(it):
+    return f"見出し「{it['category']}」、例「{it['example']}」。線に仲間のことばを書く（Lv{it['level']}）。"
+
+
+def sc_iii(it):
+    l = "・".join(a for a, _ in it["pairs"]); r = "・".join(b for _, b in it["pairs"])
+    return f"見出し（{it['relation']}）。左：{l}／右（順不同）：{r}。左右を線で結ぶ（Lv{it['level']}）。"
+
+
+def sc_i(it):
+    c = it["chain"]
+    return f"スタート「{c[0]}」→ゴール「{c[4]}」。2〜4列目の楕円から1つずつ選んでつなぐ（Lv{it['level']}）。"
+
+
+def sc_vii(it):
+    rows = it.get("moras") or [2, 3, 4, 5]
+    return f"「{it['initial']}」から始まることば。{rows[0]}〜{rows[-1]}音のマス目の先頭に「{it['initial']}」（Lv{it['level']}）。"
+
+
+def sc_viii(it):
+    return f"左の円「{it['left_attr']}」、右の円「{it['right_attr']}」、重なりの見出し「{it['intersection']}」（Lv{it['level']}）。"
+
+
+_IVc = {it["center"]: it for it in IV.values()}
+_VIc = {it["category"]: it for it in VI.values()}
+_SC = {"I": (I, sc_i), "III": (III, sc_iii), "IV": (IV, sc_iv), "VI": (VI, sc_vi), "VII": (VII, sc_vii), "VIII": (VIII, sc_viii)}
+SEC_TASK = {"safety": ["IV"], "pairs": ["III"], "chain": ["I"], "mora": ["VII"], "venn": ["VIII"], "removed": ["IV", "VI"],
+            "new-iv": ["IV"], "new-vi": ["VI"], "r2-iv": ["IV"], "r2-vi": ["VI"], "r2-vii": ["VII"], "r2-iii": ["III"],
+            "r2-viii": ["VIII"], "r3-vi-remove": ["VI", "III"], "r3-vi-relevel": ["VI"], "r3-vi-adult": ["VI"],
+            "r3-vi-new": ["VI"], "r3-iii-new": ["III"], "r4-iv-move": ["IV"], "r4-iv-hint": ["IV"], "r4-iv-new": ["IV"]}
+MANUAL = {
+    "iv-hint-trust": sc_iv(_IVc["信頼"]), "iv-hint-relief": sc_iv(_IVc["安心"]),
+    "iv-hint-regret": sc_iv(_IVc["後悔"]), "iv-hint-patience": sc_iv(_IVc["我慢"]),
+    "iii-animal-home": sc_iii(III["animal_home"]), "iii-part-use": sc_iii(III["part_use"]),
+    "iii-animal-baby": sc_iii(III["animal_baby"]), "iii-tool-action": sc_iii(III["tool_action"]),
+    "iii-vehicle-place": sc_iii(III["vehicle_place"]), "iii-season": sc_iii(III["season_thing"]),
+    "i-rain": sc_i(I["rain_boots"]), "i-tree": sc_i(I["tree_blocks"]), "i-grape": sc_i(I["grape_sherbet"]),
+    "i-cloud": sc_i(I["cloud_umbrella"]), "i-rice": sc_i(I["rice_onigiri"]),
+    "vii-instruction": "Ⅶ のすべてのページで、題の帯の下（教示文）と、ページ下部の【マスの書き方】に表示される。",
+    "vii-answer-note": "Ⅶ の解答PDFのページ下部にだけ表示される（子どもが使う問題PDFには出ない）。",
+    "vii-examples": "解答PDFで、「き」の問題の5音のマスと、「と」の問題の4音のマスに入る答えの例。",
+    "viii-soft-eat": sc_viii(VIII["soft_eat"]),
+    "dup-iv": "Ⅳ のパックで、同じ中心語（とヒント）の問題が2回出ないようにするための削除。",
+    "dup-vi": "Ⅵ のパックで、同じカテゴリー（ひらがな／漢字の書き分けを含む）が2回出ないようにするための削除。",
+    "r3-vi-pair-tasks": "修正前は Ⅵ Lv3 で、見出し「反対の意味のことば（例：大きい↔小さい）」、例「長い」の下の線に1語ずつ書く形だった。修正後は Ⅲ で、左右の語を線で結ぶ形になる。",
+    "r3-vi-closed-sets": "修正前は Ⅵ Lv2 で、見出し「季節」（例：夏）／「月」（例：1月）の下の約10本の線に書く形だった。",
+    "r3-vi-sounds": sc_vi(_VIc["動物の鳴き声"]), "r3-vi-furniture": sc_vi(_VIc["家具"]),
+    "r3-vi-action-words": sc_vi(_VIc["動作を表すことば"]), "r3-vi-size-words": sc_vi(_VIc["大きさを表すことば"]),
+    "r3-vi-energy": sc_vi(VI["vi_lv3_009b"]), "r3-vi-social-rule": sc_vi(VI["vi_lv3_017a"]),
+    "r3-vi-salary": sc_vi(VI["vi_lv3_011a"]) + "\n" + sc_vi(VI["vi_lv3_016a"]),
+    "r4-iv-move": "Lv2 のパックで、中央の円に「赤いもの」などが出る（例：" + sc_iv(_IVc["赤いもの"]) + "）",
+    "r4-iv-hint-regret": sc_iv(_IVc["後悔"]),
+}
+
+
+def _lookup(item_id, task):
+    d, fn = _SC[task]
+    for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r2-", "r3-", "r4-"):
+        if item_id.startswith(pre):
+            key = item_id[len(pre):].replace("-", "_")
+            if key in d:
+                return fn(d[key])
+    return None
+
+
+for sec in SECTIONS:
+    key = sec["key"]
+    sec["tasks"] = SEC_TASK.get(key, [])
+    for it in sec["items"]:
+        if it["id"] in MANUAL:
+            it["scene"] = MANUAL[it["id"]]
+        elif it["id"].startswith("r4-iv-hint-"):
+            it["scene"] = sc_iv(_IVc[it["label"]])
+        else:
+            for t in sec["tasks"]:
+                sc = _lookup(it["id"], t)
+                if sc:
+                    it["scene"] = sc
+                    break
+
+missing = [it["id"] for sec in SECTIONS for it in sec["items"] if not it.get("scene")]
+if missing:
+    raise SystemExit("scene 未設定: " + ", ".join(missing))
+
 data_json = json.dumps(SECTIONS, ensure_ascii=False).replace("</", "<\\/")
+tasks_json = json.dumps(TASKS, ensure_ascii=False).replace("</", "<\\/")
 figs = "\n".join(
     f'<figure class="fig"><img src="{src}" alt="{html.escape(cap)}の生成PDF" loading="lazy"><figcaption>{html.escape(cap)}</figcaption></figure>'
     for cap, src in FIGURES)
 
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html"), encoding="utf-8") as f:
     page = f.read()
-page = page.replace("/*__DATA__*/[]", data_json).replace("<!--__FIGURES__-->", figs)
+page = page.replace("/*__DATA__*/[]", data_json).replace("/*__TASKS__*/{}", tasks_json).replace("<!--__FIGURES__-->", figs)
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(page)
 print(OUT, sum(len(s["items"]) for s in SECTIONS), "items", os.path.getsize(OUT), "bytes")

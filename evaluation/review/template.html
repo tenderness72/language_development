@@ -76,6 +76,15 @@ section.sec>h2{font-size:1.12rem;margin:0 0 2px;text-wrap:balance}
 .diff .v{white-space:pre-wrap;overflow-wrap:anywhere}
 .diff .before .v{color:var(--before);text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--before) 55%,transparent)}
 .diff .after .v{color:var(--after);font-weight:700}
+.task{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 12px;display:grid;gap:4px;font-size:.9rem}
+.task .tname{font-weight:700;color:var(--accent)}
+.task dl{display:grid;grid-template-columns:8.5em 1fr;gap:2px 10px;margin:0}
+.task dt{color:var(--ink-3);font-size:.8rem;padding-top:2px}
+.task dd{margin:0;overflow-wrap:anywhere}
+.task details summary{cursor:pointer;font-size:.84rem;color:var(--accent)}
+.task img{display:block;max-width:min(100%,360px);height:auto;margin-top:6px;border:1px solid var(--line);border-radius:4px;background:#fff}
+.scene{font-size:.88rem;color:var(--ink);border-left:3px solid var(--accent);padding:2px 0 2px 10px;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.scene::before{content:"問題の中では：";color:var(--ink-3);font-size:.8rem}
 .ask{font-size:.85rem;color:var(--ink-2);background:var(--surface-2);border-radius:6px;padding:4px 10px;margin:0}
 .ask::before{content:"確認点：";color:var(--ink-3)}
 .ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start}
@@ -137,6 +146,7 @@ details.figs summary{cursor:pointer;font-weight:700}
 
 <script>
 const SECTIONS = /*__DATA__*/[];
+const TASKS = /*__TASKS__*/{};
 const LABEL = {ok:"承認", fix:"要修正", hold:"保留"};
 const state = {};          // id -> {status, note}
 let filter = "all";
@@ -161,11 +171,23 @@ function build() {
   list.textContent = "";
   for (const s of SECTIONS) {
     const sec = el("section", {cls: "sec", "data-sec": s.key});
-    sec.append(el("h2", {text: s.title}), el("p", {cls: "lead", text: s.lead}), el("div", {cls: "secmeta", "data-meta": s.key}));
+    sec.append(el("h2", {text: s.title}), el("p", {cls: "lead", text: s.lead}));
+    for (const tk of (s.tasks || [])) {
+      const t = TASKS[tk];
+      if (!t) continue;
+      const dl = el("dl");
+      for (const [k, v] of [["プリントの題", t.title], ["教示（子ども向け）", t.instruction], ["問題の形式", t.format]]) {
+        dl.append(el("dt", {text: k}), el("dd", {text: v}));
+      }
+      const det = el("details", {}, [el("summary", {text: "この課題のプリント見本を見る"}), el("img", {src: t.img, alt: t.name + " のプリント見本", loading: "lazy"})]);
+      sec.append(el("div", {cls: "task"}, [el("div", {cls: "tname", text: "課題：" + t.name}), dl, det]));
+    }
+    sec.append(el("div", {cls: "secmeta", "data-meta": s.key}));
     const box = el("div", {cls: "items"});
     for (const it of s.items) {
       const card = el("article", {cls: "item", "data-id": it.id, "data-status": ""});
       card.append(el("h3", {text: it.label}));
+      if (it.scene) card.append(el("p", {cls: "scene", text: it.scene}));
       const diff = el("div", {cls: "diff"});
       if (it.before) diff.append(el("div", {cls: "before"}, [el("span", {cls: "k", text: "修正前"}), el("span", {cls: "v", text: it.before})]));
       diff.append(el("div", {cls: "after"}, [el("span", {cls: "k", text: it.before ? "修正後" : "内容"}), el("span", {cls: "v", text: it.after})]));
