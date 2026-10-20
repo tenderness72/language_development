@@ -46,6 +46,11 @@ def check_item(type_key, item):
         rights = [p[1] for p in pairs]
         if len(set(lefts)) != 5 or len(set(rights)) != 5:
             return f"[III:{item['id']}] 左右に重複があり一意に解けない"
+        ex = item.get("extra")
+        if not ex:
+            return f"[III:{item['id']}] extra（右に足す、どれとも結ばない語）が必要"
+        if ex in rights or ex in lefts:
+            return f"[III:{item['id']}] extra '{ex}' が左右の語と重複"
     elif type_key == "VII":
         if not item.get("initial"):
             return f"[VII:{item['id']}] initial（語頭音）が必要"

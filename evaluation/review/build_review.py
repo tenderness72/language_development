@@ -346,9 +346,11 @@ for sec in ROUND4:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND5
 
+
+
 FIGURES = [
     ("Ⅳ Lv3（抽象語・感情語）", page_png("out/IV/放射状連想 Lv3.pdf", 1)),
-    ("Ⅲ ペアパック（体→はたらき・生き物→こども）", page_png("out/III/ペアパック.pdf", 4)),
+    ("Ⅲ ペアパック（右6語・解答）", page_png("out/III/ペアパック_answers.pdf", 4)),
     ("Ⅰ 連想チェーン（くも・風）", page_png("out/type_I.pdf", 1)),
     ("Ⅶ 解答（マスの書き方と注記）", page_png("out/type_VII_answers.pdf", 1)),
     ("Ⅶ Lv1 解答（直音・2〜4音）", page_png("out/VII/音韻パック_answers.pdf", 1)),
@@ -415,7 +417,8 @@ SEC_TASK = {"safety": ["IV"], "pairs": ["III"], "chain": ["I"], "mora": ["VII"],
             "new-iv": ["IV"], "new-vi": ["VI"], "r2-iv": ["IV"], "r2-vi": ["VI"], "r2-vii": ["VII"], "r2-iii": ["III"],
             "r2-viii": ["VIII"], "r3-vi-remove": ["VI", "III"], "r3-vi-relevel": ["VI"], "r3-vi-adult": ["VI"],
             "r3-vi-new": ["VI"], "r3-iii-new": ["III"], "r4-iv-move": ["IV"], "r4-iv-hint": ["IV"], "r4-iv-new": ["IV"],
-            "r5-vii-design": ["VII"], "r5-vii-lv2": ["VII"], "r5-vii-lv3": ["VII"]}
+            "r5-vii-design": ["VII"], "r5-vii-lv2": ["VII"], "r5-vii-lv3": ["VII"],
+            "r6-iii-instruction": ["III"], "r6-iii-extra": ["III"]}
 MANUAL = {
     "iv-hint-trust": sc_iv(_IVc["信頼"]), "iv-hint-relief": sc_iv(_IVc["安心"]),
     "iv-hint-regret": sc_iv(_IVc["後悔"]), "iv-hint-patience": sc_iv(_IVc["我慢"]),
@@ -439,6 +442,7 @@ MANUAL = {
     "r4-iv-move": "Lv2 のパックで、中央の円に「赤いもの」などが出る（例：" + sc_iv(_IVc["赤いもの"]) + "）",
     "r4-iv-hint-regret": sc_iv(_IVc["後悔"]),
     "r5-vii-levels": "Ⅶ の各問題のマス目。例：Lv2「か」の3音の行は「か□ん」（→かばん）、Lv3「ら」の3音の行は「ら っ□」（→らっぱ）。",
+    "r6-iii-instruction": "Ⅲ のすべてのページで、題の帯の下に表示される教示文。",
     "r5-vii-notes": "Ⅶ の各ページ下部の【マスの書き方】。ページ内でいちばん高いレベルの説明を表示する。",
 }
 
@@ -453,6 +457,28 @@ def _lookup(item_id, task):
     return None
 
 
+# ---- 第6回：Ⅲ 右側に「どれとも結ばない語」を1つ足す（先頭に表示） ----
+ROUND6 = [
+    {
+        "key": "r6-iii-instruction", "title": "Ⅲ 消去法で解けないようにする（右側を6語に）",
+        "lead": "これまでは左5語・右5語で、4組を結ぶと最後の1組が自動的に決まっていました。右に「どれとも結ばない語」を1つ足し、教示文でもそれを伝えます。",
+        "items": [{"id": "r6-iii-instruction", "label": "教示文",
+                   "before": "左のことばと関係が深いことばを、右の中から1つ選んで線で結びましょう。",
+                   "after": "左のことばと関係が深いことばを右から選んで、線で結びましょう。右には、あまることばが1つあります。",
+                   "ask": "子どもに伝わる言い方か"}],
+    },
+    {
+        "key": "r6-iii-extra", "title": "Ⅲ 各問題に足した「あまることば」（18問）",
+        "lead": "右側の語と同じ種類で、左のどの語とも意味の上で結びつかない語を選びました。左のどれかと結べてしまわないかを見てください。",
+        "items": [{"id": "r6-iii-" + k.replace("_", "-"), "label": f"{it['relation']}（Lv{it['level']}）",
+                   "before": "", "after": f"あまることば：{it['extra']}", "ask": "",
+                   "scene": sc_iii(it) + f" 右に「{it['extra']}」が加わり6語になる。"}
+                  for k, it in III.items()],
+    },
+]
+for sec in ROUND5:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND6
 for sec in SECTIONS:
     key = sec["key"]
     sec["tasks"] = SEC_TASK.get(key, [])
