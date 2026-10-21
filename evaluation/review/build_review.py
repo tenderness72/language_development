@@ -37,6 +37,8 @@ I, III, IV, VI, VII, VIII = (load(n) for n in (
 III.setdefault("vehicle_place", {"id": "vehicle_place", "relation": "のりもの→走るところ（2026-10-21 削除）", "level": 1,
                                  "pairs": [["でんしゃ", "せんろ"], ["ふね", "うみ"], ["ひこうき", "そら"], ["くるま", "どうろ"], ["そり", "ゆきのうえ"]],
                                  "extra": "うちゅう"})
+VIII.setdefault("long_animal", {"id": "long_animal", "left_attr": "長いもの", "right_attr": "どうぶつ",
+                                "intersection": "長いどうぶつ（2026-10-21 削除）", "level": 2})
 VIII.setdefault("white_animal", {"id": "white_animal", "left_attr": "白いもの", "right_attr": "どうぶつ",
                                  "intersection": "白いどうぶつ（2026-10-21 白い花 に変更）", "level": 2})
 

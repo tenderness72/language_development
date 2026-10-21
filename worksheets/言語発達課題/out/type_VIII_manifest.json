@@ -12,10 +12,10 @@
       "problems": [
         {
           "n": 1,
-          "id": "sound_toy",
-          "left_attr": "音が出るもの",
-          "right_attr": "おもちゃ",
-          "intersection": "音が出るおもちゃ"
+          "id": "hot_drink",
+          "left_attr": "あついもの",
+          "right_attr": "飲みもの",
+          "intersection": "あつい飲みもの"
         },
         {
           "n": 2,

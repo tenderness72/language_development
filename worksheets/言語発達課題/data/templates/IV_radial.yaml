@@ -89,7 +89,7 @@ items:
   - {id: iv_lv3_016, center: 協力, hint: 助け合う, level: 3}
   - {id: iv_lv3_017, center: 変化, hint: 季節, level: 3}
   - {id: iv_lv3_018, center: 思いやり, hint: やさしさ, level: 3}
-  - {id: iv_lv3_019, center: 後悔, hint: 次はこうしたい, level: 3}
+  - {id: iv_lv3_019, center: 後悔, hint: はんせい, level: 3}
   - {id: iv_lv3_020, center: 時間, hint: 待つ, level: 3}
 
   # ---- 追加 Lv3（前向きな抽象語。属性語を Lv2 へ移した分の補充。2026-10-08 追加・要確認） ----
