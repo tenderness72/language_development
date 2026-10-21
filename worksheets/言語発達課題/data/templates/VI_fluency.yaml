@@ -83,7 +83,7 @@ items:
   - {id: vi_lv2_036, category: スーパーで売っているもの, example: たまご, lines: 10, level: 2}
 
   # ---- 追加 Lv2 その3（レベル整理の補充。2026-09-26 追加・要確認） ----
-  - {id: vi_lv2_037, category: 山にあるもの, example: き, lines: 10, level: 2}
+  - {id: vi_lv2_037, category: 山にあるもの, example: 木, lines: 10, level: 2}
   - {id: vi_lv2_038, category: 病院にあるもの, example: くすり, lines: 10, level: 2}
   - {id: vi_lv2_039, category: 駅にあるもの, example: きっぷ, lines: 10, level: 2}
   - {id: vi_lv2_040, category: たまごを使ったりょうり, example: オムライス, lines: 10, level: 2}

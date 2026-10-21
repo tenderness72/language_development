@@ -2,7 +2,7 @@
 # center: 中心語 / hint: ヒントとして1個の丸に書いておく語
 # level: 1=具体物(易) 〜 3=抽象概念(難)
 # Lv2 は場所・行事と「赤いもの」のような属性で集める語、Lv3 は抽象語・感情語だけにする。
-# ヒントは1語にする（文にしない）。同じヒントを複数の中心語で使い回さない。
+# ヒントは原則1語にする。
 # 同じ中心語をレベルをまたいで重複させないこと（generate 時に検査）。
 # Lv3 の感情・社会的な語のヒントは、子どもの安全教育と矛盾しないもの・
 # 家庭環境を前提にしないものを選ぶ（例: 信頼に「秘密を守る」は使わない）。
@@ -76,12 +76,12 @@ items:
   - {id: iv_lv3_003, center: 別れ, hint: 卒業, level: 3}
   - {id: iv_lv3_004, center: 安心, hint: ほっとする, level: 3}
   - {id: iv_lv3_005, center: 失敗, hint: やり直す, level: 3}
-  - {id: iv_lv3_006, center: 成長, hint: しんちょう, level: 3}
+  - {id: iv_lv3_006, center: 成長, hint: 練習, level: 3}
   - {id: iv_lv3_007, center: 友だち, hint: なかま, level: 3}
   - {id: iv_lv3_008, center: 緊張, hint: 発表, level: 3}
-  - {id: iv_lv3_009, center: 責任, hint: とうばん, level: 3}
+  - {id: iv_lv3_009, center: 責任, hint: 約束, level: 3}
   - {id: iv_lv3_010, center: 挑戦, hint: はじめて, level: 3}
-  - {id: iv_lv3_011, center: 平和, hint: なかよし, level: 3}
+  - {id: iv_lv3_011, center: 平和, hint: けんかしない, level: 3}
   - {id: iv_lv3_012, center: 信頼, hint: やくそく, level: 3}
   - {id: iv_lv3_013, center: 孤独, hint: 一人, level: 3}
   - {id: iv_lv3_014, center: 我慢, hint: じゅんばん, level: 3}
@@ -94,8 +94,8 @@ items:
 
   # ---- 追加 Lv3（前向きな抽象語。属性語を Lv2 へ移した分の補充。2026-10-08 追加・要確認） ----
   - {id: iv_lv3_021, center: 勇気, hint: ヒーロー, level: 3}
-  - {id: iv_lv3_022, center: 感謝, hint: ありがとう, level: 3}
+  - {id: iv_lv3_022, center: 感謝, hint: おもいやり, level: 3}
   - {id: iv_lv3_023, center: 楽しみ, hint: えんそく, level: 3}
   - {id: iv_lv3_024, center: 仲直り, hint: あくしゅ, level: 3}
   - {id: iv_lv3_025, center: 発見, hint: むしめがね, level: 3}
-  - {id: iv_lv3_026, center: 想像, hint: えほん, level: 3}
+  - {id: iv_lv3_026, center: 想像, hint: イメージ, level: 3}

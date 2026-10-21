@@ -33,6 +33,14 @@ I, III, IV, VI, VII, VIII = (load(n) for n in (
     "VII_mora.yaml", "VIII_venn.yaml"))
 
 
+# レビューで削除した問題（過去の確認項目の表示用に、削除前の内容を残す）
+III.setdefault("vehicle_place", {"id": "vehicle_place", "relation": "のりもの→走るところ（2026-10-21 削除）", "level": 1,
+                                 "pairs": [["でんしゃ", "せんろ"], ["ふね", "うみ"], ["ひこうき", "そら"], ["くるま", "どうろ"], ["そり", "ゆきのうえ"]],
+                                 "extra": "うちゅう"})
+VIII.setdefault("white_animal", {"id": "white_animal", "left_attr": "白いもの", "right_attr": "どうぶつ",
+                                 "intersection": "白いどうぶつ（2026-10-21 白い花 に変更）", "level": 2})
+
+
 def pairs(it):
     return "、".join(f"{a}→{b}" for a, b in it["pairs"])
 

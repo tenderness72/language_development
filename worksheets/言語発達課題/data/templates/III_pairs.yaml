@@ -19,8 +19,8 @@ items:
     level: 1
   - id: animal_home
     relation: 動物→すみか
-    pairs: [[もぐら, つちのなか], [くじら, うみ], [らくだ, さばく], [はち, はちのす], [きんぎょ, すいそう]]
-    extra: とりかご
+    pairs: [[もぐら, つちのなか], [くじら, うみ], [らくだ, さばく], [とり, す], [きんぎょ, すいそう]]
+    extra: いぬごや
     level: 2
   - id: food_ingredient
     relation: 料理→材料
@@ -30,12 +30,7 @@ items:
   - id: place_action
     relation: 場所→すること
     pairs: [[プール, およぐ], [図書館, 本をよむ], [食堂, ごはんをたべる], [病院, みてもらう], [公園, あそぶ]]
-    extra: でんしゃにのる
-    level: 1
-  - id: vehicle_place
-    relation: のりもの→走るところ
-    pairs: [[でんしゃ, せんろ], [ふね, うみ], [ひこうき, そら], [くるま, どうろ], [そり, ゆきのうえ]]
-    extra: うちゅう
+    extra: はをみがく
     level: 1
   - id: sport_gear
     relation: スポーツ→道具
@@ -85,8 +80,8 @@ items:
     level: 1
   - id: animal_move
     relation: 動物→うごき方
-    pairs: [[とり, とぶ], [さかな, およぐ], [へび, はう], [うさぎ, はねる], [うま, はしる]]
-    extra: ほる
+    pairs: [[とり, とぶ], [さかな, およぐ], [さる, のぼる], [うさぎ, はねる], [うま, はしる]]
+    extra: はう
     level: 1
   # ---- Ⅵ から移した「対の語」の課題（2026-09-26 追加・要確認） ----
   - id: opposite_verb

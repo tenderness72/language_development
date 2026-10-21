@@ -92,10 +92,10 @@
       "problems": [
         {
           "n": 1,
-          "id": "white_animal",
+          "id": "white_flower",
           "left_attr": "白いもの",
-          "right_attr": "どうぶつ",
-          "intersection": "白いどうぶつ"
+          "right_attr": "花",
+          "intersection": "白い花"
         },
         {
           "n": 2,
