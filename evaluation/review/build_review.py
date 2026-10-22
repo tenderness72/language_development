@@ -45,7 +45,7 @@ VIII.setdefault("white_animal", {"id": "white_animal", "left_attr": "白いも�
                                  "intersection": "白いどうぶつ（2026-10-21 白い花 に変更）", "level": 2})
 
 
-I.setdefault("rain_use", {"id": "rain_use", "chain": ["雨", "ふる", "かさ", "さす", "使う"], "level": 1,
+I.setdefault("rain_use", {"id": "rain_use", "_stub": True, "chain": ["雨", "ふる", "かさ", "さす", "使う"], "level": 1,
                           "distractors": {"col2": ["はしる", "わらう", "ねむる"], "col3": ["バナナ", "とけい", "ボール"], "col4": ["たべる", "およぐ", "うたう"]}})
 
 
@@ -526,7 +526,7 @@ for _lv, _lead in ((1, "ダミーは始まりとも終わりとも関係のな�
         "items": [{"id": "r7-i-" + k.replace("_", "-"), "label": " → ".join(it["chain"]),
                    "before": "", "after": chain(it) + ("\n" + _I_SIDE[k] if k in _I_SIDE else ""),
                    "ask": _I_STATUS.get(k, "前回までに確認済みの問題（変更なし）")}
-                  for k, it in I.items() if it["level"] == _lv],
+                  for k, it in I.items() if it["level"] == _lv and not it.get("_stub")],
     })
 for sec in ROUND6:
     sec["title"] = "［前回］" + sec["title"]
