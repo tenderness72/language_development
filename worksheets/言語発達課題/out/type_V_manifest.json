@@ -14,13 +14,15 @@
           "n": 1,
           "id": "festival",
           "start": "おまつり",
-          "slots": 5
+          "slots": 5,
+          "example": "たいこ"
         },
         {
           "n": 2,
           "id": "sea",
           "start": "うみ",
-          "slots": 5
+          "slots": 5,
+          "example": "さかな"
         }
       ],
       "page": 1
@@ -32,13 +34,15 @@
           "n": 1,
           "id": "travel",
           "start": "りょこう",
-          "slots": 5
+          "slots": 5,
+          "example": "おみやげ"
         },
         {
           "n": 2,
           "id": "summer",
           "start": "なつ",
-          "slots": 5
+          "slots": 5,
+          "example": "すいか"
         }
       ],
       "page": 2

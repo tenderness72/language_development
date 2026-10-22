@@ -1,0 +1,103 @@
+{
+  "type": "II",
+  "display_title": "関係のあることばを結ぼう",
+  "clinical_title": "意味ネットワーク照合",
+  "name": "意味ネットワーク Lv3 見本",
+  "level": 3,
+  "seed": 3,
+  "count": 3,
+  "pages": [
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fire_station",
+          "center": "消防署",
+          "related": [
+            "しょうぼうしゃ",
+            "ホース",
+            "しょうぼうし",
+            "はしご",
+            "ヘルメット"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "baseball",
+          "center": "やきゅう",
+          "related": [
+            "バット",
+            "グローブ",
+            "ピッチャー",
+            "ベース",
+            "ホームラン"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "aquarium",
+          "center": "水族館",
+          "related": [
+            "イルカ",
+            "すいそう",
+            "クラゲ",
+            "アシカ",
+            "ペンギン"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "newyear",
+          "center": "お正月",
+          "related": [
+            "おもち",
+            "たこあげ",
+            "おせち",
+            "ねんがじょう",
+            "こま"
+          ]
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "bakery",
+          "center": "パンや",
+          "related": [
+            "しょくパン",
+            "メロンパン",
+            "オーブン",
+            "トレー",
+            "トング"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "art_class",
+          "center": "ずこう",
+          "related": [
+            "えのぐ",
+            "ふで",
+            "ねんど",
+            "はさみ",
+            "がようし"
+          ]
+        }
+      ],
+      "page": 3
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

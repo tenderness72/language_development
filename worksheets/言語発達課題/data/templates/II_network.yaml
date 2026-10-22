@@ -1,6 +1,11 @@
 # Ⅱ 意味ネットワーク照合
 # center: 中心語 / related: 関連語5 / distractors: 無関連ダミー5
 # related と distractors は重複させないこと。
+# level（ダミー語の近さで段階化）:
+#   1 = 関係のないダミー（ちがう種類のもの）
+#   2 = 反対の場面のダミー（例: 冬 に対して 夏のもの）
+#   3 = 同じ種類だが別の場面のダミー（例: 消防署 に対して パトカー・おまわりさん）。
+#       中心語にも当てはまってしまう語は選ばないこと（例: 消防署 に きゅうきゅうしゃ は不可）。
 type: II
 items:
   - id: sea
@@ -62,7 +67,7 @@ items:
     center: 花火
     related: [夏, 夜, 光, 音, 浴衣]
     distractors: [雪だるま, こたつ, スキー, 手袋, つらら]
-    level: 3
+    level: 2
   - id: library
     center: 図書館
     related: [本, 本だな, 司書, しずか, 貸し出し]
@@ -72,7 +77,7 @@ items:
     center: 朝
     related: [朝日, 目覚まし, 朝ごはん, あいさつ, 通学]
     distractors: [星, 月, ろうそく, ふくろう, 寝ぶくろ]
-    level: 3
+    level: 2
   - id: train
     center: 電車
     related: [線路, 駅, 切符, ホーム, 車内]
@@ -83,3 +88,34 @@ items:
     related: [にんじん, きゃべつ, トマト, 畑, 包丁]
     distractors: [えんぴつ, ボール, でんち, くつ, かさ]
     level: 1
+  # ---- Lv3：同じ種類だが別の場面のダミー（2026-10-22 追加・要確認） ----
+  - id: fire_station
+    center: 消防署
+    related: [しょうぼうしゃ, ホース, しょうぼうし, はしご, ヘルメット]
+    distractors: [パトカー, おまわりさん, てじょう, けいさつけん, こうばん]
+    level: 3
+  - id: bakery
+    center: パンや
+    related: [しょくパン, メロンパン, オーブン, トレー, トング]
+    distractors: [さしみ, はなたば, くすり, ほん, だいこん]
+    level: 3
+  - id: baseball
+    center: やきゅう
+    related: [バット, グローブ, ピッチャー, ベース, ホームラン]
+    distractors: [ゴール, ラケット, ゴーグル, ストック, シャトル]
+    level: 3
+  - id: aquarium
+    center: 水族館
+    related: [イルカ, すいそう, クラゲ, アシカ, ペンギン]
+    distractors: [ライオン, キリン, うし, にわとり, カブトムシ]
+    level: 3
+  - id: art_class
+    center: ずこう
+    related: [えのぐ, ふで, ねんど, はさみ, がようし]
+    distractors: [リコーダー, とびばこ, けんばんハーモニカ, なわとび, じしょ]
+    level: 3
+  - id: newyear
+    center: お正月
+    related: [おもち, たこあげ, おせち, ねんがじょう, こま]
+    distractors: [サンタクロース, ひなにんぎょう, こいのぼり, はなび, ハロウィン]
+    level: 3

@@ -153,7 +153,7 @@ def _draw_ruby_line(c, x, yb, segs, size, font, align, vcenter):
 
 
 def text_fit(c, cx_mm, cy_mm, s, max_w_mm, max_size=12, min_size=6.0,
-             font=REG, ctx=None, where=""):
+             font=REG, ctx=None, where="", gray=0.0):
     """枠(幅 max_w_mm)の中央(cx,cy)に収まるよう自動縮小して描画。
 
     最小サイズでも収まらなければ ctx.warnings に記録（QAで検出）。
@@ -161,7 +161,7 @@ def text_fit(c, cx_mm, cy_mm, s, max_w_mm, max_size=12, min_size=6.0,
     size, ok = fit_size(s, font, max_size, max_w_mm, min_size)
     if not ok and ctx is not None:
         ctx.warnings.append(f"overflow: {s!r} ({where}) max_w={max_w_mm}mm")
-    text(c, cx_mm, cy_mm, s, size=size, font=font, align="c", vcenter=True)
+    text(c, cx_mm, cy_mm, s, size=size, font=font, align="c", vcenter=True, gray=gray)
     return size, ok
 
 

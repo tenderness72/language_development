@@ -28,6 +28,8 @@ def page_png(pdf, page_no, dpi=62):  # noqa: E302
     return "data:image/png;base64," + base64.b64encode(png).decode()
 
 
+II = load("II_network.yaml")
+V = load("V_chain_song.yaml")
 I, III, IV, VI, VII, VIII = (load(n) for n in (
     "I_chain.yaml", "III_pairs.yaml", "IV_radial.yaml", "VI_fluency.yaml",
     "VII_mora.yaml", "VIII_venn.yaml"))
@@ -367,6 +369,8 @@ FIGURES = [
     ("Ⅲ ペアパック（右6語・解答）", page_png("out/III/ペアパック_answers.pdf", 4)),
     ("Ⅰ 連想チェーン Lv3（解答）", page_png("out/連想チェーン Lv3 見本_answers.pdf", 1)),
     ("Ⅶ 解答（マスの書き方と注記）", page_png("out/type_VII_answers.pdf", 1)),
+    ("Ⅱ Lv3（同じ種類・別の場面のダミー）", page_png("out/意味ネットワーク Lv3 見本.pdf", 1)),
+    ("Ⅴ つづき歌（手本つき）", page_png("out/type_V.pdf", 1)),
     ("Ⅶ Lv1 解答（直音・2〜4音）", page_png("out/VII/音韻パック_answers.pdf", 1)),
     ("Ⅶ Lv2 問題（ん・長音を書いておく行）", page_png("out/VII/音韻 Lv2 見本（撥音・長音）.pdf", 1)),
     ("Ⅶ Lv3 問題（拗音の語頭音・っ を書いておく行）", page_png("out/VII/音韻 Lv3 見本（拗音・促音）.pdf", 1)),
@@ -389,7 +393,9 @@ _FORMAT = {
     "VIII": "上に重なりの見出し（例：赤くて食べるもの）、左右の円に属性。左だけ・右だけ・重なりの3か所に書く。1枚に2問。",
 }
 TASKS = {}
-for k in ("I", "III", "IV", "VI", "VII", "VIII"):
+_FORMAT["II"] = "中央の円に中心語。まわりに10の楕円（関係する5語＋ダミー5語）。関係する語を選んで線で結ぶ。1枚に2問。"
+_FORMAT["V"] = "いちばん上の箱に開始語。下へ矢印でつながる箱に、前のことばと関係のあることばを1つずつ書く。2番目の箱は手本。1枚に2問。"
+for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII"):
     m = importlib.import_module("gen.templates." + _MOD[k])
     TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
                 "format": _FORMAT[k], "img": page_png(f"out/type_{k}.pdf", 1, dpi=48)}
@@ -426,14 +432,15 @@ def sc_viii(it):
 
 _IVc = {it["center"]: it for it in IV.values()}
 _VIc = {it["category"]: it for it in VI.values()}
-_SC = {"I": (I, sc_i), "III": (III, sc_iii), "IV": (IV, sc_iv), "VI": (VI, sc_vi), "VII": (VII, sc_vii), "VIII": (VIII, sc_viii)}
+_SC = {"II": (II, lambda it: sc_ii(it)), "V": (V, lambda it: sc_v(it)), "I": (I, sc_i), "III": (III, sc_iii), "IV": (IV, sc_iv), "VI": (VI, sc_vi), "VII": (VII, sc_vii), "VIII": (VIII, sc_viii)}
 SEC_TASK = {"safety": ["IV"], "pairs": ["III"], "chain": ["I"], "mora": ["VII"], "venn": ["VIII"], "removed": ["IV", "VI"],
             "new-iv": ["IV"], "new-vi": ["VI"], "r2-iv": ["IV"], "r2-vi": ["VI"], "r2-vii": ["VII"], "r2-iii": ["III"],
             "r2-viii": ["VIII"], "r3-vi-remove": ["VI", "III"], "r3-vi-relevel": ["VI"], "r3-vi-adult": ["VI"],
             "r3-vi-new": ["VI"], "r3-iii-new": ["III"], "r4-iv-move": ["IV"], "r4-iv-hint": ["IV"], "r4-iv-new": ["IV"],
             "r5-vii-design": ["VII"], "r5-vii-lv2": ["VII"], "r5-vii-lv3": ["VII"],
             "r6-iii-instruction": ["III"], "r6-iii-extra": ["III"],
-            "r7-i-lv1": ["I"], "r7-i-lv2": ["I"], "r7-i-lv3": ["I"]}
+            "r7-i-lv1": ["I"], "r7-i-lv2": ["I"], "r7-i-lv3": ["I"],
+            "r8-ii-lv3": ["II"], "r8-v-example": ["V"], "r8-viii-audit": ["VIII"]}
 MANUAL = {
     "iv-hint-trust": sc_iv(_IVc["信頼"]), "iv-hint-relief": sc_iv(_IVc["安心"]),
     "iv-hint-regret": sc_iv(_IVc["後悔"]), "iv-hint-patience": sc_iv(_IVc["我慢"]),
@@ -464,7 +471,7 @@ MANUAL = {
 
 def _lookup(item_id, task):
     d, fn = _SC[task]
-    for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r5-vii-", "r7-i-", "r2-", "r3-", "r4-"):
+    for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r5-vii-", "r7-i-", "r8-viii-", "r2-", "r3-", "r4-"):
         if item_id.startswith(pre):
             key = item_id[len(pre):].replace("-", "_")
             if key in d:
@@ -524,6 +531,58 @@ for _lv, _lead in ((1, "ダミーは始まりとも終わりとも関係のな�
 for sec in ROUND6:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND7
+
+# ---- 第8回：Ⅱ Lv3・Ⅴ 手本・Ⅷ 点検（先頭に表示） ----
+_VIII_CHECK = {
+    "赤いもの/食べるもの": ("ポスト", "パン", "トマト"), "丸いもの/学校にあるもの": ("つき", "こくばん", "とけい"),
+    "白いもの/食べるもの": ("ゆき", "トマト", "とうふ"), "四角いもの/家にあるもの": ("はがき", "まくら", "テレビ"),
+    "あまいもの/飲みもの": ("ケーキ", "みず", "ジュース"), "黄色いもの/くだもの": ("ひまわり", "りんご", "バナナ"),
+    "長いもの/道具": ("へび", "はさみ", "ものさし"), "つめたいもの/食べるもの": ("ゆき", "パン", "アイス"),
+    "大きいもの/どうぶつ": ("ビル", "ねずみ", "ぞう"), "やわらかいもの/食べるもの": ("ふとん", "せんべい", "プリン"),
+    "みどりのもの/やさい": ("はっぱ", "にんじん", "ピーマン"), "かたいもの/台所にあるもの": ("いし", "スポンジ", "なべ"),
+    "ふわふわのもの/どうぶつ": ("わたあめ", "へび", "うさぎ"), "光るもの/空にあるもの": ("でんき", "くも", "たいよう"),
+    "丸いもの/食べるもの": ("ボール", "バナナ", "おだんご"), "はやいもの/のりもの": ("チーター", "そり", "しんかんせん"),
+    "かたいもの/食べるもの": ("いし", "プリン", "せんべい"), "四角いもの/学校にあるもの": ("とうふ", "ボール", "こくばん"),
+    "白いもの/花": ("ゆき", "ひまわり", "ゆり"), "あついもの/飲みもの": ("ストーブ", "ジュース", "おちゃ"),
+    "音が出るもの/おもちゃ": ("でんわ", "つみき", "ガラガラ"),
+}
+
+
+def sc_ii(it):
+    return f"中央の円に「{it['center']}」。まわりの10の楕円（関係する5語＋ダミー5語、順不同）から関係する語を選んで線で結ぶ（Lv{it['level']}）。"
+
+
+def sc_v(it):
+    return f"いちばん上の箱に「{it['start']}」、2番目の破線の箱に手本「{it.get('example')}」（薄い字・「れい」の印）。残り4つの箱に子どもが書く（Lv{it['level']}）。"
+
+
+ROUND8 = [
+    {
+        "key": "r8-ii-lv3", "title": "Ⅱ 意味ネットワーク照合 Lv3（新規6問）",
+        "lead": "Lv3 のダミー語を「同じ種類だが別の場面のもの」にしました（例：消防署 に対して パトカー・おまわりさん）。Lv1 は関係のないダミー、Lv2 は反対の場面のダミーです。これまで Lv3 だった「花火」「朝」は、ダミーが反対の場面（冬・夜）のものなので Lv2 に移しました。ダミーのどれかが中心語にも当てはまってしまわないかを見てください。",
+        "items": [{"id": "r8-ii-" + k.replace("_", "-"), "label": it["center"], "before": "",
+                   "after": "関係する語：" + "・".join(it["related"]) + "\nダミー語：" + "・".join(it["distractors"]),
+                   "ask": "消防署：救急隊も使う「ちょうしんき」「ほうたい」は、消防署と結べてしまうので避けました" if k == "fire_station" else "",
+                   "scene": sc_ii(it)} for k, it in II.items() if it["level"] == 3],
+    },
+    {
+        "key": "r8-v-example", "title": "Ⅴ つづき歌の手本（24問）",
+        "lead": "何を書けばよいか（前のことばと関係のあることば）が分かるよう、2番目の箱に手本の語を薄い字で入れました。教示文は「…1つずつ書きましょう。2ばんめは、れいです。」に変えています。手本が開始語とはっきり関係しているかを見てください。",
+        "items": [{"id": "r8-v-" + k.replace("_", "-"), "label": it["start"], "before": "",
+                   "after": f"{it['start']} → {it.get('example')}（れい）→ □ → □ → □ → □", "ask": "", "scene": sc_v(it)}
+                  for k, it in V.items()],
+    },
+    {
+        "key": "r8-viii-audit", "title": "Ⅷ 属性交差 全21問の点検結果",
+        "lead": "左だけ・右だけ・両方の3つの領域すべてに答えがあるかを点検しました。全問に答えがありました。答えの例が成り立つかを見てください。",
+        "items": [{"id": "r8-viii-" + k.replace("_", "-"), "label": f"{it['left_attr']} ／ {it['right_attr']}", "before": "",
+                   "after": "左だけ：{0}　右だけ：{1}　両方：{2}".format(*_VIII_CHECK.get(f"{it['left_attr']}/{it['right_attr']}", ("？", "？", "？"))),
+                   "ask": ""} for k, it in VIII.items() if "削除" not in str(it.get("intersection", "")) and "変更" not in str(it.get("intersection", ""))],
+    },
+]
+for sec in ROUND7:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND8
 for sec in SECTIONS:
     key = sec["key"]
     sec["tasks"] = SEC_TASK.get(key, [])
