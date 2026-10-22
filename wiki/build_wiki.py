@@ -18,7 +18,7 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "_data", "notes.json")
 
-DOMAIN_ORDER = ["前言語期", "語彙", "構音・音韻", "音韻意識", "読み書き", "文法",
+DOMAIN_ORDER = ["発達の道筋", "前言語期", "語彙", "構音・音韻", "音韻意識", "読み書き", "文法",
                 "語用・会話", "談話・ナラティブ", "心の理論と言語", "学齢期の語彙・意味"]
 # 年齢帯（構造ノート用）。各ノートの age_band（複数可）で振り分ける。
 BANDS = ["0〜1歳", "1〜2歳", "2〜3歳", "3〜4歳", "4〜6歳", "学齢期"]
@@ -36,6 +36,7 @@ def load():
                 back[r].append(n["id"])
     for n in notes:
         n["backlinks"] = back.get(n["id"], [])
+        n.setdefault("kind", "知見")
     return notes, by_id
 
 
@@ -57,11 +58,21 @@ def write_note(n, by_id):
         body.append(f"- {s['cite']}" + (f"　<{url}>" if url.startswith("http") else (f"　{url}" if url else ""))
                     + f"（確認：{s.get('level', '—')}）")
     body.append("")
+    for key, head in (("builds_on", "基礎となるスキル（下位）"), ("leads_to", "つながる上位スキル")):
+        if n.get(key):
+            body += [f"## {head}", ""]
+            for e in n[key]:
+                tgt = link(by_id, e["id"]) if e.get("id") in by_id else e.get("skill", "")
+                via = f"　根拠ノート：{link(by_id, e['via'])}" if e.get("via") in by_id else ""
+                body.append(f"- {tgt}〔{e.get('evidence', '—')}〕" + (f"：{e['basis']}" if e.get("basis") else "") + via)
+            body.append("")
+    if n.get("nd_note"):
+        body += ["## 神経発達症の子どもでの注意", "", n["nd_note"], ""]
     if n.get("links"):
         body += ["## 関連ノート", ""] + [f"- {link(by_id, r)}" for r in n["links"] if r in by_id] + [""]
     if n.get("backlinks"):
         body += ["## このノートを参照しているノート", ""] + [f"- {link(by_id, r)}" for r in n["backlinks"]] + [""]
-    body += [f"[[00_索引|索引へ]]　[[01_年齢別の見取り図|年齢別の見取り図へ]]", ""]
+    body += [f"[[00_索引|索引へ]]　[[01_年齢別の見取り図|年齢別の見取り図へ]]　[[03_発達の道筋|発達の道筋へ]]", ""]
     with open(os.path.join(ROOT, "notes", f"{n['id']}.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(fm + body))
 
@@ -73,7 +84,7 @@ def write_index(notes, by_id):
     out = ["# 00 索引（領域別）", "",
            "定型発達児の言語発達について、1枚に1つの知見をまとめたノート（ツェッテルカステン）の入口です。",
            "各ノートには出典（確認の程度つき）と、関連ノートへのリンクがあります。", "",
-           f"ノート数：{len(notes)}　／　[[01_年齢別の見取り図|年齢別の見取り図]]　／　[[02_文献一覧|文献一覧]]", ""]
+           f"ノート数：{len(notes)}　／　[[03_発達の道筋|発達の道筋（基礎→上位）]]　／　[[01_年齢別の見取り図|年齢別の見取り図]]　／　[[02_文献一覧|文献一覧]]", ""]
     doms = [d for d in DOMAIN_ORDER if d in by_dom] + [d for d in by_dom if d not in DOMAIN_ORDER]
     for d in doms:
         out += [f"## {d}", ""] + [f"- {link(by_id, n['id'])}（{n.get('age', '')}）" for n in by_dom[d]] + [""]
@@ -116,13 +127,64 @@ def write_biblio(notes, by_id):
         f.write("\n".join(out))
 
 
+EVID_STYLE = {"縦断で予測": "==>", "介入で確認": "==>", "相関のみ": "-->", "理論上の仮説": "-.->"}
+
+
+def pathway_edges(notes, by_id):
+    """全ノートの builds_on から（下位→上位）の辺を集める。両端がノートのものだけ図にする。"""
+    edges = {}
+    for n in notes:
+        for e in n.get("builds_on", []):
+            if e.get("id") in by_id and n["kind"] != "道筋":
+                edges[(e["id"], n["id"])] = e.get("evidence", "理論上の仮説")
+    return edges
+
+
+def mermaid(notes, by_id):
+    edges = pathway_edges(notes, by_id)
+    used = {a for a, _ in edges} | {b for _, b in edges}
+    lines = ["flowchart LR"]
+    stage_of = {}
+    for n in notes:
+        if n["id"] in used:
+            stage_of[n["id"]] = (n.get("age_band") or ["学齢期"])[0]
+    for b in BANDS:
+        ids = [i for i, st in stage_of.items() if st == b]
+        if not ids:
+            continue
+        lines.append(f'  subgraph S{BANDS.index(b)}["{b}"]')
+        for i in ids:
+            t = by_id[i]["short"] if by_id[i].get("short") else by_id[i]["title"][:14]
+            lines.append(f'    {i.replace("-", "_")}["{t}"]')
+        lines.append("  end")
+    for (a, b), ev in edges.items():
+        lines.append(f'  {a.replace("-", "_")} {EVID_STYLE.get(ev, "-->")}|{ev}| {b.replace("-", "_")}')
+    return "\n".join(lines)
+
+
+def write_pathway(notes, by_id):
+    out = ["# 03 発達の道筋（基礎 → 上位）", "",
+           "どの下位スキルが、どの上位スキルの基礎になっているかを、根拠の強さつきでまとめた構造ノートです。",
+           "神経発達症の子どもでは、この順序がゆっくり進んだり、下位スキルが不十分なまま上位スキルを部分的に身につけたりしますが、",
+           "下位スキルが基礎であることに変わりはありません（各ノートの「神経発達症の子どもでの注意」を参照）。", "",
+           "根拠の強さ：**縦断で予測**（先に測った力が後の力を予測）／**介入で確認**（下位を育てると上位が伸びた）／**相関のみ**／**理論上の仮説**", "",
+           "```mermaid", mermaid(notes, by_id).replace("\\n", "\n"), "```", "", "## つながりの一覧", ""]
+    for n in [x for x in notes if x["kind"] == "道筋"]:
+        out.append(f"- {link(by_id, n['id'])}〔{n.get('evidence', '')}〕")
+    out.append("")
+    with open(os.path.join(ROOT, "03_発達の道筋.md"), "w", encoding="utf-8") as f:
+        f.write("\n".join(out))
+
+
 def write_viewer(notes):
     tpl = os.path.join(ROOT, "viewer", "template.html")
     if not os.path.exists(tpl):
         return
     with open(tpl, encoding="utf-8") as f:
         page = f.read()
+    by_id = {n["id"]: n for n in notes}
     payload = json.dumps({"notes": notes, "domains": DOMAIN_ORDER, "bands": BANDS}, ensure_ascii=False)
+    page = page.replace("<!--__MERMAID__-->", html.escape(mermaid(notes, by_id).replace("\\n", "\n")))
     page = page.replace("/*__WIKI__*/null", payload.replace("</", "<\\/"))
     with open(os.path.join(ROOT, "viewer", "wiki.html"), "w", encoding="utf-8") as f:
         f.write(page)
@@ -153,6 +215,7 @@ def main():
     write_index(notes, by_id)
     write_timeline(notes, by_id)
     write_biblio(notes, by_id)
+    write_pathway(notes, by_id)
     write_viewer(notes)
     print(len(notes), "notes")
 

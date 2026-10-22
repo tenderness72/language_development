@@ -80,6 +80,18 @@ table.map thead th{background:var(--surface-2);font-weight:700;white-space:nowra
 table.map tbody th{background:var(--surface-2);white-space:nowrap}
 table.map td button{display:block;font:inherit;font-size:.8rem;line-height:1.45;text-align:left;background:none;border:0;padding:2px 0;color:var(--accent);cursor:pointer}
 .note{font-size:.84rem;color:var(--ink-2);margin:0}
+.dep{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.dep li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 10px;align-items:baseline;font-size:.88rem}
+.ev{font-size:.72rem;border-radius:4px;padding:0 6px;white-space:nowrap;border:1px solid var(--line);color:var(--ink-2)}
+.ev.strong{border-color:var(--accent);color:var(--accent)}
+.ev.weak{border-style:dashed}
+.dep .basis{grid-column:2;color:var(--ink-2);font-size:.82rem}
+.dep button{font:inherit;text-align:left;background:none;border:0;padding:0;color:var(--accent);cursor:pointer}
+.nd{border-left:3px solid var(--en);padding:4px 0 4px 12px;font-size:.9rem}
+.nd b{color:var(--en)}
+section.path{max-width:1180px;margin:24px auto 0}
+section.path .card{overflow-x:auto}
+section.path pre.mermaid{background:transparent;margin:0;min-width:640px}
 button:focus-visible,#q:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 
@@ -98,6 +110,13 @@ button:focus-visible,#q:focus-visible{outline:2px solid var(--accent);outline-of
   </aside>
   <main id="main"></main>
 </div>
+<section class="path" aria-label="発達の道筋">
+  <div class="card">
+    <h2 style="font-family:var(--title);font-size:1.25rem;margin:0">発達の道筋（基礎 → 上位）</h2>
+    <p class="note">矢印は「左のスキルが右のスキルの基礎になっている」ことを示します。太い矢印は縦断研究・介入研究で確かめられたつながり、細い矢印は相関のみ、点線は理論上の仮説です。各ノートの「基礎となるスキル」で根拠を確認できます。</p>
+    <pre class="mermaid"><!--__MERMAID__--></pre>
+  </div>
+</section>
 
 <script>
 const W = /*__WIKI__*/null;
@@ -164,6 +183,24 @@ function showNote(n) {
     ol.append(li);
   }
   card.append(ol);
+  const STRONG = ["縦断で予測", "介入で確認"];
+  for (const [key, head] of [["builds_on", "基礎となるスキル（下位）"], ["leads_to", "つながる上位スキル"]]) {
+    if (!(n[key] || []).length) continue;
+    card.append(el("h3", {text: head}));
+    const ul = el("ul", {cls: "dep"});
+    for (const e of n[key]) {
+      const evCls = "ev" + (STRONG.includes(e.evidence) ? " strong" : (e.evidence === "理論上の仮説" ? " weak" : ""));
+      let target;
+      if (e.id && byId[e.id]) { target = el("button", {type: "button", text: byId[e.id].title}); target.addEventListener("click", () => go(e.id)); }
+      else target = el("span", {text: e.skill || ""});
+      const li = el("li", {}, [el("span", {cls: evCls, text: e.evidence || "—"}), target]);
+      if (e.basis) li.append(el("span", {cls: "basis", text: e.basis}));
+      if (e.via && byId[e.via]) { const v = el("button", {type: "button", cls: "basis", text: "根拠ノート：" + byId[e.via].title}); v.addEventListener("click", () => go(e.via)); li.append(v); }
+      ul.append(li);
+    }
+    card.append(ul);
+  }
+  if (n.nd_note) card.append(el("div", {cls: "nd"}, [el("b", {text: "神経発達症の子どもでの注意："}), n.nd_note]));
   if ((n.links || []).length) { card.append(el("h3", {text: "関連ノート"}), el("div", {cls: "links"}, n.links.map(linkBtn))); }
   if ((n.backlinks || []).length) { card.append(el("h3", {text: "このノートを参照しているノート"}), el("div", {cls: "links"}, n.backlinks.map(linkBtn))); }
   m.append(card);
