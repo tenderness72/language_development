@@ -22,7 +22,8 @@ def _page_rng(seed, type_key, page_idx):
 
 
 def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
-                 base_dir=".", name=None, sampler=None, verbose=True):
+                 base_dir=".", name=None, sampler=None, verbose=True,
+                 answers_name=None, manifest_path=None):
     """1テンプレートを count 枚生成。manifest(dict) を返す。"""
     fonts.register(data.load_config(base_dir).get("font"), base_dir=base_dir)
     from . import layout
@@ -43,7 +44,7 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
     os.makedirs(out_dir, exist_ok=True)
     stem = name or f"type_{type_key}"
     q_path = os.path.join(out_dir, f"{stem}.pdf")
-    a_path = os.path.join(out_dir, f"{stem}_answers.pdf")
+    a_path = os.path.join(out_dir, f"{answers_name or stem + '_answers'}.pdf")
 
     # PDFメタデータのタイトルも「ローマ数字＋表示名」のみ。
     # 「関連語の想起課題」や臨床名はPDFに一切入れない。
@@ -84,7 +85,9 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
 
     manifest["warnings"] = ctx.warnings
     manifest["has_answers"] = do_answers
-    with open(os.path.join(out_dir, f"{stem}_manifest.json"), "w", encoding="utf-8") as f:
+    manifest_path = manifest_path or os.path.join(out_dir, f"{stem}_manifest.json")
+    os.makedirs(os.path.dirname(manifest_path), exist_ok=True)
+    with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
     manifest["broadened_level"] = broadened

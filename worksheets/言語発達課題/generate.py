@@ -2,8 +2,8 @@
 """関連語の想起課題ジェネレータ ― CLI。
 
 例:
-  python generate.py --type II --level 2 --count 20 --seed 42 --out ./out --with-answers
-  python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
+  python generate.py --catalog                 # products.yaml の全課題・全レベルを プリント/ に作り直す
+  python generate.py --type II --level 2 --count 5 --seed 1 --out ./プリント/_試し --with-answers
 """
 import argparse
 import os
@@ -49,6 +49,41 @@ def run_pack(args):
         )
 
 
+def run_catalog(args):
+    """products.yaml の catalog に従い、全課題・全レベルを次の構成で作り直す。
+
+    プリント/NN_名前/LvL/NN_名前_LvL_問題.pdf（＋ _解答.pdf）
+    プリント/_生成記録/NN_名前_LvL.json
+    各レベルの PDF には、そのレベルの問題を1回ずつ（2問×枚数）収める。
+    """
+    import shutil
+    with open(args.catalog, encoding="utf-8") as f:
+        doc = yaml.safe_load(f) or {}
+    out_root = args.out or os.path.join(args.base_dir, "プリント")
+    if os.path.isdir(out_root):
+        shutil.rmtree(out_root)          # 古い出力が残らないよう毎回作り直す
+    log_dir = os.path.join(out_root, "_生成記録")
+    for n, entry in enumerate(doc.get("catalog", []), start=1):
+        tkey = str(entry["type"])
+        folder = f"{n:02d}_{entry['name']}"
+        items = data.load_items(tkey, args.base_dir)
+        for level in sorted({int(it.get("level", 1)) for it in items}):
+            uniq = data.count_unique(tkey, [it for it in items if int(it.get("level", 1)) == level])
+            count = uniq // 2
+            if count == 0:
+                print(f"[{tkey}] Lv{level}: 問題が{uniq}問のため1枚に満たず、作りません")
+                continue
+            stem = f"{folder}_Lv{level}"
+            generate_set(
+                type_key=tkey, count=count, level=level,
+                seed=args.seed + n * 10 + level,
+                out_dir=os.path.join(out_root, folder, f"Lv{level}"),
+                with_answers=True, base_dir=args.base_dir,
+                name=f"{stem}_問題", answers_name=f"{stem}_解答",
+                manifest_path=os.path.join(log_dir, f"{stem}.json"),
+            )
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="関連語の想起課題プリント生成")
     ap.add_argument("--type", help="I〜VIII から1つ")
@@ -56,21 +91,30 @@ def main(argv=None):
                     help="難易度 1〜3（省略時は全item対象）")
     ap.add_argument("--count", type=int, default=10, help="生成する枚数(=商品数)")
     ap.add_argument("--seed", type=int, default=0, help="乱数シード（再現性）")
-    ap.add_argument("--out", default="./out", help="出力ディレクトリ")
+    ap.add_argument("--out", default=None,
+                    help="出力ディレクトリ（省略時：--catalog は プリント/、それ以外は プリント/_試し/）")
     ap.add_argument("--with-answers", action="store_true",
                     help="I/II/III/VII の解答PDFも出力")
     ap.add_argument("--name", default=None, help="出力ファイル名の幹")
-    ap.add_argument("--pack", default=None, help="products.yaml を渡して一括生成")
+    ap.add_argument("--pack", default=None, help="products.yaml の products（販売パック）を一括生成")
+    ap.add_argument("--catalog", nargs="?", const="products.yaml", default=None,
+                    help="products.yaml の catalog に従い、全課題・全レベルを プリント/ に作り直す")
     ap.add_argument("--base-dir", default=os.path.dirname(os.path.abspath(__file__)),
                     help="data/ と fonts/ の基準ディレクトリ")
     args = ap.parse_args(argv)
 
-    if args.pack:
+    if not args.catalog and not args.out:
+        args.out = os.path.join(args.base_dir, "プリント", "_試し")
+    if args.catalog:
+        if not os.path.isabs(args.catalog) and not os.path.exists(args.catalog):
+            args.catalog = os.path.join(args.base_dir, args.catalog)
+        run_catalog(args)
+    elif args.pack:
         run_pack(args)
     elif args.type:
         run_single(args)
     else:
-        ap.error("--type か --pack のいずれかを指定してください。")
+        ap.error("--catalog・--type・--pack のいずれかを指定してください。")
 
 
 if __name__ == "__main__":

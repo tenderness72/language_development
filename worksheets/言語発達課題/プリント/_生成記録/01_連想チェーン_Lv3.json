@@ -1,0 +1,97 @@
+{
+  "type": "I",
+  "display_title": "ことばつなぎ",
+  "clinical_title": "連想チェーン",
+  "name": "01_連想チェーン_Lv3_問題",
+  "level": 3,
+  "seed": 55,
+  "count": 3,
+  "pages": [
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "paint_picture",
+          "chain": [
+            "えのぐ",
+            "まぜる",
+            "いろ",
+            "ぬる",
+            "え"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "sports_baton",
+          "chain": [
+            "運動会",
+            "はしる",
+            "リレー",
+            "わたす",
+            "バトン"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "tree_blocks",
+          "chain": [
+            "木",
+            "きる",
+            "板",
+            "けずる",
+            "つみき"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "scissors_crane",
+          "chain": [
+            "はさみ",
+            "きる",
+            "かみ",
+            "おる",
+            "つる"
+          ]
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "cloud_umbrella",
+          "chain": [
+            "くも",
+            "ひろがる",
+            "ゆうだち",
+            "ぬれる",
+            "タオル"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "grape_sherbet",
+          "chain": [
+            "ぶどう",
+            "しぼる",
+            "ジュース",
+            "こおらせる",
+            "シャーベット"
+          ]
+        }
+      ],
+      "page": 3
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

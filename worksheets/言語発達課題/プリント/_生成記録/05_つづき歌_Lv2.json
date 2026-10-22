@@ -1,0 +1,113 @@
+{
+  "type": "V",
+  "display_title": "つづき歌をつくろう",
+  "clinical_title": "つづき歌",
+  "name": "05_つづき歌_Lv2_問題",
+  "level": 2,
+  "seed": 94,
+  "count": 5,
+  "pages": [
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "flower",
+          "start": "はな",
+          "slots": 5,
+          "example": "ちょうちょ"
+        },
+        {
+          "n": 2,
+          "id": "milk",
+          "start": "ぎゅうにゅう",
+          "slots": 5,
+          "example": "うし"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "summer",
+          "start": "なつ",
+          "slots": 5,
+          "example": "すいか"
+        },
+        {
+          "n": 2,
+          "id": "rain",
+          "start": "あめ",
+          "slots": 5,
+          "example": "かさ"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "mountain",
+          "start": "やま",
+          "slots": 5,
+          "example": "き"
+        },
+        {
+          "n": 2,
+          "id": "morning",
+          "start": "あさ",
+          "slots": 5,
+          "example": "たいよう"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fire",
+          "start": "ひ",
+          "slots": 5,
+          "example": "ろうそく"
+        },
+        {
+          "n": 2,
+          "id": "shop",
+          "start": "おみせ",
+          "slots": 5,
+          "example": "おかね"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "park",
+          "start": "こうえん",
+          "slots": 5,
+          "example": "ブランコ"
+        },
+        {
+          "n": 2,
+          "id": "festival",
+          "start": "おまつり",
+          "slots": 5,
+          "example": "たいこ"
+        }
+      ],
+      "page": 5
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

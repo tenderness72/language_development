@@ -1,0 +1,175 @@
+{
+  "type": "IV",
+  "display_title": "思いつくことばを集めよう",
+  "clinical_title": "放射状連想",
+  "name": "04_放射状連想_Lv1_問題",
+  "level": 1,
+  "seed": 83,
+  "count": 9,
+  "pages": [
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "park",
+          "center": "公園",
+          "hint": "ブランコ"
+        },
+        {
+          "n": 2,
+          "id": "spring",
+          "center": "春",
+          "hint": "さくら"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "birthday",
+          "center": "誕生日",
+          "hint": "ケーキ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv1_010",
+          "center": "おもちゃ",
+          "hint": "つみき"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "zoo",
+          "center": "どうぶつえん",
+          "hint": "ぞう"
+        },
+        {
+          "n": 2,
+          "id": "summer",
+          "center": "夏",
+          "hint": "プール"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "sea",
+          "center": "海",
+          "hint": "波"
+        },
+        {
+          "n": 2,
+          "id": "winter",
+          "center": "冬",
+          "hint": "雪"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv1_006",
+          "center": "花",
+          "hint": "ちょうちょ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv1_008",
+          "center": "おべんとう",
+          "hint": "おにぎり"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "school",
+          "center": "学校",
+          "hint": "先生"
+        },
+        {
+          "n": 2,
+          "id": "kitchen",
+          "center": "台所",
+          "hint": "なべ"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv1_007",
+          "center": "雪",
+          "hint": "ゆきだるま"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv1_001",
+          "center": "秋",
+          "hint": "おちば"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv1_003",
+          "center": "ねこ",
+          "hint": "ひげ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv1_002",
+          "center": "いぬ",
+          "hint": "しっぽ"
+        }
+      ],
+      "page": 8
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv1_004",
+          "center": "くるま",
+          "hint": "タイヤ"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv1_005",
+          "center": "でんしゃ",
+          "hint": "せんろ"
+        }
+      ],
+      "page": 9
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

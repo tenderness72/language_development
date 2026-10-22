@@ -1,0 +1,133 @@
+{
+  "type": "II",
+  "display_title": "関係のあることばを結ぼう",
+  "clinical_title": "意味ネットワーク照合",
+  "name": "02_意味ネットワーク照合_Lv2_問題",
+  "level": 2,
+  "seed": 64,
+  "count": 4,
+  "pages": [
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "rain_day",
+          "center": "雨",
+          "related": [
+            "かさ",
+            "長ぐつ",
+            "雲",
+            "かっぱ",
+            "水たまり"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "train",
+          "center": "電車",
+          "related": [
+            "線路",
+            "駅",
+            "切符",
+            "ホーム",
+            "車内"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "birthday",
+          "center": "誕生日",
+          "related": [
+            "ケーキ",
+            "ろうそく",
+            "プレゼント",
+            "風船",
+            "カード"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "post",
+          "center": "郵便局",
+          "related": [
+            "切手",
+            "はがき",
+            "ポスト",
+            "手紙",
+            "小包"
+          ]
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "morning",
+          "center": "朝",
+          "related": [
+            "朝日",
+            "目覚まし",
+            "朝ごはん",
+            "あいさつ",
+            "通学"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "winter",
+          "center": "冬",
+          "related": [
+            "雪",
+            "こたつ",
+            "手袋",
+            "マフラー",
+            "みかん"
+          ]
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "II",
+      "problems": [
+        {
+          "n": 1,
+          "id": "library",
+          "center": "図書館",
+          "related": [
+            "本",
+            "本だな",
+            "司書",
+            "しずか",
+            "貸し出し"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "fireworks",
+          "center": "花火",
+          "related": [
+            "夏",
+            "夜",
+            "光",
+            "音",
+            "浴衣"
+          ]
+        }
+      ],
+      "page": 4
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

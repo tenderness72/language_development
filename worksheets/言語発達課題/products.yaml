@@ -1,13 +1,15 @@
-# 複数テンプレートの商品パックを一括生成する例。
-#   python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
-# 各パックは out/<TYPE>/ に分かれ、パック内で問題・使用語の重複なしを保証します。
-products:
-  - { type: IV, level: 1, count: 9, name: "放射状連想 Lv1" }
-  - { type: IV, level: 2, count: 14, name: "放射状連想 Lv2" }
-  - { type: IV, level: 3, count: 13, name: "放射状連想 Lv3" }
-  - { type: VI, level: 1, count: 7, name: "カテゴリー流暢性 Lv1" }
-  - { type: VI, level: 2, count: 24, name: "カテゴリー流暢性 Lv2" }
-  - { type: VI, level: 3, count: 22, name: "カテゴリー流暢性 Lv3" }
-  - { type: VIII, level: 2, count: 6, name: ベン図パック }
-  - { type: VII,  level: 1, count: 5, name: 音韻パック }
-  - { type: III,  level: 1, count: 5, name: ペアパック }
+# プリントの構成。
+#   python generate.py --catalog
+# で、ここに並べた順に番号を付けて プリント/ に作り直す（毎回、古い出力は消して作り直す）。
+#   プリント/01_連想チェーン/Lv1/01_連想チェーン_Lv1_問題.pdf（＋ _解答.pdf）
+# 各レベルの PDF には、そのレベルの問題を1回ずつ収める（1枚2問。奇数のときは1問あまる）。
+# name はフォルダ名・ファイル名に使う（記号は使わない）。
+catalog:
+  - { type: I,    name: 連想チェーン }
+  - { type: II,   name: 意味ネットワーク照合 }
+  - { type: III,  name: ペア対応づけ }
+  - { type: IV,   name: 放射状連想 }
+  - { type: V,    name: つづき歌 }
+  - { type: VI,   name: カテゴリー流暢性 }
+  - { type: VII,  name: 語頭音とモーラ数 }
+  - { type: VIII, name: 属性交差ベン図 }

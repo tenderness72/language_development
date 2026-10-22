@@ -1,0 +1,93 @@
+{
+  "type": "VIII",
+  "display_title": "どんなものがあるかな",
+  "clinical_title": "属性交差",
+  "name": "08_属性交差ベン図_Lv1_問題",
+  "level": 1,
+  "seed": 123,
+  "count": 4,
+  "pages": [
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "white_eat",
+          "left_attr": "白いもの",
+          "right_attr": "食べるもの",
+          "intersection": "白くて食べるもの"
+        },
+        {
+          "n": 2,
+          "id": "cold_eat",
+          "left_attr": "つめたいもの",
+          "right_attr": "食べるもの",
+          "intersection": "つめたくて食べるもの"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "round_eat",
+          "left_attr": "丸いもの",
+          "right_attr": "食べるもの",
+          "intersection": "丸くて食べるもの"
+        },
+        {
+          "n": 2,
+          "id": "red_eat",
+          "left_attr": "赤いもの",
+          "right_attr": "食べるもの",
+          "intersection": "赤くて食べるもの"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "big_animal",
+          "left_attr": "大きいもの",
+          "right_attr": "どうぶつ",
+          "intersection": "大きいどうぶつ"
+        },
+        {
+          "n": 2,
+          "id": "green_vege",
+          "left_attr": "みどりのもの",
+          "right_attr": "やさい",
+          "intersection": "みどりのやさい"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "sweet_drink",
+          "left_attr": "あまいもの",
+          "right_attr": "飲みもの",
+          "intersection": "あまい飲みもの"
+        },
+        {
+          "n": 2,
+          "id": "yellow_fruit",
+          "left_attr": "黄色いもの",
+          "right_attr": "くだもの",
+          "intersection": "黄色いくだもの"
+        }
+      ],
+      "page": 4
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

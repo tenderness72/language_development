@@ -49,34 +49,45 @@ pip install -r requirements.txt
 
 ## 使い方
 
-### 1テンプレートを生成
+### 印刷するとき（ふだんはここだけ）
+
+`プリント/` を開きます。課題は番号順、レベルは Lv1〜Lv3 のフォルダに分かれています。
 
 ```
-python generate.py --type II --level 2 --count 20 --seed 42 --out ./out --with-answers
+プリント/
+├── 01_連想チェーン/
+│   ├── Lv1/  01_連想チェーン_Lv1_問題.pdf ／ 01_連想チェーン_Lv1_解答.pdf
+│   ├── Lv2/
+│   └── Lv3/
+├── 02_意味ネットワーク照合/
+├── 03_ペア対応づけ/
+├── 04_放射状連想/
+├── 05_つづき歌/
+├── 06_カテゴリー流暢性/
+├── 07_語頭音とモーラ数/
+├── 08_属性交差ベン図/
+└── _生成記録/   … 各PDFに使った語の記録（ふだんは見なくてよい）
 ```
 
-`./out/` に次が出力されます。
+- 各レベルの PDF には、そのレベルの問題がすべて1回ずつ入っています（1枚2問）。
+- 解答は、正解が1つに決まる Ⅰ・Ⅱ・Ⅲ・Ⅶ だけにあります（`_解答.pdf`）。
+- 問題が1問しかないレベル（Ⅲ・Ⅷ の Lv3）は、1枚に満たないので作られません。
 
-- `type_II.pdf` … 問題PDF（20枚＝20商品。各枚に問題1・問題2）
-- `type_II_answers.pdf` … 解答PDF（Ⅰ/Ⅱ/Ⅲ/Ⅶで `--with-answers` 指定時のみ）
-- `type_II_manifest.json` … 使用語・正解・警告の記録
+### 語を直したあと、プリントを作り直す
 
-### 商品パックを一括生成（products.yaml）
-
-複数テンプレートをまとめて生成します。各パックは `out/<種別>/` に分かれ、
-パック内で同じ問題が重複しないことを保証します（判定は下記「品質保証」を参照）。
-
-```yaml
-# products.yaml
-products:
-  - { type: VIII, level: 2, count: 20, name: ベン図パック }
-  - { type: VII,  level: 1, count: 15, name: 音韻パック }
-```
+`data/templates/*.yaml` を直したら、次の1行で `プリント/` を丸ごと作り直します（古い出力は消えます）。
 
 ```
-python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
+python generate.py --catalog
 ```
 
+並び順・フォルダ名は `products.yaml` の `catalog` で決まります。
+
+### 1種類だけ試しに作る
+
+```
+python generate.py --type IV --level 2 --count 3 --seed 1 --with-answers   # → プリント/_試し/
+```
 
 ## CLIオプション
 
@@ -86,10 +97,10 @@ python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
 | `--level` | 難易度 `1`〜`3`（省略時は全レベルから出題）。 |
 | `--count` | 生成する枚数（＝商品数）。1枚ごとに問題1・問題2の内容を変える。 |
 | `--seed` | 乱数シード。同じ値なら問題・配置・PDFをバイト単位で再現。 |
-| `--out` | 出力ディレクトリ（既定 `./out`）。 |
+| `--out` | 出力ディレクトリ（省略時：`--catalog` は `プリント/`、それ以外は `プリント/_試し/`）。 |
 | `--with-answers` | 正解が一意な Ⅰ/Ⅱ/Ⅲ/Ⅶ の解答PDFも出力。 |
 | `--name` | 出力ファイル名の幹（省略時 `type_<種別>`）。 |
-| `--pack` | `products.yaml` を渡して一括生成。 |
+| `--catalog` | `products.yaml` の `catalog` に従い、全課題・全レベルを `プリント/` に作り直す。 |
 | `--base-dir` | `data/` と `fonts/` の基準ディレクトリ。 |
 
 > `--level` 指定時、そのレベルのitemが枚数に足りない場合は自動的に全レベルへ
@@ -159,22 +170,24 @@ python generate.py --pack products.yaml --seed 42 --out ./out --with-answers
 ## プロジェクト構成
 
 ```
+プリント/                印刷用PDF（generate.py --catalog で作り直す）
+_旧ファイル/             整理前の出力と、最初の参考資料（削除せず退避）
 generate.py              CLIエントリポイント
 gen/
   fonts.py               フォント登録（Noto Sans JP埋め込み）
-  layout.py              ページ枠・ヘッダー・帯・描画プリミティブ
+  layout.py              ページ枠・ヘッダー・帯・描画プリミティブ・ふりがな
   data.py                YAML読込・レベル選択・重複なしサンプリング
   qa.py                  データ妥当性チェック
-  render.py              セット生成（問題/解答PDF・manifest）
+  render.py              セット生成（問題/解答PDF・生成記録）
   templates/t1..t8       8テンプレートの描画＋解答面
 data/
   config.yaml            全体設定
+  furigana.yaml          ふりがな辞書
   templates/*.yaml       語・関係データ（編集対象）
 fonts/                   Noto Sans JP 静的TTF ＋ OFL.txt
-products.yaml            パック生成の例
+products.yaml            プリントの構成（課題の並び順・フォルダ名）
 requirements.txt
 ```
-
 
 ## ライセンス
 

@@ -1,0 +1,53 @@
+{
+  "type": "V",
+  "display_title": "つづき歌をつくろう",
+  "clinical_title": "つづき歌",
+  "name": "05_つづき歌_Lv3_問題",
+  "level": 3,
+  "seed": 95,
+  "count": 2,
+  "pages": [
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "music",
+          "start": "おんがく",
+          "slots": 5,
+          "example": "ピアノ"
+        },
+        {
+          "n": 2,
+          "id": "wind",
+          "start": "かぜ",
+          "slots": 5,
+          "example": "たこ"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "travel",
+          "start": "りょこう",
+          "slots": 5,
+          "example": "おみやげ"
+        },
+        {
+          "n": 2,
+          "id": "red",
+          "start": "あか",
+          "slots": 5,
+          "example": "トマト"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

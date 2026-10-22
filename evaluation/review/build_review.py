@@ -22,6 +22,16 @@ def load(name):
         return {it["id"]: it for it in yaml.safe_load(f)["items"]}
 
 
+_DIRS = {"I": "01_連想チェーン", "II": "02_意味ネットワーク照合", "III": "03_ペア対応づけ", "IV": "04_放射状連想",
+         "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図"}
+
+
+def sheet(k, level, answers=False):
+    """プリント/ の中の、課題 k・レベル level の PDF（相対パス）。"""
+    d = _DIRS[k]
+    return f"プリント/{d}/Lv{level}/{d}_Lv{level}_{'解答' if answers else '問題'}.pdf"
+
+
 def page_png(pdf, page_no, dpi=62):  # noqa: E302
     doc = pymupdf.open(os.path.join(WS, pdf))
     png = doc[page_no - 1].get_pixmap(dpi=dpi).tobytes("png")
@@ -365,15 +375,14 @@ SECTIONS[:0] = ROUND5
 
 
 FIGURES = [
-    ("Ⅳ Lv3（抽象語・感情語）", page_png("out/IV/放射状連想 Lv3.pdf", 1)),
-    ("Ⅲ ペアパック（右6語・解答）", page_png("out/III/ペアパック_answers.pdf", 4)),
-    ("Ⅰ 連想チェーン Lv3（解答）", page_png("out/連想チェーン Lv3 見本_answers.pdf", 1)),
-    ("Ⅶ 解答（マスの書き方と注記）", page_png("out/type_VII_answers.pdf", 1)),
-    ("Ⅱ Lv3（同じ種類・別の場面のダミー）", page_png("out/意味ネットワーク Lv3 見本.pdf", 1)),
-    ("Ⅴ つづき歌（手本つき）", page_png("out/type_V.pdf", 1)),
-    ("Ⅶ Lv1 解答（直音・2〜4音）", page_png("out/VII/音韻パック_answers.pdf", 1)),
-    ("Ⅶ Lv2 問題（ん・長音を書いておく行）", page_png("out/VII/音韻 Lv2 見本（撥音・長音）.pdf", 1)),
-    ("Ⅶ Lv3 問題（拗音の語頭音・っ を書いておく行）", page_png("out/VII/音韻 Lv3 見本（拗音・促音）.pdf", 1)),
+    ("Ⅳ Lv3（抽象語・感情語）", page_png(sheet("IV", 3), 1)),
+    ("Ⅲ Lv1（右6語・解答）", page_png(sheet("III", 1, True), 1)),
+    ("Ⅰ 連想チェーン Lv3（解答）", page_png(sheet("I", 3, True), 1)),
+    ("Ⅱ Lv3（同じ種類・別の場面のダミー）", page_png(sheet("II", 3), 1)),
+    ("Ⅴ つづき歌（手本つき）", page_png(sheet("V", 1), 1)),
+    ("Ⅶ Lv1 解答（直音・2〜4音）", page_png(sheet("VII", 1, True), 1)),
+    ("Ⅶ Lv2 問題（ん・長音を書いておく行）", page_png(sheet("VII", 2), 1)),
+    ("Ⅶ Lv3 問題（拗音の語頭音・っ を書いておく行）", page_png(sheet("VII", 3), 1)),
 ]
 
 # ---- 課題の説明（どの課題の、どんな問題の中の表現か） ----
@@ -398,7 +407,7 @@ _FORMAT["V"] = "いちばん上の箱に開始語。下へ矢印でつながる�
 for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII"):
     m = importlib.import_module("gen.templates." + _MOD[k])
     TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
-                "format": _FORMAT[k], "img": page_png(f"out/type_{k}.pdf", 1, dpi=48)}
+                "format": _FORMAT[k], "img": page_png(sheet(k, 1), 1, dpi=48)}
 
 
 def sc_iv(it):
