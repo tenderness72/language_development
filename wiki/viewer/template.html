@@ -1,0 +1,209 @@
+<title>ことばの発達ノート</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDGothic&family=Zen+Old+Mincho:wght@600&display=swap">
+<style>
+/* 索引カード棚：左に検索と一覧、右に1枚のカード（ノート）。見取り図は 領域×年齢帯 の表 */
+:root{
+  --bg:#f3f5f6; --surface:#ffffff; --surface-2:#e9eef1; --line:#d3dce1;
+  --ink:#1d2a33; --ink-2:#4f606b; --ink-3:#7a8a94;
+  --accent:#22587d; --accent-soft:#dde9f2;
+  --debate:#8a5a00; --debate-soft:#f7ecd4;
+  --jp:#2f6b4c; --en:#6a4c8c;
+  --font:"BIZ UDPGothic","Hiragino Sans","Yu Gothic UI","Meiryo",system-ui,sans-serif;
+  --title:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --mono:"BIZ UDGothic","Hiragino Sans","Meiryo",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12181c; --surface:#1a2228; --surface-2:#222d34; --line:#33424b;
+    --ink:#e4ecf0; --ink-2:#b0bfc8; --ink-3:#86969f;
+    --accent:#86bde3; --accent-soft:#1d3444;
+    --debate:#e6bd6a; --debate-soft:#3a2f17;
+    --jp:#8fd0ad; --en:#c3a6e6; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12181c; --surface:#1a2228; --surface-2:#222d34; --line:#33424b;
+  --ink:#e4ecf0; --ink-2:#b0bfc8; --ink-3:#86969f;
+  --accent:#86bde3; --accent-soft:#1d3444;
+  --debate:#e6bd6a; --debate-soft:#3a2f17;
+  --jp:#8fd0ad; --en:#c3a6e6; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.8;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+a{color:var(--accent)}
+.shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;padding-top:20px}
+@media (max-width:820px){.shell{grid-template-columns:minmax(0,1fr)}}
+header.top{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+header.top h1{font-family:var(--title);font-size:1.6rem;margin:0;letter-spacing:.04em}
+header.top p{margin:0;color:var(--ink-2);font-size:.9rem}
+header.top .home{margin-left:auto;font:inherit;font-size:.88rem;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:6px;padding:3px 12px;cursor:pointer}
+aside{display:grid;gap:12px;align-content:start;min-width:0}
+@media (min-width:821px){aside{position:sticky;top:env(safe-area-inset-top,0px);max-height:100vh;overflow:auto;padding-bottom:20px}}
+#q{width:100%;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink)}
+.filt{display:flex;flex-wrap:wrap;gap:5px}
+.filt button{font:inherit;font-size:.78rem;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:1px 9px;cursor:pointer}
+.filt button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.flabel{font-size:.74rem;color:var(--ink-3);letter-spacing:.08em}
+#list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+#list li button{display:grid;grid-template-columns:4.6em 1fr;gap:6px;width:100%;text-align:left;font:inherit;font-size:.86rem;line-height:1.5;
+  background:transparent;border:0;border-bottom:1px solid var(--line);padding:7px 4px;color:var(--ink);cursor:pointer}
+#list li button:hover{background:var(--surface-2)}
+#list li button[aria-current="true"]{background:var(--accent-soft)}
+.nid{font-family:var(--mono);font-size:.78rem;color:var(--ink-3)}
+.count{font-size:.8rem;color:var(--ink-3)}
+main{min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 26px;display:grid;gap:14px}
+@media (max-width:560px){.card{padding:16px}}
+.card h2{font-family:var(--title);font-size:1.35rem;line-height:1.5;margin:0;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.78rem;border-radius:999px;padding:1px 10px;background:var(--surface-2);color:var(--ink-2)}
+.chip.jp{color:var(--jp)} .chip.en{color:var(--en)}
+.body{margin:0;max-width:68ch}
+.debate{background:var(--debate-soft);border-radius:8px;padding:8px 12px;font-size:.92rem}
+.debate b{color:var(--debate)}
+h3{font-size:.86rem;letter-spacing:.08em;color:var(--ink-3);margin:6px 0 0}
+.src{margin:0;padding-left:1.2em;font-size:.86rem;line-height:1.65}
+.src li{margin-bottom:4px;overflow-wrap:anywhere}
+.lvl{font-size:.74rem;color:var(--ink-3)}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links button{font:inherit;font-size:.84rem;text-align:left;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:7px;padding:3px 10px;cursor:pointer}
+.links button:hover{border-color:var(--accent)}
+.overview h2{font-family:var(--title);font-size:1.25rem;margin:0}
+.grid-wrap{overflow-x:auto}
+table.map{border-collapse:collapse;font-size:.82rem;min-width:720px;width:100%}
+table.map th,table.map td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+table.map thead th{background:var(--surface-2);font-weight:700;white-space:nowrap}
+table.map tbody th{background:var(--surface-2);white-space:nowrap}
+table.map td button{display:block;font:inherit;font-size:.8rem;line-height:1.45;text-align:left;background:none;border:0;padding:2px 0;color:var(--accent);cursor:pointer}
+.note{font-size:.84rem;color:var(--ink-2);margin:0}
+button:focus-visible,#q:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="shell">
+  <header class="top">
+    <h1>ことばの発達ノート</h1>
+    <p>定型発達児の言語発達（0歳〜学齢期）を、1枚1知見のノートでつないだ参照用 Wiki</p>
+    <button class="home" id="home" type="button">見取り図にもどる</button>
+  </header>
+  <aside>
+    <input id="q" type="search" placeholder="ことばで探す（例：喃語、助詞、モーラ）" aria-label="ノートを検索">
+    <div><div class="flabel">領域</div><div class="filt" id="fdom"></div></div>
+    <div><div class="flabel">年齢帯</div><div class="filt" id="fband"></div></div>
+    <div class="count" id="count"></div>
+    <ul id="list"></ul>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<script>
+const W = /*__WIKI__*/null;
+const notes = W ? W.notes : [];
+const byId = Object.fromEntries(notes.map(n => [n.id, n]));
+let fDom = "", fBand = "", q = "";
+
+function el(t, a = {}, kids = []) {
+  const e = document.createElement(t);
+  for (const [k, v] of Object.entries(a)) { if (k === "text") e.textContent = v; else if (k === "cls") e.className = v; else e.setAttribute(k, v); }
+  for (const c of [].concat(kids)) if (c != null) e.append(c);
+  return e;
+}
+function chips(box, values, cur, set) {
+  box.textContent = "";
+  for (const v of ["", ...values]) {
+    const b = el("button", {type: "button", "aria-pressed": String(cur() === v), text: v || "すべて"});
+    b.addEventListener("click", () => { set(v); renderList(); chips(box, values, cur, set); });
+    box.append(b);
+  }
+}
+function match(n) {
+  if (fDom && n.domain !== fDom) return false;
+  if (fBand && !(n.age_band || []).includes(fBand)) return false;
+  if (q) {
+    const hay = [n.id, n.title, n.body, n.debate || "", (n.tags || []).join(" "), (n.sources || []).map(s => s.cite).join(" ")].join(" ");
+    return q.split(/\s+/).every(w => hay.includes(w));
+  }
+  return true;
+}
+function renderList() {
+  const list = document.getElementById("list"); list.textContent = "";
+  const hits = notes.filter(match);
+  document.getElementById("count").textContent = `${hits.length} / ${notes.length} 枚`;
+  const cur = location.hash.slice(1);
+  for (const n of hits) {
+    const b = el("button", {type: "button", "aria-current": String(n.id === cur)}, [el("span", {cls: "nid", text: n.id}), el("span", {text: n.title})]);
+    b.addEventListener("click", () => go(n.id));
+    list.append(el("li", {}, b));
+  }
+}
+function linkBtn(id) {
+  const n = byId[id]; if (!n) return null;
+  const b = el("button", {type: "button"}, [el("span", {cls: "nid", text: id + " "}), n.title]);
+  b.addEventListener("click", () => go(id));
+  return b;
+}
+function showNote(n) {
+  const m = document.getElementById("main"); m.textContent = "";
+  const card = el("article", {cls: "card"});
+  card.append(el("div", {cls: "nid", text: n.id}), el("h2", {text: n.title}));
+  const dataCls = n.lang_data === "日本語児" ? "chip jp" : (n.lang_data === "英語圏" ? "chip en" : "chip");
+  card.append(el("div", {cls: "meta"}, [el("span", {cls: "chip", text: n.domain}), el("span", {cls: "chip", text: "年齢：" + (n.age || "—")}),
+    el("span", {cls: dataCls, text: "データ：" + (n.lang_data || "—")}), ...(n.tags || []).map(t => el("span", {cls: "chip", text: "#" + t}))]));
+  card.append(el("p", {cls: "body", text: n.body}));
+  if (n.debate) card.append(el("div", {cls: "debate"}, [el("b", {text: "論点："}), n.debate]));
+  card.append(el("h3", {text: "出典"}));
+  const ol = el("ol", {cls: "src"});
+  for (const s of n.sources || []) {
+    const li = el("li", {}, [s.cite + " "]);
+    if (s.url && s.url.startsWith("http")) li.append(el("a", {href: s.url, target: "_blank", rel: "noopener", text: "リンク"}), " ");
+    else if (s.url) li.append(s.url + " ");
+    li.append(el("span", {cls: "lvl", text: "（確認：" + (s.level || "—") + "）"}));
+    ol.append(li);
+  }
+  card.append(ol);
+  if ((n.links || []).length) { card.append(el("h3", {text: "関連ノート"}), el("div", {cls: "links"}, n.links.map(linkBtn))); }
+  if ((n.backlinks || []).length) { card.append(el("h3", {text: "このノートを参照しているノート"}), el("div", {cls: "links"}, n.backlinks.map(linkBtn))); }
+  m.append(card);
+}
+function showOverview() {
+  const m = document.getElementById("main"); m.textContent = "";
+  const card = el("section", {cls: "card overview"});
+  card.append(el("h2", {text: "見取り図（領域 × 年齢帯）"}),
+    el("p", {cls: "note", text: "ノートを領域と年齢帯で並べています。1枚のノートが複数の年齢帯にまたがることがあります。ノート名を押すと開きます。左の一覧からも検索・絞り込みができます。"}));
+  const doms = W.domains.filter(d => notes.some(n => n.domain === d));
+  const t = el("table", {cls: "map"});
+  t.append(el("thead", {}, el("tr", {}, [el("th", {text: "領域 ＼ 年齢"}), ...W.bands.map(b => el("th", {text: b}))])));
+  const tb = el("tbody");
+  for (const d of doms) {
+    const tr = el("tr", {}, el("th", {text: d}));
+    for (const b of W.bands) {
+      const td = el("td");
+      for (const n of notes.filter(x => x.domain === d && (x.age_band || []).includes(b))) {
+        const btn = el("button", {type: "button", title: n.title, text: n.title.length > 22 ? n.title.slice(0, 22) + "…" : n.title});
+        btn.addEventListener("click", () => go(n.id)); td.append(btn);
+      }
+      tr.append(td);
+    }
+    tb.append(tr);
+  }
+  t.append(tb);
+  card.append(el("div", {cls: "grid-wrap"}, t));
+  m.append(card);
+}
+function go(id) { if (location.hash.slice(1) !== id) location.hash = id; else route(); }
+function route() {
+  const id = location.hash.slice(1);
+  if (byId[id]) showNote(byId[id]); else showOverview();
+  renderList();
+  try { window.scrollTo({top: 0}); } catch (e) {}
+}
+document.getElementById("q").addEventListener("input", e => { q = e.target.value.trim(); renderList(); });
+document.getElementById("home").addEventListener("click", () => { history.replaceState(null, "", location.pathname + location.search); route(); });
+window.addEventListener("hashchange", route);
+chips(document.getElementById("fdom"), W ? W.domains.filter(d => notes.some(n => n.domain === d)) : [], () => fDom, v => fDom = v);
+chips(document.getElementById("fband"), W ? W.bands : [], () => fBand, v => fBand = v);
+route();
+</script>
