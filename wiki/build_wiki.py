@@ -18,8 +18,8 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "_data", "notes.json")
 
-DOMAIN_ORDER = ["発達の道筋", "前言語期", "語彙", "構音・音韻", "音韻意識", "読み書き", "文法",
-                "語用・会話", "談話・ナラティブ", "心の理論と言語", "学齢期の語彙・意味"]
+DOMAIN_ORDER = ["発達の道筋", "前言語期", "言語環境", "語彙", "語意学習", "構音・音韻", "音韻意識", "読み書き",
+                "文法", "語用・会話", "談話・ナラティブ", "心の理論と言語", "学齢期の語彙・意味"]
 # 年齢帯（構造ノート用）。各ノートの age_band（複数可）で振り分ける。
 BANDS = ["0〜1歳", "1〜2歳", "2〜3歳", "3〜4歳", "4〜6歳", "学齢期"]
 
@@ -130,35 +130,37 @@ def write_biblio(notes, by_id):
 EVID_STYLE = {"縦断で予測": "==>", "介入で確認": "==>", "相関のみ": "-->", "理論上の仮説": "-.->"}
 
 
-def pathway_edges(notes, by_id):
-    """全ノートの builds_on から（下位→上位）の辺を集める。両端がノートのものだけ図にする。"""
-    edges = {}
+def pathway_edges(notes):
+    """道筋ノート（kind=道筋）から、スキル名を節点とする（下位→上位）の辺を集める。"""
+    nodes, edges = {}, []
+    order = {b: i for i, b in enumerate(BANDS)}
     for n in notes:
-        for e in n.get("builds_on", []):
-            if e.get("id") in by_id and n["kind"] != "道筋":
-                edges[(e["id"], n["id"])] = e.get("evidence", "理論上の仮説")
-    return edges
+        if n["kind"] != "道筋":
+            continue
+        for label, band in ((n["from_short"], n["age_band"]), (n["to_short"], n.get("to_band") or n["age_band"])):
+            b0 = (band or ["学齢期"])[0]
+            if label not in nodes or order[b0] < order[nodes[label]]:
+                nodes[label] = b0
+        edges.append((n["from_short"], n["to_short"], n["evidence"], n.get("bidirectional", False), n["id"]))
+    return nodes, edges
 
 
 def mermaid(notes, by_id):
-    edges = pathway_edges(notes, by_id)
-    used = {a for a, _ in edges} | {b for _, b in edges}
+    nodes, edges = pathway_edges(notes)
+    key = {lab: f"K{i}" for i, lab in enumerate(nodes)}
     lines = ["flowchart LR"]
-    stage_of = {}
-    for n in notes:
-        if n["id"] in used:
-            stage_of[n["id"]] = (n.get("age_band") or ["学齢期"])[0]
     for b in BANDS:
-        ids = [i for i, st in stage_of.items() if st == b]
-        if not ids:
+        labs = [lab for lab, st in nodes.items() if st == b]
+        if not labs:
             continue
         lines.append(f'  subgraph S{BANDS.index(b)}["{b}"]')
-        for i in ids:
-            t = by_id[i]["short"] if by_id[i].get("short") else by_id[i]["title"][:14]
-            lines.append(f'    {i.replace("-", "_")}["{t}"]')
+        lines += [f'    {key[lab]}["{lab}"]' for lab in labs]
         lines.append("  end")
-    for (a, b), ev in edges.items():
-        lines.append(f'  {a.replace("-", "_")} {EVID_STYLE.get(ev, "-->")}|{ev}| {b.replace("-", "_")}')
+    for a, b, ev, bi, nid in edges:
+        arrow = EVID_STYLE.get(ev, "-->")
+        if bi:
+            arrow = {"==>": "<==>", "-->": "<-->", "-.->": "<-.->"}[arrow]
+        lines.append(f"  {key[a]} {arrow}|{nid}| {key[b]}")
     return "\n".join(lines)
 
 
@@ -168,9 +170,10 @@ def write_pathway(notes, by_id):
            "神経発達症の子どもでは、この順序がゆっくり進んだり、下位スキルが不十分なまま上位スキルを部分的に身につけたりしますが、",
            "下位スキルが基礎であることに変わりはありません（各ノートの「神経発達症の子どもでの注意」を参照）。", "",
            "根拠の強さ：**縦断で予測**（先に測った力が後の力を予測）／**介入で確認**（下位を育てると上位が伸びた）／**相関のみ**／**理論上の仮説**", "",
-           "```mermaid", mermaid(notes, by_id).replace("\\n", "\n"), "```", "", "## つながりの一覧", ""]
+           "```mermaid", mermaid(notes, by_id), "```", "", "## つながりの一覧", ""]
     for n in [x for x in notes if x["kind"] == "道筋"]:
-        out.append(f"- {link(by_id, n['id'])}〔{n.get('evidence', '')}〕")
+        bi = "（双方向）" if n.get("bidirectional") else ""
+        out.append(f"- {link(by_id, n['id'])}〔{n.get('evidence', '')}〕{bi}（{n.get('age', '')}）")
     out.append("")
     with open(os.path.join(ROOT, "03_発達の道筋.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(out))
@@ -184,7 +187,7 @@ def write_viewer(notes):
         page = f.read()
     by_id = {n["id"]: n for n in notes}
     payload = json.dumps({"notes": notes, "domains": DOMAIN_ORDER, "bands": BANDS}, ensure_ascii=False)
-    page = page.replace("<!--__MERMAID__-->", html.escape(mermaid(notes, by_id).replace("\\n", "\n")))
+    page = page.replace("<!--__MERMAID__-->", html.escape(mermaid(notes, by_id)))
     page = page.replace("/*__WIKI__*/null", payload.replace("</", "<\\/"))
     with open(os.path.join(ROOT, "viewer", "wiki.html"), "w", encoding="utf-8") as f:
         f.write(page)
