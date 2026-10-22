@@ -43,6 +43,10 @@ VIII.setdefault("white_animal", {"id": "white_animal", "left_attr": "白いも�
                                  "intersection": "白いどうぶつ（2026-10-21 白い花 に変更）", "level": 2})
 
 
+I.setdefault("rain_use", {"id": "rain_use", "chain": ["雨", "ふる", "かさ", "さす", "使う"], "level": 1,
+                          "distractors": {"col2": ["はしる", "わらう", "ねむる"], "col3": ["バナナ", "とけい", "ボール"], "col4": ["たべる", "およぐ", "うたう"]}})
+
+
 def pairs(it):
     return "、".join(f"{a}→{b}" for a, b in it["pairs"])
 
@@ -361,7 +365,7 @@ SECTIONS[:0] = ROUND5
 FIGURES = [
     ("Ⅳ Lv3（抽象語・感情語）", page_png("out/IV/放射状連想 Lv3.pdf", 1)),
     ("Ⅲ ペアパック（右6語・解答）", page_png("out/III/ペアパック_answers.pdf", 4)),
-    ("Ⅰ 連想チェーン（くも・風）", page_png("out/type_I.pdf", 1)),
+    ("Ⅰ 連想チェーン Lv3（解答）", page_png("out/連想チェーン Lv3 見本_answers.pdf", 1)),
     ("Ⅶ 解答（マスの書き方と注記）", page_png("out/type_VII_answers.pdf", 1)),
     ("Ⅶ Lv1 解答（直音・2〜4音）", page_png("out/VII/音韻パック_answers.pdf", 1)),
     ("Ⅶ Lv2 問題（ん・長音を書いておく行）", page_png("out/VII/音韻 Lv2 見本（撥音・長音）.pdf", 1)),
@@ -428,7 +432,8 @@ SEC_TASK = {"safety": ["IV"], "pairs": ["III"], "chain": ["I"], "mora": ["VII"],
             "r2-viii": ["VIII"], "r3-vi-remove": ["VI", "III"], "r3-vi-relevel": ["VI"], "r3-vi-adult": ["VI"],
             "r3-vi-new": ["VI"], "r3-iii-new": ["III"], "r4-iv-move": ["IV"], "r4-iv-hint": ["IV"], "r4-iv-new": ["IV"],
             "r5-vii-design": ["VII"], "r5-vii-lv2": ["VII"], "r5-vii-lv3": ["VII"],
-            "r6-iii-instruction": ["III"], "r6-iii-extra": ["III"]}
+            "r6-iii-instruction": ["III"], "r6-iii-extra": ["III"],
+            "r7-i-lv1": ["I"], "r7-i-lv2": ["I"], "r7-i-lv3": ["I"]}
 MANUAL = {
     "iv-hint-trust": sc_iv(_IVc["信頼"]), "iv-hint-relief": sc_iv(_IVc["安心"]),
     "iv-hint-regret": sc_iv(_IVc["後悔"]), "iv-hint-patience": sc_iv(_IVc["我慢"]),
@@ -459,7 +464,7 @@ MANUAL = {
 
 def _lookup(item_id, task):
     d, fn = _SC[task]
-    for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r5-vii-", "r2-", "r3-", "r4-"):
+    for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r5-vii-", "r7-i-", "r2-", "r3-", "r4-"):
         if item_id.startswith(pre):
             key = item_id[len(pre):].replace("-", "_")
             if key in d:
@@ -489,6 +494,36 @@ ROUND6 = [
 for sec in ROUND5:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND6
+
+# ---- 第7回：Ⅰ 連想チェーンの点検と追加（先頭に表示） ----
+_I_STATUS = {
+    "school_note": "作り直し（旧：学校→勉強→教科書→読む→本。2列目が名詞で、教科書→本 は言いかえ）",
+    "bread_jam": "新規", "morning_towel": "新規", "flower_honey": "新規",
+    "fire_imo": "ゴールを変更（旧：…→あたる→あたたかい。ゴールが形容詞）",
+    "milk_cheese": "4列目を変更（旧：つくる。何にでもつながる動詞）",
+    "egg_chick": "ダミーを変更（旧：わる。ひなが殻をわる、で筋が通ってしまう）",
+    "sports_baton": "新規", "scissors_crane": "新規", "paint_picture": "新規",
+}
+_I_SIDE = {
+    "sports_baton": "わき道：おどる→ダンス、なげる→たまいれ→いれる、つなひき→ひく（どれもバトンに届かない）",
+    "scissors_crane": "わき道：きる→ぬの→ぬう、きる→かみのけ→とかす、はる→テープ（どれもつるに届かない）",
+    "paint_picture": "わき道：しぼる→タオル→ふく、ながす→みず→こぼす（どれも絵に届かない）",
+}
+ROUND7 = []
+for _lv, _lead in ((1, "ダミーは始まりとも終わりとも関係のない、遠い語です。"),
+                   (2, "ダミーは同じ場面にはあるが、つながらない語です。"),
+                   (3, "ダミーは途中まで筋が通る「わき道」になるが、ゴールには届かない語です。ダミーを通ってゴールまで筋が通る経路がないかを、とくに見てください。")):
+    ROUND7.append({
+        "key": f"r7-i-lv{_lv}", "title": f"Ⅰ 連想チェーン Lv{_lv}（6問）",
+        "lead": "形を「名詞→動き→名詞→動き→名詞」にそろえ、各レベル6問にしました。" + _lead,
+        "items": [{"id": "r7-i-" + k.replace("_", "-"), "label": " → ".join(it["chain"]),
+                   "before": "", "after": chain(it) + ("\n" + _I_SIDE[k] if k in _I_SIDE else ""),
+                   "ask": _I_STATUS.get(k, "前回までに確認済みの問題（変更なし）")}
+                  for k, it in I.items() if it["level"] == _lv],
+    })
+for sec in ROUND6:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND7
 for sec in SECTIONS:
     key = sec["key"]
     sec["tasks"] = SEC_TASK.get(key, [])

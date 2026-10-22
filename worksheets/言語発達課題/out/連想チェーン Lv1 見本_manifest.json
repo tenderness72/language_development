@@ -1,0 +1,97 @@
+{
+  "type": "I",
+  "display_title": "ことばつなぎ",
+  "clinical_title": "連想チェーン",
+  "name": "連想チェーン Lv1 見本",
+  "level": 1,
+  "seed": 5,
+  "count": 3,
+  "pages": [
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "wind_kite",
+          "chain": [
+            "風",
+            "ふく",
+            "たこ",
+            "あがる",
+            "空"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "rain_boots",
+          "chain": [
+            "雨",
+            "ふる",
+            "みずたまり",
+            "ふむ",
+            "ながぐつ"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "bread_jam",
+          "chain": [
+            "パン",
+            "やく",
+            "トースト",
+            "ぬる",
+            "ジャム"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "morning_towel",
+          "chain": [
+            "朝",
+            "おきる",
+            "かお",
+            "あらう",
+            "タオル"
+          ]
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "flower_honey",
+          "chain": [
+            "花",
+            "さく",
+            "はち",
+            "あつめる",
+            "はちみつ"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "school_note",
+          "chain": [
+            "学校",
+            "ならう",
+            "字",
+            "かく",
+            "ノート"
+          ]
+        }
+      ],
+      "page": 3
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

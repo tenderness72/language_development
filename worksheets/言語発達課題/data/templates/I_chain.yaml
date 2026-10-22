@@ -1,11 +1,17 @@
 # Ⅰ 連想チェーン
 # chain: [start, 列2, 列3, 列4, goal]（連想で1本につながる正解列）
-# distractors: 各列(col2/col3/col4)のダミー語3つ以上。正解語と重複させないこと。
-# level: 1=遠いダミー(易) 2=中 3=近いダミー(難)
-# 近いダミーを使うときは、ダミーを通っても start→goal が意味の上でつながって
-# しまわないか（正解以外の経路がないか）を人が確認すること。
+#   形は「名詞 → 動き → 名詞 → 動き → 名詞」にそろえる（例: 雨 → ふる → みずたまり → ふむ → ながぐつ）。
+#   「つくる」「使う」のように何にでもつながる動詞は使わない。
+# distractors: 各列(col2/col3/col4)のダミー語3つ。正解語と同じ品詞にし、正解語と重複させないこと。
+# level（ダミー語の近さで段階化）:
+#   1 = 遠いダミー（始まりとも終わりとも関係のない語）
+#   2 = 中くらい（同じ場面にはあるが、つながらない語）
+#   3 = 近いダミー（途中までは筋が通る「わき道」になるが、ゴールには届かない語）
+# ダミーを通っても start→goal が意味の上でつながってしまわないか（正解以外の経路がないか）を
+# 人が確認すること（自動では検査できない）。
 type: I
 items:
+  # ---- Lv1：遠いダミー ----
   - id: rain_boots
     chain: [雨, ふる, みずたまり, ふむ, ながぐつ]
     distractors:
@@ -13,15 +19,44 @@ items:
       col3: [バナナ, とけい, ボール]
       col4: [たべる, およぐ, うたう]
     level: 1
-  - id: school_book
-    chain: [学校, 勉強, 教科書, 読む, 本]
+  - id: wind_kite
+    chain: [風, ふく, たこ, あがる, 空]
     distractors:
-      col2: [そうじ, さんぽ, りょこう]
-      col3: [りんご, ぼうし, でんしゃ]
-      col4: [なげる, はしる, とぶ]
+      col2: [もえる, こおる, とける]
+      col3: [いす, かばん, コップ]
+      col4: [しずむ, おちる, とまる]
     level: 1
-  - id: fire_warm
-    chain: [火, もえる, たきび, あたる, あたたかい]
+  - id: school_note
+    chain: [学校, ならう, 字, かく, ノート]
+    distractors:
+      col2: [ねむる, ほえる, もえる]
+      col3: [さかな, くつ, かさ]
+      col4: [とぶ, なげる, ほる]
+    level: 1
+  - id: bread_jam
+    chain: [パン, やく, トースト, ぬる, ジャム]
+    distractors:
+      col2: [およぐ, ねむる, はしる]
+      col3: [くつ, でんしゃ, ほん]
+      col4: [とぶ, うたう, なげる]
+    level: 1
+  - id: morning_towel
+    chain: [朝, おきる, かお, あらう, タオル]
+    distractors:
+      col2: [およぐ, なげる, うたう]
+      col3: [くるま, ボール, さかな]
+      col4: [とぶ, ほる, はしる]
+    level: 1
+  - id: flower_honey
+    chain: [花, さく, はち, あつめる, はちみつ]
+    distractors:
+      col2: [およぐ, ねむる, はしる]
+      col3: [くつ, でんしゃ, ほん]
+      col4: [なげる, うたう, ほる]
+    level: 1
+  # ---- Lv2：同じ場面だがつながらないダミー（2026-10-22 見直し） ----
+  - id: fire_imo
+    chain: [火, もえる, たきび, やく, やきいも]
     distractors:
       col2: [こおる, ひえる, ぬれる]
       col3: [プール, れいぞうこ, ゆきだるま]
@@ -35,19 +70,12 @@ items:
       col4: [ころぶ, ねむる, わらう]
     level: 2
   - id: milk_cheese
-    chain: [牛, しぼる, 牛乳, つくる, チーズ]
+    chain: [牛, しぼる, 牛乳, かためる, チーズ]
     distractors:
       col2: [なでる, はしる, とぶ]
       col3: [ジュース, ガソリン, インク]
       col4: [すてる, こわす, なくす]
     level: 2
-  - id: wind_kite
-    chain: [風, ふく, たこ, あがる, 空]
-    distractors:
-      col2: [もえる, こおる, とける]
-      col3: [いす, かばん, コップ]
-      col4: [しずむ, おちる, とまる]
-    level: 1
   - id: rice_onigiri
     chain: [米, たく, ごはん, にぎる, おにぎり]
     distractors:
@@ -55,6 +83,21 @@ items:
       col3: [みそしる, サラダ, パン]
       col4: [きる, ゆでる, むく]
     level: 2
+  - id: egg_chick
+    chain: [たまご, あたためる, ひな, そだつ, にわとり]
+    distractors:
+      col2: [まぜる, ゆでる, やく]
+      col3: [こねこ, こいぬ, きんぎょ]
+      col4: [とぶ, およぐ, はう]
+    level: 2
+  - id: snow_snowman
+    chain: [雪, つもる, ゆきだま, ころがす, ゆきだるま]
+    distractors:
+      col2: [とける, ながれる, かわく]
+      col3: [すなやま, どろだんご, おちば]
+      col4: [なげる, たべる, かくす]
+    level: 2
+  # ---- Lv3：途中まで筋が通る「わき道」のダミー（2026-10-22 追加・見直し、要確認） ----
   - id: cloud_umbrella
     chain: [くも, ひろがる, ゆうだち, ぬれる, タオル]
     distractors:
@@ -69,24 +112,31 @@ items:
       col3: [いし, てつ, ガラス]
       col4: [もやす, うめる, ながす]
     level: 3
-  - id: egg_chick
-    chain: [たまご, あたためる, ひな, そだつ, にわとり]
-    distractors:
-      col2: [わる, ゆでる, やく]
-      col3: [こねこ, こいぬ, きんぎょ]
-      col4: [とぶ, およぐ, はう]
-    level: 2
-  - id: snow_snowman
-    chain: [雪, つもる, ゆきだま, ころがす, ゆきだるま]
-    distractors:
-      col2: [とける, ながれる, かわく]
-      col3: [すなやま, どろだんご, おちば]
-      col4: [なげる, たべる, かくす]
-    level: 2
   - id: grape_sherbet
     chain: [ぶどう, しぼる, ジュース, こおらせる, シャーベット]
     distractors:
       col2: [なげる, うえる, ほる]
       col3: [はっぱ, たね, かわ]
       col4: [やく, にる, きる]
+    level: 3
+  - id: sports_baton
+    chain: [運動会, はしる, リレー, わたす, バトン]
+    distractors:
+      col2: [おどる, なげる, ころぶ]
+      col3: [ダンス, たまいれ, つなひき]
+      col4: [ひく, いれる, かつ]
+    level: 3
+  - id: scissors_crane
+    chain: [はさみ, きる, かみ, おる, つる]
+    distractors:
+      col2: [はる, ぬる, けずる]
+      col3: [ぬの, かみのけ, テープ]
+      col4: [あむ, ぬう, とかす]
+    level: 3
+  - id: paint_picture
+    chain: [えのぐ, まぜる, いろ, ぬる, え]
+    distractors:
+      col2: [あらう, しぼる, ながす]
+      col3: [みず, タオル, バケツ]
+      col4: [けす, ふく, こぼす]
     level: 3

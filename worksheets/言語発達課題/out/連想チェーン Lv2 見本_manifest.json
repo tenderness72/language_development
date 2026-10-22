@@ -1,0 +1,97 @@
+{
+  "type": "I",
+  "display_title": "ことばつなぎ",
+  "clinical_title": "連想チェーン",
+  "name": "連想チェーン Lv2 見本",
+  "level": 2,
+  "seed": 5,
+  "count": 3,
+  "pages": [
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "seed_flower",
+          "chain": [
+            "たね",
+            "まく",
+            "め",
+            "そだつ",
+            "花"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "fire_imo",
+          "chain": [
+            "火",
+            "もえる",
+            "たきび",
+            "やく",
+            "やきいも"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "rice_onigiri",
+          "chain": [
+            "米",
+            "たく",
+            "ごはん",
+            "にぎる",
+            "おにぎり"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "egg_chick",
+          "chain": [
+            "たまご",
+            "あたためる",
+            "ひな",
+            "そだつ",
+            "にわとり"
+          ]
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "I",
+      "problems": [
+        {
+          "n": 1,
+          "id": "snow_snowman",
+          "chain": [
+            "雪",
+            "つもる",
+            "ゆきだま",
+            "ころがす",
+            "ゆきだるま"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "milk_cheese",
+          "chain": [
+            "牛",
+            "しぼる",
+            "牛乳",
+            "かためる",
+            "チーズ"
+          ]
+        }
+      ],
+      "page": 3
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}
