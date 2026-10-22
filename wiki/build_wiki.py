@@ -131,17 +131,22 @@ EVID_STYLE = {"縦断で予測": "==>", "介入で確認": "==>", "相関のみ"
 
 
 def pathway_edges(notes):
-    """道筋ノート（kind=道筋）から、スキル名を節点とする（下位→上位）の辺を集める。"""
+    """道筋ノート（kind=道筋）の edges から、スキル名を節点とする（下位→上位）の辺を集める。
+    節点の年齢帯は _data/pathway_map.json の nodes で決める。"""
+    with open(os.path.join(ROOT, "_data", "pathway_map.json"), encoding="utf-8") as f:
+        pm = json.load(f)
+    node_band = pm["nodes"]
     nodes, edges = {}, []
-    order = {b: i for i, b in enumerate(BANDS)}
     for n in notes:
         if n["kind"] != "道筋":
             continue
-        for label, band in ((n["from_short"], n["age_band"]), (n["to_short"], n.get("to_band") or n["age_band"])):
-            b0 = (band or ["学齢期"])[0]
-            if label not in nodes or order[b0] < order[nodes[label]]:
-                nodes[label] = b0
-        edges.append((n["from_short"], n["to_short"], n["evidence"], n.get("bidirectional", False), n["id"]))
+        for a, b in n["edges"]:
+            for lab in (a, b):
+                nodes[lab] = node_band[lab]
+            edges.append((a, b, n["evidence"], n.get("bidirectional", False), n["id"]))
+    for a, b in pm.get("continuity", []):
+        if a in nodes and b in nodes:
+            edges.append((a, b, "連続", False, ""))
     return nodes, edges
 
 
@@ -160,7 +165,10 @@ def mermaid(notes, by_id):
         arrow = EVID_STYLE.get(ev, "-->")
         if bi:
             arrow = {"==>": "<==>", "-->": "<-->", "-.->": "<-.->"}[arrow]
-        lines.append(f"  {key[a]} {arrow}|{nid}| {key[b]}")
+        if ev == "連続":
+            lines.append(f"  {key[a]} --- {key[b]}")
+        else:
+            lines.append(f"  {key[a]} {arrow}|{nid}| {key[b]}")
     return "\n".join(lines)
 
 
@@ -169,6 +177,7 @@ def write_pathway(notes, by_id):
            "どの下位スキルが、どの上位スキルの基礎になっているかを、根拠の強さつきでまとめた構造ノートです。",
            "神経発達症の子どもでは、この順序がゆっくり進んだり、下位スキルが不十分なまま上位スキルを部分的に身につけたりしますが、",
            "下位スキルが基礎であることに変わりはありません（各ノートの「神経発達症の子どもでの注意」を参照）。", "",
+           "図の矢印の番号は道筋ノート（PW-xx）です。矢印のない細い線は、同じ力が年齢とともに伸びていくことを示します（根拠の辺ではありません）。", "",
            "根拠の強さ：**縦断で予測**（先に測った力が後の力を予測）／**介入で確認**（下位を育てると上位が伸びた）／**相関のみ**／**理論上の仮説**", "",
            "```mermaid", mermaid(notes, by_id), "```", "", "## つながりの一覧", ""]
     for n in [x for x in notes if x["kind"] == "道筋"]:

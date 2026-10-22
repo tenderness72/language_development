@@ -56,6 +56,16 @@
     "skill": "語彙発達（語理解・語表出・句理解）",
     "evidence": "縦断で予測",
     "basis": "6か月時の条件づけ振り向き法による音声弁別成績が、13・16・24か月時のCDIによる語理解・語表出・句理解と有意に相関した（Tsao, Liu, & Kuhl, 2004, Child Development, 75(4), 1067–1084；抄録。対象言語の詳細は抄録に記載なし）。"
+   },
+   {
+    "id": "VO-03",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
    }
   ],
   "nd_note": "",
@@ -92,7 +102,18 @@
    }
   ],
   "builds_on": [],
-  "leads_to": [],
+  "leads_to": [
+   {
+    "id": "VO-03",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   }
+  ],
   "nd_note": "",
   "links": [
    "PL-01",
@@ -126,7 +147,18 @@
    }
   ],
   "builds_on": [],
-  "leads_to": [],
+  "leads_to": [
+   {
+    "id": "VO-03",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   }
+  ],
   "nd_note": "",
   "links": [
    "PL-01",
@@ -208,7 +240,13 @@
    }
   ],
   "builds_on": [],
-  "leads_to": [],
+  "leads_to": [
+   {
+    "id": "VO-05",
+    "evidence": "縦断で予測",
+    "via": "PW-03"
+   }
+  ],
   "nd_note": "",
   "links": [
    "PL-06",
@@ -266,6 +304,11 @@
     "skill": "表出語彙（18〜30か月）",
     "evidence": "縦断で予測",
     "basis": "規準喃語の開始が遅れた乳児は18・24・30か月時の表出語彙が対照群より少なかった（Oller, Eilers, Neal, & Schwartz, 1999, Journal of Communication Disorders, 32(4), 223–245；抄録）。"
+   },
+   {
+    "id": "VO-05",
+    "evidence": "縦断で予測",
+    "via": "PW-03"
    }
   ],
   "nd_note": "",
@@ -382,6 +425,11 @@
     "skill": "言語発達（自閉症児）",
     "evidence": "縦断で予測",
     "basis": "自閉症児15名（平均45か月）で、身ぶりによる非言語的共同注意の測度が13か月後の言語発達の有意な予測因であり、初期言語水準やIQは予測しなかった（Mundy, Sigman, & Kasari, 1990, J Autism Dev Disord, 20(1), 115–128；抄録）。"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-04"
    }
   ],
   "nd_note": "",
@@ -449,6 +497,16 @@
     "skill": "表出言語（自閉症児）",
     "evidence": "介入で確認",
     "basis": "3〜4歳の自閉症児58名のRCTで、共同注意介入・象徴遊び介入はいずれも対照群より12か月後の表出言語の伸びが大きく、開始時の言語水準が最も低い児では共同注意介入の効果が特に大きかった（Kasari, Paparella, Freeman, & Jahromi, 2008, J Consult Clin Psychol, 76(1), 125–137；抄録）。定型発達児での介入確認ではない。"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-04"
+   },
+   {
+    "id": "TM-05",
+    "evidence": "縦断で予測",
+    "via": "PW-20"
    }
   ],
   "nd_note": "ウィリアムズ症候群児47名では、一般集団で一貫して報告される「叙述的指さし→指示的な語」の順序とは逆に、多くの児が叙述的指さしの数か月前に指示的な語を産出し始めた。ただし叙述的指さしの開始月齢は、24か月時の表出語彙とは独立に48か月時の語彙・文法・知的能力の個人差を予測し、その説明率は早期語彙サイズより大きかった（Becerra & Mervis, 2019, Frontiers in Psychology, 10, 2648；抄録）。下位スキル（叙述的指さし）が未出現のまま上位スキル（指示的語の産出）が部分的に先行する経路の報告である。",
@@ -495,6 +553,11 @@
     "skill": "子どもが先に身ぶりで表した指示対象は後に音声語彙に入り、「指さし＋語」の組み合わせの開始が二語発話の開始を予測する",
     "evidence": "理論上の仮説",
     "basis": "前言語的身ぶりの普遍性が言語コミュニケーションの共通基盤をなすとする著者らの主張（Liszkowski et al., 2012；抄録）。"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-05"
    }
   ],
   "nd_note": "",
@@ -551,6 +614,11 @@
     "skill": "二語発話（統語の始まり）",
     "evidence": "縦断で予測",
     "basis": "身ぶり＋語で2要素を伝え始めた時期が早い児ほど二語結合の開始も早かった（Iverson & Goldin-Meadow, 2005；抄録）。"
+   },
+   {
+    "id": "GR-02",
+    "evidence": "縦断で予測",
+    "via": "PW-06"
    }
   ],
   "nd_note": "（下位スキルが不十分なまま上位スキルを獲得する経路ではなく、逆方向の乖離の報告）ダウン症児5名（平均生活年齢47.6か月、言語年齢18か月）は、言語年齢・表出語彙を揃えた定型児と同程度の頻度で二要素結合（主に身ぶり＋語）を産出したが、二語結合は観察されず、一語発話から二語発話への移行に特有の遅れがある可能性が示された（Iverson, Longobardi, & Caselli, 2003, Int J Lang Commun Disord, 38(2), 179–197；抄録）。",
@@ -630,6 +698,11 @@
     "skill": "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
     "evidence": "縦断で予測",
     "basis": "12か月の身ぶりと18か月の語産出の関係を14か月の語理解が媒介した（ASD同胞高リスク児92名・低リスク児28名、CDI；Roemer, West, Northrup, & Iverson, 2019, Developmental Science, 22(3), e12767；抄録）。"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-05"
    }
   ],
   "nd_note": "ASD児の同胞（高リスク群）を追跡した研究で、低リスク児や診断なし・言語遅滞のみの高リスク児では12か月の身ぶりと14か月の語理解が強く関連したが、36か月で後にASDと診断された児ではこの関連が見られなかった（Roemer et al., 2019, Developmental Science, 22(3), e12767；抄録）。著者らはASD児が異なる経路で言語を学ぶ可能性を指摘している。",
@@ -668,6 +741,21 @@
     "skill": "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）",
     "evidence": "理論上の仮説",
     "basis": "語彙学習と音声構造の学習は並行して進むという著者らの提案（Bergelson & Swingley, 2012, PNAS, 109(9), 3253–3258；抄録）。"
+   },
+   {
+    "id": "PL-01",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "PL-02",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "PL-03",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
    }
   ],
   "leads_to": [
@@ -719,6 +807,41 @@
     "skill": "14〜18か月の身ぶりの量・意味の種類は後の語彙を予測し、実験的に指さしを増やすと表出語彙が増える",
     "evidence": "縦断で予測",
     "basis": "12か月の身ぶりが14か月の語理解を介して18か月の語産出につながる媒介経路（Roemer et al., 2019；抄録）。"
+   },
+   {
+    "id": "PL-01",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "PL-02",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "PL-03",
+    "evidence": "縦断で予測",
+    "via": "PW-01"
+   },
+   {
+    "id": "PL-08",
+    "evidence": "縦断で予測",
+    "via": "PW-04"
+   },
+   {
+    "id": "PL-09",
+    "evidence": "縦断で予測",
+    "via": "PW-04"
+   },
+   {
+    "id": "PL-10",
+    "evidence": "縦断で予測",
+    "via": "PW-05"
+   },
+   {
+    "id": "VO-02",
+    "evidence": "縦断で予測",
+    "via": "PW-05"
    }
   ],
   "leads_to": [
@@ -726,6 +849,16 @@
     "skill": "表出語彙",
     "evidence": "縦断で予測",
     "basis": "14か月の語理解が12か月の身ぶりと18か月の語産出の関係を媒介した（Roemer et al., 2019, Developmental Science, 22(3), e12767；抄録）。"
+   },
+   {
+    "id": "GR-03",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
+   },
+   {
+    "id": "GR-02",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
    }
   ],
   "nd_note": "",
@@ -782,6 +915,16 @@
     "skill": "養育者の応答性",
     "evidence": "縦断で予測",
     "basis": "9・13か月時の母親の応答性が、初模倣・初語・表出50語・語結合・過去への言及の達成時期を子ども自身の行動を超えて予測し、13か月の応答性の方が強い予測因であった（Tamis-LeMonda, Bornstein, & Baumwell, 2001, Child Development, 72(3), 748–767；抄録。英語圏40名）。"
+   },
+   {
+    "id": "PL-05",
+    "evidence": "縦断で予測",
+    "via": "PW-03"
+   },
+   {
+    "id": "PL-06",
+    "evidence": "縦断で予測",
+    "via": "PW-03"
    }
   ],
   "leads_to": [
@@ -891,7 +1034,13 @@
     "level": "本文"
    }
   ],
-  "builds_on": [],
+  "builds_on": [
+   {
+    "id": "EN-02",
+    "evidence": "縦断で予測",
+    "via": "PW-08"
+   }
+  ],
   "leads_to": [],
   "nd_note": "",
   "links": [
@@ -1466,6 +1615,11 @@
     "skill": "学齢期（8歳）の言語・認知能力",
     "evidence": "縦断で予測",
     "basis": "25か月時の語認識速度と語彙サイズが、それぞれ8歳時の言語・認知スキルの独自の分散を説明した（Marchman & Fernald, 2008, Developmental Science, 11(3), F9–F16；抄録）。"
+   },
+   {
+    "id": "VO-07",
+    "evidence": "縦断で予測",
+    "via": "PW-08"
    }
   ],
   "nd_note": "",
@@ -1902,6 +2056,16 @@
     "skill": "学齢期（8歳）の言語・認知能力",
     "evidence": "縦断で予測",
     "basis": "25か月時の語彙サイズが8歳時の言語・認知スキルの独自の分散を説明した（Marchman & Fernald, 2008, Developmental Science, 11(3), F9–F16；抄録。英語圏）。"
+   },
+   {
+    "id": "GR-03",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
+   },
+   {
+    "id": "GR-02",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
    }
   ],
   "nd_note": "",
@@ -2594,6 +2758,21 @@
     "skill": "幼稚園年長児の多くは就学前にひらがな71文字の大半を読めるが、分布はJ字型で習得の遅い子が一定数いる",
     "evidence": "理論上の仮説",
     "basis": "語を音節に分解し音を抽出する行為の形成が文字学習能力の重要な構成要素とされる（天野, 1970；深川・窪島, 2015 による紹介）。"
+   },
+   {
+    "id": "RW-01",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "RW-09",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "RW-01",
+    "evidence": "介入で確認",
+    "via": "PW-12"
    }
   ],
   "nd_note": "ひらがな読みが習得されていても音韻構造の意識化（音韻抽出など）に困難を示す読み困難の中学生が存在したと報告されている（細川ら, 2004；深川・窪島, 2015 による紹介、二次）。対象の診断名の詳細は二次資料からは確認できない。",
@@ -2695,6 +2874,16 @@
     "skill": "年長児の特殊音節表記の読み正答率は拗音・促音で約7割、長音・拗長音・助詞「は」「へ」ではそれより低い",
     "evidence": "理論上の仮説",
     "basis": "特殊拍の自覚が特殊音節表記の読みの前提になるという関係は、本研究では直接検討されていない。"
+   },
+   {
+    "id": "RW-01",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "RW-09",
+    "evidence": "相関のみ",
+    "via": "PW-11"
    }
   ],
   "nd_note": "",
@@ -2805,6 +2994,16 @@
     "skill": "特殊音節の表記は学齢期にも誤りが残りやすく、小1の通常学級での段階的指導で読み書き成績が向上する",
     "evidence": "理論上の仮説",
     "basis": "モーラ単位の分解が特殊音節の正しい表記の前提になるという想定は指導実践で広く用いられるが、本調査で縦断的検証は確認できなかった。"
+   },
+   {
+    "id": "RW-01",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "RW-09",
+    "evidence": "相関のみ",
+    "via": "PW-11"
    }
   ],
   "nd_note": "",
@@ -2859,6 +3058,11 @@
     "skill": "平仮名短文の読解",
     "evidence": "相関のみ",
     "basis": "音削除・逆唱の能力と平仮名短文の読解の間に高い相関（原, 2001、横断）。"
+   },
+   {
+    "id": "RW-06",
+    "evidence": "縦断で予測",
+    "via": "PW-13"
    }
   ],
   "nd_note": "",
@@ -2950,6 +3154,11 @@
     "skill": "拗音節の読み書きは指導前から部分的に習得され、約10音節が読める頃から規則的な読み方・書き方が現れ始める",
     "evidence": "相関のみ",
     "basis": "音素レベルの韻の感受性と拗音の読み書き成績が関連（遠藤, 1991、横断）。"
+   },
+   {
+    "id": "RW-06",
+    "evidence": "介入で確認",
+    "via": "PW-14"
    }
   ],
   "nd_note": "",
@@ -3004,6 +3213,26 @@
     "skill": "モーラ削除・逆唱は年中〜小1にかけて大きく伸び、到達時期は課題のモーラ数に強く依存する",
     "evidence": "縦断で予測",
     "basis": "小1開始時の音韻意識が小1中期のひらがな読みの正確さと書字を予測したが、効果は弱く短期的（Inoue et al., 2017）。"
+   },
+   {
+    "id": "PA-01",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "PA-03",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "PA-05",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "PA-01",
+    "evidence": "介入で確認",
+    "via": "PW-12"
    }
   ],
   "leads_to": [
@@ -3262,6 +3491,21 @@
     "skill": "非語復唱（音韻性短期記憶）",
     "evidence": "相関のみ",
     "basis": "逐字読み群は流暢読み群より非語復唱が低い（迫野・伊藤, 2015、横断）。"
+   },
+   {
+    "id": "PA-06",
+    "evidence": "縦断で予測",
+    "via": "PW-13"
+   },
+   {
+    "id": "RW-07",
+    "evidence": "縦断で予測",
+    "via": "PW-13"
+   },
+   {
+    "id": "PA-08",
+    "evidence": "介入で確認",
+    "via": "PW-14"
    }
   ],
   "leads_to": [
@@ -3343,6 +3587,11 @@
     "skill": "カタカナ・漢字はひらがなより読み書き困難の出現率が高く、漢字の習得にはひらがな技能・語彙・形態意識が関わる",
     "evidence": "縦断で予測",
     "basis": "小1の音韻意識とRANがひらがな技能を介して小2の漢字技能を予測（Inoue et al., 2022）。"
+   },
+   {
+    "id": "RW-06",
+    "evidence": "縦断で予測",
+    "via": "PW-13"
    }
   ],
   "nd_note": "自閉スペクトラム症の一部にみられる過読症（hyperlexia）では、典型的な読みの下位要素が変化・解離しており、自閉児は時系列が逆転した経路で読みを学び、視覚的な語形認識システムを多用するとされる（Ostrolenk et al., 2017、系統的レビュー、主に非日本語圏のデータ）。",
@@ -3460,7 +3709,23 @@
     "level": "抄録"
    }
   ],
-  "builds_on": [],
+  "builds_on": [
+   {
+    "id": "PA-01",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "PA-03",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   },
+   {
+    "id": "PA-05",
+    "evidence": "相関のみ",
+    "via": "PW-11"
+   }
+  ],
   "leads_to": [],
   "nd_note": "",
   "links": [
@@ -3505,6 +3770,26 @@
     "skill": "語彙",
     "evidence": "縦断で予測",
     "basis": "語彙が小1〜小5を通じて読解力を予測し、先行する読解力も語彙を説明（高橋, 2001）。"
+   },
+   {
+    "id": "GR-05",
+    "evidence": "縦断で予測",
+    "via": "PW-15"
+   },
+   {
+    "id": "SV-05",
+    "evidence": "縦断で予測",
+    "via": "PW-16"
+   },
+   {
+    "id": "SV-06",
+    "evidence": "縦断で予測",
+    "via": "PW-16"
+   },
+   {
+    "id": "NA-05",
+    "evidence": "縦断で予測",
+    "via": "PW-24"
    }
   ],
   "leads_to": [],
@@ -3603,6 +3888,21 @@
     "skill": "表出語彙量",
     "evidence": "縦断で予測",
     "basis": "20か月時の表出語彙量が28か月時の文法的複雑さ（MLU等）を最もよく予測し、交差遅延相関は+.70〜+.84であった（英語圏、MacArthur CDI）。Bates & Goodman (1997) Language and Cognitive Processes 12, 507–584."
+   },
+   {
+    "id": "VO-01",
+    "evidence": "縦断で予測",
+    "via": "PW-06"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
+   },
+   {
+    "id": "VO-11",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
    }
   ],
   "leads_to": [],
@@ -3653,6 +3953,16 @@
     "skill": "表出語彙量（日本語児）",
     "evidence": "相関のみ",
     "basis": "JCDI（1998年版）による18〜30か月児658名の横断調査と16名の縦断調査で、文法の出現は年齢より語彙サイズに依存し、格助詞の獲得には約100語以上の語彙が必要であった。小椋たみ子（2000年度）科研費研究成果概要（課題番号12011211）。"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
+   },
+   {
+    "id": "VO-11",
+    "evidence": "縦断で予測",
+    "via": "PW-07"
    }
   ],
   "leads_to": [
@@ -3756,6 +4066,11 @@
     "skill": "学齢期にも中央埋め込み構造とOSV語順の格助詞文の理解は発達途上である（J.COSS）",
     "evidence": "理論上の仮説",
     "basis": "OSV語順の格助詞文や埋め込み文の理解には助詞を手がかりとする処理が前提となるという考え方（直接の縦断検証は未確認）。中川ら (2017) は J.COSS の格助詞項目（「馬を牛が押しています」）を助詞方略に関する項目と位置づけている。"
+   },
+   {
+    "id": "RW-10",
+    "evidence": "縦断で予測",
+    "via": "PW-15"
    }
   ],
   "nd_note": "",
@@ -3974,6 +4289,11 @@
     "skill": "終助詞の組み合わせ（「よね」）・「のに」",
     "evidence": "理論上の仮説",
     "basis": "終助詞の習得順序（「よ」「の」「ね」「な」→「ぞ」「か(な)」→「よね」「のに」）が「今ここ」→過去→比較という認知発達段階と対応する可能性の指摘。白井・白井 (2016)（永須 2020 による紹介、二次）。"
+   },
+   {
+    "id": "TM-03",
+    "evidence": "相関のみ",
+    "via": "PW-19"
    }
   ],
   "nd_note": "",
@@ -4239,7 +4559,18 @@
    }
   ],
   "builds_on": [],
-  "leads_to": [],
+  "leads_to": [
+   {
+    "id": "NA-01",
+    "evidence": "相関のみ",
+    "via": "PW-23"
+   },
+   {
+    "id": "NA-04",
+    "evidence": "相関のみ",
+    "via": "PW-23"
+   }
+  ],
   "nd_note": "",
   "links": [
    "GR-12",
@@ -4895,7 +5226,13 @@
     "level": "本文"
    }
   ],
-  "builds_on": [],
+  "builds_on": [
+   {
+    "id": "NA-05",
+    "evidence": "縦断で予測",
+    "via": "PW-24"
+   }
+  ],
   "leads_to": [],
   "nd_note": "",
   "links": [
@@ -5065,7 +5402,13 @@
    }
   ],
   "builds_on": [],
-  "leads_to": [],
+  "leads_to": [
+   {
+    "id": "NA-06",
+    "evidence": "理論上の仮説",
+    "via": "PW-25"
+   }
+  ],
   "nd_note": "",
   "links": [
    "PR-01",
@@ -5248,7 +5591,18 @@
     "level": "抄録"
    }
   ],
-  "builds_on": [],
+  "builds_on": [
+   {
+    "id": "TM-01",
+    "evidence": "縦断で予測",
+    "via": "PW-22"
+   },
+   {
+    "id": "GR-15",
+    "evidence": "相関のみ",
+    "via": "PW-23"
+   }
+  ],
   "leads_to": [
    {
     "skill": "自他理解（心の理論など）との関連",
@@ -5368,7 +5722,13 @@
     "level": "抄録"
    }
   ],
-  "builds_on": [],
+  "builds_on": [
+   {
+    "id": "GR-15",
+    "evidence": "相関のみ",
+    "via": "PW-23"
+   }
+  ],
   "leads_to": [],
   "nd_note": "",
   "links": [
@@ -5413,6 +5773,16 @@
     "skill": "書きことばの物語（作文）",
     "evidence": "縦断で予測",
     "basis": "5歳時の談話マクロ構造の制御が8歳時の書きことばの物語と関連した。Griffin, T. M., Hemphill, L., Camp, L., & Wolf, D. P. (2004). Oral discourse in the preschool years and later literacy skills. First Language, 24(2), 123-147."
+   },
+   {
+    "id": "RW-10",
+    "evidence": "縦断で予測",
+    "via": "PW-24"
+   },
+   {
+    "id": "GR-29",
+    "evidence": "縦断で予測",
+    "via": "PW-24"
    }
   ],
   "nd_note": "",
@@ -5458,6 +5828,11 @@
     "skill": "一次的ことば（文脈依存の対話）",
     "evidence": "理論上の仮説",
     "basis": "二次的ことばは一次的ことばに加えて習得されるものと位置づけられている。清水由紀・内田伸子 (2004). 一次的ことばから二次的ことばへの移行. お茶の水女子大学子ども発達教育研究センター紀要, 2, 51-60."
+   },
+   {
+    "id": "PR-03",
+    "evidence": "理論上の仮説",
+    "via": "PW-25"
    }
   ],
   "leads_to": [
@@ -5512,6 +5887,11 @@
     "skill": "皮肉の理解には話者の信念と意図の再帰的理解が必要で、5〜9歳を通じて段階的に発達する",
     "evidence": "相関のみ",
     "basis": "心の理論と言語能力が年齢・記憶を超えて皮肉の解釈に独自に寄与した（横断研究）。Filippova, E., & Astington, J. W. (2008). Further development in social reasoning revealed in discourse irony understanding. Child Development, 79(1), 126-138."
+   },
+   {
+    "id": "NA-01",
+    "evidence": "縦断で予測",
+    "via": "PW-22"
    }
   ],
   "nd_note": "自閉症の参加者では、誤信念課題2つに50%の確率で通過する言語性精神年齢が、定型発達児の約4歳に対して9歳2か月と大幅に高かった（既存データのプール分析）。言語能力が誤信念課題の通過に強く関わる可能性が論じられている。出典：Happé (1995) Child Development, 66(3), 843-855. https://pubmed.ncbi.nlm.nih.gov/7789204/",
@@ -5625,6 +6005,11 @@
     "skill": "確信度を表す文末表現（終助詞など）の処理経験",
     "evidence": "理論上の仮説",
     "basis": "日本語児にのみ促進効果がみられた理由として、日常談話での標識処理の経験が推定されている。Matsui, T., Rakoczy, H., Miura, Y., & Tomasello, M. (2009). Understanding of speaker certainty and false-belief reasoning: A comparison of Japanese and German preschoolers. Developmental Science, 12(4), 602-613."
+   },
+   {
+    "id": "GR-09",
+    "evidence": "相関のみ",
+    "via": "PW-19"
    }
   ],
   "leads_to": [],
@@ -5712,6 +6097,11 @@
     "skill": "養育者の心的状態語の入力",
     "evidence": "縦断で予測",
     "basis": "早期の母親の心的状態発話が、多くの交絡を統制しても後の子どもの心の理論を予測した。Ruffman, T., Slade, L., & Crowe, E. (2002). The relation between children's and mothers' mental state language and theory-of-mind understanding. Child Development, 73(3), 734-751."
+   },
+   {
+    "id": "PL-09",
+    "evidence": "縦断で予測",
+    "via": "PW-20"
    }
   ],
   "leads_to": [],
@@ -6023,7 +6413,13 @@
     "basis": "年長児ほど形態分析で複合的な語の意味を導くと論じられている。Anglin, J. M. (1993). Vocabulary development: A morphological analysis. Monographs of the Society for Research in Child Development, 58(10), Serial No. 238."
    }
   ],
-  "leads_to": [],
+  "leads_to": [
+   {
+    "id": "RW-10",
+    "evidence": "縦断で予測",
+    "via": "PW-16"
+   }
+  ],
   "nd_note": "",
   "links": [
    "SV-04",
@@ -6067,6 +6463,11 @@
     "skill": "文章理解力",
     "evidence": "相関のみ",
     "basis": "猪原敬介・上田紋佳・塩谷京子・小山内秀和 (2015). 複数の読書量推定指標と語彙力・文章理解力との関係：日本人小学生における検討. 教育心理学研究, 63(3), 254-266."
+   },
+   {
+    "id": "RW-10",
+    "evidence": "縦断で予測",
+    "via": "PW-16"
    }
   ],
   "nd_note": "",
@@ -6442,6 +6843,1691 @@
    "SV-13",
    "SV-15",
    "SV-03"
+  ]
+ },
+ {
+  "id": "PW-01",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "母語音の弁別（音声知覚） → 語の理解・表出、句の理解（初期語彙）",
+  "from_skill": "母語音の弁別（音声知覚）",
+  "to_skill": "語の理解・表出、句の理解（初期語彙）",
+  "edges": [
+   [
+    "母語音の弁別",
+    "初期語彙"
+   ]
+  ],
+  "age": "6か月／7.5か月 → 13・16・24か月（〜2歳半）",
+  "age_band": [
+   "0〜1歳"
+  ],
+  "to_band": [
+   "2〜3歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "6か月時の条件づけ振り向き法による音声弁別成績が、13・16・24か月時のMCDI（語理解・語表出・句理解）と有意に相関した（Tsao et al., 2004）。Kuhl et al.（2008）は7.5か月時のERPで、母語音の弁別が良いほどその後2年間の言語発達が速く、非母語音の弁別が良いほど遅いという逆向きの予測関係を報告し、知覚的狭小化（母語への神経的コミットメント）が語彙の土台になると解釈した。いずれも中規模以下の米国サンプルで、一般認知の統制は抄録では確認できない。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Tsao, F.-M., Liu, H.-M., & Kuhl, P. K. (2004). Speech perception in infancy predicts language development in the second year of life: A longitudinal study. Child Development, 75(4), 1067-1084.",
+    "url": "https://doi.org/10.1111/j.1467-8624.2004.00726.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Kuhl, P. K., Conboy, B. T., Coffey-Corina, S., Padden, D., Rivera-Gaxiola, M., & Nelson, T. (2008). Phonetic learning as a pathway to language: New data and native language magnet theory expanded (NLM-e). Philosophical Transactions of the Royal Society B, 363(1493), 979-1000.",
+    "url": "https://doi.org/10.1098/rstb.2007.2154",
+    "level": "抄録"
+   },
+   {
+    "cite": "Kuhl, P. K., Coffey-Corina, S., Padden, D., & Dawson, G. (2005). Links between social and linguistic processing of speech in preschool children with autism: Behavioral and electrophysiological measures. Developmental Science, 8(1), F1-F12.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2004.00384.x",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "ASD幼児では、マザリーズより非音声の類似音を好む子どもの群で音節変化に対するMMNが見られず、マザリーズを好む群は対照群と差がなかった（Kuhl et al., 2005）。社会的な音声への選好と音声知覚の処理が結びついていることを示す同時点の知見で、縦断的な予測ではない。",
+  "links": [
+   "PL-01",
+   "PL-02",
+   "PL-03",
+   "VO-03",
+   "VO-04"
+  ],
+  "builds_on": [
+   {
+    "id": "PL-01",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "PL-02",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "PL-03",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "VO-03",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-02",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "連続音声からの語の切り出し（分節化） → 表出語彙（2歳）・就学前の言語能力",
+  "from_skill": "連続音声からの語の切り出し（分節化）",
+  "to_skill": "表出語彙（2歳）・就学前の言語能力",
+  "edges": [
+   [
+    "語の切り出し",
+    "初期語彙"
+   ]
+  ],
+  "age": "12か月未満 → 24か月／4〜6歳",
+  "age_band": [
+   "学齢期"
+  ],
+  "to_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "12か月未満で行った語の分節化課題の成績は24か月時の表出語彙と関連したが、ほかの乳児期課題は関連しなかった（Study 1）。乳児期に流暢な発話から語を切り出せた子どもは、4〜6歳で言語検査の得点が高かったが、一般IQに差はなかった（Study 2）。既存の実験参加者を後からたどった回顧的分析である点が限界。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Newman, R., Ratner, N. B., Jusczyk, A. M., Jusczyk, P. W., & Dow, K. A. (2006). Infants' early ability to segment the conversational speech signal predicts later language development: A retrospective analysis. Developmental Psychology, 42(4), 643-655.",
+    "url": "https://doi.org/10.1037/0012-1649.42.4.643",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし（著者らは言語障害の早期発見への応用の可能性に言及するにとどまる）。",
+  "links": [
+   "VO-04"
+  ],
+  "builds_on": [],
+  "leads_to": [
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-03",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "規準喃語・子音レパートリー（音の産出） → 初語（指示的な語使用）・表出語彙",
+  "from_skill": "規準喃語・子音レパートリー（音の産出）",
+  "to_skill": "初語（指示的な語使用）・表出語彙",
+  "edges": [
+   [
+    "規準喃語・子音",
+    "初期語彙"
+   ]
+  ],
+  "age": "9〜16か月（規準喃語は〜10か月） → 16か月／18・24・30か月",
+  "age_band": [
+   "0〜1歳",
+   "1〜2歳"
+  ],
+  "to_band": [
+   "1〜2歳",
+   "2〜3歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "約10か月のリスク児3400名以上をスクリーニングし、規準喃語の開始が遅れた乳児は18・24・30か月時の表出語彙が対照群より少なかった（Oller et al., 1999）。9〜16か月を追った20名では、一貫して出せる子音の数が16か月時の指示的な語使用を予測し、子どもが一貫して出せる子音がそのまま初期の語に使われていた（McCune & Vihman, 2001）。喃語は語の『音の材料』を用意する基盤と言える。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Oller, D. K., Eilers, R. E., Neal, A. R., & Schwartz, H. K. (1999). Precursors to speech in infancy: The prediction of speech and language disorders. Journal of Communication Disorders, 32(4), 223-245.",
+    "url": "https://doi.org/10.1016/s0021-9924(99)00013-1",
+    "level": "抄録"
+   },
+   {
+    "cite": "McCune, L., & Vihman, M. M. (2001). Early phonetic and lexical development: A productivity approach. Journal of Speech, Language, and Hearing Research, 44(3), 670-684.",
+    "url": "https://doi.org/10.1044/1092-4388(2001/054)",
+    "level": "抄録"
+   },
+   {
+    "cite": "Patten, E., Belardi, K., Baranek, G. T., Watson, L. R., Labban, J. D., & Oller, D. K. (2014). Vocal patterns in infants with autism spectrum disorder: Canonical babbling status and vocalization frequency. Journal of Autism and Developmental Disorders, 44(10), 2413-2428.",
+    "url": "https://doi.org/10.1007/s10803-014-2047-4",
+    "level": "抄録"
+   },
+   {
+    "cite": "Lynch, M. P., Oller, D. K., Steffens, M. L., Levine, S. L., Basinger, D. L., & Umbel, V. (1995). Onset of speech-like vocalizations in infants with Down syndrome. American Journal on Mental Retardation, 100(1), 68-86.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/7546639/",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "後にASDと診断された乳児では、9〜12か月と15〜18か月の家庭ビデオで規準喃語の比率と発声量が低かった（回顧的研究：Patten et al., 2014）。ダウン症児は規準喃語の開始が定型発達より約2か月遅く、開始後も不安定で、開始月齢は27か月時の社会的コミュニケーション（ESCS）得点と相関した（Lynch et al., 1995）。",
+  "links": [
+   "PL-05",
+   "PL-06",
+   "VO-05"
+  ],
+  "builds_on": [
+   {
+    "id": "PL-05",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "PL-06",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "VO-05",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-04",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "共同注意（応答・始発、視線追従、共同注意場面への参加） → 語彙・初期言語（理解・表出・身ぶり）",
+  "from_skill": "共同注意（応答・始発、視線追従、共同注意場面への参加）",
+  "to_skill": "語彙・初期言語（理解・表出・身ぶり）",
+  "edges": [
+   [
+    "共同注意・視線追従",
+    "初期語彙"
+   ]
+  ],
+  "age": "9〜18か月 → 15〜24か月",
+  "age_band": [
+   "0〜1歳",
+   "1〜2歳"
+  ],
+  "to_band": [
+   "1〜2歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "9〜15か月の24名を毎月追跡した研究では、母親との共同注意場面に参加する時間と、子どもの注意に沿った母親の発話量が、最初期の身ぶり・言語によるコミュニケーションを予測した（Carpenter et al., 1998）。95名の研究では、12か月時の共同注意への応答（RJA）と18か月時の共同注意の始発（IJA）が、一般的な認知発達を統制しても24か月時の言語を予測した（Mundy et al., 2007）。10〜11か月時の視線追従と18か月時の言語得点にも強い正の相関がある（Brooks & Meltzoff, 2005）。日本語児の縦断データは今回確認できなかった。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Carpenter, M., Nagell, K., & Tomasello, M. (1998). Social cognition, joint attention, and communicative competence from 9 to 15 months of age. Monographs of the Society for Research in Child Development, 63(4), i-vi, 1-143.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9835078/",
+    "level": "抄録"
+   },
+   {
+    "cite": "Mundy, P., Block, J., Delgado, C., Pomares, Y., Van Hecke, A. V., & Parlade, M. V. (2007). Individual differences and the development of joint attention in infancy. Child Development, 78(3), 938-954.",
+    "url": "https://doi.org/10.1111/j.1467-8624.2007.01042.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Brooks, R., & Meltzoff, A. N. (2005). The development of gaze following and its relation to language. Developmental Science, 8(6), 535-543.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2005.00445.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Mundy, P., Sigman, M., & Kasari, C. (1990). A longitudinal study of joint attention and language development in autistic children. Journal of Autism and Developmental Disorders, 20(1), 115-128.",
+    "url": "https://doi.org/10.1007/BF02206861",
+    "level": "抄録"
+   },
+   {
+    "cite": "Kasari, C., Paparella, T., Freeman, S., & Jahromi, L. B. (2008). Language outcome in autism: Randomized comparison of joint attention and play interventions. Journal of Consulting and Clinical Psychology, 76(1), 125-137.",
+    "url": "https://doi.org/10.1037/0022-006X.76.1.125",
+    "level": "抄録"
+   },
+   {
+    "cite": "菊池哲平 (2005). ダウン症乳幼児における姿勢・移動運動と共同注意行動の発達的関連. 特殊教育学研究, 42(5), 341-350.",
+    "url": "https://doi.org/10.6033/tokkyou.42.341",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "ASD児（平均45か月、n=15）では、言語水準・精神年齢・IQを統制しても身ぶりによる共同注意が弱く、共同注意の得点が13か月後の言語発達を予測した（初期言語やIQは予測しなかった）（Mundy et al., 1990）。3〜4歳ASD児58名のRCTでは、共同注意介入と象徴遊び介入の両群で12か月後の表出言語の伸びが対照群より大きく、開始時の言語水準が最も低い子どもでは共同注意介入の効果が特に大きかった（Kasari et al., 2008）＝ASDでは『介入で確認』の水準。ダウン症の単一事例では、伝い歩き・独歩の獲得後に共同注意発達年齢が上がり、交互凝視ははっきり観察されなかった（菊池, 2005）。",
+  "links": [
+   "PL-08",
+   "PL-09",
+   "VO-04"
+  ],
+  "builds_on": [
+   {
+    "id": "PL-08",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "PL-09",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-05",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "指さし・身ぶり（直示的身ぶり、身ぶりで表す意味の種類） → 表出語彙",
+  "from_skill": "指さし・身ぶり（直示的身ぶり、身ぶりで表す意味の種類）",
+  "to_skill": "表出語彙",
+  "edges": [
+   [
+    "指さし・身ぶり",
+    "初期語彙"
+   ]
+  ],
+  "age": "10〜18か月（ASD児は30か月） → 24〜42か月（各研究で約1〜2年後）",
+  "age_band": [
+   "0〜1歳",
+   "1〜2歳",
+   "2〜3歳"
+  ],
+  "to_band": [
+   "2〜3歳",
+   "3〜4歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "多言語",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "子どもが最初に身ぶりで指し示した対象の多くは、のちにその子の音声語彙に入った（Iverson & Goldin-Meadow, 2005; 10名）。52名の家庭観察では、18か月時に身ぶりで伝えた意味の種類の数が、子ども自身の初期発話を統制しても42か月時の語彙を予測した（Rowe & Goldin-Meadow, 2009）。ドイツの82名の研究でも指さしの頻度が後の言語を予測したが、養育者の応答性を高める介入は差し出し（hold-out-give）を増やしたものの、指さしや24か月時の言語には群差を生まなかった（Kaletsch & Liszkowski, 2026）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Iverson, J. M., & Goldin-Meadow, S. (2005). Gesture paves the way for language development. Psychological Science, 16(5), 367-371.",
+    "url": "https://doi.org/10.1111/j.0956-7976.2005.01542.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Rowe, M. L., & Goldin-Meadow, S. (2009). Early gesture selectively predicts later language learning. Developmental Science, 12(1), 182-187.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2008.00764.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Kaletsch, K., & Liszkowski, U. (2026). Does caregivers' responsiveness influence the early development of deictic gestures? Longitudinal and training evidence in relation to subsequent language development. Infancy, 31(4), e70112.",
+    "url": "https://doi.org/10.1111/infa.70112",
+    "level": "抄録"
+   },
+   {
+    "cite": "Özçalışkan, Ş., Adamson, L. B., & Dimitrova, N. (2016). Early deictic but not other gestures predict later vocabulary in both typical development and autism. Autism, 20(6), 754-763.",
+    "url": "https://doi.org/10.1177/1362361315605921",
+    "level": "抄録"
+   },
+   {
+    "cite": "Özçalışkan, Ş., Adamson, L. B., Dimitrova, N., Bailey, J., & Schmuck, L. (2016). Baby sign but not spontaneous gesture predicts later vocabulary in children with Down syndrome. Journal of Child Language, 43(4), 948-963.",
+    "url": "https://doi.org/10.1017/S030500091500029X",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "ASD児（30か月）は特に直示的身ぶりが少なかったが、定型発達と同じく直示的身ぶり（ほかの身ぶりではなく）が1年後の語彙を予測した（Özçalışkan et al., 2016, Autism）。ダウン症児（平均2歳6か月）は直示的身ぶりが少なくベビーサインが多く、1年後の音声語彙を予測したのは直示的身ぶりではなくベビーサインだった（Özçalışkan et al., 2016, J Child Lang）＝症候群によって土台となる経路が異なりうる。",
+  "links": [
+   "PL-10",
+   "VO-02",
+   "VO-04"
+  ],
+  "builds_on": [
+   {
+    "id": "PL-10",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "VO-02",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-06",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "身ぶり＋語の組み合わせ（例：鳥を指さして「ねんね」） → 二語発話・文の複雑さ",
+  "from_skill": "身ぶり＋語の組み合わせ（例：鳥を指さして「ねんね」）",
+  "to_skill": "二語発話・文の複雑さ",
+  "edges": [
+   [
+    "身ぶり＋語",
+    "二語文・文法"
+   ]
+  ],
+  "age": "14〜18か月頃 → 二語期／42か月",
+  "age_band": [
+   "1〜2歳"
+  ],
+  "to_band": [
+   "3〜4歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "一語期から二語期に移る10名では、二つの要素を表す身ぶり＋語の組み合わせを早く出した子どもほど、二語発話も早く出した（Iverson & Goldin-Meadow, 2005）。52名では、18か月時の身ぶり＋語の組み合わせ（特に文に近い内容を表すもの）が42か月時の文の複雑さを予測したが語彙は予測せず、逆に身ぶりで表す意味の種類は語彙だけを予測した（Rowe & Goldin-Meadow, 2009）。身ぶりの種類によって支える上位スキルが分かれる点が重要。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Iverson, J. M., & Goldin-Meadow, S. (2005). Gesture paves the way for language development. Psychological Science, 16(5), 367-371.",
+    "url": "https://doi.org/10.1111/j.0956-7976.2005.01542.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Rowe, M. L., & Goldin-Meadow, S. (2009). Early gesture selectively predicts later language learning. Developmental Science, 12(1), 182-187.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2008.00764.x",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし。",
+  "links": [
+   "VO-01",
+   "GR-02"
+  ],
+  "builds_on": [
+   {
+    "id": "VO-01",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "GR-02",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-07",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "表出語彙量（臨界量） → 文法（語連鎖・形態の過剰規則化）",
+  "from_skill": "表出語彙量（臨界量）",
+  "to_skill": "文法（語連鎖・形態の過剰規則化）",
+  "edges": [
+   [
+    "初期語彙",
+    "二語文・文法"
+   ]
+  ],
+  "age": "1歳4か月〜3歳 → 1歳4か月〜3歳",
+  "age_band": [
+   "1〜2歳",
+   "2〜3歳"
+  ],
+  "to_band": [
+   "1〜2歳",
+   "2〜3歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": true,
+  "lang_data": "多言語",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "英語児1130名（1;4〜2;6）の保護者報告では、過去形の過剰規則化（誤り）は語彙（動詞）がある量（臨界量）を超えてから出てくることが支持された（Marchman & Bates, 1994：横断データ）。英国の双生児約2500組を2歳と3歳で調べた研究では、語彙と文法は強く相関し遺伝的相関も高く、交差遅延モデルでは語彙→文法、文法→語彙の両方の『ブートストラッピング』が2〜3歳に働いていた（Dionne et al., 2003）＝双方向。日本語では、小椋（2007）の縦断2事例で語彙急増期の後は名詞優位、その後文法発達に伴って動詞優位へ移る経過が示されている。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Marchman, V. A., & Bates, E. (1994). Continuity in lexical and morphological development: A test of the critical mass hypothesis. Journal of Child Language, 21(2), 339-366.",
+    "url": "https://doi.org/10.1017/s0305000900009302",
+    "level": "抄録"
+   },
+   {
+    "cite": "Dionne, G., Dale, P. S., Boivin, M., & Plomin, R. (2003). Genetic evidence for bidirectional effects of early lexical and grammatical development. Child Development, 74(2), 394-412.",
+    "url": "https://doi.org/10.1111/1467-8624.7402005",
+    "level": "抄録"
+   },
+   {
+    "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29-53.",
+    "url": "https://doi.org/10.11435/gengo.132.0_29",
+    "level": "抄録"
+   },
+   {
+    "cite": "大伴潔 (2023). 知的障害のある児童における表出語彙―語連鎖段階および自閉スペクトラム症の有無との関連からの検討. 言語聴覚研究, 20(1), 3-12.",
+    "url": "https://doi.org/10.11477/mf.6001200409",
+    "level": "抄録"
+   },
+   {
+    "cite": "Rescorla, L. (2009). Age 17 language and reading outcomes in late-talking toddlers: Support for a dimensional perspective on language delay. Journal of Speech, Language, and Hearing Research, 52(1), 16-30.",
+    "url": "https://doi.org/10.1044/1092-4388(2008/07-0171)",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "学齢の知的障害児75名（日本語）では、語連鎖が長い段階ほど表出語彙数が有意に多く、2語以上の連鎖を産出するASD児は非ASD児より自発的な形容詞が少なかった（大伴, 2023：横断）。24〜31か月で遅れていたlate talkersは17歳時に平均範囲内でも語彙・文法と言語性記憶の因子得点が対照群より低く、2歳時の語彙が17歳時の語彙・文法因子の分散の17%を説明した（Rescorla, 2009）。",
+  "links": [
+   "VO-04",
+   "VO-11",
+   "GR-03",
+   "GR-02"
+  ],
+  "builds_on": [
+   {
+    "id": "VO-04",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "VO-11",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "GR-03",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "GR-02",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-08",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "語の認識の速さ（処理効率） → 語彙の伸び・文法、のちの言語・認知",
+  "from_skill": "語の認識の速さ（処理効率）",
+  "to_skill": "語彙の伸び・文法、のちの言語・認知",
+  "edges": [
+   [
+    "語の認識の速さ",
+    "初期語彙"
+   ]
+  ],
+  "age": "18か月／25か月 → 30か月まで／8歳",
+  "age_band": [
+   "1〜2歳",
+   "2〜3歳"
+  ],
+  "to_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "注視課題で測った18か月時の語の認識の効率は、その後30か月までの語彙の伸びを予測した（Fernald & Marchman, 2012）。25か月時の認識の速さと語彙量は、それぞれ独自に8歳時の言語・認知検査の得点を説明し、その効果は主に作業記憶との強い関連によるものだった（Marchman & Fernald, 2008）。Fernald et al.（2006）は15〜25か月の59名で処理効率が上がること、25か月時の速さと正確さがそれ以前の語彙・文法の発達と相関することを示した（この部分は時期をさかのぼった関連）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Fernald, A., & Marchman, V. A. (2012). Individual differences in lexical processing at 18 months predict vocabulary growth in typically developing and late-talking toddlers. Child Development, 83(1), 203-222.",
+    "url": "https://doi.org/10.1111/j.1467-8624.2011.01692.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Marchman, V. A., & Fernald, A. (2008). Speed of word recognition and vocabulary knowledge in infancy predict cognitive and language outcomes in later childhood. Developmental Science, 11(3), F9-F16.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2008.00671.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Fernald, A., Perfors, A., & Marchman, V. A. (2006). Picking up speed in understanding: Speech processing efficiency and vocabulary growth across the 2nd year. Developmental Psychology, 42(1), 98-116.",
+    "url": "https://doi.org/10.1037/0012-1649.42.1.98",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "18か月時のlate talkers（36名）のうち語の認識が効率的な子どもほど、その後1年間で語彙が加速して『追いつく（bloom）』可能性が高かった（Fernald & Marchman, 2012）。",
+  "links": [
+   "EN-02",
+   "VO-07"
+  ],
+  "builds_on": [
+   {
+    "id": "EN-02",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "VO-07",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-09",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "音韻記憶（非語復唱） → 語彙の習得",
+  "from_skill": "音韻記憶（非語復唱）",
+  "to_skill": "語彙の習得",
+  "edges": [
+   [
+    "音韻記憶（非語復唱）",
+    "語彙・文法（幼児期）"
+   ]
+  ],
+  "age": "4歳 → 5歳（〜8歳）",
+  "age_band": [
+   "4〜6歳"
+  ],
+  "to_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": true,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "4・5・6・8歳で測定した研究では、交差遅延相関により4→5歳では音韻記憶が後の語彙を予測する方向が強く、5歳以降は語彙が後の音韻記憶を予測する方向が強くなった（Gathercole et al., 1992）。8歳では年齢・非言語知能・読みを統制すると両者の関連は有意でなくなった。日本語の3〜4歳児では非単語復唱が長音の読みと関連していた（垣花ら, 2009：横断）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Gathercole, S. E., Willis, C. S., Emslie, H., & Baddeley, A. D. (1992). Phonological memory and vocabulary development during the early school years: A longitudinal study. Developmental Psychology, 28(5), 887-898.",
+    "url": "https://www.mrc-cbu.cam.ac.uk/bibliography/articles/2816",
+    "level": "抄録"
+   },
+   {
+    "cite": "Laws, G., & Gunn, D. (2004). Phonological memory as a predictor of language comprehension in Down syndrome: A five-year follow-up study. Journal of Child Psychology and Psychiatry, 45(2), 326-337.",
+    "url": "https://doi.org/10.1111/j.1469-7610.2004.00224.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Bishop, D. V. M., North, T., & Donlan, C. (1996). Nonword repetition as a behavioural marker for inherited language impairment: Evidence from a twin study. Journal of Child Psychology and Psychiatry, 37(4), 391-403.",
+    "url": "https://doi.org/10.1111/j.1469-7610.1996.tb01420.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "垣花真一郎・安藤寿康・小山麻紀・飯高晶子・菅原いづみ (2009). 幼児のかな識字能力の認知的規定因. 教育心理学研究, 57(3), 295-308.",
+    "url": "https://doi.org/10.5926/jjep.57.295",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "ダウン症の青年・若年成人30名の5年追跡では、非言語能力と初回の言語得点を統制しても、初回の非語復唱が後の語彙の伸びを予測し、文法理解への寄与は年齢の低い参加者でのみ見られた。逆に初回の語彙も後の非語復唱を予測した（Laws & Gunn, 2004）。7〜9歳の言語障害の双生児では、言語障害が持続している子どもも改善した子どもも非語復唱が低く、その弱さには遺伝性があった（Bishop et al., 1996）＝DLDの指標になる。",
+  "links": [],
+  "builds_on": [],
+  "leads_to": []
+ },
+ {
+  "id": "PW-10",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "語彙の増加（語彙表象の再構造化） → 音韻意識",
+  "from_skill": "語彙の増加（語彙表象の再構造化）",
+  "to_skill": "音韻意識",
+  "edges": [
+   [
+    "語彙・文法（幼児期）",
+    "音韻意識（日本語ではモーラ）"
+   ]
+  ],
+  "age": "幼児期〜就学初期（抄録に年齢記載なし） → 1年後",
+  "age_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "語彙再構造化仮説では、語彙が増えて似た音の語が増えると語の表象がより細かい音の単位で整理され、それが音韻意識につながると考える（Metsala, 1999）。Metsala et al.（2009）では、似た音の語が少ない（近隣が疎な）語の聞き取り認識の成績が1年後の音韻意識を予測し、その認識が弱いと2年目の単語読みも低かった。ただし予測因子は語彙量そのものではなく語の聞き取り認識の課題で、効果の大きさは抄録では確認できない。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Metsala, J. L., Stavrinos, D., & Walley, A. C. (2009). Children's spoken word recognition and contributions to phonological awareness and nonword repetition: A 1-year follow-up. Applied Psycholinguistics, 30(1), 101-121.",
+    "url": "https://doi.org/10.1017/S014271640809005X",
+    "level": "抄録"
+   },
+   {
+    "cite": "Metsala, J. L. (1999). Young children's phonological awareness and nonword repetition as a function of vocabulary development. Journal of Educational Psychology, 91(1), 3-19.（書誌はCrossrefで確認、内容は引用文献での要約）",
+    "url": "https://doi.org/10.1037/0022-0663.91.1.3",
+    "level": "二次"
+   }
+  ],
+  "nd_note": "確認できた根拠なし。",
+  "links": [
+   "PA-01",
+   "PA-04"
+  ],
+  "builds_on": [],
+  "leads_to": [
+   {
+    "id": "PA-01",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "PA-04",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-11",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "モーラ意識（分解・抽出・削除・逆唱） → かな文字の読み（文字音の知識・短文の読解）",
+  "from_skill": "モーラ意識（分解・抽出・削除・逆唱）",
+  "to_skill": "かな文字の読み（文字音の知識・短文の読解）",
+  "edges": [
+   [
+    "音韻意識（日本語ではモーラ）",
+    "かな文字の読み"
+   ]
+  ],
+  "age": "3〜6歳 → 3〜6歳（同時点）",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "to_band": [
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "evidence": "相関のみ",
+  "bidirectional": false,
+  "lang_data": "日本語",
+  "tags": [
+   "相関のみ"
+  ],
+  "body": "3〜4歳児55名では、文字音の知識の上位群はモーラ意識・数唱・非単語復唱・語彙・視知覚のすべてで下位群を上回ったが、ロジスティック回帰で独自に寄与したのはモーラ意識だけだった。特殊表記では長音の読みが非単語復唱と関連し、促音・拗音と関連する認知要因は見つからなかった（垣花ら, 2009）。年中・年長123名と小1〜3年98名では、就学前の1年間に3拍語の削除・逆唱ができるようになり、削除・逆唱と平仮名短文の読解に高い相関があった（原, 2001）。3;6〜9;1の64名の横断研究も、音韻操作能力を読字の必要条件とした（尾川・種村, 2001）。いずれも横断データで、因果の向きは確定していない。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "垣花真一郎・安藤寿康・小山麻紀・飯高晶子・菅原いづみ (2009). 幼児のかな識字能力の認知的規定因. 教育心理学研究, 57(3), 295-308.",
+    "url": "https://doi.org/10.5926/jjep.57.295",
+    "level": "抄録"
+   },
+   {
+    "cite": "原恵子 (2001). 健常児における音韻意識の発達. 聴能言語学研究, 18(1), 10-18.",
+    "url": "https://doi.org/10.11219/jjcomdis1983.18.10",
+    "level": "抄録"
+   },
+   {
+    "cite": "尾川亜希子・種村純 (2001). 仮名読みの獲得過程に対する音韻操作能力の関与. 音声言語医学, 42(3), 220-226.",
+    "url": "https://doi.org/10.5112/jjlp.42.220",
+    "level": "抄録"
+   },
+   {
+    "cite": "井上知洋・東原文子・岡崎慎治・前川久男 (2012). 読み困難児におけるひらがな読字能力と音韻処理能力の関連性の検討―音読潜時と発話時間から―. 特殊教育学研究, 49(5), 435-444.",
+    "url": "https://doi.org/10.6033/tokkyou.49.435",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "学齢の読み困難児10名では、単語の音読潜時、非単語の発話時間、モーラ削除課題の遂行時間が延びていて、単語全体として認識する力の発達の弱さと音韻意識の弱さの2点が影響していると考察された（井上ら, 2012）。",
+  "links": [
+   "PA-01",
+   "PA-03",
+   "PA-05",
+   "RW-01",
+   "RW-09"
+  ],
+  "builds_on": [
+   {
+    "id": "PA-01",
+    "evidence": "相関のみ"
+   },
+   {
+    "id": "PA-03",
+    "evidence": "相関のみ"
+   },
+   {
+    "id": "PA-05",
+    "evidence": "相関のみ"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "RW-01",
+    "evidence": "相関のみ"
+   },
+   {
+    "id": "RW-09",
+    "evidence": "相関のみ"
+   }
+  ]
+ },
+ {
+  "id": "PW-12",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "モーラ意識 → かな単語の読解（読んで意味がわかること）",
+  "from_skill": "モーラ意識",
+  "to_skill": "かな単語の読解（読んで意味がわかること）",
+  "edges": [
+   [
+    "音韻意識（日本語ではモーラ）",
+    "かな文字の読み"
+   ]
+  ],
+  "age": "学齢（知的障害児1名） → 訓練後",
+  "age_band": [
+   "学齢期"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "介入で確認",
+  "bidirectional": false,
+  "lang_data": "日本語",
+  "tags": [
+   "介入で確認"
+  ],
+  "body": "一文字ずつのかなの読み（命名）はほぼできるのに、書かれた単語の意味がわからない知的障害児1名に、単語をモーラに分ける訓練と指定した位置のモーラを答える訓練を行ったところ、モーラ意識が育つにつれて文字で書かれた単語を理解できるようになった。著者は、モーラ意識は文字一つひとつを読む（命名する）のには必要ないが、文字列を読んで理解するのには必要だと結論した。単一事例なので一般化には限界がある。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "大六一志 (1995). モーラに対する意識はかな文字の読み習得の必要条件か? 心理学研究, 66(4), 253-260.",
+    "url": "https://doi.org/10.4992/jjpsy.66.253",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "知的障害児で、一文字ずつの読み（上位スキルの一部）だけを先に覚え、土台のモーラ意識が育っていない『部分的獲得』の状態が実際にあり、土台を訓練すると単語の読解に進んだ事例（大六, 1995）。",
+  "links": [
+   "PA-01",
+   "RW-01"
+  ],
+  "builds_on": [
+   {
+    "id": "PA-01",
+    "evidence": "介入で確認"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "RW-01",
+    "evidence": "介入で確認"
+   }
+  ]
+ },
+ {
+  "id": "PW-13",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "音韻意識・RAN（呼称の速さ）・文字音知識 → 単語の読み（正確さ・流暢さ）・綴り",
+  "from_skill": "音韻意識・RAN（呼称の速さ）・文字音知識",
+  "to_skill": "単語の読み（正確さ・流暢さ）・綴り",
+  "edges": [
+   [
+    "音韻意識（日本語ではモーラ）",
+    "単語の読み（正確さ・流暢さ）"
+   ],
+   [
+    "RAN（呼称の速さ）",
+    "単語の読み（正確さ・流暢さ）"
+   ],
+   [
+    "かな文字の読み",
+    "単語の読み（正確さ・流暢さ）"
+   ]
+  ],
+  "age": "読み指導の開始時（小1はじめ） → 10か月後〜小2",
+  "age_band": [
+   "学齢期"
+  ],
+  "to_band": [
+   "0〜1歳",
+   "1〜2歳",
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "多言語",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "英語・スペイン語・スロバキア語・チェコ語の4言語では、読み指導の開始時の音素意識・文字音知識・RANが、10か月後の読み・綴りを同じ程度の重みで予測した（言語性記憶スパンは予測しなかった）（Caravolas et al., 2012）。日本語の小1の169名を小2の半ばまで追った研究では、RAN・音韻記憶・形態意識が、ひらがなの単語・非単語の読みの流暢さの初期値と伸びを予測した（Inoue et al., 2020）。音韻意識のひらがなへの効果は比較的弱く一時的で、RANと形態意識は漢字でより重要だった（Inoue et al., 2017）。小1の音韻意識とRANはひらがなの読み書きと関連し、それが小2の漢字を予測した（Inoue et al., 2022）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Caravolas, M., Lervåg, A., Mousikou, P., Efrim, C., Litavsky, M., Onochie-Quintanilla, E., ... Hulme, C. (2012). Common patterns of prediction of literacy development in different alphabetic orthographies. Psychological Science, 23(6), 678-686.",
+    "url": "https://doi.org/10.1177/0956797611434536",
+    "level": "抄録"
+   },
+   {
+    "cite": "Inoue, T., Georgiou, G. K., Muroya, N., Hosokawa, M., Maekawa, H., & Parrila, R. (2020). Predicting the early growth of word and nonword reading fluency in a consistent syllabic orthography. Journal of Research in Reading, 43(3), 364-381.",
+    "url": "https://doi.org/10.1111/1467-9817.12317",
+    "level": "抄録"
+   },
+   {
+    "cite": "Inoue, T., Georgiou, G. K., Muroya, N., Maekawa, H., & Parrila, R. (2017). Cognitive predictors of literacy acquisition in syllabic Hiragana and morphographic Kanji. Reading and Writing, 30(6), 1335-1360.",
+    "url": "https://doi.org/10.1007/s11145-017-9726-4",
+    "level": "二次"
+   },
+   {
+    "cite": "Inoue, T., Georgiou, G. K., & Parrila, R. (2022). Cross-script effects of cognitive-linguistic skills on Japanese Hiragana and Kanji: Evidence from a longitudinal study. Journal of Cultural Cognitive Science, 6(2), 119-134.",
+    "url": "https://doi.org/10.1007/s41809-022-00099-8",
+    "level": "抄録"
+   },
+   {
+    "cite": "井上知洋・東原文子・岡崎慎治・前川久男 (2012). 読み困難児におけるひらがな読字能力と音韻処理能力の関連性の検討. 特殊教育学研究, 49(5), 435-444.",
+    "url": "https://doi.org/10.6033/tokkyou.49.435",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "日本語の読み困難児ではモーラ削除の遂行時間や音読潜時の延長が見られた（井上ら, 2012：同時点比較）。",
+  "links": [
+   "PA-06",
+   "RW-07",
+   "RW-06"
+  ],
+  "builds_on": [
+   {
+    "id": "PA-06",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "RW-07",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "RW-06",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-14",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "音素意識・文字音知識 → 単語の読み・綴り",
+  "from_skill": "音素意識・文字音知識",
+  "to_skill": "単語の読み・綴り",
+  "edges": [
+   [
+    "音韻意識（日本語ではモーラ）",
+    "単語の読み（正確さ・流暢さ）"
+   ]
+  ],
+  "age": "就学初期（抄録に年齢記載なし） → 介入終了5か月後",
+  "age_band": [
+   "学齢期"
+  ],
+  "to_band": [
+   "0〜1歳"
+  ],
+  "evidence": "介入で確認",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "介入で確認"
+  ],
+  "body": "文字音知識と音素意識を教える音韻・読み介入は、その2つのスキルと、のちの単語の読み・綴りを改善した。介入終了時の文字音知識と音素意識の改善が、5か月後の単語レベルの読み書きの改善を完全に媒介した。介入研究と媒介分析を組み合わせて因果的な役割を示した（アルファベット言語）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Hulme, C., Bowyer-Crane, C., Carroll, J. M., Duff, F. J., & Snowling, M. J. (2012). The causal role of phoneme awareness and letter-sound knowledge in learning to read: Combining intervention studies with mediation analyses. Psychological Science, 23(6), 572-577.",
+    "url": "https://doi.org/10.1177/0956797611435921",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし（日本語児での同様の介入研究は今回確認できなかった）。",
+  "links": [
+   "PA-08",
+   "RW-06"
+  ],
+  "builds_on": [
+   {
+    "id": "PA-08",
+    "evidence": "介入で確認"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "RW-06",
+    "evidence": "介入で確認"
+   }
+  ]
+ },
+ {
+  "id": "PW-15",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "話しことばの理解（語彙・文法・聴解） → 読解（読んで理解すること）",
+  "from_skill": "話しことばの理解（語彙・文法・聴解）",
+  "to_skill": "読解（読んで理解すること）",
+  "edges": [
+   [
+    "語彙・文法（幼児期）",
+    "読解・作文"
+   ]
+  ],
+  "age": "3歳〜就学前 → 小1〜小3",
+  "age_band": [
+   "3〜4歳"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "多言語",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "読みのシンプルな見方（Simple View of Reading）では、読解はデコーディング（単語を読み取る力）と言語理解の積で決まるとされる（Gough & Tunmer, 1986; Hoover & Gough, 1990）。NICHDの1137名を3歳から小3まで追った研究では、語彙だけでなく文法・意味を含む広い話しことばの力が、就学移行期の単語認識に直接・間接に関わり、語彙だけより良い土台になった（NICHD ECCRN, 2005）。日本語の年長〜小1の縦断研究では、聴解は作業記憶と語彙で説明され、読解は聴解とデコーディングの効率で説明された（高橋, 1996）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Gough, P. B., & Tunmer, W. E. (1986). Decoding, reading, and reading disability. Remedial and Special Education, 7(1), 6-10.（書誌はCrossrefで確認、内容は二次資料）",
+    "url": "https://doi.org/10.1177/074193258600700104",
+    "level": "二次"
+   },
+   {
+    "cite": "Hoover, W. A., & Gough, P. B. (1990). The simple view of reading. Reading and Writing, 2(2), 127-160.",
+    "url": "https://doi.org/10.1007/BF00401799",
+    "level": "二次"
+   },
+   {
+    "cite": "NICHD Early Child Care Research Network (2005). Pathways to reading: The role of oral language in the transition to reading. Developmental Psychology, 41(2), 428-442.",
+    "url": "https://doi.org/10.1037/0012-1649.41.2.428",
+    "level": "抄録"
+   },
+   {
+    "cite": "高橋登 (1996). 就学前後の子ども達の読解の能力の獲得過程について―縦断研究による分析―. 教育心理学研究, 44(2), 166-175.",
+    "url": "https://doi.org/10.5926/jjep1953.44.2_166",
+    "level": "抄録"
+   },
+   {
+    "cite": "Catts, H. W., Adlof, S. M., & Ellis Weismer, S. (2006). Language deficits in poor comprehenders: A case for the simple view of reading. Journal of Speech, Language, and Hearing Research, 49(2), 278-293.",
+    "url": "https://doi.org/10.1044/1092-4388(2006/023)",
+    "level": "抄録"
+   },
+   {
+    "cite": "Nation, K., Clarke, P., Wright, B., & Williams, C. (2006). Patterns of reading ability in children with autism spectrum disorder. Journal of Autism and Developmental Disorders, 36(7), 911-919.",
+    "url": "https://doi.org/10.1007/s10803-006-0130-1",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "8年生で、読解だけが弱い子ども（poor comprehenders）は言語理解が弱く音韻処理は正常で、デコーディングが弱い子ども（poor decoders、ディスレクシア型）はその逆だった。この特徴は幼稚園・小2・小4の時点からさかのぼって同じように見られた（Catts et al., 2006）。ASD児41名では単語・非単語の読みと音読の正確さは平均範囲だったが読解は弱く、正確に読めても理解がとても弱い過読症（hyperlexia）型の子どももいた（Nation et al., 2006）＝デコーディングだけが先に育ち、言語理解という土台が弱いままの典型例。",
+  "links": [
+   "GR-05",
+   "RW-10"
+  ],
+  "builds_on": [
+   {
+    "id": "GR-05",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "RW-10",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-16",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "語彙（学童期） → 読解",
+  "from_skill": "語彙（学童期）",
+  "to_skill": "読解",
+  "edges": [
+   [
+    "語彙（学童期）",
+    "読解・作文"
+   ]
+  ],
+  "age": "小1・小3 → 小3・小5",
+  "age_band": [
+   "学齢期"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": true,
+  "lang_data": "日本語",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "大阪府の公立小学校の子どもを小1・3・5年の冬に追跡した研究では、かな単語の命名速度は小1では読解を左右したが、学年が上がると影響が小さくなった。一方、語彙は低学年から高学年まで読解を左右し続け、学童期の語彙は前の時点の読解でも説明された。読書を通じて語彙が増え、それがまた読解を高めるという相互的な関係と解釈されている。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "高橋登 (2001). 学童期における読解能力の発達過程―1-5年生の縦断的な分析―. 教育心理学研究, 49(1), 1-10.",
+    "url": "https://doi.org/10.5926/jjep1953.49.1_1",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし。",
+  "links": [
+   "SV-05",
+   "SV-06",
+   "RW-10"
+  ],
+  "builds_on": [
+   {
+    "id": "SV-05",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "SV-06",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "RW-10",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-17",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "作業記憶（＋語彙） → 聴解（文・談話の理解）",
+  "from_skill": "作業記憶（＋語彙）",
+  "to_skill": "聴解（文・談話の理解）",
+  "edges": [
+   [
+    "作業記憶",
+    "語彙・文法（幼児期）"
+   ]
+  ],
+  "age": "年長〜小1／25か月 → 年長〜小1／8歳",
+  "age_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "相関のみ",
+  "bidirectional": false,
+  "lang_data": "多言語",
+  "tags": [
+   "相関のみ"
+  ],
+  "body": "日本語の年長〜小1の縦断研究では、聴解課題の成績は作業記憶の容量と語彙で説明された（高橋, 1996）。ただし抄録からは、説明が時点をまたぐものか同時点のものかはわからない。乳児期の処理速度と語彙が8歳の言語・認知を予測した効果の多くは、作業記憶との関連によるものだった（Marchman & Fernald, 2008）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "高橋登 (1996). 就学前後の子ども達の読解の能力の獲得過程について―縦断研究による分析―. 教育心理学研究, 44(2), 166-175.",
+    "url": "https://doi.org/10.5926/jjep1953.44.2_166",
+    "level": "抄録"
+   },
+   {
+    "cite": "Marchman, V. A., & Fernald, A. (2008). Speed of word recognition and vocabulary knowledge in infancy predict cognitive and language outcomes in later childhood. Developmental Science, 11(3), F9-F16.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2008.00671.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Laws, G., & Gunn, D. (2004). Phonological memory as a predictor of language comprehension in Down syndrome: A five-year follow-up study. Journal of Child Psychology and Psychiatry, 45(2), 326-337.",
+    "url": "https://doi.org/10.1111/j.1469-7610.2004.00224.x",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "ダウン症では、音韻記憶（非語復唱）が文法理解の伸びに関わったのは年齢の低い参加者だけだった（Laws & Gunn, 2004：5年の縦断）。",
+  "links": [
+   "GR-28"
+  ],
+  "builds_on": [],
+  "leads_to": [
+   {
+    "id": "GR-28",
+    "evidence": "相関のみ"
+   }
+  ]
+ },
+ {
+  "id": "PW-18",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "言語能力（統語・意味、補文構造、視点を切り替える会話） → 心の理論（誤信念の理解）",
+  "from_skill": "言語能力（統語・意味、補文構造、視点を切り替える会話）",
+  "to_skill": "心の理論（誤信念の理解）",
+  "edges": [
+   [
+    "語彙・文法（幼児期）",
+    "心の理論（誤信念）"
+   ]
+  ],
+  "age": "3〜4歳 → 3〜5歳（7か月後／訓練後）",
+  "age_band": [
+   "3〜4歳"
+  ],
+  "to_band": [
+   "0〜1歳",
+   "1〜2歳",
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "evidence": "介入で確認",
+  "bidirectional": true,
+  "lang_data": "多言語",
+  "tags": [
+   "介入で確認"
+  ],
+  "body": "3歳児59名を7か月の間に3回調べた研究では、それ以前の言語能力が（それ以前の心の理論を統制しても）後の誤信念課題の成績を予測したが、逆の予測は見られなかった（Astington & Jenkins, 1999）。7歳未満を対象にした104研究（N=8891）のメタ分析では、年齢を統制しても中〜大の効果量があり、受容語彙より言語全般の指標で関連が強く、言語→誤信念の向きの方が逆より強かった（Milligan et al., 2007）。補文構造（『〜と思っている』の文）の訓練は心の理論課題の成績を上げたが、誤信念の訓練は言語を伸ばさなかった（Hale & Tager-Flusberg, 2003）。ドイツの3歳児でも、視点を切り替える会話と補文構文がそれぞれ独立に誤信念理解を改善した（Lohmann & Tomasello, 2003）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Astington, J. W., & Jenkins, J. M. (1999). A longitudinal study of the relation between language and theory-of-mind development. Developmental Psychology, 35(5), 1311-1320.",
+    "url": "https://doi.org/10.1037/0012-1649.35.5.1311",
+    "level": "抄録"
+   },
+   {
+    "cite": "Milligan, K., Astington, J. W., & Dack, L. A. (2007). Language and theory of mind: Meta-analysis of the relation between language ability and false-belief understanding. Child Development, 78(2), 622-646.",
+    "url": "https://doi.org/10.1111/j.1467-8624.2007.01018.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Hale, C. M., & Tager-Flusberg, H. (2003). The influence of language on theory of mind: A training study. Developmental Science, 6(3), 346-359.",
+    "url": "https://doi.org/10.1111/1467-7687.00289",
+    "level": "抄録"
+   },
+   {
+    "cite": "Lohmann, H., & Tomasello, M. (2003). The role of language in the development of false belief understanding: A training study. Child Development, 74(4), 1130-1144.",
+    "url": "https://doi.org/10.1111/1467-8624.00597",
+    "level": "抄録"
+   },
+   {
+    "cite": "Happé, F. G. E. (1995). The role of age and verbal ability in the theory of mind task performance of subjects with autism. Child Development, 66(3), 843-855.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/7789204/",
+    "level": "抄録"
+   },
+   {
+    "cite": "Lind, S. E., & Bowler, D. M. (2009). Language and theory of mind in autism spectrum disorder: The relationship between complement syntax and false belief task performance. Journal of Autism and Developmental Disorders, 39(6), 929-937.",
+    "url": "https://doi.org/10.1007/s10803-009-0702-y",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "ASD児が誤信念課題に50%の確率で通過するには言語性精神年齢が約9歳2か月必要で、定型発達（約4歳）の2倍以上だった（Happé, 1995）。ASD群では補文構文の得点と位置移動型の誤信念課題の相関が対照群より強く、言語を使って課題を『解いている（hacking out）』可能性が示されたが、中身の入れ替え型課題では支持されなかった（Lind & Bowler, 2009）＝言語による代償経路の可能性。",
+  "links": [
+   "TM-01",
+   "TM-02"
+  ],
+  "builds_on": [],
+  "leads_to": [
+   {
+    "id": "TM-01",
+    "evidence": "介入で確認"
+   },
+   {
+    "id": "TM-02",
+    "evidence": "介入で確認"
+   }
+  ]
+ },
+ {
+  "id": "PW-19",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "話し手の確信度を表す文末表現（日本語の助詞）の処理 → 誤信念の推論",
+  "from_skill": "話し手の確信度を表す文末表現（日本語の助詞）の処理",
+  "to_skill": "誤信念の推論",
+  "edges": [
+   [
+    "文末表現（確信度）",
+    "心の理論（誤信念）"
+   ]
+  ],
+  "age": "3歳 → 3歳（同時点の実験）",
+  "age_band": [
+   "3〜4歳"
+  ],
+  "to_band": [
+   "3〜4歳"
+  ],
+  "evidence": "相関のみ",
+  "bidirectional": false,
+  "lang_data": "多言語",
+  "tags": [
+   "相関のみ"
+  ],
+  "body": "英語児の3歳は登場人物の誤った発言から誤った信念を推論できないことが多いが、日本語児の3歳は、確信度を表す助詞がついた発言から登場人物の誤信念を読み取る手がかりを得られた。そうした文法標識のないドイツ語児には同じ効果が見られなかった。日常の会話でこうした標識を処理していることが影響していると解釈されている（言語間を比べた実験で、縦断研究や介入研究ではない）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Matsui, T., Rakoczy, H., Miura, Y., & Tomasello, M. (2009). Understanding of speaker certainty and false-belief reasoning: A comparison of Japanese and German preschoolers. Developmental Science, 12(4), 602-613.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2008.00812.x",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし。",
+  "links": [
+   "GR-09",
+   "TM-03"
+  ],
+  "builds_on": [
+   {
+    "id": "GR-09",
+    "evidence": "相関のみ"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "TM-03",
+    "evidence": "相関のみ"
+   }
+  ]
+ },
+ {
+  "id": "PW-20",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "視線追従（乳児期）→心的状態語 → 心の理論（明示的な課題）",
+  "from_skill": "視線追従（乳児期）→心的状態語",
+  "to_skill": "心の理論（明示的な課題）",
+  "edges": [
+   [
+    "共同注意・視線追従",
+    "心的状態語"
+   ],
+   [
+    "心的状態語",
+    "心の理論（誤信念）"
+   ]
+  ],
+  "age": "10.5か月／2.5歳 → 2.5歳／4.5歳",
+  "age_band": [
+   "0〜1歳",
+   "1〜2歳",
+   "2〜3歳"
+  ],
+  "to_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "同じ子どもを10.5か月・2.5歳・4.5歳で調べた研究で、10.5か月の視線追従の得点が高い子どもは2.5歳で心的状態語（思う・知っている等）を多く使い、2.5歳で心的状態語が多い子どもは4.5歳の心の理論課題の成績が良かった。この予測関係は、言語全般、母親の学歴、社会的でない注意を統制しても有意だった。共同注意→心的状態語→心の理論という、ことばが橋渡しをする経路を示す。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Brooks, R., & Meltzoff, A. N. (2015). Connecting the dots from infancy to childhood: A longitudinal study connecting gaze following, language, and explicit theory of mind. Journal of Experimental Child Psychology, 130, 67-78.",
+    "url": "https://doi.org/10.1016/j.jecp.2014.09.010",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし。",
+  "links": [
+   "PL-09",
+   "TM-05"
+  ],
+  "builds_on": [
+   {
+    "id": "PL-09",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "TM-05",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-21",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "実行機能（抑制制御） → 心の理論",
+  "from_skill": "実行機能（抑制制御）",
+  "to_skill": "心の理論",
+  "edges": [
+   [
+    "実行機能（抑制）",
+    "心の理論（誤信念）"
+   ]
+  ],
+  "age": "3〜4歳 → 3〜4歳（同時点）",
+  "age_band": [
+   "3〜4歳"
+  ],
+  "to_band": [
+   "3〜4歳"
+  ],
+  "evidence": "相関のみ",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "相関のみ"
+  ],
+  "body": "3〜4歳児107名で、抑制制御と心の理論は強く関連し（r=.66）、年齢・性別・言語能力・運動の順序づけ・きょうだい数などを統制しても有意だった。特に、優勢な反応を抑えて別の反応をする『葛藤』型の課題が、『遅延』型の課題より強く心の理論を予測した。著者らは、抑制制御が心の理論の出現と表出を可能にする要因の一つだと考えている（同時点のデータ）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Carlson, S. M., & Moses, L. J. (2001). Individual differences in inhibitory control and children's theory of mind. Child Development, 72(4), 1032-1053.",
+    "url": "https://doi.org/10.1111/1467-8624.00333",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし。",
+  "links": [
+   "SV-09"
+  ],
+  "builds_on": [
+   {
+    "id": "SV-09",
+    "evidence": "相関のみ"
+   }
+  ],
+  "leads_to": []
+ },
+ {
+  "id": "PW-22",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "心の理論 → ナラティブ・文章の理解（聴解・読解）",
+  "from_skill": "心の理論",
+  "to_skill": "ナラティブ・文章の理解（聴解・読解）",
+  "edges": [
+   [
+    "心の理論（誤信念）",
+    "ナラティブ（語り）"
+   ],
+   [
+    "心の理論（誤信念）",
+    "読解・作文"
+   ]
+  ],
+  "age": "3歳〜（メタ分析は3〜70歳、平均10.5歳） → 同上",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": true,
+  "lang_data": "多言語",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "47サンプル（N=5123）のメタ分析で、心の理論と文章（聞く・読む）の理解には有意な関連があり（r=.33）、言語能力や実行機能を統制しても残った（r=.22〜.32）。縦断研究では、心の理論が先に測られた場合と理解が先の場合で効果量に差がなく、双方向の関係がうかがえる。読解より聴解で関連が強かった（Tompkins et al., 2025）。イタリアの年長・小1の142名では、ナラティブの力が『だまし』の理解を予測した（Accorti Gamannossi & Pinto, 2014：回帰分析）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Tompkins, V., Montgomery, D. E., Dore, R. A., & Lee, B. K. (2025). Theory of mind and text comprehension across the lifespan: A meta-analysis. Developmental Psychology, 61(6), 1112-1125.",
+    "url": "https://doi.org/10.1037/dev0001869",
+    "level": "抄録"
+   },
+   {
+    "cite": "Accorti Gamannossi, B., & Pinto, G. (2014). Theory of mind and language of mind in narratives: Developmental trends from kindergarten to primary school. First Language, 34(3), 262-272.",
+    "url": "https://doi.org/10.1177/0142723714535875",
+    "level": "抄録"
+   },
+   {
+    "cite": "Capps, L., Losh, M., & Thurber, C. (2000). \"The frog ate the bug and made his mouth sad\": Narrative competence in children with autism. Journal of Abnormal Child Psychology, 28(2), 193-204.",
+    "url": "https://doi.org/10.1023/a:1005126915631",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "ASD児13名のナラティブの力は心の理論課題や会話能力の指標と関連したが、発達遅滞児では関連しなかった。ASD児と発達遅滞児は、言語能力をそろえた定型発達児に比べて、登場人物の気持ちの原因を説明することが少なく、感情にラベルをつけるだけのことが多かった（Capps et al., 2000）。",
+  "links": [
+   "TM-01",
+   "NA-01"
+  ],
+  "builds_on": [
+   {
+    "id": "TM-01",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "NA-01",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-23",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "語彙・文法（下位の言語スキル） → ナラティブ（語りの力）",
+  "from_skill": "語彙・文法（下位の言語スキル）",
+  "to_skill": "ナラティブ（語りの力）",
+  "edges": [
+   [
+    "語彙・文法（幼児期）",
+    "ナラティブ（語り）"
+   ]
+  ],
+  "age": "3〜6歳／4歳 → 3〜6歳／4・7歳",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "to_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "evidence": "相関のみ",
+  "bidirectional": false,
+  "lang_data": "英語圏",
+  "tags": [
+   "相関のみ"
+  ],
+  "body": "3〜6歳の336名では、語彙・文法・音韻意識で、年齢から期待される水準に対するナラティブの指標の約13%が説明された。ナラティブの力が低い層では音韻意識と語彙、中央では語彙と文法、とても高い層では語彙だけが有意だった（Khan et al., 2021：横断）。215名の研究では、4歳時の物語の再話と、語彙・文法・言語性記憶からなる言語の中核は、関連しながらも別の因子だった。7歳時の言語・聴解を予測するうえで、再話は4歳時の言語の中核以上の説明力を加えなかった（Karlsen et al., 2021）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Khan, K. S., Logan, J., Justice, L. M., Bowles, R. P., & Piasta, S. B. (2021). The contribution of vocabulary, grammar, and phonological awareness across a continuum of narrative ability levels in young children. Journal of Speech, Language, and Hearing Research, 64(9), 3489-3503.",
+    "url": "https://doi.org/10.1044/2021_JSLHR-20-00403",
+    "level": "抄録"
+   },
+   {
+    "cite": "Karlsen, J., Hjetland, H. N., Hagtvet, B. E., Braeken, J., & Melby-Lervåg, M. (2021). The concurrent and longitudinal relationship between narrative skills and other language skills in children. First Language, 41(5), 555-572.",
+    "url": "https://doi.org/10.1177/0142723721995688",
+    "level": "抄録"
+   },
+   {
+    "cite": "Bishop, D. V. M., & Edmundson, A. (1987). Language-impaired 4-year-olds: Distinguishing transient from persistent impairment. Journal of Speech and Hearing Disorders, 52(2), 156-173.",
+    "url": "https://doi.org/10.1044/jshd.5202.156",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "4歳の言語障害児87名の追跡では、5歳半時の経過（改善するか持続するか）を4歳時の検査から90%の精度で予測でき、最も良い予測因子は絵を見て簡単な物語を再話する力で、音韻の力だけが経過と関連しなかった（Bishop & Edmundson, 1987）＝DLDではナラティブが予後の指標になる。",
+  "links": [
+   "GR-15",
+   "NA-01",
+   "NA-04"
+  ],
+  "builds_on": [
+   {
+    "id": "GR-15",
+    "evidence": "相関のみ"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "NA-01",
+    "evidence": "相関のみ"
+   },
+   {
+    "id": "NA-04",
+    "evidence": "相関のみ"
+   }
+  ]
+ },
+ {
+  "id": "PW-24",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "ナラティブ・説明的な談話（口頭） → 読解・作文",
+  "from_skill": "ナラティブ・説明的な談話（口頭）",
+  "to_skill": "読解・作文",
+  "edges": [
+   [
+    "ナラティブ（語り）",
+    "読解・作文"
+   ]
+  ],
+  "age": "5歳／就学時 → 8歳／12歳以降",
+  "age_band": [
+   "4〜6歳"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "縦断で予測",
+  "bidirectional": false,
+  "lang_data": "多言語",
+  "tags": [
+   "縦断で予測"
+  ],
+  "body": "32名の追跡で、5歳時の語りで出来事の重要性を示す評価的な言語の使用と、説明的な発話で情報を表す力が、8歳時の読解を予測した。また5歳時の談話のマクロ構造（全体の組み立て）を使いこなす力は、8歳時に書く物語と関連した（Griffin et al., 2004）。乳児期から青年期までの研究では、19か月時の語彙が就学前の読み書きの初期スキルと12歳の読解を予測し、母親と乳児の語彙を統制しても就学時の口頭ナラティブが約10年後の読解を独自に予測した（Suggate et al., 2018）。ただしKarlsen et al.（2021）では、4歳時の再話は言語の中核以上の説明力を持たなかった。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Griffin, T. M., Hemphill, L., Camp, L., & Wolf, D. P. (2004). Oral discourse in the preschool years and later literacy skills. First Language, 24(2), 123-147.",
+    "url": "https://doi.org/10.1177/0142723704042369",
+    "level": "二次"
+   },
+   {
+    "cite": "Suggate, S., Schaughency, E., McAnally, H., & Reese, E. (2018). From infancy to adolescence: The longitudinal links between vocabulary, early literacy skills, oral narrative, and reading comprehension. Cognitive Development, 47, 82-95.",
+    "url": "https://doi.org/10.1016/j.cogdev.2018.04.005",
+    "level": "二次"
+   },
+   {
+    "cite": "Karlsen, J., Hjetland, H. N., Hagtvet, B. E., Braeken, J., & Melby-Lervåg, M. (2021). The concurrent and longitudinal relationship between narrative skills and other language skills in children. First Language, 41(5), 555-572.",
+    "url": "https://doi.org/10.1177/0142723721995688",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "確認できた根拠なし。",
+  "links": [
+   "NA-05",
+   "RW-10",
+   "GR-29"
+  ],
+  "builds_on": [
+   {
+    "id": "NA-05",
+    "evidence": "縦断で予測"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "RW-10",
+    "evidence": "縦断で予測"
+   },
+   {
+    "id": "GR-29",
+    "evidence": "縦断で予測"
+   }
+  ]
+ },
+ {
+  "id": "PW-25",
+  "kind": "道筋",
+  "domain": "発達の道筋",
+  "title": "一次的ことば（親しい人とのその場の対話） → 二次的ことば（その場を離れ、不特定の聞き手に一方向で語る・書く）",
+  "from_skill": "一次的ことば（親しい人とのその場の対話）",
+  "to_skill": "二次的ことば（その場を離れ、不特定の聞き手に一方向で語る・書く）",
+  "edges": [
+   [
+    "一次的ことば（対話）",
+    "二次的ことば"
+   ]
+  ],
+  "age": "幼児期 → 就学前後〜学童期",
+  "age_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "to_band": [
+   "学齢期"
+  ],
+  "evidence": "理論上の仮説",
+  "bidirectional": false,
+  "lang_data": "日本語",
+  "tags": [
+   "理論上の仮説"
+  ],
+  "body": "岡本夏木の理論では、一次的ことばは具体的な事柄について状況の文脈に頼りながら親しい人と直接対話する言語活動で、二次的ことばは現実の場面を離れて、未知の不特定多数に向けて一方向的に、話の骨組みを自分で調整しながら表現することばとされる。二次的ことばは一次的ことばを土台に発達するが、二次的ことばを獲得しても一次的ことばの発達は終わらず、両方を深めていく必要があるとされる（松葉, 2014による整理。松葉は概念の出典を『小学生になる前後』（1995）としている）。関連する実証として、30か月時に親が今ここにない事柄（過去・未来、ごっこ、説明）を話す量が、子ども自身の早期の言語などを統制しても、年長時の語彙・統語・ナラティブを予測した（Demir et al., 2015：英語圏）。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "岡本夏木 (1985). ことばと発達. 岩波書店（岩波新書）.（書誌は国立国会図書館サーチで確認、内容は二次資料）",
+    "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001727085",
+    "level": "二次"
+   },
+   {
+    "cite": "松葉恵 (2014). 「教育関係」における対話のとらえかたに関する一考察―参与観察記録の分析のために―. 教育学研究論集（武庫川女子大学）, 9, 37-43.",
+    "url": "https://mukogawa.repo.nii.ac.jp/records/669",
+    "level": "本文"
+   },
+   {
+    "cite": "Demir, Ö. E., Rowe, M. L., Heller, G., Goldin-Meadow, S., & Levine, S. C. (2015). Vocabulary, syntax, and narrative development in typically developing children and children with early unilateral brain injury: Early parental talk about the \"there-and-then\" matters. Developmental Psychology, 51(2), 161-175.",
+    "url": "https://doi.org/10.1037/a0038476",
+    "level": "抄録"
+   }
+  ],
+  "nd_note": "Demir et al.（2015）では、30か月時に統語・ナラティブが低い子どもや、早期の片側脳損傷のある子どもでは、脱文脈的な会話の効果が特に大きかった（脳損傷は神経発達症そのものではない）。",
+  "links": [
+   "PR-03",
+   "NA-06"
+  ],
+  "builds_on": [
+   {
+    "id": "PR-03",
+    "evidence": "理論上の仮説"
+   }
+  ],
+  "leads_to": [
+   {
+    "id": "NA-06",
+    "evidence": "理論上の仮説"
+   }
   ]
  }
 ]

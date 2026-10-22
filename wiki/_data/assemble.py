@@ -1,5 +1,5 @@
 """調査結果（wiki_A〜E.json）を notes.json にまとめる。ID付与・関連ノートのID化・年齢帯の判定。
-  python wiki/_data/assemble.py <調査JSONのあるフォルダ>
+  python wiki/_data/assemble.py wiki/_data/research
 """
 import json
 import os
@@ -67,6 +67,9 @@ def bands(age):
 MERGE = {"日本語乳児は母音の長短の弁別感受性": "日本語の母音の長短（/mana/–/ma:na/）の弁別は"}
 
 
+LEVEL = {"本文確認": "本文", "抄録のみ": "抄録", "二次文献経由": "二次"}
+
+
 def norm(t):
     return re.sub(r"[\s、。，．・「」（）()]", "", unicodedata.normalize("NFKC", t))
 
@@ -121,27 +124,28 @@ def main(src):
     pe = os.path.join(src, "wiki_E.json")
     pmap_p = os.path.join(HERE, "pathway_map.json")
     if os.path.exists(pe):
-        pmap = json.load(open(pmap_p, encoding="utf-8")) if os.path.exists(pmap_p) else {}
+        pmap = json.load(open(pmap_p, encoding="utf-8"))
         by_id = {n["id"]: n for n in notes}
         for i, e in enumerate(json.load(open(pe, encoding="utf-8")), 1):
             nid = f"PW-{i:02d}"
-            m = pmap.get(f"{e['from']}→{e['to']}", {})
-            fr, to = m.get("from_notes", []), m.get("to_notes", [])
+            m = pmap["pathways"][i - 1]
+            fr, to = m["from_notes"], m["to_notes"]
             notes.append({"id": nid, "kind": "道筋", "domain": "発達の道筋",
                           "title": f"{e['from']} → {e['to']}", "from_skill": e["from"], "to_skill": e["to"],
-                          "from_short": m.get("from_short", e["from"]), "to_short": m.get("to_short", e["to"]),
+                          "edges": m["edges"],
                           "age": f"{e.get('from_age', '')} → {e.get('to_age', '')}",
                           "age_band": bands(e.get("from_age", "")), "to_band": bands(e.get("to_age", "")),
                           "evidence": e["evidence"], "bidirectional": e.get("bidirectional", False),
                           "lang_data": e.get("lang_data", ""), "tags": [e["evidence"]],
-                          "body": e["summary"], "debate": e.get("debate", ""), "sources": e.get("sources", []),
+                          "body": e["summary"], "debate": e.get("debate", ""),
+                          "sources": [dict(s, level=LEVEL.get(s.get("level"), s.get("level"))) for s in e.get("sources", [])],
                           "nd_note": e.get("nd_note", ""), "links": [x for x in fr + to if x in by_id],
                           "builds_on": [{"id": x, "evidence": e["evidence"]} for x in fr if x in by_id],
                           "leads_to": [{"id": x, "evidence": e["evidence"]} for x in to if x in by_id]})
             # 上位側のノートに「基礎となるスキル」として、下位側に「つながる上位スキル」として書き戻す
             for t in to:
                 for f in fr:
-                    if t in by_id and f in by_id:
+                    if t in by_id and f in by_id and t != f:
                         by_id[t]["builds_on"].append({"id": f, "evidence": e["evidence"], "via": nid})
                         by_id[f]["leads_to"].append({"id": t, "evidence": e["evidence"], "via": nid})
     with open(os.path.join(HERE, "notes.json"), "w", encoding="utf-8") as f:

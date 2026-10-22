@@ -1,0 +1,1748 @@
+[
+  {
+    "title": "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）",
+    "body": "乳児は当初、母語にない子音対比も弁別できるが、この能力は生後1年目のうちに言語経験に応じて低下する（Werker & Tees, 1984 を起点とする知見；原典は未読で、Werker, 2024 と Kuhl et al., 2003/2006 の抄録による）。Kuhl et al. (2006) は米国と日本の6〜8か月児・10〜12か月児に英語の /r–l/ 対比を提示し、この期間に母語話者側（米国児）では成績が有意に向上し、非母語側（日本児）では低下することを示した。したがってこの時期の変化は非母語対比の「喪失」だけでなく母語対比の「促進」を伴う。著者らはこれを母語の音声特性への神経的コミットメントで説明している。",
+    "age": "6〜12か月",
+    "domain": "前言語期",
+    "tags": [
+      "音声知覚",
+      "知覚的狭小化",
+      "知覚的再体制化",
+      "/r-l/",
+      "日本語児"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Kuhl, P. K., Stevens, E., Hayashi, A., Deguchi, T., Kiritani, S., & Iverson, P. (2006). Infants show a facilitation effect for native language phonetic perception between 6 and 12 months. Developmental Science, 9(2), F13–F21.",
+        "url": "https://doi.org/10.1111/j.1467-7687.2006.00468.x",
+        "level": "抄録"
+      },
+      {
+        "cite": "Werker, J. F. (2024). Phonetic perceptual reorganization across the first year of life: Looking back. Infant Behavior and Development, 75, 101935.",
+        "url": "https://doi.org/10.1016/j.infbeh.2024.101935",
+        "level": "抄録"
+      },
+      {
+        "cite": "Werker, J. F., & Tees, R. C. (1984). Cross-language speech perception: Evidence for perceptual reorganization during the first year of life. Infant Behavior and Development, 7(1), 49–63.",
+        "url": "https://doi.org/10.1016/S0163-6383(84)80022-3",
+        "level": "二次"
+      },
+      {
+        "cite": "Kuhl, P. K., Tsao, F.-M., & Liu, H.-M. (2003). Foreign-language experience in infancy: Effects of short-term exposure and social interaction on phonetic learning. Proceedings of the National Academy of Sciences of the USA, 100(15), 9096–9101.",
+        "url": "https://doi.org/10.1073/pnas.1532872100",
+        "level": "抄録"
+      },
+      {
+        "cite": "Tsao, F.-M., Liu, H.-M., & Kuhl, P. K. (2004). Speech perception in infancy predicts language development in the second year of life: A longitudinal study. Child Development, 75(4), 1067–1084.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2004.00726.x",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "母音の知覚的調律は生後6か月頃までに、母語母音と非母語母音で逆方向の変化として有意になる",
+      "日本語の母音の長短（/mana/–/ma:na/）の弁別は、7.5〜9.5か月の間に成立する",
+      "非母語音声の知覚低下は9〜10か月時の生身の対人接触で逆転しうるが、録画・録音の提示では逆転しない",
+      "日常的な名詞の意味理解は生後6〜9か月で既に始まっている"
+    ],
+    "debate": "知覚的調律（狭小化）が臨界期現象といえるかどうかは議論が続いている（Werker, 2024 の抄録がこの論点を扱うと明記）。",
+    "builds_on": [
+      {
+        "skill": "社会的相互作用を伴う言語音声の経験",
+        "evidence": "介入で確認",
+        "basis": "9か月の米国児に中国語話者との対面セッションを12回行うと中国語音声の知覚低下が逆転し、録画・録音提示では効果がなかった（Kuhl, Tsao, & Liu, 2003, PNAS, 100(15), 9096–9101；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "語彙発達（語理解・語表出・句理解）",
+        "evidence": "縦断で予測",
+        "basis": "6か月時の条件づけ振り向き法による音声弁別成績が、13・16・24か月時のCDIによる語理解・語表出・句理解と有意に相関した（Tsao, Liu, & Kuhl, 2004, Child Development, 75(4), 1067–1084；抄録。対象言語の詳細は抄録に記載なし）。"
+      }
+    ]
+  },
+  {
+    "title": "母音の知覚的調律は生後6か月頃までに、母語母音と非母語母音で逆方向の変化として有意になる",
+    "body": "知覚的狭小化の証拠の大半は子音に基づくが、多くのモデルはこれを母音にも一般化してきた。Tsuji & Cristia (2014) は0〜14か月児の母音弁別に関する行動・電気生理・脳画像研究を初めて包括的にメタ分析し、母語母音と非母語母音の弁別の効果量が生後1年目に逆方向へ変化し、その差が生後約6か月で有意になることを示した。子音で一般に報告される時期（6〜12か月）より早い時期から母音の調律が進む可能性を示す。",
+    "age": "0〜14か月（変化の有意化は6か月頃）",
+    "domain": "前言語期",
+    "tags": [
+      "音声知覚",
+      "母音",
+      "知覚的狭小化",
+      "メタ分析"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Tsuji, S., & Cristia, A. (2014). Perceptual attunement in vowels: A meta-analysis. Developmental Psychobiology, 56(2), 179–191.",
+        "url": "https://doi.org/10.1002/dev.21179",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）",
+      "日本語の母音の長短（/mana/–/ma:na/）の弁別は、7.5〜9.5か月の間に成立する"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "日本語の母音の長短（/mana/–/ma:na/）の弁別は、7.5〜9.5か月の間に成立する",
+    "body": "Sato, Sogabe, & Mazuka (2010) は馴化—脱馴化法で日本語児に2音節語中の短母音・長母音の対比（/mana/ vs /ma:na/）を提示し、4か月児（n = 32）では弁別の証拠がなく、9.5か月児（n = 33）では弁別が認められた。7.5か月児では編集刺激でも自然発話刺激でも弁別の明確な証拠は得られなかった。一方、母音の質の違い（/mana/ vs /mina/）は4か月児でも弁別された。持続時間による母語固有の音韻対立は、生後早期からの弁別が「維持」されるのではなく生後1年目後半に「獲得」される経路をとり、母音の質による対立とは発達経過が異なることを示す。",
+    "age": "4〜9.5か月（成立は7.5〜9.5か月）",
+    "domain": "前言語期",
+    "tags": [
+      "音声知覚",
+      "母音長",
+      "特殊拍",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "Sato, Y., Sogabe, Y., & Mazuka, R. (2010). Discrimination of phonemic vowel length by Japanese infants. Developmental Psychology, 46(1), 106–119.",
+        "url": "https://doi.org/10.1037/a0016718",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）",
+      "母音の知覚的調律は生後6か月頃までに、母語母音と非母語母音で逆方向の変化として有意になる",
+      "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "非母語音声の知覚低下は9〜10か月時の生身の対人接触で逆転しうるが、録画・録音の提示では逆転しない",
+    "body": "Kuhl, Tsao, & Liu (2003) は9か月の米国児に中国語母語話者との実験室セッションを12回行い、英語のみを聞いた対照群で見られる中国語音声の知覚低下が逆転することを示した（実験1）。同じ話者・教材を視聴覚録画または音声のみで提示した条件では効果がなかった（実験2）。この時期の音声学習は長期の聴取を必要とせず、社会的相互作用によって促進されると著者らは結論づけている。",
+    "age": "9〜10か月",
+    "domain": "前言語期",
+    "tags": [
+      "音声知覚",
+      "社会的相互作用",
+      "外国語接触",
+      "介入研究"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Kuhl, P. K., Tsao, F.-M., & Liu, H.-M. (2003). Foreign-language experience in infancy: Effects of short-term exposure and social interaction on phonetic learning. Proceedings of the National Academy of Sciences of the USA, 100(15), 9096–9101.",
+        "url": "https://doi.org/10.1073/pnas.1532872100",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）",
+      "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+      "養育者への話しかけコーチングは子ども向け発話と parentese を増やし、14か月時の表出語数を増やす（無作為化比較試験）"
+    ],
+    "builds_on": [
+      {
+        "skill": "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+        "evidence": "理論上の仮説",
+        "basis": "Kuhl et al. (2003) は効果の違いを社会的相互作用によるものと解釈しているが、共同注意などどの社会的要素が効いたかは本研究では特定されていない（抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "非母語（接触言語）の音声カテゴリーの維持",
+        "evidence": "介入で確認",
+        "basis": "対面での外国語接触が、対照群で見られる非母語音声の知覚低下を逆転させた（Kuhl, Tsao, & Liu, 2003；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "前言語期の音声は「クーイング→声遊び→規準喃語」の順に現れるが、段階は重複し、規準喃語の出現時期の個人差は大きい",
+    "body": "前言語期音声の stage model（Oller, Stark ら）では各段階の開始時期・期間は研究者間で異なるが、クーイング、声遊び音声（vocal play）、喃語の出現順序については一致がある（柳田ら, 2011 の文献概観）。柳田ら (2011) は日本人乳児5名を4〜10か月に月1回録音し、規準喃語が母音的音声や声遊び音声より遅れて出現し、規準喃語の出現後も母音的音声・声遊び音声が観察される（段階が重複する）ことを示した。規準喃語が全発声の1割以上を占める段階に達したのは7か月・9か月・10か月と児によって異なり、10か月時点で同段階に達していない児が2名いた（うち1名は家庭では /ma/ などの発声があると母親が報告）。少数例・月1回の実験室録音という制約がある。",
+    "age": "0〜10か月",
+    "domain": "前言語期",
+    "tags": [
+      "クーイング",
+      "声遊び",
+      "規準喃語",
+      "stage model",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "柳田早織・今井智子・榊原健一・西澤典子 (2011). 前言語期の音声発達. 音声言語医学, 52(1), 1–8.",
+        "url": "https://doi.org/10.5112/jjlp.52.1",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "聴覚に問題のない乳児のほぼ全員が10か月までに規準喃語を始め、その開始の遅れは後の表出語彙の少なさを予測する",
+      "規準喃語の出現期にはリズミカルな身体運動がピークに達し、発声と運動が同期する"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "聴覚に問題のない乳児のほぼ全員が10か月までに規準喃語を始め、その開始の遅れは後の表出語彙の少なさを予測する",
+    "body": "規準喃語段階では「バババ」のような整った音節が反復的に産出される。Oller et al. (1999) によれば聴覚健常児のほぼ全員が10か月までに規準喃語段階に入り、約10か月時の3400名超のリスク児のスクリーニングでは、規準喃語の開始が遅い児の半数未満しか遅れを説明しうる医学的問題の診断を受けておらず、追跡では18・24・30か月時の表出語彙が対照群より少なかった。Oller & Eilers (1988) は、整った音節の産出は聴覚健常児では生後10か月以内に確立するが聾児ではそうでないことを示した。一方、早産・低SESのリスク児も整った音節の産出は概して予定どおりで、低SES児は発声頻度自体が低かった（Oller et al., 1994）。いずれも米国のデータであり、親への面接で規準喃語を把握できる点が臨床的に強調されている（Oller et al., 1999）。",
+    "age": "6〜10か月（ほぼ全員が10か月までに開始）",
+    "domain": "前言語期",
+    "tags": [
+      "規準喃語",
+      "聴覚",
+      "早期指標",
+      "表出語彙"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Oller, D. K., Eilers, R. E., Neal, A. R., & Schwartz, H. K. (1999). Precursors to speech in infancy: The prediction of speech and language disorders. Journal of Communication Disorders, 32(4), 223–245.",
+        "url": "https://doi.org/10.1016/s0021-9924(99)00013-1",
+        "level": "抄録"
+      },
+      {
+        "cite": "Oller, D. K., & Eilers, R. E. (1988). The role of audition in infant babbling. Child Development, 59(2), 441–449.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/3359864/",
+        "level": "抄録"
+      },
+      {
+        "cite": "Oller, D. K., Eilers, R. E., Steffens, M. L., Lynch, M. P., & Urbano, R. (1994). Speech-like vocalizations in infancy: An evaluation of potential risk factors. Journal of Child Language, 21(1), 33–58.",
+        "url": "https://doi.org/10.1017/s0305000900008667",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "前言語期の音声は「クーイング→声遊び→規準喃語」の順に現れるが、段階は重複し、規準喃語の出現時期の個人差は大きい",
+      "規準喃語の出現期にはリズミカルな身体運動がピークに達し、発声と運動が同期する",
+      "養育者への話しかけコーチングは子ども向け発話と parentese を増やし、14か月時の表出語数を増やす（無作為化比較試験）"
+    ],
+    "builds_on": [
+      {
+        "skill": "聴覚入力（聴力）",
+        "evidence": "相関のみ",
+        "basis": "聾児と聴覚健常児の比較で、整った音節の産出が健常児でのみ生後10か月以内に確立した（Oller & Eilers, 1988, Child Development, 59(2), 441–449；抄録）。自然群の比較であり実験的操作ではない。"
+      },
+      {
+        "skill": "規準喃語の出現期にはリズミカルな身体運動がピークに達し、発声と運動が同期する",
+        "evidence": "相関のみ",
+        "basis": "規準喃語と手の打ち付け（hand-banging）の開始時期が関連した（Cobo-Lewis et al., 1996, American Journal on Mental Retardation, 100(5), 456–467；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "表出語彙（18〜30か月）",
+        "evidence": "縦断で予測",
+        "basis": "規準喃語の開始が遅れた乳児は18・24・30か月時の表出語彙が対照群より少なかった（Oller, Eilers, Neal, & Schwartz, 1999, Journal of Communication Disorders, 32(4), 223–245；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "規準喃語の出現期にはリズミカルな身体運動がピークに達し、発声と運動が同期する",
+    "body": "江尻 (1998) は日本人乳児4名を4〜6か月から11か月まで縦断観察し、前言語期の発声とリズミカルな運動の同期が、規準喃語出現の直前の月に特に顕著であることを報告した。Ejiri (1998) は日本人乳児28名を5〜9か月に縦断観察し、ガラガラ振りなどのリズミカルな活動が規準喃語の開始前後にピークに達すること、開始直後は音の出るガラガラも出ないガラガラも振るが、その後は音の出るガラガラを多く振るようになることを示し、規準喃語の開始前後に聴覚フィードバックに基づく運動制御が学習されると示唆した。米国の Cobo-Lewis et al. (1996) も、定型児とダウン症児の双方を含むデータで規準喃語と手の打ち付けの開始時期が関連し、共通の神経筋基盤が示唆されると報告している。",
+    "age": "4〜11か月",
+    "domain": "前言語期",
+    "tags": [
+      "規準喃語",
+      "リズミカル運動",
+      "聴覚フィードバック",
+      "日本語児"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "江尻桂子 (1998). 乳児における喃語と身体運動の同期現象 I：その発達的変化. 心理学研究, 68(6), 433–440.",
+        "url": "https://doi.org/10.4992/jjpsy.68.433",
+        "level": "抄録"
+      },
+      {
+        "cite": "Ejiri, K. (1998). Relationship between rhythmic behavior and canonical babbling in infant vocal development. Phonetica, 55(4), 226–237.",
+        "url": "https://doi.org/10.1159/000028434",
+        "level": "抄録"
+      },
+      {
+        "cite": "Cobo-Lewis, A. B., Oller, D. K., Lynch, M. P., & Levine, S. L. (1996). Relations of motor and vocal milestones in typically developing infants and infants with Down syndrome. American Journal on Mental Retardation, 100(5), 456–467.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/8852298/",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "前言語期の音声は「クーイング→声遊び→規準喃語」の順に現れるが、段階は重複し、規準喃語の出現時期の個人差は大きい",
+      "聴覚に問題のない乳児のほぼ全員が10か月までに規準喃語を始め、その開始の遅れは後の表出語彙の少なさを予測する"
+    ],
+    "builds_on": [
+      {
+        "skill": "リズミカルな四肢運動（手の打ち付け等）",
+        "evidence": "相関のみ",
+        "basis": "規準喃語と hand-banging の開始時期が関連した（Cobo-Lewis et al., 1996；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "聴覚に問題のない乳児のほぼ全員が10か月までに規準喃語を始め、その開始の遅れは後の表出語彙の少なさを予測する",
+        "evidence": "理論上の仮説",
+        "basis": "発声とリズミカル運動の同期が規準喃語の産出を促す機能をもつ可能性が示唆された（江尻, 1998, 心理学研究, 68(6), 433–440；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+    "body": "Carpenter, Nagell, & Tomasello (1998) は24名の乳児を9〜15か月に毎月7回観察し、共同関与、視線・指さしの追従、2種の模倣、命令的・叙述的身ぶり、言語理解・産出を同時に測定した。社会的認知スキルは、注意の共有→他者の注意への追従→他者の注意・行動の誘導という一貫した順序で出現し、非社会的認知スキルにはこの順序は見られなかった。母子が共同関与に費やす時間と、母親が乳児の注意の焦点に沿って（follow-in）言語を用いる程度が、乳児の最初期の身ぶり・言語コミュニケーションを予測した。日本では常田 (2007) が1組の母子を2〜9か月に家庭で縦断観察し、母親の注意支持行動が乳児の姿勢・運動発達とともに変化し、共同注視から共同注意への移行を支える過程を記述している（単一事例）。",
+    "age": "9〜15か月",
+    "domain": "前言語期",
+    "tags": [
+      "共同注意",
+      "三項関係",
+      "視線追従",
+      "共同関与",
+      "follow-in"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Carpenter, M., Nagell, K., & Tomasello, M. (1998). Social cognition, joint attention, and communicative competence from 9 to 15 months of age. Monographs of the Society for Research in Child Development, 63(4), i–vi, 1–143.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9835078/",
+        "level": "抄録"
+      },
+      {
+        "cite": "常田美穂 (2007). 乳児期の共同注意の発達における母親の支持的行動の役割. 発達心理学研究, 18(2), 97–108.",
+        "url": "https://www.jstage.jst.go.jp/article/jjdp/18/2/18_KJ00004659674/_article/-char/ja",
+        "level": "抄録"
+      },
+      {
+        "cite": "Mundy, P., Sigman, M., & Kasari, C. (1990). A longitudinal study of joint attention and language development in autistic children. Journal of Autism and Developmental Disorders, 20(1), 115–128.",
+        "url": "https://doi.org/10.1007/BF02206861",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "10〜11か月時の視線追従と指さしは、2歳までの表出語彙の伸びの速さを予測する",
+      "指さしは調査された7つの文化すべてで10〜14か月までに見られ、乳児の指さしは文化差よりも月齢と養育者の指さしで予測される",
+      "入力の「質」（語彙の多様性・洗練度、脱文脈的言語、共同関与の質、応答性）は、量を超えて後の語彙を予測する",
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む"
+    ],
+    "builds_on": [
+      {
+        "skill": "養育者の注意支持行動",
+        "evidence": "相関のみ",
+        "basis": "母親の注意支持行動が乳児の姿勢・運動発達とともに変化し共同注意の形成に寄与する過程が記述された（常田, 2007, 発達心理学研究, 18(2), 97–108；抄録。単一事例の縦断記述）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "初期の身ぶり・言語（理解・産出）",
+        "evidence": "縦断で予測",
+        "basis": "共同関与の時間と母親の follow-in 的言語使用が、乳児の最初期の身ぶり・言語的コミュニケーションを予測した（Carpenter, Nagell, & Tomasello, 1998, Monographs SRCD, 63(4)；抄録）。"
+      },
+      {
+        "skill": "言語発達（自閉症児）",
+        "evidence": "縦断で予測",
+        "basis": "自閉症児15名（平均45か月）で、身ぶりによる非言語的共同注意の測度が13か月後の言語発達の有意な予測因であり、初期言語水準やIQは予測しなかった（Mundy, Sigman, & Kasari, 1990, J Autism Dev Disord, 20(1), 115–128；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "10〜11か月時の視線追従と指さしは、2歳までの表出語彙の伸びの速さを予測する",
+    "body": "Brooks & Meltzoff (2008) は10または11か月時に大人が物の方を向く場面を実験的に提示し、視線を追従して対象を長く見た乳児ほど、その後2歳までの表出語彙の伸びが有意に速いことを成長曲線モデルで示した（母親の学歴を統制）。乳児の指さしを加えるとモデルはさらに強まった。Tomasello, Carpenter, & Liszkowski (2007) は、12か月児が大人に向けて指さすとき他者の心的状態に影響を与えようとしているという「豊かな解釈」と、協力・共有志向性に基づく指さし理論を提示し、初期の言語スキルはこの前言語的コミュニケーションの基盤の上に築かれるとしている。",
+    "age": "10〜24か月",
+    "domain": "前言語期",
+    "tags": [
+      "共同注意",
+      "視線追従",
+      "指さし",
+      "語彙予測"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Brooks, R., & Meltzoff, A. N. (2008). Infant gaze following and pointing predict accelerated vocabulary growth through two years of age: A longitudinal, growth curve modeling study. Journal of Child Language, 35(1), 207–220.",
+        "url": "https://doi.org/10.1017/s030500090700829x",
+        "level": "抄録"
+      },
+      {
+        "cite": "Tomasello, M., Carpenter, M., & Liszkowski, U. (2007). A new look at infant pointing. Child Development, 78(3), 705–722.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2007.01025.x",
+        "level": "抄録"
+      },
+      {
+        "cite": "Kasari, C., Paparella, T., Freeman, S., & Jahromi, L. B. (2008). Language outcome in autism: Randomized comparison of joint attention and play interventions. Journal of Consulting and Clinical Psychology, 76(1), 125–137.",
+        "url": "https://doi.org/10.1037/0022-006X.76.1.125",
+        "level": "抄録"
+      },
+      {
+        "cite": "Becerra, A. M., & Mervis, C. B. (2019). Age at onset of declarative gestures and 24-month expressive vocabulary predict later language and intellectual abilities in young children with Williams syndrome. Frontiers in Psychology, 10, 2648.",
+        "url": "https://doi.org/10.3389/fpsyg.2019.02648",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+      "指さしは調査された7つの文化すべてで10〜14か月までに見られ、乳児の指さしは文化差よりも月齢と養育者の指さしで予測される",
+      "子どもが先に身ぶりで表した指示対象は後に音声語彙に入り、「指さし＋語」の組み合わせの開始が二語発話の開始を予測する",
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む"
+    ],
+    "debate": "12か月児の指さしにどこまで他者の心的状態の理解を読み込むか（豊かな解釈か否か）には立場の違いがあり、Tomasello et al. (2007) は豊かな解釈を支持する側である。",
+    "builds_on": [
+      {
+        "skill": "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+        "evidence": "理論上の仮説",
+        "basis": "初期言語は共有志向性に基づく前言語的コミュニケーションの基盤の上に築かれるとする理論（Tomasello, Carpenter, & Liszkowski, 2007, Child Development, 78(3), 705–722；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "表出語彙の増加（〜24か月）",
+        "evidence": "縦断で予測",
+        "basis": "視線追従時の対象注視の長さが2歳までの語彙増加の速さを予測し、指さしを加えるとモデルが強まった（Brooks & Meltzoff, 2008, Journal of Child Language, 35(1), 207–220；抄録）。"
+      },
+      {
+        "skill": "表出言語（自閉症児）",
+        "evidence": "介入で確認",
+        "basis": "3〜4歳の自閉症児58名のRCTで、共同注意介入・象徴遊び介入はいずれも対照群より12か月後の表出言語の伸びが大きく、開始時の言語水準が最も低い児では共同注意介入の効果が特に大きかった（Kasari, Paparella, Freeman, & Jahromi, 2008, J Consult Clin Psychol, 76(1), 125–137；抄録）。定型発達児での介入確認ではない。"
+      }
+    ],
+    "nd_note": "ウィリアムズ症候群児47名では、一般集団で一貫して報告される「叙述的指さし→指示的な語」の順序とは逆に、多くの児が叙述的指さしの数か月前に指示的な語を産出し始めた。ただし叙述的指さしの開始月齢は、24か月時の表出語彙とは独立に48か月時の語彙・文法・知的能力の個人差を予測し、その説明率は早期語彙サイズより大きかった（Becerra & Mervis, 2019, Frontiers in Psychology, 10, 2648；抄録）。下位スキル（叙述的指さし）が未出現のまま上位スキル（指示的語の産出）が部分的に先行する経路の報告である。"
+  },
+  {
+    "title": "指さしは調査された7つの文化すべてで10〜14か月までに見られ、乳児の指さしは文化差よりも月齢と養育者の指さしで予測される",
+    "body": "Liszkowski et al. (2012) は標準化した半自然的な誘発手続きを互いに大きく異なる7つの文化に適用し、10〜14か月までに乳児と養育者がいずれの文化でも同じ基本状況で、同程度の頻度、人差し指を伸ばす同じ典型的形態で指さすことを示した。乳児の指さしは文化群ではなく月齢と養育者の指さしで最もよく予測され、養育者と乳児の指さし事象の間には時間的な連関（前言語的な身ぶりの会話構造）も見られた。著者らは、言語に依存しない前言語的身ぶりの普遍性が多様な言語コミュニケーションの共通基盤をなすと主張している。",
+    "age": "10〜14か月",
+    "domain": "前言語期",
+    "tags": [
+      "指さし",
+      "通文化",
+      "養育者の身ぶり"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Liszkowski, U., Brown, P., Callaghan, T., Takada, A., & de Vos, C. (2012). A prelinguistic gestural universal of human communication. Cognitive Science, 36(4), 698–713.",
+        "url": "https://doi.org/10.1111/j.1551-6709.2011.01228.x",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "10〜11か月時の視線追従と指さしは、2歳までの表出語彙の伸びの速さを予測する",
+      "子どもが先に身ぶりで表した指示対象は後に音声語彙に入り、「指さし＋語」の組み合わせの開始が二語発話の開始を予測する",
+      "14〜18か月の身ぶりの量・意味の種類は後の語彙を予測し、実験的に指さしを増やすと表出語彙が増える"
+    ],
+    "builds_on": [
+      {
+        "skill": "養育者の指さし（身ぶり入力）",
+        "evidence": "相関のみ",
+        "basis": "乳児の指さしは月齢と養育者の指さしで最もよく予測され、文化群では予測されなかった（Liszkowski et al., 2012, Cognitive Science, 36(4), 698–713；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "子どもが先に身ぶりで表した指示対象は後に音声語彙に入り、「指さし＋語」の組み合わせの開始が二語発話の開始を予測する",
+        "evidence": "理論上の仮説",
+        "basis": "前言語的身ぶりの普遍性が言語コミュニケーションの共通基盤をなすとする著者らの主張（Liszkowski et al., 2012；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "子どもが先に身ぶりで表した指示対象は後に音声語彙に入り、「指さし＋語」の組み合わせの開始が二語発話の開始を予測する",
+    "body": "Iverson & Goldin-Meadow (2005) は一語期から二語結合期へ移行する10名を追跡し、各児が最初に身ぶりで表した項目の多くが、のちにその児の音声語彙に移行することを示した。また、命題の2要素を伝える身ぶり＋語の組み合わせ（鳥を指さして「ねんね」と言う）を早く始めた児ほど、二語結合（「鳥 ねんね」）も早く始めた。身ぶりの変化は言語の変化に先行するだけでなくそれを予測し、初期の身ぶりが後の言語発達の道を開いている可能性が示された。英語圏の小標本研究で、月齢は抄録に記載がない。",
+    "age": "一語期〜二語結合期（月齢は抄録に記載なし）",
+    "domain": "語彙",
+    "tags": [
+      "身ぶり",
+      "指さし",
+      "ジェスチャー",
+      "二語発話",
+      "語彙"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Iverson, J. M., & Goldin-Meadow, S. (2005). Gesture paves the way for language development. Psychological Science, 16(5), 367–371.",
+        "url": "https://doi.org/10.1111/j.0956-7976.2005.01542.x",
+        "level": "抄録"
+      },
+      {
+        "cite": "Iverson, J. M., Longobardi, E., & Caselli, M. C. (2003). Relationship between gestures and words in children with Down's syndrome and typically developing children in the early stages of communicative development. International Journal of Language & Communication Disorders, 38(2), 179–197.",
+        "url": "https://doi.org/10.1080/1368282031000062891",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "指さしは調査された7つの文化すべてで10〜14か月までに見られ、乳児の指さしは文化差よりも月齢と養育者の指さしで予測される",
+      "14〜18か月の身ぶりの量・意味の種類は後の語彙を予測し、実験的に指さしを増やすと表出語彙が増える",
+      "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）"
+    ],
+    "builds_on": [
+      {
+        "skill": "指さしは調査された7つの文化すべてで10〜14か月までに見られ、乳児の指さしは文化差よりも月齢と養育者の指さしで予測される",
+        "evidence": "理論上の仮説",
+        "basis": "指さし自体が語に先立つ前言語的伝達手段であることに基づく位置づけ（Liszkowski et al., 2012；抄録）。指さし→語の移行そのものは Iverson & Goldin-Meadow (2005) が縦断で示している。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "音声語彙（同一指示対象の語）",
+        "evidence": "縦断で予測",
+        "basis": "最初に身ぶりで表された項目の多くが後に音声語彙に入った（Iverson & Goldin-Meadow, 2005, Psychological Science, 16(5), 367–371；抄録）。"
+      },
+      {
+        "skill": "二語発話（統語の始まり）",
+        "evidence": "縦断で予測",
+        "basis": "身ぶり＋語で2要素を伝え始めた時期が早い児ほど二語結合の開始も早かった（Iverson & Goldin-Meadow, 2005；抄録）。"
+      }
+    ],
+    "nd_note": "（下位スキルが不十分なまま上位スキルを獲得する経路ではなく、逆方向の乖離の報告）ダウン症児5名（平均生活年齢47.6か月、言語年齢18か月）は、言語年齢・表出語彙を揃えた定型児と同程度の頻度で二要素結合（主に身ぶり＋語）を産出したが、二語結合は観察されず、一語発話から二語発話への移行に特有の遅れがある可能性が示された（Iverson, Longobardi, & Caselli, 2003, Int J Lang Commun Disord, 38(2), 179–197；抄録）。"
+  },
+  {
+    "title": "14〜18か月の身ぶりの量・意味の種類は後の語彙を予測し、実験的に指さしを増やすと表出語彙が増える",
+    "body": "Rowe & Goldin-Meadow (2009, Science) は50名の14か月時の親子相互作用を家庭で録画し、高SES家庭の子どもほど身ぶりで多く伝達し（これは親の身ぶり使用で説明された）、54か月時の語彙のSES差は14か月時の子どもの身ぶり使用で説明されることを示した。同著者ら (2009, Developmental Science) は52名で、18か月時に身ぶりで伝えた意味の種類数が42か月時の語彙を、身ぶり＋発話の組み合わせ数が文の複雑さを、それぞれ選択的に予測することを示した（早期の発話を統制）。LeBarton, Goldin-Meadow, & Raudenbush (2015) は1歳5か月児15名に8週間の家庭介入を行い、名指された物を指さすよう促された児は養育者との自然な相互作用でも身ぶりの意味数が増え、追跡時の音声語彙も大きかった。いずれも米国の研究で、介入研究は小標本である。",
+    "age": "14〜54か月（介入は1歳5か月）",
+    "domain": "語彙",
+    "tags": [
+      "身ぶり",
+      "指さし",
+      "SES",
+      "介入研究",
+      "語彙予測"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Rowe, M. L., & Goldin-Meadow, S. (2009). Differences in early gesture explain SES disparities in child vocabulary size at school entry. Science, 323(5916), 951–953.",
+        "url": "https://doi.org/10.1126/science.1167025",
+        "level": "抄録"
+      },
+      {
+        "cite": "Rowe, M. L., & Goldin-Meadow, S. (2009). Early gesture selectively predicts later language learning. Developmental Science, 12(1), 182–187.",
+        "url": "https://doi.org/10.1111/j.1467-7687.2008.00764.x",
+        "level": "抄録"
+      },
+      {
+        "cite": "LeBarton, E. S., Goldin-Meadow, S., & Raudenbush, S. (2015). Experimentally-induced increases in early gesture lead to increases in spoken vocabulary. Journal of Cognition and Development, 16(2), 199–220.",
+        "url": "https://doi.org/10.1080/15248372.2013.858041",
+        "level": "抄録"
+      },
+      {
+        "cite": "Roemer, E. J., West, K. L., Northrup, J. B., & Iverson, J. M. (2019). Word comprehension mediates the link between gesture and word production: Examining language development in infant siblings of children with autism spectrum disorder. Developmental Science, 22(3), e12767.",
+        "url": "https://doi.org/10.1111/desc.12767",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "子どもが先に身ぶりで表した指示対象は後に音声語彙に入り、「指さし＋語」の組み合わせの開始が二語発話の開始を予測する",
+      "指さしは調査された7つの文化すべてで10〜14か月までに見られ、乳児の指さしは文化差よりも月齢と養育者の指さしで予測される",
+      "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
+      "入力の「質」（語彙の多様性・洗練度、脱文脈的言語、共同関与の質、応答性）は、量を超えて後の語彙を予測する"
+    ],
+    "builds_on": [
+      {
+        "skill": "養育者の身ぶり使用",
+        "evidence": "相関のみ",
+        "basis": "高SES児の14か月時の身ぶりの多さは親の身ぶり使用で説明された（発話を統制）（Rowe & Goldin-Meadow, 2009, Science, 323(5916), 951–953；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "表出語彙",
+        "evidence": "介入で確認",
+        "basis": "指さしを促された群で身ぶりの意味数が増え、追跡時の音声語彙が大きかった（LeBarton, Goldin-Meadow, & Raudenbush, 2015, J Cogn Dev, 16(2), 199–220；抄録。15名）。"
+      },
+      {
+        "skill": "就学前期の語彙（42〜54か月）",
+        "evidence": "縦断で予測",
+        "basis": "14か月の身ぶり使用が54か月の語彙のSES差を説明し（Rowe & Goldin-Meadow, 2009, Science）、18か月の身ぶりの意味数が42か月の語彙を予測した（Rowe & Goldin-Meadow, 2009, Developmental Science, 12(1), 182–187）；いずれも抄録。"
+      },
+      {
+        "skill": "文の複雑さ",
+        "evidence": "縦断で予測",
+        "basis": "18か月の身ぶり＋発話の組み合わせ数（特に文に相当する内容）が42か月の文の複雑さを予測した（Rowe & Goldin-Meadow, 2009, Developmental Science；抄録）。"
+      },
+      {
+        "skill": "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
+        "evidence": "縦断で予測",
+        "basis": "12か月の身ぶりと18か月の語産出の関係を14か月の語理解が媒介した（ASD同胞高リスク児92名・低リスク児28名、CDI；Roemer, West, Northrup, & Iverson, 2019, Developmental Science, 22(3), e12767；抄録）。"
+      }
+    ],
+    "nd_note": "ASD児の同胞（高リスク群）を追跡した研究で、低リスク児や診断なし・言語遅滞のみの高リスク児では12か月の身ぶりと14か月の語理解が強く関連したが、36か月で後にASDと診断された児ではこの関連が見られなかった（Roemer et al., 2019, Developmental Science, 22(3), e12767；抄録）。著者らはASD児が異なる経路で言語を学ぶ可能性を指摘している。"
+  },
+  {
+    "title": "日常的な名詞の意味理解は生後6〜9か月で既に始まっている",
+    "body": "Bergelson & Swingley (2012) は6〜9か月児に絵のセットを見せ、親がその中の1枚を名指すと、この月齢範囲全体で乳児が名指された絵に視線を向けることを示した。語は実験室で訓練したものではなく日常経験で学ばれた一般的な名詞であった。語の理解は他者の目標・意図の解釈が発達する9〜15か月以降に始まるという従来の見解に反し、語彙学習と音声構造の学習が並行して始まる可能性を示す。英語圏の研究である。",
+    "age": "6〜9か月",
+    "domain": "語彙",
+    "tags": [
+      "語理解",
+      "理解語彙",
+      "視線計測"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Bergelson, E., & Swingley, D. (2012). At 6–9 months, human infants know the meanings of many common nouns. Proceedings of the National Academy of Sciences of the USA, 109(9), 3253–3258.",
+        "url": "https://doi.org/10.1073/pnas.1113380109",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
+      "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）",
+      "社会的・文脈的支援のない条件で語と物の恣意的な連合を最小限の提示で形成できるのは、14か月頃からである"
+    ],
+    "debate": "6か月児が既に大人の参照意図を把握しているのか、意図理解の出現以前に語を学べるのかは未決であり、著者ら自身が両方の可能性を挙げている。また、社会的手がかりを除いた実験室での語—物連合学習は14か月頃からとする報告（Werker et al., 1998）とは測定条件が異なる。",
+    "builds_on": [
+      {
+        "skill": "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）",
+        "evidence": "理論上の仮説",
+        "basis": "語彙学習と音声構造の学習は並行して進むという著者らの提案（Bergelson & Swingley, 2012, PNAS, 109(9), 3253–3258；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
+        "evidence": "理論上の仮説",
+        "basis": "語理解が表出に先行するという一般的知見（Benedict, 1979；小椋, 2007）との位置づけであり、本研究自体は後の発達を追跡していない。"
+      }
+    ]
+  },
+  {
+    "title": "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
+    "body": "Benedict (1979) は英語圏乳児8名の最初の50語を比較し、理解は9か月頃に始まり1歳1か月で50語に達したのに対し、表出は1歳0か月に始まり1歳6か月で50語に達し、理解の語獲得速度は表出の2倍であった。日本語マッカーサー乳幼児言語発達質問紙（JCDIs）の標準化データでは、出現率50%を超えた語が50語に達する月齢は理解で10〜15か月、表出で15〜21か月であり、米国児（理解8〜13か月、表出12〜18か月）より遅かった（小椋, 2007）。日本語児の早期理解語のうち最初に出現率50%に達したのは「バイバイ」（10か月）、「イナイイナイバー」（11か月）、12か月の「ちょうだい」「マンマ」「ダメ」「おいで」「ワンワン」であった。",
+    "age": "9〜21か月",
+    "domain": "語彙",
+    "tags": [
+      "理解語彙",
+      "表出語彙",
+      "JCDIs",
+      "日米比較"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Benedict, H. (1979). Early lexical development: Comprehension and production. Journal of Child Language, 6(2), 183–200.",
+        "url": "https://doi.org/10.1017/S0305000900002245",
+        "level": "抄録"
+      },
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "日常的な名詞の意味理解は生後6〜9か月で既に始まっている",
+      "日本語児の最初期の有意味語は動作に伴う語・社会的な語・「マンマ」などであり、指示対象の明確な普通名詞や動詞はその後に現れる",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+      "14〜18か月の身ぶりの量・意味の種類は後の語彙を予測し、実験的に指さしを増やすと表出語彙が増える"
+    ],
+    "builds_on": [
+      {
+        "skill": "14〜18か月の身ぶりの量・意味の種類は後の語彙を予測し、実験的に指さしを増やすと表出語彙が増える",
+        "evidence": "縦断で予測",
+        "basis": "12か月の身ぶりが14か月の語理解を介して18か月の語産出につながる媒介経路（Roemer et al., 2019；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "表出語彙",
+        "evidence": "縦断で予測",
+        "basis": "14か月の語理解が12か月の身ぶりと18か月の語産出の関係を媒介した（Roemer et al., 2019, Developmental Science, 22(3), e12767；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "日本語児の最初期の有意味語は動作に伴う語・社会的な語・「マンマ」などであり、指示対象の明確な普通名詞や動詞はその後に現れる",
+    "body": "小椋 (2007) が前言語期から観察できた日本語児3名では、最初に有意味語として現れたのは動作に伴う語（「ヨイチョ」10か月20日、「ポン」「ポーン」）、個人社会語（「アーイ」「バイバイ」）、「マンマ」、人（毎日世話をしてくれる人の呼び名）で、9〜11か月台に観察された。物の名前を表す普通名詞、人を表す名詞、動作を表す動詞はこれらの語の後に出現し、名詞類と動詞のどちらが先かは6名の縦断データで個人差があった。JCDIs 標準化データで表出の出現率が最も早く50%を超えたのは「マンマ」「（イナイイナイ）バー」「ワンワン」「アーアッ」で、15か月であった。一般的な目安として初語は「1歳の誕生日前後」とされる（奥村・小林, 2019 の概説）が、初語の時期を含め発達の開始時期と経過の個人差は大きい（Fenson et al., 1994）。",
+    "age": "9〜17か月",
+    "domain": "語彙",
+    "tags": [
+      "初語",
+      "有意味語",
+      "幼児語",
+      "縦断観察",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      },
+      {
+        "cite": "奥村優子・小林哲生 (2019). 日本語レイト・トーカーにおける表出語彙のカテゴリ構成の検討. 音声言語医学, 60(3), 205–213.",
+        "url": "https://doi.org/10.5112/jjlp.60.205",
+        "level": "本文"
+      },
+      {
+        "cite": "Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., & Pethick, S. J. (1994). Variability in early communicative development. Monographs of the Society for Research in Child Development, 59(5), 1–173.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/7845413/",
+        "level": "抄録"
+      },
+      {
+        "cite": "Tamis-LeMonda, C. S., Bornstein, M. H., & Baumwell, L. (2001). Maternal responsiveness and children's achievement of language milestones. Child Development, 72(3), 748–767.",
+        "url": "https://doi.org/10.1111/1467-8624.00313",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+      "8〜30か月の語彙・身ぶり・文法の発達速度の個人差は非常に大きく、性差やSES・出生順位の効果はごく小さい（英語圏の親報告）",
+      "入力の「質」（語彙の多様性・洗練度、脱文脈的言語、共同関与の質、応答性）は、量を超えて後の語彙を予測する"
+    ],
+    "builds_on": [
+      {
+        "skill": "養育者の応答性",
+        "evidence": "縦断で予測",
+        "basis": "9・13か月時の母親の応答性が、初模倣・初語・表出50語・語結合・過去への言及の達成時期を子ども自身の行動を超えて予測し、13か月の応答性の方が強い予測因であった（Tamis-LeMonda, Bornstein, & Baumwell, 2001, Child Development, 72(3), 748–767；抄録。英語圏40名）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "形容詞・指示詞など他の語類の出現",
+        "evidence": "相関のみ",
+        "basis": "日本語児6名の縦断で、形容詞や閉じた語類（指示詞）は名詞・動詞の出現後、総表出語彙が10語以上になってから表出された（小椋, 2007, 言語研究, 132, 29–53；本文）。"
+      }
+    ]
+  },
+  {
+    "title": "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+    "body": "小椋 (2007) は JCDIs 最終版の標準化データ（「語と身振り」版1230名、「語と文法」版2841名）から出現率50%を最初に超えた月齢順に早期表出50語を選び、日本語児では50語のうち20語（40%）が幼児語（「ワンワン」「ブーブー」などのオノマトペや「ネンネ」「ナイナイ」などの動作名詞）であったと報告した。幼児語を意味分野に振り分けると上位3分野（普通名詞、社会的な語、人）は日米で共通したが、普通名詞の比率は日本44%、米国52%であった。50語に到達する月齢は日本15〜21か月、米国12〜18か月で、表出語彙の発達は米国児の方が早かった。小椋は、日本語のオノマトペの語彙的体系性と、模倣しやすいオノマトペで語りかける養育者側の要因を挙げている。",
+    "age": "15〜21か月",
+    "domain": "語彙",
+    "tags": [
+      "JCDIs",
+      "早期表出語",
+      "幼児語",
+      "オノマトペ",
+      "日米比較"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      },
+      {
+        "cite": "小椋たみ子・綿巻徹・稲葉太一 (2016). 日本語マッカーサー乳幼児言語発達質問紙の開発と研究. 京都: ナカニシヤ出版.（p.120 Table 7-3-2「早期表出語50語」修正表，出版社公開PDFのみ確認）",
+        "url": "https://www.nakanishiya.co.jp/files/p.120Table7-3-2.pdf",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "理解語彙は表出語彙に先行し、50語到達に数か月の差がある（英語圏・日本語児とも）",
+      "日本語児の最初期の有意味語は動作に伴う語・社会的な語・「マンマ」などであり、指示対象の明確な普通名詞や動詞はその後に現れる",
+      "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する",
+      "米国の母親は日本の母親より物のラベル付けを頻繁かつ一貫して行い、日本の母親は物を使った社会的ルーティンに乳児を誘うことが多い",
+      "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する",
+      "母親の育児語使用の効果は時期と語の種類で異なり、14か月時の事物育児語は後の成人語の事物語獲得と正、24か月時の動作育児語は後の動作語獲得と負の関連を示す"
+    ],
+    "builds_on": [
+      {
+        "skill": "米国の母親は日本の母親より物のラベル付けを頻繁かつ一貫して行い、日本の母親は物を使った社会的ルーティンに乳児を誘うことが多い",
+        "evidence": "理論上の仮説",
+        "basis": "日本語児の幼児語の多さは日本語のオノマトペの体系性と養育者の育児語での語りかけによると小椋が解釈（小椋, 2007；本文）。早期表出語の構成と養育者入力の関連を直接検証したものではない。"
+      }
+    ],
+    "leads_to": []
+  },
+  {
+    "title": "語彙スパート（語彙爆発）は平均像としては1歳後半に語られるが、すべての子どもに明確な加速点があるわけではない",
+    "body": "Goldfield & Reznick (1990) は1歳2か月から日誌法で18名を追跡し、13名で獲得速度が著しく増す時期が最大3か月続き、その期間に学ばれた語の約4分の3が名詞であった一方、5名は名詞と他の語類をバランスよく漸進的に獲得した。Ganger & Brent (2004) は38名の縦断データに変曲点のあるロジスティック関数と変曲点のない二次関数を当てはめ、スパートを示す当てはまりの方が良かったのは5名のみであった。McMurray (2007) は、多数の語が並行して学習され、易しい語が少なく難しい語が多い分布であれば、特別な認知的変化を仮定しなくても加速は学習の必然的な副産物として生じることを示した。日本語児の縦断観察（小椋, 2007）では観察場面で語彙が10語以上増える時期が16か月台・18か月台に見られたが、2名の事例である。",
+    "age": "14〜24か月",
+    "domain": "語彙",
+    "tags": [
+      "語彙スパート",
+      "語彙爆発",
+      "命名爆発",
+      "個人差"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Goldfield, B. A., & Reznick, J. S. (1990). Early lexical acquisition: Rate, content, and the vocabulary spurt. Journal of Child Language, 17(1), 171–183.",
+        "url": "https://doi.org/10.1017/S0305000900013167",
+        "level": "抄録"
+      },
+      {
+        "cite": "Ganger, J., & Brent, M. R. (2004). Reexamining the vocabulary spurt. Developmental Psychology, 40(4), 621–632.",
+        "url": "https://doi.org/10.1037/0012-1649.40.4.621",
+        "level": "抄録"
+      },
+      {
+        "cite": "McMurray, B. (2007). Defusing the childhood vocabulary explosion. Science, 317(5838), 631.",
+        "url": "https://doi.org/10.1126/science.1144073",
+        "level": "抄録"
+      },
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      },
+      {
+        "cite": "奥村優子・小林哲生 (2019). 日本語レイト・トーカーにおける表出語彙のカテゴリ構成の検討. 音声言語医学, 60(3), 205–213.",
+        "url": "https://doi.org/10.5112/jjlp.60.205",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "初期語彙の名詞優位は多くの言語で確認されるが、測定法・場面・名詞の数え方によって結果が変わる",
+      "8〜30か月の語彙・身ぶり・文法の発達速度の個人差は非常に大きく、性差やSES・出生順位の効果はごく小さい（英語圏の親報告）",
+      "相互排他性は語彙爆発の開始前（15〜20か月）から働いている",
+      "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する"
+    ],
+    "debate": "スパートが大多数の子どもに存在する離散的な変化か（Goldfield & Reznick, 1990）、少数にしか見られないか（Ganger & Brent, 2004）、また加速が命名に関する洞察などの特別なメカニズムを要するか、並行学習の副産物にすぎないか（McMurray, 2007）について論争がある。",
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "初期語彙の名詞優位は多くの言語で確認されるが、測定法・場面・名詞の数え方によって結果が変わる",
+    "body": "Gentner (1982) は6言語の子どものデータから、初期語彙の名詞優位は名詞の学習を容易にする知覚・認知過程に基づく普遍的現象であると主張した（自然分割仮説；小椋, 2007 による紹介）。Bornstein et al. (2004) は7言語圏の20か月児269名の母親報告で、語り始めたばかりの児を除くすべての言語・語彙サイズ群で名詞の比率が他の語類より相対的に高いことを示した。これに対し Tardif (1996) は、保守的な名詞の数え方では標準中国語を話す22か月児10名中9名が自然発話で名詞・物のラベルより動詞・動作語を多く産出し、緩い定義では名詞・動詞いずれの偏りも見られなかったと報告した。親報告は普通名詞を過度に報告する傾向がある（Pine, 1992；小椋, 2007 による紹介）など、データ収集法の違いが論点となっている。",
+    "age": "12〜24か月",
+    "domain": "語彙",
+    "tags": [
+      "名詞優位",
+      "動詞",
+      "通言語比較",
+      "自然分割仮説"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Gentner, D. (1982). Why nouns are learned before verbs: Linguistic relativity versus natural partitioning. In S. A. Kuczaj (Ed.), Language development, Vol. 2 (pp. 301–334). Hillsdale, NJ: Erlbaum.",
+        "url": "（小椋, 2007 による紹介）",
+        "level": "二次"
+      },
+      {
+        "cite": "Bornstein, M. H., Cote, L. R., Maital, S., Painter, K., Park, S.-Y., Pascual, L., Pêcheux, M.-G., Ruel, J., Venuti, P., & Vyt, A. (2004). Cross-linguistic analysis of vocabulary in young children: Spanish, Dutch, French, Hebrew, Italian, Korean, and American English. Child Development, 75(4), 1115–1139.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2004.00729.x",
+        "level": "抄録"
+      },
+      {
+        "cite": "Tardif, T. (1996). Nouns are not always learned before verbs: Evidence from Mandarin speakers' early vocabularies. Developmental Psychology, 32(3), 492–504.",
+        "url": "https://doi.org/10.1037/0012-1649.32.3.492",
+        "level": "抄録"
+      },
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する",
+      "新奇動詞の般化は新奇名詞より難しく、日本語児でも3歳では動作の同一性だけに基づく動詞の般化が困難で、5歳で可能になる",
+      "米国の母親は日本の母親より物のラベル付けを頻繁かつ一貫して行い、日本の母親は物を使った社会的ルーティンに乳児を誘うことが多い",
+      "語彙スパート（語彙爆発）は平均像としては1歳後半に語られるが、すべての子どもに明確な加速点があるわけではない"
+    ],
+    "debate": "名詞優位を知覚・概念的基盤による普遍現象とみるか（Gentner, 1982；Bornstein et al., 2004）、言語構造や養育者入力・文化的文脈によって変わるとみるか（Tardif, 1996；韓国語の Choi & Gopnik, 1995 などの報告は小椋, 2007 による紹介）で議論が続いている。",
+    "builds_on": [
+      {
+        "skill": "事物概念の個体化の容易さ",
+        "evidence": "理論上の仮説",
+        "basis": "名詞に対応する具体的概念は述部に対応する関係的概念より知覚的に切り出しやすいとする自然分割仮説（Gentner, 1982；Gentner & Boroditsky, 2001；小椋, 2007 による紹介）。"
+      }
+    ],
+    "leads_to": []
+  },
+  {
+    "title": "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する",
+    "body": "小椋 (2007) は JCDIs 標準化データの20か月児158名で、リスト語数で割った取得率（opportunity score）が名詞＞形容詞＞動詞＞閉じた語類の順であり、名詞が最上位である点は Bornstein et al. (2004) の7言語と一致したが、動詞が形容詞より低い点はイタリア語以外と一致しなかったと報告した。12〜24か月児31名の母子観察（Ogura et al., 2006 の要約）では、絵本場面では言語段階にかかわらず名詞優位、玩具場面では一語発話段階で名詞優位であったが、人を名詞に含めない数え方では統語段階で動詞優位となった。母親の発話は玩具場面で一貫して動詞優位であり、子どもの名詞・動詞バランスとは対応しなかった。小椋は、文法出現以前の名詞優位は入力とは独立した、名詞を学習しやすい子ども側の概念的傾向を示すと結論づけている。",
+    "age": "12〜24か月",
+    "domain": "語彙",
+    "tags": [
+      "名詞優位",
+      "動詞優位",
+      "JCDIs",
+      "場面差",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      },
+      {
+        "cite": "Ogura, T., Dale, P. S., Yamashita, Y., Murase, T., & Mahieu, A. (2006). The use of nouns and verbs by Japanese children and their caregivers in book reading and toy-play contexts. Journal of Child Language, 33(1), 1–29.",
+        "url": "（小椋, 2007 の日本語要約による）",
+        "level": "二次"
+      },
+      {
+        "cite": "Bornstein, M. H., Cote, L. R., Maital, S., Painter, K., Park, S.-Y., Pascual, L., Pêcheux, M.-G., Ruel, J., Venuti, P., & Vyt, A. (2004). Cross-linguistic analysis of vocabulary in young children: Spanish, Dutch, French, Hebrew, Italian, Korean, and American English. Child Development, 75(4), 1115–1139.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2004.00729.x",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "初期語彙の名詞優位は多くの言語で確認されるが、測定法・場面・名詞の数え方によって結果が変わる",
+      "新奇動詞の般化は新奇名詞より難しく、日本語児でも3歳では動作の同一性だけに基づく動詞の般化が困難で、5歳で可能になる",
+      "米国の母親は日本の母親より物のラベル付けを頻繁かつ一貫して行い、日本の母親は物を使った社会的ルーティンに乳児を誘うことが多い",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い"
+    ],
+    "debate": "Oshima-Takane (2006) は日本語児の名詞・動詞のバランスについて個人差が大きく初期語彙ではバランスがとれているとまとめており（小椋, 2007 による紹介）、結論は場面・数え方（人を名詞に含めるか）・データ収集法に依存する。",
+    "builds_on": [
+      {
+        "skill": "名詞を学習しやすい概念的傾向",
+        "evidence": "理論上の仮説",
+        "basis": "玩具場面の母親入力が動詞優位でも一語期の子どもは名詞優位であったことからの小椋の推論（小椋, 2007；本文）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "動詞語彙の増加",
+        "evidence": "相関のみ",
+        "basis": "統語段階になると玩具場面で子どもの動詞の割合が増加した（横断31名；小椋, 2007 の Ogura et al., 2006 要約）。小椋は多語発話に動詞が必要なためと解釈している。"
+      }
+    ]
+  },
+  {
+    "title": "米国の母親は日本の母親より物のラベル付けを頻繁かつ一貫して行い、日本の母親は物を使った社会的ルーティンに乳児を誘うことが多い",
+    "body": "Fernald & Morikawa (1993) は6・12・19か月児の日米母子60組の家庭での玩具遊びを横断比較し、言語的単純化や頻繁な反復、乳児の月齢に応じた調整という共通性とともに、米国の母親が物のラベル付けをより頻繁・一貫して行い、日本の母親は物を用いて社会的ルーティンに乳児を誘うことが多いという差を見出した。母親報告では米国児の名詞語彙が日本児より大きかった。物の名詞の強調は日英の構造差で部分的にしか説明できず、相互作用スタイルと育児観の文化差が対乳児発話の構造と内容に強く影響すると結論づけている。小椋 (2007) は同研究から、日本の母親はすべての月齢でオノマトペを使用したのに対し米国の母親はほとんど使用しなかったことも紹介している。",
+    "age": "6〜19か月",
+    "domain": "言語環境",
+    "tags": [
+      "対乳児発話",
+      "日米比較",
+      "ラベル付け",
+      "社会的ルーティン",
+      "オノマトペ"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Fernald, A., & Morikawa, H. (1993). Common themes and cultural variations in Japanese and American mothers' speech to infants. Child Development, 64(3), 637–656.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/8339686/",
+        "level": "抄録"
+      },
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "初期語彙の名詞優位は多くの言語で確認されるが、測定法・場面・名詞の数え方によって結果が変わる",
+      "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+      "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する"
+    ],
+    "builds_on": [],
+    "leads_to": [
+      {
+        "skill": "名詞語彙の大きさ",
+        "evidence": "相関のみ",
+        "basis": "ラベル付けの多い米国の母親の子どもの方が母親報告による名詞語彙が大きかった（Fernald & Morikawa, 1993, Child Development, 64(3), 637–656；抄録。横断の群比較）。"
+      }
+    ]
+  },
+  {
+    "title": "新奇動詞の般化は新奇名詞より難しく、日本語児でも3歳では動作の同一性だけに基づく動詞の般化が困難で、5歳で可能になる",
+    "body": "Imai, Haryu, & Okada (2005) は3歳・5歳の日本語児に動的な行為場面で新奇名詞・新奇動詞を教え、両年齢とも新奇名詞は新奇物体に対応づけられたが、動作の同一性のみに基づいて動詞を般化できたのは5歳児だけであった。困難は行為そのものの符号化・記憶ではなく、どの要素を動詞に対応づけるかにあった（研究4）。Imai et al. (2008) は日本語・英語・中国語の3歳・5歳児を対象とする6研究で、いずれの言語でも新奇名詞の方が新奇動詞より容易に対応づけ・般化され、「動詞に親和的」とされる中国語・日本語でも同様であることを示した。同時に、英語児は動詞学習に文法的支援を、中国語児は語用論的支援も必要とするなど、入力言語が動詞学習を独自に形づくることも示された。",
+    "age": "3〜5歳",
+    "domain": "語意学習",
+    "tags": [
+      "動詞学習",
+      "名詞優位",
+      "日本語児",
+      "通言語比較"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Imai, M., Haryu, E., & Okada, H. (2005). Mapping novel nouns and verbs onto dynamic action events: Are verb meanings easier to learn than noun meanings for Japanese children? Child Development, 76(2), 340–355.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2005.00849.x",
+        "level": "抄録"
+      },
+      {
+        "cite": "Imai, M., Li, L., Haryu, E., Okada, H., Hirsh-Pasek, K., Golinkoff, R. M., & Shigematsu, J. (2008). Novel noun and verb learning in Chinese-, English-, and Japanese-speaking children. Child Development, 79(4), 979–1000.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2008.01171.x",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "初期語彙の名詞優位は多くの言語で確認されるが、測定法・場面・名詞の数え方によって結果が変わる",
+      "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する",
+      "音象徴性のある新奇動詞では、日本語3歳児も動作の同一性に基づく動詞の般化ができる",
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む"
+    ],
+    "debate": "名詞の学習が動詞の学習より特権的かという長年の論争（Imai et al., 2005 が本研究を位置づける論点）。Tardif (1996) などの動詞優位の自然発話データとの整合が問われる。",
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む",
+    "body": "Markman (1990) は語彙獲得を帰納の問題とみなし、新奇語を物の部分・物質・属性ではなく物全体の名前と解釈する事物全体制約、主題的に関係する物ではなく同種の物への拡張を想定するタクソノミー（事物カテゴリー）制約、1つの物には1つのラベルを想定する相互排他性制約を提案した。Markman & Wachtel (1988) は6研究で、3歳児が既知物への2つ目のラベルを退けて新奇物のラベルとして扱うこと、既知物しかない場合には新奇語を部分名や物質名と解釈することを示し、相互排他性が物以外の語の学習も動機づけるとした。小椋 (2007) はこれらに加え、形状類似バイアス（Landau, Smith, & Jones, 1988）や名詞—カテゴリー結合（Waxman, 1991）を、名詞獲得を有利にする原理として紹介している。",
+    "age": "2〜3歳中心",
+    "domain": "語意学習",
+    "tags": [
+      "語意学習の制約",
+      "事物全体制約",
+      "タクソノミー制約",
+      "相互排他性",
+      "形状バイアス"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Markman, E. M. (1990). Constraints children place on word meanings. Cognitive Science, 14(1), 57–77.",
+        "url": "https://doi.org/10.1207/s15516709cog1401_4",
+        "level": "抄録"
+      },
+      {
+        "cite": "Markman, E. M., & Wachtel, G. F. (1988). Children's use of mutual exclusivity to constrain the meanings of words. Cognitive Psychology, 20(2), 121–157.",
+        "url": "https://doi.org/10.1016/0010-0285(88)90017-5",
+        "level": "抄録"
+      },
+      {
+        "cite": "小椋たみ子 (2007). 日本の子どもの初期の語彙発達. 言語研究, 132, 29–53.",
+        "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_ogura.pdf",
+        "level": "本文"
+      },
+      {
+        "cite": "Preissler, M. A., & Carey, S. (2005). The role of inferences about referential intent in word learning: Evidence from autism. Cognition, 97(1), B13–B23.",
+        "url": "https://doi.org/10.1016/j.cognition.2005.01.008",
+        "level": "抄録"
+      },
+      {
+        "cite": "Baron-Cohen, S., Baldwin, D. A., & Crowson, M. (1997). Do children with autism use the speaker's direction of gaze strategy to crack the code of language? Child Development, 68(1), 48–57.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9084124/",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "相互排他性は語彙爆発の開始前（15〜20か月）から働いている",
+      "12〜13か月児でも、物に付与された語は物のカテゴリーへの注意を高め、その効果は特に上位レベルで見られる（名詞—カテゴリー結合）",
+      "日本語児は可算・不可算の文法手がかりなしに2歳で物体名と物質名を区別するが、単純な形の物体の扱いには日英差がある",
+      "既知物に与えられた新しい語を、日本語3歳児は形の典型性に応じて下位カテゴリー名か、既知カテゴリーと相互排他的な新カテゴリー名として解釈する",
+      "即時マッピング（新奇語の指示対象の選択）は頑健だが、それだけでは語の保持は保証されない",
+      "語彙スパート（語彙爆発）は平均像としては1歳後半に語られるが、すべての子どもに明確な加速点があるわけではない"
+    ],
+    "debate": "制約が生得的で語彙に特有のものか、一般的な注意・連合学習や社会—語用論的手がかりから創発するメタ知識か（創発連立モデル Hollich et al., 2000；針生, 2006；Diesendruck, 2007 はいずれも小椋, 2007 による紹介）について議論がある。",
+    "builds_on": [
+      {
+        "skill": "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+        "evidence": "理論上の仮説",
+        "basis": "話者の参照意図の理解が制約による語意推論を支えるとする社会—語用論的説明があるが、自閉症児では参照意図のモニタリングが弱くても相互排他性型の対応づけは成立した（Preissler & Carey, 2005；抄録）ため、依存関係は確定していない。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "急速な語彙獲得",
+        "evidence": "理論上の仮説",
+        "basis": "子どもが語彙を急速に獲得するには多くの可能な意味を排除できなければならないという前提（Markman & Wachtel, 1988, Cognitive Psychology, 20(2), 121–157；Markman, 1990, Cognitive Science, 14(1), 57–77；抄録）。"
+      }
+    ],
+    "nd_note": "自閉症児は話者の参照意図のモニタリングに障害を示したが、参照が曖昧な条件で新奇語を未命名の物に対応づける点では24か月の定型児と同等に成功した（Preissler & Carey, 2005, Cognition, 97(1), B13–B23；抄録）。相互排他性型の対応づけが、話者意図の評価という下位スキルに全面的には依存しない経路を示す。一方、話者の視線方向から新奇語の指示対象を推論できた割合は知的障害児70.6%に対し自閉症児29.4%で、自閉症児は聞き手（自分）の視線方向に頼って対応づけの誤りを生じた（Baron-Cohen, Baldwin, & Crowson, 1997, Child Development, 68(1), 48–57；抄録）。"
+  },
+  {
+    "title": "相互排他性は語彙爆発の開始前（15〜20か月）から働いている",
+    "body": "Markman, Wasow, & Hansen (2003) は、新奇物を置かず既知物だけが見える条件（不透明なバケツを探索場所として置く、既知物を手渡す、明らかな探索場所をなくす）で、語彙スパートをまたぐ15〜17か月児と18〜20か月児をテストした。両月齢とも既知物への2つ目のラベルに抵抗し、条件つきながら新奇ラベルのより良い指示対象を探す傾向を示した。新奇物が生む「語彙の空白」を埋めようとする動機では説明できない条件で示した点が重要であり、著者らは相互排他性が命名爆発の開始前に備わっていると結論した。",
+    "age": "15〜20か月",
+    "domain": "語意学習",
+    "tags": [
+      "相互排他性",
+      "語彙スパート",
+      "語意学習の制約"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Markman, E. M., Wasow, J. L., & Hansen, M. B. (2003). Use of the mutual exclusivity assumption by young word learners. Cognitive Psychology, 47(3), 241–275.",
+        "url": "https://doi.org/10.1016/s0010-0285(03)00034-3",
+        "level": "抄録"
+      },
+      {
+        "cite": "Bion, R. A. H., Borovsky, A., & Fernald, A. (2013). Fast mapping, slow learning: Disambiguation of novel word-object mappings in relation to vocabulary learning at 18, 24, and 30 months. Cognition, 126(1), 39–53.",
+        "url": "https://doi.org/10.1016/j.cognition.2012.08.008",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む",
+      "語彙スパート（語彙爆発）は平均像としては1歳後半に語られるが、すべての子どもに明確な加速点があるわけではない",
+      "即時マッピング（新奇語の指示対象の選択）は頑健だが、それだけでは語の保持は保証されない"
+    ],
+    "debate": "Bion, Borovsky, & Fernald (2013) の視線計測では、18か月児は新奇名の後に新奇物を確実には選好せず、24か月で信頼できる選好が見られたため、相互排他性（曖昧性解消）の出現時期は課題・測度によって異なる。",
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "12〜13か月児でも、物に付与された語は物のカテゴリーへの注意を高め、その効果は特に上位レベルで見られる（名詞—カテゴリー結合）",
+    "body": "Waxman & Markow (1995) は修正版新奇性選好法による3実験で12〜13か月児をテストし、物に新奇語を付与すると、名詞でも形容詞でも物のカテゴリーへの注意が高まり、その効果は特に上位レベルで見られることを示した。乳児の初期の語学習の進み具合は、この語—カテゴリー結合の理解と関連していた。著者らは、語彙獲得の開始時、乳児は物に付与された語をその物と同種の物を指すと広く解釈し、母語で標示される文法範疇を区別するにつれてより特定的な意味を割り当てるようになると提案している。",
+    "age": "12〜13か月",
+    "domain": "語意学習",
+    "tags": [
+      "名詞—カテゴリー結合",
+      "カテゴリー化",
+      "上位レベル",
+      "乳児"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Waxman, S. R., & Markow, D. B. (1995). Words as invitations to form categories: Evidence from 12- to 13-month-old infants. Cognitive Psychology, 29(3), 257–302.",
+        "url": "https://doi.org/10.1006/cogp.1995.1016",
+        "level": "抄録"
+      },
+      {
+        "cite": "Nazzi, T., & Karmiloff-Smith, A. (2002). Early categorization abilities in young children with Williams syndrome. NeuroReport, 13(10), 1259–1262.",
+        "url": "https://doi.org/10.1097/00001756-200207190-00008",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む",
+      "上位レベルのカテゴリーは基礎レベルより後に獲得され、その学習には言語的説明が年長児で役立つ",
+      "日本語児は可算・不可算の文法手がかりなしに2歳で物体名と物質名を区別するが、単純な形の物体の扱いには日英差がある"
+    ],
+    "builds_on": [],
+    "leads_to": [
+      {
+        "skill": "初期の語学習の進展",
+        "evidence": "相関のみ",
+        "basis": "乳児の初期語学習の進み具合が語—カテゴリー結合の理解と関連した（Waxman & Markow, 1995, Cognitive Psychology, 29(3), 257–302；抄録）。"
+      }
+    ],
+    "nd_note": "2〜6歳のウィリアムズ症候群児は、視覚的な共通性に基づいては新しい物のカテゴリーを形成したが、同じ名前が与えられたという言語的手がかりだけではカテゴリー化できず、はるかに年少で語彙の少ない定型児が両方の手がかりを使えることと対照的であった（Nazzi & Karmiloff-Smith, 2002, NeuroReport, 13(10), 1259–1262；抄録）。語彙を獲得していながら語—カテゴリー結合の利用が弱い、非定型な語彙獲得経路を示唆する。"
+  },
+  {
+    "title": "日本語児は可算・不可算の文法手がかりなしに2歳で物体名と物質名を区別するが、単純な形の物体の扱いには日英差がある",
+    "body": "Imai & Gentner (1997) は、無生物名詞をすべて同様に扱い可算・不可算の文法区別をもたない日本語の子どもと英語の子ども（2歳、2歳半、4歳）および成人に、中立的な統語で新奇名詞を教え、形が同じで素材が違う物と、素材が同じで形が違う物のどちらに名前を拡張するかを調べた。両言語の子どもとも2歳で既に複雑な物体と物質を区別し、言語以前の存在論的知識の普遍的利用が示唆された。一方、単純な形の物体と物質の事例の般化は日米で異なり、個体／非個体の区別は普遍的でもカテゴリーの性質と境界は言語の影響を受けると著者らは推測している。",
+    "age": "2〜4歳",
+    "domain": "語意学習",
+    "tags": [
+      "物体名",
+      "物質名",
+      "存在論",
+      "可算・不可算",
+      "日本語児"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Imai, M., & Gentner, D. (1997). A cross-linguistic study of early word meaning: Universal ontology and linguistic influence. Cognition, 62(2), 169–200.",
+        "url": "https://doi.org/10.1016/s0010-0277(96)00784-6",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む",
+      "既知物に与えられた新しい語を、日本語3歳児は形の典型性に応じて下位カテゴリー名か、既知カテゴリーと相互排他的な新カテゴリー名として解釈する",
+      "12〜13か月児でも、物に付与された語は物のカテゴリーへの注意を高め、その効果は特に上位レベルで見られる（名詞—カテゴリー結合）"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "既知物に与えられた新しい語を、日本語3歳児は形の典型性に応じて下位カテゴリー名か、既知カテゴリーと相互排他的な新カテゴリー名として解釈する",
+    "body": "日本語は可算／不可算、固有名詞／普通名詞、単数／複数の文法区別をもたないため、英語圏で語意推論に重要とされる統語的な語類手がかりが使えない。Haryu & Imai (2002) では、3歳児は既知の人工物に与えられた新しい名詞を素材名ではなくその物の新しいカテゴリーラベルと解釈した。名指された物の形が既知カテゴリーとして典型的なら新しい語を下位カテゴリーに対応づけ、非典型的なら名指された物を既知カテゴリーから除外して相互排他的な新カテゴリーに対応づけるというように、形状情報で柔軟に解釈を切り替えた。著者らは、子どもが複数の手がかりを階層的な重みづけで統合し、状況に最も妥当な単一の解を選ぶと解釈している。",
+    "age": "3歳",
+    "domain": "語意学習",
+    "tags": [
+      "相互排他性",
+      "下位カテゴリー",
+      "形状",
+      "語彙の再編成",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "Haryu, E., & Imai, M. (2002). Reorganizing the lexicon by learning a new word: Japanese children's interpretation of the meaning of a new word for a familiar artifact. Child Development, 73(5), 1378–1391.",
+        "url": "https://doi.org/10.1111/1467-8624.00478",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む",
+      "日本語児は可算・不可算の文法手がかりなしに2歳で物体名と物質名を区別するが、単純な形の物体の扱いには日英差がある",
+      "上位レベルのカテゴリーは基礎レベルより後に獲得され、その学習には言語的説明が年長児で役立つ"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "即時マッピング（新奇語の指示対象の選択）は頑健だが、それだけでは語の保持は保証されない",
+    "body": "Horst & Samuelson (2008) は24か月児に既知物と新奇物を含む参照選択課題で複数の新奇名を提示し、5分後に保持をテストしたところ、参照選択は非常に良好だったが保持は非常に悪かった。参照選択に明示的な命名（直示的命名）を加えると、セッションで最初に提示された4つの新奇名の保持が示された。Bion, Borovsky, & Fernald (2013) は18・24・30か月児で、新奇名の後に新奇物を見る割合が新奇語の保持の成功および語彙サイズと関連する一方、24か月児は曖昧性解消に成功しても保持の証拠がなく、30か月児でも保持の証拠は脆弱であったことを示した。語学習は曖昧性解消バイアスと関連はするが依存はしない漸進的過程と特徴づけられている。",
+    "age": "18〜30か月",
+    "domain": "語意学習",
+    "tags": [
+      "即時マッピング",
+      "fast mapping",
+      "参照選択",
+      "保持",
+      "曖昧性解消"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Horst, J. S., & Samuelson, L. K. (2008). Fast mapping but poor retention by 24-month-old infants. Infancy, 13(2), 128–157.",
+        "url": "https://doi.org/10.1080/15250000701795598",
+        "level": "抄録"
+      },
+      {
+        "cite": "Bion, R. A. H., Borovsky, A., & Fernald, A. (2013). Fast mapping, slow learning: Disambiguation of novel word-object mappings in relation to vocabulary learning at 18, 24, and 30 months. Cognition, 126(1), 39–53.",
+        "url": "https://doi.org/10.1016/j.cognition.2012.08.008",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む",
+      "相互排他性は語彙爆発の開始前（15〜20か月）から働いている",
+      "社会的・文脈的支援のない条件で語と物の恣意的な連合を最小限の提示で形成できるのは、14か月頃からである"
+    ],
+    "debate": "即時マッピング（参照選択の成功）を語の学習と同一視できるかが論点であり、上記研究は参照選択と長期的保持を区別する必要を示している。",
+    "builds_on": [
+      {
+        "skill": "相互排他性は語彙爆発の開始前（15〜20か月）から働いている",
+        "evidence": "相関のみ",
+        "basis": "新奇名の後に新奇物を見る割合（曖昧性解消）は保持の成功と関連したが、保持は曖昧性解消の成功に依存しなかった（Bion, Borovsky, & Fernald, 2013, Cognition, 126(1), 39–53；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "語彙サイズ",
+        "evidence": "相関のみ",
+        "basis": "曖昧性解消の程度が語彙サイズと関連した（Bion et al., 2013；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "社会的・文脈的支援のない条件で語と物の恣意的な連合を最小限の提示で形成できるのは、14か月頃からである",
+    "body": "Werker et al. (1998) は8〜14か月児に2つの語—物ペアを馴化させ、組み合わせを入れ替えたテスト試行への反応を見る「スイッチ課題」を6実験で実施し、連合を形成したのは14か月児のみで、それも物が動いている場合に限られた。8〜12か月児は連合を形成しなかったが、語と物それぞれの情報は処理していた。著者らは、最小限の提示で恣意的な語—物連合を学ぶ能力は14か月頃に現れると結論づけている。日常経験で学ばれた語の理解を6〜9か月で示した研究（Bergelson & Swingley, 2012）とは、社会的手がかりの有無や刺激の新奇性など測定条件が異なる。",
+    "age": "8〜14か月",
+    "domain": "語意学習",
+    "tags": [
+      "語—物連合",
+      "スイッチ課題",
+      "実験室研究"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Werker, J. F., Cohen, L. B., Lloyd, V. L., Casasola, M., & Stager, C. L. (1998). Acquisition of word-object associations by 14-month-old infants. Developmental Psychology, 34(6), 1289–1309.",
+        "url": "https://doi.org/10.1037/0012-1649.34.6.1289",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "日常的な名詞の意味理解は生後6〜9か月で既に始まっている",
+      "即時マッピング（新奇語の指示対象の選択）は頑健だが、それだけでは語の保持は保証されない",
+      "母親の育児語使用の効果は時期と語の種類で異なり、14か月時の事物育児語は後の成人語の事物語獲得と正、24か月時の動作育児語は後の動作語獲得と負の関連を示す"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "子どもに向けられた発話の量は語処理効率を介して24か月の表出語彙を予測し、子どもが傍らで聞くだけの発話は語彙と関連しない",
+    "body": "Weisleder & Fernald (2013) は低SESのスペイン語話者家庭で終日録音を行い、養育者が子どもに向ける発話量に家庭間で大きなばらつきがあることを示した。子ども向け発話を多く経験した乳児ほど既知語のリアルタイム処理が効率的になり、24か月時の表出語彙が大きかったが、子どもが立ち聞きしただけの発話は語彙と無関連であった。媒介分析では子ども向け発話の効果は語処理効率で説明された。Hoff (2003) は高SES33組・中SES30組の2歳児で、10週間の表出語彙の伸びのSES差が、SESにより異なる母親発話の特性で完全に説明されることを示した。Fernald, Marchman, & Weisleder (2013) は英語児48名で、語彙と処理効率のSES差が18か月で既に見られ、24か月で処理スキルに6か月分の差があることを報告している。",
+    "age": "18〜24か月",
+    "domain": "言語環境",
+    "tags": [
+      "話しかけの量",
+      "子ども向け発話",
+      "SES",
+      "語処理効率",
+      "終日録音"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Weisleder, A., & Fernald, A. (2013). Talking to children matters: Early language experience strengthens processing and builds vocabulary. Psychological Science, 24(11), 2143–2152.",
+        "url": "https://doi.org/10.1177/0956797613488145",
+        "level": "抄録"
+      },
+      {
+        "cite": "Hoff, E. (2003). The specificity of environmental influence: Socioeconomic status affects early vocabulary development via maternal speech. Child Development, 74(5), 1368–1378.",
+        "url": "https://doi.org/10.1111/1467-8624.00612",
+        "level": "抄録"
+      },
+      {
+        "cite": "Fernald, A., Marchman, V. A., & Weisleder, A. (2013). SES differences in language processing skill and vocabulary are evident at 18 months. Developmental Science, 16(2), 234–248.",
+        "url": "https://doi.org/10.1111/desc.12019",
+        "level": "抄録"
+      },
+      {
+        "cite": "Sperry, D. E., Sperry, L. L., & Miller, P. J. (2019). Reexamining the verbal environments of children from different socioeconomic backgrounds. Child Development, 90(4), 1303–1318.",
+        "url": "https://doi.org/10.1111/cdev.13072",
+        "level": "抄録"
+      },
+      {
+        "cite": "Golinkoff, R. M., Hoff, E., Rowe, M. L., Tamis-LeMonda, C. S., & Hirsh-Pasek, K. (2019). Language matters: Denying the existence of the 30-million-word gap has serious consequences. Child Development, 90(3), 985–992.",
+        "url": "https://doi.org/10.1111/cdev.13128",
+        "level": "抄録"
+      },
+      {
+        "cite": "Marchman, V. A., & Fernald, A. (2008). Speed of word recognition and vocabulary knowledge in infancy predict cognitive and language outcomes in later childhood. Developmental Science, 11(3), F9–F16.",
+        "url": "https://doi.org/10.1111/j.1467-7687.2008.00671.x",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "入力の「質」（語彙の多様性・洗練度、脱文脈的言語、共同関与の質、応答性）は、量を超えて後の語彙を予測する",
+      "養育者への話しかけコーチングは子ども向け発話と parentese を増やし、14か月時の表出語数を増やす（無作為化比較試験）",
+      "8〜30か月の語彙・身ぶり・文法の発達速度の個人差は非常に大きく、性差やSES・出生順位の効果はごく小さい（英語圏の親報告）",
+      "日本語児の2歳時点の表出語彙：JCDIs（J-CDI）では2歳で50語前後は男児の15パーセンタイル以下、女児の5パーセンタイル以下に相当する"
+    ],
+    "debate": "Hart & Risley (1995) の「3000万語格差」をめぐり、Sperry, Sperry, & Miller (2019) は米国5コミュニティの家庭観察から、低所得家庭の子どもが聞く語数は同主張ほど少なくなく、複数の養育者や傍らの会話を除外する定義が低所得児の接する語数を過小評価すると主張した。Golinkoff et al. (2019) は、言語学習に重要なのは立ち聞きではなく子どもに向けた質の高い発話であるとしてこれに反論している。",
+    "builds_on": [
+      {
+        "skill": "養育者の子ども向け発話の量",
+        "evidence": "縦断で予測",
+        "basis": "子ども向け発話の量が語処理効率を介して24か月の表出語彙を予測した（Weisleder & Fernald, 2013, Psychological Science, 24(11), 2143–2152；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "学齢期（8歳）の言語・認知能力",
+        "evidence": "縦断で予測",
+        "basis": "25か月時の語認識速度と語彙サイズが、それぞれ8歳時の言語・認知スキルの独自の分散を説明した（Marchman & Fernald, 2008, Developmental Science, 11(3), F9–F16；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "入力の「質」（語彙の多様性・洗練度、脱文脈的言語、共同関与の質、応答性）は、量を超えて後の語彙を予測する",
+    "body": "Rowe (2012) は50組の親子を18・30・42か月で観察し、SES・入力量・子どもの先行語彙を統制しても、幼児期には多様で洗練された語彙の使用が、就学前期には語り（ナラティブ）などの脱文脈的言語の使用が、1年後の語彙の付加的な分散を説明した。Hirsh-Pasek et al. (2015) は低所得60家庭で、24か月時の相互作用の質（象徴を含む共同関与、ルーティンと儀式、流暢でつながったコミュニケーション）が1年後の表出言語の分散の27%を説明し、母親の語数や敏感な養育より強い予測因であった。Tamis-LeMonda, Bornstein, & Baumwell (2001) は9・13か月時の母親の応答性（記述、遊び、模倣）が初語・50語・語結合などの達成時期を子ども自身の行動を超えて予測し、13か月の応答性の方が強い予測因であることを示した。いずれも米国の研究である。",
+    "age": "9〜54か月",
+    "domain": "言語環境",
+    "tags": [
+      "話しかけの質",
+      "応答性",
+      "脱文脈的言語",
+      "共同関与",
+      "語彙予測"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Rowe, M. L. (2012). A longitudinal investigation of the role of quantity and quality of child-directed speech in vocabulary development. Child Development, 83(5), 1762–1774.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2012.01805.x",
+        "level": "抄録"
+      },
+      {
+        "cite": "Hirsh-Pasek, K., Adamson, L. B., Bakeman, R., Owen, M. T., Golinkoff, R. M., Pace, A., Yust, P. K. S., & Suma, K. (2015). The contribution of early communication quality to low-income children's language success. Psychological Science, 26(7), 1071–1083.",
+        "url": "https://doi.org/10.1177/0956797615581493",
+        "level": "抄録"
+      },
+      {
+        "cite": "Tamis-LeMonda, C. S., Bornstein, M. H., & Baumwell, L. (2001). Maternal responsiveness and children's achievement of language milestones. Child Development, 72(3), 748–767.",
+        "url": "https://doi.org/10.1111/1467-8624.00313",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "子どもに向けられた発話の量は語処理効率を介して24か月の表出語彙を予測し、子どもが傍らで聞くだけの発話は語彙と関連しない",
+      "養育者への話しかけコーチングは子ども向け発話と parentese を増やし、14か月時の表出語数を増やす（無作為化比較試験）",
+      "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+      "日本語児の最初期の有意味語は動作に伴う語・社会的な語・「マンマ」などであり、指示対象の明確な普通名詞や動詞はその後に現れる",
+      "14〜18か月の身ぶりの量・意味の種類は後の語彙を予測し、実験的に指さしを増やすと表出語彙が増える"
+    ],
+    "builds_on": [
+      {
+        "skill": "共同注意関連スキルは9〜15か月に「注意の共有→追従→誘導」の順で出現し、母子の共同関与の時間が最初期の身ぶり・言語を予測する",
+        "evidence": "縦断で予測",
+        "basis": "24か月時の象徴を含む共同関与などの相互作用の質が1年後の表出言語の分散の27%を説明した（Hirsh-Pasek et al., 2015, Psychological Science, 26(7), 1071–1083；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "1年後の語彙（30〜54か月）",
+        "evidence": "縦断で予測",
+        "basis": "多様で洗練された語彙・脱文脈的言語の使用が、SES・入力量・先行語彙を統制しても1年後の語彙を予測した（Rowe, 2012, Child Development, 83(5), 1762–1774；抄録）。"
+      },
+      {
+        "skill": "言語マイルストーンの達成時期",
+        "evidence": "縦断で予測",
+        "basis": "9・13か月の母親の応答性が初語・50語・語結合・過去への言及の達成時期を予測した（Tamis-LeMonda et al., 2001, Child Development, 72(3), 748–767；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "養育者への話しかけコーチングは子ども向け発話と parentese を増やし、14か月時の表出語数を増やす（無作為化比較試験）",
+    "body": "Ferjan Ramírez et al. (2019) は定型発達の6か月児の家庭を、親へのコーチングを行う介入群と対照群に無作為に割り付けた。6か月と10か月に、家庭での一人称視点の LENA 録音から得た子ども向け発話量・やりとり（back-and-forth）・parentese（対乳児発話の話し方）について量的・質的フィードバックを行った。コーチングにより子どもに向けた発話の割合と parentese の割合が高まり、これらは6〜14か月の喃語の伸びと関連した。介入群は対照群より喃語の伸びが大きく、14か月時には LENA 録音と CDI の両方で対照群より多くの語を産出した。米国の研究である。",
+    "age": "6〜14か月",
+    "domain": "言語環境",
+    "tags": [
+      "介入研究",
+      "RCT",
+      "parentese",
+      "LENA",
+      "話しかけ"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Ferjan Ramírez, N., Lytle, S. R., Fish, M., & Kuhl, P. K. (2019). Parent coaching at 6 and 10 months improves language outcomes at 14 months: A randomized controlled trial. Developmental Science, 22(3), e12762.",
+        "url": "https://doi.org/10.1111/desc.12762",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "子どもに向けられた発話の量は語処理効率を介して24か月の表出語彙を予測し、子どもが傍らで聞くだけの発話は語彙と関連しない",
+      "入力の「質」（語彙の多様性・洗練度、脱文脈的言語、共同関与の質、応答性）は、量を超えて後の語彙を予測する",
+      "乳児の対乳児発話（IDS）への選好は67研究室で再現されたが、効果量は従来推定より小さく、月齢・母語一致・測定法によって変わる",
+      "聴覚に問題のない乳児のほぼ全員が10か月までに規準喃語を始め、その開始の遅れは後の表出語彙の少なさを予測する",
+      "非母語音声の知覚低下は9〜10か月時の生身の対人接触で逆転しうるが、録画・録音の提示では逆転しない"
+    ],
+    "builds_on": [],
+    "leads_to": [
+      {
+        "skill": "喃語の伸び",
+        "evidence": "介入で確認",
+        "basis": "介入群は6〜14か月の喃語の伸びが対照群より大きかった（Ferjan Ramírez, Lytle, Fish, & Kuhl, 2019, Developmental Science, 22(3), e12762；抄録）。"
+      },
+      {
+        "skill": "14か月時の表出語数",
+        "evidence": "介入で確認",
+        "basis": "介入群は14か月時に LENA 録音と CDI の両方で対照群より多くの語を産出した（Ferjan Ramírez et al., 2019；抄録）。"
+      }
+    ]
+  },
+  {
+    "title": "乳児の対乳児発話（IDS）への選好は67研究室で再現されたが、効果量は従来推定より小さく、月齢・母語一致・測定法によって変わる",
+    "body": "ManyBabies Consortium (2020) は北米・欧州・豪州・アジアの67研究室で、北米英語の IDS と対成人発話（ADS）に対する乳児の相対的選好を、ヘッドターン選好法・中心固視法・アイトラッキングの3手法で測定した。メタ分析的効果量は d = 0.35（95%CI [0.29, 0.42]）で0より確実に大きかったが、先行文献から計算された平均（0.67）より小さかった。選好は年長の乳児、刺激が母語・方言と一致する乳児、ヘッドターン選好法のデータで有意に強かった。IDS 選好という現象自体は再現されたが、その大きさは発達、母語経験、測定手続きによって調整される。",
+    "age": "乳児期（参加月齢の範囲は抄録に記載なし）",
+    "domain": "言語環境",
+    "tags": [
+      "対乳児発話",
+      "IDS",
+      "マザリーズ",
+      "CDS",
+      "再現性",
+      "多施設研究"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "ManyBabies Consortium [Frank, M. C., et al.] (2020). Quantifying sources of variability in infancy research using the infant-directed-speech preference. Advances in Methods and Practices in Psychological Science, 3(1), 24–52.",
+        "url": "https://doi.org/10.1177/2515245919900809",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "日本語の自発的な対乳児発話では音韻カテゴリーの対比が対成人発話よりわずかに不明瞭であり、「超調音（hyperarticulation）」仮説は支持されない",
+      "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する",
+      "養育者への話しかけコーチングは子ども向け発話と parentese を増やし、14か月時の表出語数を増やす（無作為化比較試験）"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "日本語の自発的な対乳児発話では音韻カテゴリーの対比が対成人発話よりわずかに不明瞭であり、「超調音（hyperarticulation）」仮説は支持されない",
+    "body": "Martin et al. (2015) は理化学研究所で収録された自発的日本語音声の大規模コーパスを音声技術で網羅的に分析し、IDS の音韻対比は ADS よりわずかだが有意に不明瞭である傾向を示した。これは養育者が IDS で音韻カテゴリーを積極的に強調するという考えに反する結果であり、著者らは、乳児の言語獲得理論はノイズの多いデータから学習する能力を仮定する必要があると述べている。一方、Kuhl et al. (1997) は IDS の母音空間が拡大し母音カテゴリーの形成を容易にすると報告しており（小椋・浜辺, 2021 による紹介）、IDS の音声学的機能については見解が分かれている。",
+    "age": "乳児期（コーパスの対象月齢は抄録に記載なし）",
+    "domain": "言語環境",
+    "tags": [
+      "対乳児発話",
+      "超調音",
+      "音韻カテゴリー",
+      "コーパス",
+      "日本語"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "Martin, A., Schatz, T., Versteegh, M., Miyazawa, K., Mazuka, R., Dupoux, E., & Cristia, A. (2015). Mothers speak less clearly to infants than to adults: A comprehensive test of the hyperarticulation hypothesis. Psychological Science, 26(3), 341–347.",
+        "url": "https://doi.org/10.1177/0956797614562453",
+        "level": "抄録"
+      },
+      {
+        "cite": "小椋たみ子・浜辺直子 (2021). 日本の母親の育児語の特徴と子どもの語彙獲得に及ぼす効果：事物語と動作語について. Studies in Language Sciences（日本言語科学会）, 19(2), 1–18.",
+        "url": "https://www.jstage.jst.go.jp/article/sls/19/2/19_190201/_pdf",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "乳児の対乳児発話（IDS）への選好は67研究室で再現されたが、効果量は従来推定より小さく、月齢・母語一致・測定法によって変わる",
+      "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する",
+      "生後6〜12か月に非母語の子音対比の弁別は低下し、母語の子音対比の弁別は向上する（知覚的狭小化）"
+    ],
+    "debate": "IDS が音韻カテゴリーを明瞭化して音素学習を助けるか（母音空間拡大の報告；Kuhl et al., 1997 は二次）、むしろ不明瞭であるか（Martin et al., 2015）について結論が分かれている。",
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する",
+    "body": "小椋・浜辺 (2021) は9〜24か月児の母子158組の5分間のままごと遊びを分析し、母親の育児語のうち特殊モーラ（撥音・促音・長音など）を含む語と自立モーラの反復語を合わせると、事物育児語のタイプの91.7%、動作育児語のタイプの88.9%を占めた。158名中144名（91.1%）の母親が育児語を使用し、動作育児語の使用者（89.9%）は事物育児語の使用者（50%）より多く、育児語の使用量に子どもの月齢による有意差はなかった。Hayashi & Mazuka (2017) はヘッドターン選好法による5実験で、日本語の育児語に特徴的で成人語にはまれな2音節の重—軽（H-L）型の語を、8〜10か月児は選好したが4〜6か月児は選好しなかったことを示した。IDS は成人語では目立たない形式についても乳児の選好を形成しうる。",
+    "age": "4〜24か月",
+    "domain": "言語環境",
+    "tags": [
+      "育児語",
+      "幼児語",
+      "特殊モーラ",
+      "重—軽音節",
+      "オノマトペ",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "小椋たみ子・浜辺直子 (2021). 日本の母親の育児語の特徴と子どもの語彙獲得に及ぼす効果：事物語と動作語について. Studies in Language Sciences（日本言語科学会）, 19(2), 1–18.",
+        "url": "https://www.jstage.jst.go.jp/article/sls/19/2/19_190201/_pdf",
+        "level": "本文"
+      },
+      {
+        "cite": "Hayashi, A., & Mazuka, R. (2017). Emergence of Japanese infants' prosodic preferences in infant-directed vocabulary. Developmental Psychology, 53(1), 28–37.",
+        "url": "https://doi.org/10.1037/dev0000259",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "母親の育児語使用の効果は時期と語の種類で異なり、14か月時の事物育児語は後の成人語の事物語獲得と正、24か月時の動作育児語は後の動作語獲得と負の関連を示す",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+      "米国の母親は日本の母親より物のラベル付けを頻繁かつ一貫して行い、日本の母親は物を使った社会的ルーティンに乳児を誘うことが多い",
+      "日本語の母音の長短（/mana/–/ma:na/）の弁別は、7.5〜9.5か月の間に成立する",
+      "音象徴性のある新奇動詞では、日本語3歳児も動作の同一性に基づく動詞の般化ができる"
+    ],
+    "builds_on": [],
+    "leads_to": [
+      {
+        "skill": "語の切り出し（分節化）",
+        "evidence": "理論上の仮説",
+        "basis": "重音節は連続音声の中で際立ち、乳児がH-L連鎖を単位として分節できるようになるとする説明（Hayashi & Mazuka, 2017 の議論を小椋・浜辺, 2021 が紹介；本文）。"
+      }
+    ]
+  },
+  {
+    "title": "母親の育児語使用の効果は時期と語の種類で異なり、14か月時の事物育児語は後の成人語の事物語獲得と正、24か月時の動作育児語は後の動作語獲得と負の関連を示す",
+    "body": "小椋・浜辺 (2021) は母親の発話中の育児語率（育児語／〔育児語＋成人語〕）と33か月時の JCDIs 表出取得率の関連を、観察時点の取得率を統制した偏相関で検討した。14か月児の母親の事物育児語率は33か月の成人語形の事物語と正の関連（タイプ r = 0.412、トークン r = 0.411）を、動作育児語率（トークン）は33か月の動作幼児語と正の関連（r = 0.491）を示した。一方、24か月児の母親の動作育児語率は33か月の動作幼児語（r = −0.483〜−0.552）・動作成人語（r = −0.485〜−0.495）と負の関連を示した。著者らは、動詞の活用形が出現し始める時期に活用しない動作名詞形の入力が多いことが動詞獲得に負に働く可能性を論じ、育児語は子どもの年齢・言語発達に合わせて使うことが重要と結論している。各月齢の追跡児は18〜26名の小標本で、分析は5分間のままごと場面に限られる。",
+    "age": "14〜33か月",
+    "domain": "言語環境",
+    "tags": [
+      "育児語",
+      "幼児語",
+      "動作語",
+      "事物語",
+      "JCDIs",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "小椋たみ子・浜辺直子 (2021). 日本の母親の育児語の特徴と子どもの語彙獲得に及ぼす効果：事物語と動作語について. Studies in Language Sciences（日本言語科学会）, 19(2), 1–18.",
+        "url": "https://www.jstage.jst.go.jp/article/sls/19/2/19_190201/_pdf",
+        "level": "本文"
+      }
+    ],
+    "related": [
+      "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+      "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する",
+      "社会的・文脈的支援のない条件で語と物の恣意的な連合を最小限の提示で形成できるのは、14か月頃からである"
+    ],
+    "debate": "育児語の使用の是非は育児・保育の現場でも議論があり（小椋・浜辺, 2021）、本研究は効果が語の種類と時期によって正にも負にもなりうることを示している。",
+    "builds_on": [],
+    "leads_to": [
+      {
+        "skill": "成人語形の事物語（33か月）",
+        "evidence": "縦断で予測",
+        "basis": "14か月児の母親の事物育児語率が33か月の成人語形事物語の取得率と正の偏相関を示した（小椋・浜辺, 2021, Studies in Language Sciences, 19(2), 1–18；本文）。"
+      },
+      {
+        "skill": "動作語（動詞）の獲得（33か月）",
+        "evidence": "縦断で予測",
+        "basis": "24か月児の母親の動作育児語率が33か月の動作幼児語・動作成人語の取得率と負の偏相関を示した（小椋・浜辺, 2021；本文）。"
+      }
+    ]
+  },
+  {
+    "title": "音象徴性のある新奇動詞では、日本語3歳児も動作の同一性に基づく動詞の般化ができる",
+    "body": "Imai, Kita, Nagumo, & Okada (2008) は、日本語・英語の成人と2・3歳の日本語児によって特定の動作によく合うと判断された音象徴的な新奇動詞を作成し、25か月児が動作領域の通言語的に妥当な音象徴の対応に敏感であることを示した。動詞学習課題では、3歳児は非音象徴的な新奇動詞については先行研究どおり動作の同一性に基づく般化ができなかったが、音象徴的な新奇動詞では正しく般化できた。著者らは、音象徴による類像的な足場かけが初期の動詞学習で重要な役割を果たすと提案している。",
+    "age": "25か月〜3歳",
+    "domain": "語意学習",
+    "tags": [
+      "音象徴",
+      "オノマトペ",
+      "動詞学習",
+      "類像性",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "Imai, M., Kita, S., Nagumo, M., & Okada, H. (2008). Sound symbolism facilitates early verb learning. Cognition, 109(1), 54–65.",
+        "url": "https://doi.org/10.1016/j.cognition.2008.07.015",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "新奇動詞の般化は新奇名詞より難しく、日本語児でも3歳では動作の同一性だけに基づく動詞の般化が困難で、5歳で可能になる",
+      "日本語の育児語は特殊モーラを含む形（重—軽音節）や自立モーラの反復がほとんどを占め、8〜10か月児はこの韻律型を選好する",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い"
+    ],
+    "builds_on": [
+      {
+        "skill": "音と動作の非恣意的対応（音象徴）への感受性",
+        "evidence": "相関のみ",
+        "basis": "25か月児が動作領域の通言語的に妥当な音象徴の対応に敏感であることが示された（Imai, Kita, Nagumo, & Okada, 2008, Cognition, 109(1), 54–65；抄録）。"
+      }
+    ],
+    "leads_to": [
+      {
+        "skill": "新奇動詞の般化は新奇名詞より難しく、日本語児でも3歳では動作の同一性だけに基づく動詞の般化が困難で、5歳で可能になる",
+        "evidence": "介入で確認",
+        "basis": "実験室での短期学習課題で、音象徴的な新奇動詞では3歳児が動作の同一性に基づく般化に成功した（Imai et al., 2008；抄録）。日常的な語彙発達への長期効果は検証されていない。"
+      }
+    ]
+  },
+  {
+    "title": "上位レベルのカテゴリーは基礎レベルより後に獲得され、その学習には言語的説明が年長児で役立つ",
+    "body": "Mervis & Crisafi (1982) は2歳6か月・4歳・5歳6か月児に無意味図形を用いて「同じ種類のもの」を選ばせ、カテゴリー化能力が基礎レベル→上位レベル→下位レベルの順に獲得されることを示し、そのレベルのカテゴリーの分化度が高いほど早く獲得されると論じた。Horton & Markman (1980) は人工的な動物カテゴリーの学習課題で、基準属性の言語的説明が上位カテゴリーの獲得のみを、しかも年長の子どもでのみ促進することを示し（対象は就学前児・幼稚園児・小学1年生）、成員間の知覚的類似性が低い上位カテゴリーには言語情報が必要になると論じた。日本語児では、小坂 (2012) の3〜6歳児117名の絵カード呼称課題で、3歳前半〜4歳前半群の誤りに上位語（例：タンポポ→花、ヒヨコ→鳥）や等位語が多く、細部まで分化できない語では上位語で呼ぶ傾向が見られた。",
+    "age": "2歳半〜6歳",
+    "domain": "語彙",
+    "tags": [
+      "上位語",
+      "カテゴリー語",
+      "基礎レベル",
+      "カテゴリー階層",
+      "呼称"
+    ],
+    "lang_data": "多言語",
+    "sources": [
+      {
+        "cite": "Mervis, C. B., & Crisafi, M. A. (1982). Order of acquisition of subordinate-, basic-, and superordinate-level categories. Child Development, 53(1), 258–266.",
+        "url": "https://doi.org/10.2307/1129660",
+        "level": "抄録"
+      },
+      {
+        "cite": "Horton, M. S., & Markman, E. M. (1980). Developmental differences in the acquisition of basic and superordinate categories. Child Development, 51(3), 708–719.",
+        "url": "https://doi.org/10.2307/1129456",
+        "level": "抄録"
+      },
+      {
+        "cite": "小坂美鶴 (2012). 典型発達児の呼称課題における語彙の発達：誤りの分析から見る語意味とその構造. 音声言語医学, 53(3), 212–218.",
+        "url": "https://doi.org/10.5112/jjlp.53.212",
+        "level": "本文"
+      },
+      {
+        "cite": "Waxman, S. R., & Markow, D. B. (1995). Words as invitations to form categories: Evidence from 12- to 13-month-old infants. Cognitive Psychology, 29(3), 257–302.",
+        "url": "https://doi.org/10.1006/cogp.1995.1016",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "12〜13か月児でも、物に付与された語は物のカテゴリーへの注意を高め、その効果は特に上位レベルで見られる（名詞—カテゴリー結合）",
+      "既知物に与えられた新しい語を、日本語3歳児は形の典型性に応じて下位カテゴリー名か、既知カテゴリーと相互排他的な新カテゴリー名として解釈する",
+      "語意学習の制約（事物全体・事物カテゴリー〔タクソノミー〕・相互排他性）は、新奇語の意味の仮説空間を絞り込む"
+    ],
+    "debate": "12〜13か月児では語の付与が特に上位レベルのカテゴリー化を促すという報告もあり（Waxman & Markow, 1995）、上位レベルの位置づけは課題と測度（語の産出・カテゴリー判断・注意課題）によって異なる。日本語児の上位語の産出・理解の獲得時期を直接扱った規準的データは今回確認できていない。",
+    "builds_on": [
+      {
+        "skill": "12〜13か月児でも、物に付与された語は物のカテゴリーへの注意を高め、その効果は特に上位レベルで見られる（名詞—カテゴリー結合）",
+        "evidence": "理論上の仮説",
+        "basis": "語が物のカテゴリー形成を促すという名詞—カテゴリー結合（Waxman & Markow, 1995；抄録）を上位語学習の基盤とみなす位置づけ。直接の縦断検証は確認していない。"
+      }
+    ],
+    "leads_to": []
+  },
+  {
+    "title": "日本語児の2歳時点の表出語彙：JCDIs（J-CDI）では2歳で50語前後は男児の15パーセンタイル以下、女児の5パーセンタイル以下に相当する",
+    "body": "奥村・小林 (2019) によれば、J-CDI では2歳時の表出語彙50語前後は男児の15パーセンタイル以下、女児の5パーセンタイル以下に相当し、同研究のレイトトーカー群の平均33.8語は男女とも18か月の標準化データの50パーセンタイル付近に相当する。同研究で24か月の標準化データの25パーセンタイル以上の児から抽出した定型発達24か月児12名の平均表出語彙は212.0語（範囲110〜289語）で、全員に2語文が見られた。英語圏では24か月の定型発達児の平均表出語彙は150〜180語とされ（Rescorla et al., 2000 の引用）、レイトトーカーの代表的基準 Delay-3 は「2歳で表出語彙50語以下、または2語発話なし」である（同論文による紹介）。JCDIs の月齢別パーセンタイル表そのもの（綿巻・小椋, 2004；小椋ら, 2016）は今回確認していない。",
+    "age": "24か月",
+    "domain": "語彙",
+    "tags": [
+      "語彙サイズ",
+      "2歳",
+      "JCDIs",
+      "パーセンタイル",
+      "レイトトーカー",
+      "Delay-3"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "奥村優子・小林哲生 (2019). 日本語レイト・トーカーにおける表出語彙のカテゴリ構成の検討. 音声言語医学, 60(3), 205–213.",
+        "url": "https://doi.org/10.5112/jjlp.60.205",
+        "level": "本文"
+      },
+      {
+        "cite": "Rescorla, L., Mirak, J., & Singh, L. (2000). Vocabulary growth in late talkers: Lexical development from 2;0 to 3;0. Journal of Child Language, 27, 293–311.",
+        "url": "（奥村・小林, 2019 の引用による）",
+        "level": "二次"
+      }
+    ],
+    "related": [
+      "表出語彙の意味構成は月齢よりも語彙サイズに対応する：日本語レイトトーカー（24か月）の語彙構成は、語彙数を揃えた年少の定型児に類似する",
+      "8〜30か月の語彙・身ぶり・文法の発達速度の個人差は非常に大きく、性差やSES・出生順位の効果はごく小さい（英語圏の親報告）",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+      "子どもに向けられた発話の量は語処理効率を介して24か月の表出語彙を予測し、子どもが傍らで聞くだけの発話は語彙と関連しない"
+    ],
+    "builds_on": [],
+    "leads_to": [
+      {
+        "skill": "学齢期（8歳）の言語・認知能力",
+        "evidence": "縦断で予測",
+        "basis": "25か月時の語彙サイズが8歳時の言語・認知スキルの独自の分散を説明した（Marchman & Fernald, 2008, Developmental Science, 11(3), F9–F16；抄録。英語圏）。"
+      }
+    ]
+  },
+  {
+    "title": "表出語彙の意味構成は月齢よりも語彙サイズに対応する：日本語レイトトーカー（24か月）の語彙構成は、語彙数を揃えた年少の定型児に類似する",
+    "body": "奥村・小林 (2019) は、表出語彙が50語台以下で語連結のない24か月児12名（平均33.8語）を、語彙数を揃えた17〜18か月の定型児12名（平均33.0語、2語文なし）および月齢を揃えた24か月の定型児12名（平均212.0語、全員2語文あり）と J-CDI で比較した。語彙カテゴリ構成はレイトトーカー群と語彙数統制群で非常に類似していた。意味カテゴリでは、レイトトーカー群と語彙数統制群で社会語と幼児語の割合が高く、月齢統制群で普通名詞と述部の割合が高かった。日本語のレイトトーカーは遅れはあるものの、語彙数が同程度の年少の定型児と似た獲得パタンをたどる傾向が示唆された。各群12名の小標本である。",
+    "age": "17〜25か月",
+    "domain": "語彙",
+    "tags": [
+      "語彙構成",
+      "レイトトーカー",
+      "幼児語",
+      "社会語",
+      "日本語児"
+    ],
+    "lang_data": "日本語児",
+    "sources": [
+      {
+        "cite": "奥村優子・小林哲生 (2019). 日本語レイト・トーカーにおける表出語彙のカテゴリ構成の検討. 音声言語医学, 60(3), 205–213.",
+        "url": "https://doi.org/10.5112/jjlp.60.205",
+        "level": "本文"
+      },
+      {
+        "cite": "Bornstein, M. H., Cote, L. R., Maital, S., Painter, K., Park, S.-Y., Pascual, L., Pêcheux, M.-G., Ruel, J., Venuti, P., & Vyt, A. (2004). Cross-linguistic analysis of vocabulary in young children: Spanish, Dutch, French, Hebrew, Italian, Korean, and American English. Child Development, 75(4), 1115–1139.",
+        "url": "https://doi.org/10.1111/j.1467-8624.2004.00729.x",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "日本語児の2歳時点の表出語彙：JCDIs（J-CDI）では2歳で50語前後は男児の15パーセンタイル以下、女児の5パーセンタイル以下に相当する",
+      "JCDIs の早期表出50語の4割は幼児語であり、日本語児の初期語彙は米国児より普通名詞の比率が低く、50語到達も遅い",
+      "日本語児は一語発話期・絵本場面では名詞優位だが、玩具場面では統語段階に入ると動詞優位へ移行する",
+      "8〜30か月の語彙・身ぶり・文法の発達速度の個人差は非常に大きく、性差やSES・出生順位の効果はごく小さい（英語圏の親報告）"
+    ],
+    "builds_on": [],
+    "leads_to": []
+  },
+  {
+    "title": "8〜30か月の語彙・身ぶり・文法の発達速度の個人差は非常に大きく、性差やSES・出生順位の効果はごく小さい（英語圏の親報告）",
+    "body": "Fenson et al. (1994) は MacArthur CDI 標準化研究の1,803名の親報告から8〜30か月の典型的な経過と変動を記述し、理解・表出語彙、動作と身ぶり、形態・統語について10・25・50・75・90パーセンタイルの成長曲線を示した。語彙・身ぶり・文法の発達速度には大きな変動があり、開始時期と経過の幅の広さは「典型的な子ども（modal child）」という概念の有意味性を問い直すほどであった。性差は一貫して女児優位だが分散の1〜2%程度と非常に小さく、この年齢範囲での SES と出生順位の効果はさらに小さかった。異なるスキル間には同時的にも6か月間の予測的にも中程度から高い相関があった。",
+    "age": "8〜30か月",
+    "domain": "語彙",
+    "tags": [
+      "個人差",
+      "CDI",
+      "性差",
+      "SES",
+      "パーセンタイル"
+    ],
+    "lang_data": "英語圏",
+    "sources": [
+      {
+        "cite": "Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., & Pethick, S. J. (1994). Variability in early communicative development. Monographs of the Society for Research in Child Development, 59(5), 1–173.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/7845413/",
+        "level": "抄録"
+      }
+    ],
+    "related": [
+      "日本語児の2歳時点の表出語彙：JCDIs（J-CDI）では2歳で50語前後は男児の15パーセンタイル以下、女児の5パーセンタイル以下に相当する",
+      "語彙スパート（語彙爆発）は平均像としては1歳後半に語られるが、すべての子どもに明確な加速点があるわけではない",
+      "子どもに向けられた発話の量は語処理効率を介して24か月の表出語彙を予測し、子どもが傍らで聞くだけの発話は語彙と関連しない",
+      "日本語児の最初期の有意味語は動作に伴う語・社会的な語・「マンマ」などであり、指示対象の明確な普通名詞や動詞はその後に現れる"
+    ],
+    "debate": "大規模な親報告データではSESの効果がごく小さい一方、観察・実験的測度では18か月で既に語彙と処理効率にSES差が見られるという報告がある（Fernald, Marchman, & Weisleder, 2013）。測度と標本の違いによって環境要因の見積もりが異なる。",
+    "builds_on": [],
+    "leads_to": [
+      {
+        "skill": "文法（形態・統語）の発達",
+        "evidence": "縦断で予測",
+        "basis": "語彙・身ぶり・文法などのスキル間に6か月間の予測的相関（中〜高程度）があった（Fenson et al., 1994, Monographs SRCD, 59(5)；抄録）。個別の経路（語彙→文法）の方向性は抄録からは特定できない。"
+      }
+    ]
+  }
+]
