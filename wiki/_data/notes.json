@@ -6846,6 +6846,620 @@
   ]
  },
  {
+  "id": "SV-17",
+  "title": "4歳児は1つの食べ物を分類学的カテゴリーとスクリプトカテゴリーの両方に入れられ、7歳で成人並みの正確さになる",
+  "domain": "学齢期の語彙・意味",
+  "age": "3〜7歳（成人比較あり）",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "英語圏",
+  "tags": [
+   "交差分類",
+   "カテゴリー",
+   "分類学的カテゴリー",
+   "スクリプトカテゴリー",
+   "食べ物",
+   "ベン図ワークシート"
+  ],
+  "body": "Nguyen & Murphy (2003) は食べ物について、分類学的（果物など）・スクリプト（朝ごはんの食べ物など）・評価的（ジャンクフードなど）カテゴリーを3択マッチング課題で調べた。実験3（4歳・7歳・成人各16名）では同じ標的12品目を分類学的トライアドとスクリプトトライアドの両方で出し、正答率は4歳で66%／60%、7歳で89%／83%、成人で89%／89%だった（年齢の主効果あり、全群チャンス以上）。両方の課題で正しく分類された品目数は独立性からの予測（4.87）と差がなく（観察4.75）、片方にしか入れない傾向は見られなかったため、著者らは交差分類ができると解釈した。3歳児（実験2）は分類学的・スクリプトとも60%でチャンスは上回ったが年長群より低かった。Nguyen (2007) も2〜6歳で分類学的・スクリプトの交差分類を報告し、Nguyen & Gelman (2012) では適切な水準の総称表現の手がかり（「たべもの」「誕生会のもの」など）が5歳児の交差分類を助けた。限界：3択のマッチング課題であり、2つの基準を同時に満たす位置に置くベン図課題とは要求が異なる。",
+  "debate": "交差分類の「できる」は課題形式（マッチング／自由分類／帰納推論）で大きく変わる。Nguyen & Murphy (2003) は、スクリプトカテゴリーから分類学的カテゴリーへの発達的移行を示す証拠はないとしている。",
+  "sources": [
+   {
+    "cite": "Nguyen, S. P., & Murphy, G. L. (2003). An apple is more than just a fruit: Cross-classification in children's concepts. Child Development, 74(6), 1783–1806.",
+    "url": "https://doi.org/10.1046/j.1467-8624.2003.00638.x",
+    "level": "本文"
+   },
+   {
+    "cite": "Nguyen, S. P. (2007). Cross-classification and category representation in children's concepts. Developmental Psychology, 43(3), 719–731.",
+    "url": "https://doi.org/10.1037/0012-1649.43.3.719",
+    "level": "抄録"
+   },
+   {
+    "cite": "Nguyen, S. P., & Gelman, S. A. (2012). Generic language facilitates children's cross-classification. Cognitive Development, 27(2), 154–167.",
+    "url": "https://doi.org/10.1016/j.cogdev.2012.01.001",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "分類学的カテゴリー語彙（上位語）の知識",
+    "evidence": "相関のみ",
+    "basis": "3歳児は個別品目によって成績がチャンス以上かどうかが分かれ、カテゴリー知識の量が成績を左右することが示唆される（Nguyen & Murphy, 2003）。"
+   },
+   {
+    "skill": "言語ラベルによる分類の手がかり",
+    "evidence": "介入で確認",
+    "basis": "適切な水準の総称表現の手がかりで5歳児の交差分類が促進された（Nguyen & Gelman, 2012）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "ベン図の「両方」領域への配置"
+   },
+   {
+    "skill": "カテゴリーに基づく選択的な帰納推論"
+   }
+  ],
+  "nd_note": "",
+  "links": [
+   "SV-21",
+   "SV-22",
+   "SV-18"
+  ]
+ },
+ {
+  "id": "SV-18",
+  "title": "2属性マトリックス（2×2）分類の成功年齢は課題形式で大きく変わり、帰納型課題では6〜8歳、演繹型では4〜5歳でも成功する",
+  "domain": "学齢期の語彙・意味",
+  "age": "3〜8歳",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "マトリックス分類",
+   "重複分類",
+   "乗法的分類",
+   "ピアジェ",
+   "認知的柔軟性",
+   "課題効果"
+  ],
+  "body": "ピアジェの伝統では、2次元を同時に扱う重複（乗法的）分類は7〜8歳の具体的操作期の指標の1つとされる（高橋・都築 1983 による紹介）。土居 (1977) の2×2マトリックス空所補完（色・形・大きさ・数のうち2次元、10項目）では、5歳児は低く、8歳児はどの条件でも高く、6歳児だけ条件差が出た。Siegler & Svetina (2002) はスロベニアの子ども135名で、7セッションの微視発生的変化と6歳→7歳の年齢変化がよく似ていることを示した。一方、Podjarny ら (2017) の多次元カード選択課題（3歳50名・4歳57名）では半数以上が3次元を3試行一貫して同時に扱え、Podjarny ら (2022, N=102) の演繹型マトリックス課題では4・5歳が成功した。つまり「2属性同時」の成功年齢は、規則を自分で見つける帰納型か、条件を言われてそれに合う物を選ぶ演繹型かで大きく変わる。限界：課題間で刺激（知覚属性）・反応形式が異なり、単純に年齢を比べることはできない。",
+  "debate": "ピアジェ派の「具体的操作期（7〜8歳）まで同時に2次元を扱えない」という見方に対し、演繹型課題では就学前でも成功するという反論がある（Podjarny et al., 2022）。高橋・都築 (1983) の7〜8歳という記述は二次的紹介で、Inhelder & Piaget の原典は確認していない。",
+  "sources": [
+   {
+    "cite": "土居道栄 (1977). 幼児の重複分類課題におよぼす刺激言語化の効果について. 教育心理学研究, 25(2), 116–126.",
+    "url": "https://doi.org/10.5926/jjep1953.25.2_116",
+    "level": "抄録"
+   },
+   {
+    "cite": "高橋有美子・都築繁幸 (1983). 聴覚障害児の重複分類能力の発達的検討. 心身障害学研究, 7(2), 49–55.",
+    "url": "https://tsukuba.repo.nii.ac.jp/records/21904",
+    "level": "二次"
+   },
+   {
+    "cite": "Siegler, R. S., & Svetina, M. (2002). A microgenetic/cross-sectional study of matrix completion: Comparing short-term and long-term change. Child Development, 73(3), 793–809.",
+    "url": "https://doi.org/10.1111/1467-8624.00439",
+    "level": "抄録"
+   },
+   {
+    "cite": "Podjarny, G., Kamawar, D., & Andrews, K. (2017). The Multidimensional Card Selection Task: A new way to measure concurrent cognitive flexibility in preschoolers. Journal of Experimental Child Psychology, 159, 199–218.",
+    "url": "https://doi.org/10.1016/j.jecp.2017.02.006",
+    "level": "抄録"
+   },
+   {
+    "cite": "Podjarny, G., Kamawar, D., & Andrews, K. (2022). Two birds in the hand: Concurrent and switching cognitive flexibility in preschoolers. Journal of Experimental Child Psychology, 220, 105418.",
+    "url": "https://doi.org/10.1016/j.jecp.2022.105418",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "切り替え型の認知的柔軟性（DCCSなど）",
+    "evidence": "相関のみ",
+    "basis": "多次元カード選択課題の成績はDCCSと関連するが同一ではなかった（Podjarny et al., 2017）。"
+   },
+   {
+    "skill": "一般知能",
+    "evidence": "相関のみ",
+    "basis": "マトリックス課題での学習量はIQと正に相関した（Siegler & Svetina, 2002）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "保存課題"
+   },
+   {
+    "skill": "ベン図・表（キャロル図）による分類"
+   }
+  ],
+  "nd_note": "",
+  "links": [
+   "SV-19",
+   "SV-20",
+   "SV-21"
+  ]
+ },
+ {
+  "id": "SV-19",
+  "title": "日本語児の重複分類課題では、刺激を言葉で言わせることが6歳児の遂行を促進し、言語化訓練は新しい刺激への転移も高めた",
+  "domain": "学齢期の語彙・意味",
+  "age": "5〜8歳（効果は6歳で顕著）",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "重複分類",
+   "言語化",
+   "マトリックス",
+   "訓練",
+   "日本語児",
+   "転移"
+  ],
+  "body": "土居 (1977) は5・6・8歳児に2×2マトリックスの空所補完課題10項目を行い、刺激の認知（言語化／知覚的同定）×反応（言語反応／選択肢からの選択）の条件を比べた。年齢差は顕著で、条件の効果は6歳児だけに有意だった。6歳児では、刺激を言語化させる条件と言語で答える条件が促進的で、両方がそろうと効果が最も大きかった。実験IIでは課題が解けない6歳児に、マトリックス要素を言語化させる訓練と正答の視覚的フィードバックのみの訓練を比べた。言語化訓練群のほうが学習基準に早く到達し、新しい刺激からなる転移課題でも成績が高かった。限界：抄録に人数の記載がなく、刺激は色・形などの知覚次元に限られる。語のカテゴリー（のりもの等）で同じ効果が出るかは検証されていない。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "土居道栄 (1977). 幼児の重複分類課題におよぼす刺激言語化の効果について. 教育心理学研究, 25(2), 116–126.",
+    "url": "https://doi.org/10.5926/jjep1953.25.2_116",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "属性（色・形など）を表す語の産出",
+    "evidence": "介入で確認",
+    "basis": "マトリックス要素の言語化訓練が非言語訓練より学習と転移を促進した（土居, 1977）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "2属性ベン図での自己教示（「のりもの？そらをとぶ？」と言いながら置く）"
+   }
+  ],
+  "nd_note": "",
+  "links": [
+   "SV-18",
+   "SV-20"
+  ]
+ },
+ {
+  "id": "SV-20",
+  "title": "多重分類スキルは訓練で獲得でき、その効果は訓練素材に近い領域で強く出る",
+  "domain": "学齢期の語彙・意味",
+  "age": "5〜10歳",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "英語圏",
+  "tags": [
+   "多重分類",
+   "訓練",
+   "転移",
+   "ステレオタイプ",
+   "マトリックス"
+  ],
+  "body": "Bigler & Liben (1992) は5〜10歳児75名を、性別ステレオタイプと多重分類スキルの事前テストで揃えてから、(1)非社会的刺激による多重分類訓練、(2)社会的刺激（職業と性別など）による多重分類訓練、(3)規則訓練、(4)統制の4群に割り当てた。社会的刺激で多重分類を獲得した群と規則訓練群は、その後のステレオタイプ測度でより平等な反応を示し、反ステレオタイプ情報の記憶も良かった。非社会的刺激で訓練した群は記憶は改善したが、ステレオタイプ測度での柔軟性は高まらなかった。Siegler & Svetina (2002) もマトリックス課題が数セッションの練習で上達し、保存課題へ般化したと報告している。限界：訓練効果は訓練した素材に近い領域で強く、別領域への転移は一様ではない。",
+  "debate": "非社会的素材での分類訓練が社会的判断の柔軟性に転移しなかった点は、領域一般の「論理操作」の獲得という説明の限界を示す。",
+  "sources": [
+   {
+    "cite": "Bigler, R. S., & Liben, L. S. (1992). Cognitive mechanisms in children's gender stereotyping: Theoretical and educational implications of a cognitive-based intervention. Child Development, 63(6), 1351–1363.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/1446556/",
+    "level": "抄録"
+   },
+   {
+    "cite": "Siegler, R. S., & Svetina, M. (2002). A microgenetic/cross-sectional study of matrix completion: Comparing short-term and long-term change. Child Development, 73(3), 793–809.",
+    "url": "https://doi.org/10.1111/1467-8624.00439",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "1次元での分類",
+    "evidence": "理論上の仮説",
+    "basis": "多重分類は単一次元の分類の協調として理論化されている（ピアジェ派の前提。Bigler & Liben, 1992 の抄録では明示されていない）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "反ステレオタイプ情報の記憶"
+   },
+   {
+    "skill": "例外を含むカテゴリーの柔軟な理解"
+   }
+  ],
+  "nd_note": "",
+  "links": [
+   "SV-18",
+   "SV-19"
+  ]
+ },
+ {
+  "id": "SV-21",
+  "title": "同じ対象を別のカテゴリーで捉え直す柔軟性は、概念知識（3→4歳）と実行制御（4→5歳）の発達がずれて支えている",
+  "domain": "学齢期の語彙・意味",
+  "age": "3〜5歳",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "カテゴリー柔軟性",
+   "実行機能",
+   "心の理論",
+   "交差分類",
+   "DCCS"
+  ],
+  "body": "Blaye & Jacques (2009) は3〜5歳児に、分類学的・主題的・無関連の3択マッチング課題で「2つの仲間」を選ばせ（実験1）、さらに分類学的・主題的な連合を別々の試行で出して実行制御の負荷を下げた課題（実験2）と比べた。上位カテゴリー関係の概念知識は3〜4歳で伸び、実行制御の伸びは4〜5歳に見られたので、柔軟性を支える2つの過程の発達にはずれがあると結論した。Nguyen & McDermott (2024) は3〜5歳児75名で、年齢と心の理論（特に高次の心の理論）が、規則切り替え（3次元DCCS）の効果を超えて交差分類を予測したと報告した。限界：いずれも横断研究で、心の理論と交差分類の関係の因果は未検証。",
+  "debate": "交差分類の基盤を実行機能（切り替え・抑制）とみるか、表象の多重性の理解（心の理論）とみるかで立場が分かれる。",
+  "sources": [
+   {
+    "cite": "Blaye, A., & Jacques, S. (2009). Categorical flexibility in preschoolers: Contributions of conceptual knowledge and executive control. Developmental Science, 12(6), 863–873.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2009.00832.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Nguyen, S. P., & McDermott, C. (2024). Holding multiple category representations: The role of age, theory of mind, and rule switching in children's developing cross-classification abilities. Journal of Experimental Child Psychology, 237, 105716.",
+    "url": "https://doi.org/10.1016/j.jecp.2023.105716",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "上位カテゴリーの概念知識",
+    "evidence": "相関のみ",
+    "basis": "上位関係の知識は3〜4歳で伸びた（Blaye & Jacques, 2009、横断比較）。"
+   },
+   {
+    "skill": "実行制御（抑制・切り替え）",
+    "evidence": "相関のみ",
+    "basis": "実行負荷の高い課題での伸びは4〜5歳に見られた（Blaye & Jacques, 2009）。"
+   },
+   {
+    "skill": "心の理論（高次）",
+    "evidence": "相関のみ",
+    "basis": "年齢とDCCSを統制しても交差分類を予測した（Nguyen & McDermott, 2024、横断）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "交差分類"
+   },
+   {
+    "skill": "1つの語を複数の観点から説明する力"
+   }
+  ],
+  "nd_note": "自閉スペクトラム症では認知的柔軟性の弱さがメタ分析で示されており（Lage et al., 2024）、交差分類課題にも影響しうるが、ASD児で交差分類を直接測った研究は今回確認できなかった。",
+  "links": [
+   "SV-17",
+   "SV-18",
+   "SV-25"
+  ]
+ },
+ {
+  "id": "SV-22",
+  "title": "幼児は1つの物が2種類のカテゴリー（素材と物の種類など）に同時に属することを推論で使えるが、クラス包含の言語的質問は学齢期まで難しい",
+  "domain": "学齢期の語彙・意味",
+  "age": "3〜8歳",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "クラス包含",
+   "多重分類",
+   "帰納推論",
+   "交差",
+   "共通部分",
+   "両方"
+  ],
+  "body": "Kalish & Gelman (1992) は素材カテゴリー（木・綿）と物のカテゴリー（いす・まくら）を組み合わせた「木のまくら」などで、幼児が性質の種類に応じてどちらのカテゴリーで推論するかを調べた。手ざわりやこわれやすさは素材に基づいて推論し、未知の性質も、素材を共有する物は傾向性（水でふやけるなど）を、物の種類を共有する物は機能的性質を共有すると判断した。研究3では3歳児でも同じ感受性が見られた（個人差は大きい）。一方、ピアジェ型のクラス包含課題（上位クラスと下位クラスの数比較）については、Brunetti ら (2021) が5〜6歳と7〜8歳を比べ、7〜8歳のほうが成績が高かった。Siegler & Svetina (2006) では、5歳児は経験的説明より論理的説明を受けたほうがよく学習した。限界：「両方に属する」の暗黙的な利用と、「どちらが多い？」のような明示的・言語的判断とでは、成功年齢が大きく異なる。",
+  "debate": "Brunetti ら (2021) は、量化表現の理解とクラス包含が別々に発達すると示唆し、ピアジェの「共通の論理的制約」説に疑問を呈した。",
+  "sources": [
+   {
+    "cite": "Kalish, C. W., & Gelman, S. A. (1992). On wooden pillows: Multiple classification and children's category-based inductions. Child Development, 63(6), 1536–1557.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/1446568/",
+    "level": "抄録"
+   },
+   {
+    "cite": "Brunetti, M., Di Matteo, R., Aureli, T., Garito, M. C., & Casadio, C. (2021). Class inclusion versus quantifiers comprehension tasks: An experimental study with school-aged children. Cognitive Processing, 22(1), 151–158.",
+    "url": "https://doi.org/10.1007/s10339-020-00995-3",
+    "level": "抄録"
+   },
+   {
+    "cite": "Siegler, R. S., & Svetina, M. (2006). What leads children to adopt new strategies? A microgenetic/cross-sectional study of class inclusion. Child Development, 77(4), 997–1015.",
+    "url": "https://doi.org/10.1111/j.1467-8624.2006.00915.x",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "素材語・物の名前の語彙",
+    "evidence": "理論上の仮説",
+    "basis": "Kalish & Gelman (1992) は、具体的な理論知識がなくても領域に分けて整理できることが関連カテゴリーの選択を可能にすると論じた。"
+   },
+   {
+    "skill": "論理的説明の理解",
+    "evidence": "介入で確認",
+    "basis": "5歳児は論理的説明でクラス包含をよりよく学習した（Siegler & Svetina, 2006）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "ベン図の共通部分（両方）の理解"
+   },
+   {
+    "skill": "上位・下位概念の階層理解"
+   }
+  ],
+  "nd_note": "ASD児（Ming et al., 2018）やASDと中等度の学習障害を伴う成人（Zagrabska-Swiatkowska et al., 2020）で、入れ子の透明な箱など非恣意的手がかりを用いたクラス包含訓練の成功例がある（少数例）。",
+  "links": [
+   "SV-17",
+   "SV-24",
+   "SV-25"
+  ]
+ },
+ {
+  "id": "SV-23",
+  "title": "日本語の「だけ」の解釈は、付く位置（主語／目的語）と格助詞の有無で幼児の正答率が大きく変わり、就学前後まで大人と異なる",
+  "domain": "学齢期の語彙・意味",
+  "age": "4〜12歳",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "だけ",
+   "only",
+   "焦点詞",
+   "真偽判断課題",
+   "格助詞",
+   "日本語児"
+  ],
+  "body": "Matsuoka (2007) は横浜の保育園児20名（分析対象17名、4;1〜6;7、平均5;4）に真偽判断課題を行い、主語・目的語に付いた「だけ」を、格助詞なし（「おまわりさんだけ恐竜を…」）とあり（「…だけが」「…だけを」）の両条件で調べた。大人らしい反応率は、主語＋だけ 97%、主語＋だけが 43%、目的語＋だけ 47%、目的語＋だけを 94% で、成人（23名）は条件差を示さなかった。英語でも主語に付く only が難しいことが知られ、Paterson ら (2003) は6〜12歳と成人（実験3では就学前児）で、誤りの主因が対比情報（他の人はしていない）を処理しないことだと報告した。Höhle ら (2016) の4歳ドイツ語児では、視線データは大人と同様の処理を示したが、文-絵照合の判断は悪く、主語前の nur の誤りは抑制制御と関連した。限界：日本語データは少人数で、ベン図の「〜だけ」（一方の集合にしか属さない）という集合的な使い方を直接調べた研究ではない。",
+  "debate": "誤りの原因を統語知識の未熟さ（主語の only を文副詞として扱う）とみるか、対比情報の処理や絵を調べる認知的負荷とみるかで論争がある（Paterson et al., 2003；Höhle et al., 2016）。",
+  "sources": [
+   {
+    "cite": "Matsuoka, K. (2007). Case/focus interaction in young children's interpretation of dake (only) in Japanese. 言語研究 (Gengo Kenkyu), 132, 15–28.",
+    "url": "https://ls-japan.org/wp-content/uploads/2024/02/132_matsuoka.pdf",
+    "level": "本文"
+   },
+   {
+    "cite": "Paterson, K. B., Liversedge, S. P., Rowland, C., & Filik, R. (2003). Children's comprehension of sentences with focus particles. Cognition, 89(3), 263–294.",
+    "url": "https://doi.org/10.1016/s0010-0277(03)00126-4",
+    "level": "抄録"
+   },
+   {
+    "cite": "Höhle, B., Fritzsche, T., & Müller, A. (2016). Children's comprehension of sentences with focus particles and the role of cognitive control: An eye tracking study with German-learning 4-year-olds. PLoS ONE, 11(3), e0149870.",
+    "url": "https://doi.org/10.1371/journal.pone.0149870",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "格助詞「が」「を」の知識",
+    "evidence": "相関のみ",
+    "basis": "格助詞の有無で「だけ」の解釈が体系的に変わった（Matsuoka, 2007）。"
+   },
+   {
+    "skill": "抑制制御・ワーキングメモリ",
+    "evidence": "相関のみ",
+    "basis": "WMは両文型の成績と、抑制制御は主語前 only の誤りと関連した（Höhle et al., 2016）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "ベン図の「〜だけ」領域の言語指示の理解"
+   },
+   {
+    "skill": "しか〜ないの理解"
+   }
+  ],
+  "nd_note": "広東語の自閉症児（5〜10歳、ASD42名・定型33名）では、主語前の「only」は定型児と同程度だったが、動詞前の「only」の正確さが低く、処理速度も遅かった（Ge et al., 2026）。",
+  "links": [
+   "SV-24",
+   "SV-25"
+  ]
+ },
+ {
+  "id": "SV-24",
+  "title": "否定・「と／か」などの論理語は2〜3歳で理解の芽が見られるが、文脈・課題要求に強く左右され、「どちらでもない」の直接データは見当たらない",
+  "domain": "学齢期の語彙・意味",
+  "age": "2〜6歳",
+  "age_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "否定",
+   "論理語",
+   "選言",
+   "連言",
+   "量化表現",
+   "どちらでもない",
+   "両方"
+  ],
+  "body": "Reuter ら (2018) は、支持的な談話文脈があれば3歳児（N=16）が肯定文・否定文の両方を理解し、2歳児（N=28）は文型を混ぜると失敗し、肯定文を先にブロック提示したときだけ成功したと報告した。Grigoroglou ら (2019) は言語化された否定（「箱には入っていない」）を使った選言的推論で、2.5歳と3歳が正しく推論したとした。Lobina ら (2026) は、先行の産出研究では大人並みの産出が連言（and）は3歳から、選言（or）は6歳からとされることを示したうえで、平均28か月児が選好注視で連言と選言を区別し、包含的な or の解釈を好むことを示した。日本語では住吉 (1995) が3〜6歳児の全称量化表現の理解を調べ、疑問詞疑問文に答えるような反応が5歳前半以下で構文と状況によって変わり、5歳後半以降はほとんど出なくなったと報告している。限界：「両方」「どちらでもない」（neither）を子どもで直接調べた発達研究は、今回の検索では見つからなかった。",
+  "debate": "否定の理解の難しさが意味処理によるのか、文脈なしの否定文の語用論的な不自然さによるのかで論争があり、Reuter ら (2018) は3歳児では後者が主なボトルネックとした。",
+  "sources": [
+   {
+    "cite": "Reuter, T., Feiman, R., & Snedeker, J. (2018). Getting to no: Pragmatic and semantic factors in two- and three-year-olds' understanding of negation. Child Development, 89(4), e364–e381.",
+    "url": "https://doi.org/10.1111/cdev.12858",
+    "level": "抄録"
+   },
+   {
+    "cite": "Grigoroglou, M., Chan, S., & Ganea, P. A. (2019). Toddlers' understanding and use of verbal negation in inferential reasoning search tasks. Journal of Experimental Child Psychology, 183, 222–241.",
+    "url": "https://doi.org/10.1016/j.jecp.2019.02.004",
+    "level": "抄録"
+   },
+   {
+    "cite": "Lobina, D. J., Bulf, H. S., & Guasti, M. T. (2026). The comprehension of conjunction and disjunction by toddlers. Journal of Child Language (online ahead of print).",
+    "url": "https://doi.org/10.1017/S0305000926100671",
+    "level": "抄録"
+   },
+   {
+    "cite": "住吉チカ (1995). 幼児の量化表現の理解について：全称量化表現を中心に. 発達心理学研究, 6(1), 17–29.",
+    "url": "https://doi.org/10.11201/jjdp.6.17",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "談話文脈の利用",
+    "evidence": "介入で確認",
+    "basis": "支持的談話文脈を与えると3歳児が否定文を理解した（Reuter et al., 2018、実験操作）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "補集合（〜でないもの）の理解"
+   },
+   {
+    "skill": "ベン図の外側領域の理解"
+   }
+  ],
+  "nd_note": "",
+  "links": [
+   "SV-23",
+   "SV-22"
+  ]
+ },
+ {
+  "id": "SV-25",
+  "title": "自閉スペクトラム症の子どもは1次元に偏った分類と認知的柔軟性の弱さを示しやすいが、異質性が大きく、クラス包含は手がかりつき訓練で獲得例がある",
+  "domain": "学齢期の語彙・意味",
+  "age": "幼児〜成人（ASD）",
+  "age_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "英語圏",
+  "tags": [
+   "自閉スペクトラム症",
+   "認知的柔軟性",
+   "1次元分類",
+   "クラス包含",
+   "神経発達症",
+   "訓練"
+  ],
+  "body": "Lage ら (2024) のメタ分析（59研究、知的障害のない自閉症者2122名と定型2036名、4〜85歳）では、自閉症者の認知的柔軟性の困難が小〜中程度の効果量で示され、保続エラーで効果が最大だったが、異質性は大きかった。Faja & Dawson (2014) では、知的障害のないASD幼児23名は年齢・IQを揃えた定型児20名よりDCCSの柔軟性が低かった。Edwards ら (2012) の教師なし分類課題では、易しい刺激セットでASD児が精神年齢を揃えた対照群より1次元で分類しやすく、難しいセットでは両群とも1次元分類が増えた。クラス包含は、ASD児（Ming et al., 2018）やASDと中等度学習障害を伴う成人3名（Zagrabska-Swiatkowska et al., 2020）で、入れ子の箱など視覚的・非恣意的な手がかりつき訓練により獲得された。限界：ASD児にベン図型の2属性分類を直接行った研究は確認できなかった。DLD・知的障害単独での多重分類データも見つからなかった。",
+  "debate": "ASDの柔軟性困難は課題・指標により効果量が大きく異なり、一律の「障害」とはいえない（Lage et al., 2024）。",
+  "sources": [
+   {
+    "cite": "Lage, C., Smith, E. S., & Lawson, R. P. (2024). A meta-analysis of cognitive flexibility in autism spectrum disorder. Neuroscience & Biobehavioral Reviews, 157, 105511.",
+    "url": "https://doi.org/10.1016/j.neubiorev.2023.105511",
+    "level": "抄録"
+   },
+   {
+    "cite": "Faja, S., & Dawson, G. (2014). Performance on the dimensional change card sort and backward digit span by young children with autism without intellectual disability. Child Neuropsychology, 20(6), 692–699.",
+    "url": "https://doi.org/10.1080/09297049.2013.856395",
+    "level": "抄録"
+   },
+   {
+    "cite": "Edwards, D. J., Perlman, A., & Reed, P. (2012). Unsupervised categorization in a sample of children with autism spectrum disorders. Research in Developmental Disabilities, 33(4), 1264–1269.",
+    "url": "https://doi.org/10.1016/j.ridd.2012.02.021",
+    "level": "抄録"
+   },
+   {
+    "cite": "Ming, S., Mulhern, T., Stewart, I., Moran, L., & Bynum, K. (2018). Training class inclusion responding in typically developing children and individuals with autism. Journal of Applied Behavior Analysis, 51(1), 53–60.",
+    "url": "https://doi.org/10.1002/jaba.429",
+    "level": "抄録"
+   },
+   {
+    "cite": "Zagrabska-Swiatkowska, P., Mulhern, T., Ming, S., Stewart, I., & McElwee, J. (2020). Training class inclusion responding in individuals with autism: Further investigation. Journal of Applied Behavior Analysis, 53(4), 2067–2080.",
+    "url": "https://doi.org/10.1002/jaba.712",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "認知的柔軟性（切り替え）",
+    "evidence": "相関のみ",
+    "basis": "ASD児ではDCCSの低成績が社会的コミュニケーションの困難と関連した（Faja & Dawson, 2014）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "2属性同時分類"
+   },
+   {
+    "skill": "クラス包含"
+   }
+  ],
+  "nd_note": "ASD：1次元に偏った分類（Edwards et al., 2012）と柔軟性の困難（Lage et al., 2024）が示されている。ベン図課題では一方の属性だけで判断していないかを確かめ、入れ子の箱のような視覚的手がかりを使うことが示唆される（Ming et al., 2018 は少数例の研究）。",
+  "links": [
+   "SV-21",
+   "SV-22",
+   "SV-23"
+  ]
+ },
+ {
+  "id": "SV-26",
+  "title": "聴覚障害児の多次元分類は聴児と異なる発達経路をたどり、属性次元数の影響は概念的に解く段階で大きくなる",
+  "domain": "学齢期の語彙・意味",
+  "age": "4〜7歳（吉野）、小学部〜高等部（高橋・都築）",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "多次元分類",
+   "重複分類",
+   "聴覚障害",
+   "日本語児",
+   "次元数",
+   "知覚から概念へ"
+  ],
+  "body": "吉野 (1974) は4〜7歳のろう児108名と聴児82名（精神年齢・就学を対応）に、2〜3次元からなる図形マトリックス12項目を課した。両群とも年齢とともに得点が有意に上がった。聴児は6:0〜6:5で一時的に成績が下がる「逆説的逆行現象」を示し、この時期が知覚的反応から概念的反応への転換期と解釈された。ろう児は明らかな逆行を示さず、やや遅れて概念的反応に移行した。属性次元数は、知覚的反応ではあまり影響せず、概念的反応で影響が大きかった。高橋・都築 (1983) は聴覚障害児（小学部・高等部）で、次元を抽出する順序（例：抽象物2次元では〔色〕＞〔形〕、〔数〕＞〔大きさ〕）を報告した。限界：古い研究で、統計の詳細は抄録の範囲でしか確認していない。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "吉野公喜 (1974). 聴覚障害児（ろう児）の関係把握能力：多次元分類による発達的研究. 特殊教育学研究, 12(1), 33–42.",
+    "url": "https://doi.org/10.6033/tokkyou.12.33",
+    "level": "抄録"
+   },
+   {
+    "cite": "高橋有美子・都築繁幸 (1983). 聴覚障害児の重複分類能力の発達的検討. 心身障害学研究, 7(2), 49–55.",
+    "url": "https://tsukuba.repo.nii.ac.jp/records/21904",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "言語的・象徴的表象",
+    "evidence": "理論上の仮説",
+    "basis": "吉野 (1974) は、ろう児では聴覚的表象と言語経験の制限により内的象徴の形成過程が異なると考察した。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "概念的属性（機能・用途）による分類"
+   }
+  ],
+  "nd_note": "聴覚障害児：概念的な属性で分類する段階への移行が聴児よりやや遅れ、次元数の負荷が大きくなる時期も異なる（吉野, 1974）。",
+  "links": [
+   "SV-18",
+   "SV-19"
+  ]
+ },
+ {
   "id": "PW-01",
   "kind": "道筋",
   "domain": "発達の道筋",

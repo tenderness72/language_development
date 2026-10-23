@@ -16,7 +16,7 @@ BANDS = [(0, 12, "0〜1歳"), (12, 24, "1〜2歳"), (24, 36, "2〜3歳"), (36, 4
 SCHOOL = re.compile(r"学齢|小学|小\d|中学|高校|学年|児童|青年|成人")
 # 数値のない年齢表記（月齢が抄録にない場合など）の振り分け
 WORDS = [("乳児", ["0〜1歳"]), ("一語期", ["1〜2歳"]), ("二語", ["1〜2歳"]), ("年中", ["4〜6歳"]), ("年長", ["4〜6歳"]),
-         ("幼児期後期", ["4〜6歳"]), ("幼児期", ["2〜3歳", "3〜4歳", "4〜6歳"])]
+         ("幼児期後期", ["4〜6歳"]), ("幼児期", ["2〜3歳", "3〜4歳", "4〜6歳"]), ("幼児", ["2〜3歳", "3〜4歳", "4〜6歳"])]
 
 
 def months(age):
@@ -70,13 +70,18 @@ MERGE = {"日本語乳児は母音の長短の弁別感受性": "日本語の母
 LEVEL = {"本文確認": "本文", "抄録のみ": "抄録", "二次文献経由": "二次"}
 
 
+def _deps(lst):
+    """builds_on/leads_to の要素が文字列だけのとき（根拠の強さの記載なし）は {"skill": …} にそろえる。"""
+    return [{"skill": e} if isinstance(e, str) else e for e in lst]
+
+
 def norm(t):
     return re.sub(r"[\s、。，．・「」（）()]", "", unicodedata.normalize("NFKC", t))
 
 
 def main(src):
     raw = []
-    for k in "ABCD":
+    for k in "ABCDF":
         p = os.path.join(src, f"wiki_{k}.json")
         if os.path.exists(p):
             raw += json.load(open(p, encoding="utf-8"))
@@ -108,8 +113,8 @@ def main(src):
         notes.append({"id": nid, "title": r["title"], "domain": d, "age": r.get("age", ""),
                       "age_band": bands(r.get("age", "")), "lang_data": r.get("lang_data", ""),
                       "tags": r.get("tags", []), "body": r["body"], "debate": r.get("debate", ""),
-                      "sources": r.get("sources", []), "builds_on": r.get("builds_on", []),
-                      "leads_to": r.get("leads_to", []), "nd_note": r.get("nd_note", ""),
+                      "sources": r.get("sources", []), "builds_on": _deps(r.get("builds_on", [])),
+                      "leads_to": _deps(r.get("leads_to", [])), "nd_note": r.get("nd_note", ""),
                       "_related": r.get("related", [])})
     miss = []
     for n in notes:
