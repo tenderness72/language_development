@@ -90,9 +90,9 @@ def check_item(type_key, item):
             return f"[VII:{item['id']}] Lv3 は語頭音が拗音か、「っ」を書いておく行が必要"
     elif type_key == "V":
         rel = item.get("relation")
-        expect = {"いっしょ": 1, "なかま": 2, "こうたい": 3}
+        expect = {"かんけい": 1, "なかま": 2, "こうたい": 3}
         if rel not in expect:
-            return f"[V:{item['id']}] relation は いっしょ／なかま／こうたい のいずれか"
+            return f"[V:{item['id']}] relation は かんけい／なかま／こうたい のいずれか"
         if int(item.get("level", 1)) != expect[rel]:
             return f"[V:{item['id']}] relation「{rel}」は Lv{expect[rel]}"
     elif type_key == "IX":

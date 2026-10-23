@@ -23,7 +23,8 @@ def load(name):
 
 
 _DIRS = {"I": "01_連想チェーン", "II": "02_意味ネットワーク照合", "III": "03_ペア対応づけ", "IV": "04_放射状連想",
-         "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図"}
+         "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図",
+         "IX": "09_仲間えらび", "X": "10_ベン図えらび"}
 
 
 def sheet(k, level, answers=False):
@@ -390,9 +391,11 @@ import importlib
 import sys
 sys.path.insert(0, WS)
 _MOD = {"I": "t1_chain", "II": "t2_network", "III": "t3_pairs", "IV": "t4_radial",
-        "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn"}
+        "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn",
+        "IX": "t9_category_choice", "X": "t10_venn_choice"}
 _NAME = {"I": "Ⅰ 連想チェーン", "II": "Ⅱ 意味ネットワーク照合", "III": "Ⅲ ペア対応づけ", "IV": "Ⅳ 放射状連想",
-         "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）"}
+         "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）",
+         "IX": "Ⅸ 仲間えらび（Ⅵ の書かない版）", "X": "Ⅹ ベン図えらび（Ⅷ の書かない版）"}
 _FORMAT = {
     "I": "左のスタート語から右のゴール語まで、2〜4列目の楕円（各列に正解1つ＋ダミー3つ）から1つずつ選び、線でつなぐ。1枚に2問。",
     "III": "見出しに関係名（例：動物→鳴き声）。左に5語、右に順番を入れかえた5語。左右の語を線で結ぶ。1枚に2問。",
@@ -403,8 +406,10 @@ _FORMAT = {
 }
 TASKS = {}
 _FORMAT["II"] = "中央の円に中心語。まわりに10の楕円（関係する5語＋ダミー5語）。関係する語を選んで線で結ぶ。1枚に2問。"
-_FORMAT["V"] = "いちばん上の箱に開始語。下へ矢印でつながる箱に、前のことばと関係のあることばを1つずつ書く。2番目の箱は手本。1枚に2問。"
-for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII"):
+_FORMAT["V"] = "いちばん上の箱に開始語。下へ矢印でつながる箱に、矢印の横に書いたつなぎ方（Lv1 関係のあることば／Lv2 おなじなかま／Lv3 なかまといっしょを交互）でことばを1つずつ書く。2番目の箱は手本。1枚に2問。"
+_FORMAT["IX"] = "上の四角にカテゴリー名。下に12語（仲間6語＋仲間でない6語、順不同）。仲間の語を○でかこむ。書かずに答える。1枚に2問。"
+_FORMAT["X"] = "左右の円に条件。左右の列の語の箱から、合う場所（ひだりだけ・りょうほう・みぎだけ、Lv2 は外の四角＝どちらでもない）へ線を引く。書かずに答える。1枚に2問。"
+for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"):
     m = importlib.import_module("gen.templates." + _MOD[k])
     TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
                 "format": _FORMAT[k], "img": page_png(sheet(k, 1), 1, dpi=48)}
@@ -479,6 +484,8 @@ MANUAL = {
 
 
 def _lookup(item_id, task):
+    if task not in _SC:
+        return None
     d, fn = _SC[task]
     for pre in ("new-", "r2-iii-", "r3-iii-", "r2-viii-", "r5-vii-", "r7-i-", "r8-viii-", "r2-", "r3-", "r4-"):
         if item_id.startswith(pre):
@@ -579,7 +586,7 @@ ROUND8 = [
         "lead": "何を書けばよいか（前のことばと関係のあることば）が分かるよう、2番目の箱に手本の語を薄い字で入れました。教示文は「…1つずつ書きましょう。2ばんめは、れいです。」に変えています。手本が開始語とはっきり関係しているかを見てください。",
         "items": [{"id": "r8-v-" + k.replace("_", "-"), "label": it["start"], "before": "",
                    "after": f"{it['start']} → {it.get('example')}（れい）→ □ → □ → □ → □", "ask": "", "scene": sc_v(it)}
-                  for k, it in V.items()],
+                  for k, it in V.items() if it.get("relation") == "かんけい"],
     },
     {
         "key": "r8-viii-audit", "title": "Ⅷ 属性交差 全21問の点検結果",
@@ -592,6 +599,84 @@ ROUND8 = [
 for sec in ROUND7:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND8
+
+# ---- 第9回：書かない版（Ⅸ・Ⅹ）、Ⅴ のつなぎ方によるレベル、Ⅶ Lv3 の拗長音、教示の補足（先頭に表示） ----
+IX = load("IX_category_choice.yaml")
+X = load("X_venn_choice.yaml")
+_VII_BEFORE = {"cho_lv3": "2・3・5音の行。3音の行は2マス目に「っ」。", "kyu_lv3": "2・3・4・5音の行。書いておく字なし。",
+               "sho_lv3": "3・4・5音の行。3音の行は2マス目に「っ」。", "kyo_lv3": "2・3・4音の行。書いておく字なし。"}
+_V_LINK = {"なかま": "おなじなかま", "こうたい": "おなじなかま → いっしょにあるもの → おなじなかま …（交互）"}
+
+
+def _rows(it):
+    rows = it.get("moras") or [2, 3, 4, 5]
+    fx = "".join(f"{k}音の行は{i + 1}マス目に「{ch}」。" for k, r in (it.get("fixed") or {}).items() for i, ch in r.items())
+    return f"{'・'.join(map(str, rows))}音の行。" + (fx or "書いておく字なし。")
+
+
+ROUND9 = [
+    {
+        "key": "r9-ix", "title": "Ⅸ 仲間えらび（Ⅵ の書かない版・新規8問）",
+        "lead": "Ⅵ カテゴリー流暢性を、書かずに○で答える形にしました。12語のうち仲間の6語を○でかこみます。Lv1 は仲間でない語が別の領域の物、Lv2 はとなりのカテゴリーの物です。境界があいまいな語（いちご・すいか、くつ・ぼうし、くも・だんごむし など）は避けました。仲間でない語が仲間にも入ってしまわないか、仲間の語に迷うものがないかを見てください。",
+        "items": [{"id": "r9-ix-" + k.replace("_", "-"), "label": f"{it['category']}（Lv{it['level']}）", "before": "",
+                   "after": "仲間：" + "・".join(it["members"]) + "\n仲間でない：" + "・".join(it["others"]), "ask": "",
+                   "scene": f"上の四角に「{it['category']}」。下の12語（順不同）から仲間の語を○でかこむ（Lv{it['level']}）。"}
+                  for k, it in IX.items()],
+    },
+    {
+        "key": "r9-x", "title": "Ⅹ ベン図えらび（Ⅷ の書かない版・新規8問）",
+        "lead": "Ⅷ 属性交差を、書かずに線で答える形にしました。語の箱から、合う場所（ひだりだけ・りょうほう・みぎだけ）へ線を引きます。Lv2 は円の外の四角（どちらでもない）を加えます。どの語も入る場所が1つに決まるかを見てください。「食べるもの／木になるもの」の どんぐり・まつぼっくり は「食べるもの」に入れない前提です。",
+        "items": [{"id": "r9-x-" + k.replace("_", "-"), "label": f"{it['left_attr']} ／ {it['right_attr']}（Lv{it['level']}）", "before": "",
+                   "after": "ひだりだけ：" + "・".join(it["left"]) + "　りょうほう：" + "・".join(it["both"]) + "　みぎだけ：" + "・".join(it["right"])
+                            + ("　どちらでもない：" + "・".join(it["none"]) if it.get("none") else ""), "ask": "",
+                   "scene": f"左の円「{it['left_attr']}」、右の円「{it['right_attr']}」。左右の列の語から、合う場所へ線を引く（Lv{it['level']}）。"}
+                  for k, it in X.items()],
+    },
+    {
+        "key": "r9-v-levels", "title": "Ⅴ つづき歌：つなぎ方でレベル分け（新規18問）",
+        "lead": "レベルを開始語の抽象度ではなく、つなぎ方の種類で決めるようにしました。矢印の横につなぎ方を書きます。Lv1 は第8回で確認していただいた24問（関係のあることば・つなぎ方は自由）。Lv2 は「おなじなかま」、Lv3 は「おなじなかま」と「いっしょにあるもの」を交互に。根拠：幼児が主題的関係と分類学的関係のどちらを選ぶかは教示で変わり（湯川, 2002）、上位概念の知識は3〜4歳、関係を切り替える実行制御は4〜5歳で伸びる（Blaye & Jacques, 2009）。手本の語が最初のつなぎ方（おなじなかま）に合っているかを見てください。",
+        "items": [{"id": "r9-v-" + k.replace("_", "-"), "label": f"{it['start']}（Lv{it['level']}）", "before": "",
+                   "after": f"{it['start']} →〔おなじなかま〕→ {it['example']}（れい）→ □ → □ → □ → □\nつなぎ方：{_V_LINK[it['relation']]}",
+                   "ask": "", "scene": f"いちばん上の箱に「{it['start']}」、2番目の破線の箱に手本「{it['example']}」。矢印の横のつなぎ方で、残り4つの箱に書く（Lv{it['level']}）。"}
+                  for k, it in V.items() if it.get("relation") in ("なかま", "こうたい")],
+    },
+    {
+        "key": "r9-vii-yochoon", "title": "Ⅶ Lv3：拗長音の行に「う」を書いておく（4問）",
+        "lead": "拗長音（きゅう・しょう など）は特殊音節の中で最も表記が難しい（年長の読み正答率43％：太田ら, 2018）ため、答えが拗長音になる行には、のばす音の「う」を書いておくようにしました。2音の行は「う」を書くとマスが全部うまってしまうので、その行は外しました。",
+        "items": [{"id": "r9-vii-" + k.replace("_", "-"), "label": f"「{VII[k]['initial']}」から始まることば", "before": _VII_BEFORE[k],
+                   "after": _rows(VII[k]) + "\n答えの例：" + "・".join(w for ws in VII[k]["answers"].values() for w in ws), "ask": "",
+                   "scene": sc_vii(VII[k])} for k in _VII_BEFORE],
+    },
+    {
+        "key": "r9-notes", "title": "教示の補足（書かずに・読まずに答えてよいこと）",
+        "lead": "どの課題もねらいは語の意味の力で、かなの読み書きではないため、教示の下に1行の補足を入れました（評価レポート §13）。",
+        "items": [
+            {"id": "r9-note-oral", "label": "書く課題（Ⅳ・Ⅴ・Ⅵ・Ⅷ）", "before": "（なし）",
+             "after": "書くのがたいへんなときは、口で言って、大人に書いてもらってもいいよ。", "ask": "子どもに伝わる言い方か",
+             "scene": "Ⅳ・Ⅴ・Ⅵ・Ⅷ のすべてのページで、教示文の下に薄い字で表示される。"},
+            {"id": "r9-note-read", "label": "読む課題（Ⅸ・Ⅹ）", "before": "（なし）",
+             "after": "字を読むのがたいへんなときは、大人が読んであげてもいいよ。", "ask": "",
+             "scene": "Ⅸ・Ⅹ のすべてのページで、教示文の下に薄い字で表示される。"},
+            {"id": "r9-note-vi", "label": "Ⅵ の教示文", "before": "それぞれの仲間に入ることばを、できるだけたくさん書きましょう。はじめの1つは例です。",
+             "after": "それぞれの仲間に入ることばを、思いつくだけ書きましょう。はじめの1つは例です。全部うめなくてもだいじょうぶ。",
+             "ask": "5行版（_問題_5行.pdf）も作りました", "scene": "Ⅵ のすべてのページで、題の帯の下に表示される教示文。"},
+            {"id": "r9-note-v", "label": "Ⅴ の教示文", "before": "一番上のことばから始めて、前のことばと関係があることばを1つずつ書きましょう。2ばんめは、れいです。",
+             "after": "一番上のことばから始めて、やじるしの横に書いてあるつなぎ方で、ことばを1つずつ書きましょう。2ばんめは、れいです。",
+             "ask": "", "scene": "Ⅴ のすべてのページで、題の帯の下に表示される教示文。"},
+        ],
+    },
+]
+for sec in ROUND8:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND9
+SEC_TASK.update({"r9-ix": ["IX"], "r9-x": ["X"], "r9-v-levels": ["V"], "r9-vii-yochoon": ["VII"],
+                 "r9-notes": ["IV", "V", "VI", "VIII", "IX", "X"]})
+FIGURES[:0] = [
+    ("Ⅸ 仲間えらび Lv2（解答）", page_png(sheet("IX", 2, True), 1)),
+    ("Ⅹ ベン図えらび Lv2（解答）", page_png(sheet("X", 2, True), 1)),
+    ("Ⅴ つづき歌 Lv3（なかま・いっしょを交互）", page_png(sheet("V", 3), 1)),
+    ("Ⅵ カテゴリー流暢性 Lv1（5行版）", page_png(sheet("VI", 1).replace("_問題.pdf", "_問題_5行.pdf"), 1)),
+]
 for sec in SECTIONS:
     key = sec["key"]
     sec["tasks"] = SEC_TASK.get(key, [])

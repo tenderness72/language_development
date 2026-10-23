@@ -1,32 +1,45 @@
 # Ⅴ つづき歌（自由記述）
 # start: 開始語 / example: 2番目の欄に薄い字で入れる手本の語 / slots: 空欄の数（既定5。手本の欄を含む）
 # relation: 前のことばとのつなぎ方。矢印の横に表示する。
-#   いっしょ … いっしょにあるもの・いっしょに使うもの（主題的な関係）
+#   かんけい … 関係のあることば（つなぎ方を問わない。第8回で確認済みの24問）
+#   いっしょ … いっしょにあるもの・いっしょに使うもの（主題的な関係。こうたい の中で使う）
 #   なかま   … おなじなかまのもの（分類学的な関係）
 #   こうたい … 「なかま」と「いっしょ」を1つずつ交互に（最初の矢印は なかま）
-# level は relation で決める（2026-10-23 改訂）：1=いっしょ 2=なかま 3=こうたい
+# level は relation で決める（2026-10-23 改訂）：1=かんけい 2=なかま 3=こうたい
 #   根拠：幼児が主題的関係と分類学的関係のどちらを選ぶかは教示で変わる（湯川, 2002）。
 #   上位概念の知識は3〜4歳、関係を切り替える実行制御は4〜5歳で伸びる（Blaye & Jacques, 2009）。
 #   Wiki の SV-08・SV-09 を参照。
 # example は relation の最初の矢印に合う語にすること（こうたい は なかま の語）。
 type: V
 items:
-  # ---- Lv1：いっしょにあるもの ----
-  - {id: curry, start: カレー, example: ごはん, relation: いっしょ, slots: 5, level: 1}
-  - {id: snow, start: 雪, example: ゆきだるま, relation: いっしょ, slots: 5, level: 1}
-  - {id: train, start: でんしゃ, example: えき, relation: いっしょ, slots: 5, level: 1}
-  - {id: sea, start: うみ, example: さかな, relation: いっしょ, slots: 5, level: 1}
-  - {id: school, start: がっこう, example: せんせい, relation: いっしょ, slots: 5, level: 1}
-  - {id: rain, start: あめ, example: かさ, relation: いっしょ, slots: 5, level: 1}
-  - {id: park, start: こうえん, example: ブランコ, relation: いっしょ, slots: 5, level: 1}
-  - {id: cake, start: ケーキ, example: いちご, relation: いっしょ, slots: 5, level: 1}
-  - {id: bath, start: おふろ, example: せっけん, relation: いっしょ, slots: 5, level: 1}
-  - {id: festival, start: おまつり, example: たいこ, relation: いっしょ, slots: 5, level: 1}
-  - {id: flower, start: はな, example: ちょうちょ, relation: いっしょ, slots: 5, level: 1}
-  - {id: mountain, start: やま, example: き, relation: いっしょ, slots: 5, level: 1}
+  # ---- Lv1：関係のあることば（つなぎ方は自由） ----
+  - {id: curry, start: カレー, example: ごはん, relation: かんけい, slots: 5, level: 1}
+  - {id: snow, start: 雪, example: ゆきだるま, relation: かんけい, slots: 5, level: 1}
+  - {id: apple, start: りんご, example: あか, relation: かんけい, slots: 5, level: 1}
+  - {id: train, start: でんしゃ, example: えき, relation: かんけい, slots: 5, level: 1}
+  - {id: dog, start: いぬ, example: さんぽ, relation: かんけい, slots: 5, level: 1}
+  - {id: sea, start: うみ, example: さかな, relation: かんけい, slots: 5, level: 1}
+  - {id: school, start: がっこう, example: せんせい, relation: かんけい, slots: 5, level: 1}
+  - {id: rain, start: あめ, example: かさ, relation: かんけい, slots: 5, level: 1}
+  - {id: summer, start: なつ, example: すいか, relation: かんけい, slots: 5, level: 1}
+  - {id: park, start: こうえん, example: ブランコ, relation: かんけい, slots: 5, level: 1}
+  - {id: cake, start: ケーキ, example: いちご, relation: かんけい, slots: 5, level: 1}
+  - {id: fire, start: ひ, example: ろうそく, relation: かんけい, slots: 5, level: 1}
+  - {id: flower, start: はな, example: ちょうちょ, relation: かんけい, slots: 5, level: 1}
+  - {id: morning, start: あさ, example: たいよう, relation: かんけい, slots: 5, level: 1}
+  - {id: bath, start: おふろ, example: せっけん, relation: かんけい, slots: 5, level: 1}
+  - {id: festival, start: おまつり, example: たいこ, relation: かんけい, slots: 5, level: 1}
+  - {id: wind, start: かぜ, example: たこ, relation: かんけい, slots: 5, level: 1}
+  - {id: red, start: あか, example: トマト, relation: かんけい, slots: 5, level: 1}
+  - {id: music, start: おんがく, example: ピアノ, relation: かんけい, slots: 5, level: 1}
+  - {id: travel, start: りょこう, example: おみやげ, relation: かんけい, slots: 5, level: 1}
+  - {id: milk, start: ぎゅうにゅう, example: うし, relation: かんけい, slots: 5, level: 1}
+  - {id: mountain, start: やま, example: き, relation: かんけい, slots: 5, level: 1}
+  - {id: bird, start: とり, example: はね, relation: かんけい, slots: 5, level: 1}
+  - {id: shop, start: おみせ, example: おかね, relation: かんけい, slots: 5, level: 1}
   # ---- Lv2：おなじなかま（2026-10-23 追加・要確認） ----
-  - {id: t_apple, start: りんご, example: バナナ, relation: なかま, slots: 5, level: 2}
-  - {id: t_dog, start: いぬ, example: ねこ, relation: なかま, slots: 5, level: 2}
+  - {id: t_orange, start: みかん, example: ぶどう, relation: なかま, slots: 5, level: 2}
+  - {id: t_elephant, start: ぞう, example: きりん, relation: なかま, slots: 5, level: 2}
   - {id: t_bus, start: バス, example: タクシー, relation: なかま, slots: 5, level: 2}
   - {id: t_carrot, start: にんじん, example: だいこん, relation: なかま, slots: 5, level: 2}
   - {id: t_sparrow, start: すずめ, example: からす, relation: なかま, slots: 5, level: 2}

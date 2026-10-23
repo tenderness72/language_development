@@ -5,31 +5,9 @@
   "name": "05_つづき歌_Lv1_問題",
   "level": 1,
   "seed": 51,
-  "count": 6,
+  "count": 12,
   "overrides": {},
   "pages": [
-    {
-      "type": "V",
-      "problems": [
-        {
-          "n": 1,
-          "id": "curry",
-          "start": "カレー",
-          "slots": 5,
-          "example": "ごはん",
-          "relation": "いっしょ"
-        },
-        {
-          "n": 2,
-          "id": "cake",
-          "start": "ケーキ",
-          "slots": 5,
-          "example": "いちご",
-          "relation": "いっしょ"
-        }
-      ],
-      "page": 1
-    },
     {
       "type": "V",
       "problems": [
@@ -39,62 +17,18 @@
           "start": "雪",
           "slots": 5,
           "example": "ゆきだるま",
-          "relation": "いっしょ"
+          "relation": "かんけい"
         },
         {
           "n": 2,
-          "id": "bath",
-          "start": "おふろ",
+          "id": "morning",
+          "start": "あさ",
           "slots": 5,
-          "example": "せっけん",
-          "relation": "いっしょ"
+          "example": "たいよう",
+          "relation": "かんけい"
         }
       ],
-      "page": 2
-    },
-    {
-      "type": "V",
-      "problems": [
-        {
-          "n": 1,
-          "id": "rain",
-          "start": "あめ",
-          "slots": 5,
-          "example": "かさ",
-          "relation": "いっしょ"
-        },
-        {
-          "n": 2,
-          "id": "sea",
-          "start": "うみ",
-          "slots": 5,
-          "example": "さかな",
-          "relation": "いっしょ"
-        }
-      ],
-      "page": 3
-    },
-    {
-      "type": "V",
-      "problems": [
-        {
-          "n": 1,
-          "id": "train",
-          "start": "でんしゃ",
-          "slots": 5,
-          "example": "えき",
-          "relation": "いっしょ"
-        },
-        {
-          "n": 2,
-          "id": "flower",
-          "start": "はな",
-          "slots": 5,
-          "example": "ちょうちょ",
-          "relation": "いっしょ"
-        }
-      ],
-      "page": 4
+      "page": 1
     },
     {
       "type": "V",
@@ -105,18 +39,216 @@
           "start": "やま",
           "slots": 5,
           "example": "き",
-          "relation": "いっしょ"
+          "relation": "かんけい"
         },
         {
           "n": 2,
+          "id": "rain",
+          "start": "あめ",
+          "slots": 5,
+          "example": "かさ",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "bath",
+          "start": "おふろ",
+          "slots": 5,
+          "example": "せっけん",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "flower",
+          "start": "はな",
+          "slots": 5,
+          "example": "ちょうちょ",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "dog",
+          "start": "いぬ",
+          "slots": 5,
+          "example": "さんぽ",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "fire",
+          "start": "ひ",
+          "slots": 5,
+          "example": "ろうそく",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "summer",
+          "start": "なつ",
+          "slots": 5,
+          "example": "すいか",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "bird",
+          "start": "とり",
+          "slots": 5,
+          "example": "はね",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
           "id": "school",
           "start": "がっこう",
           "slots": 5,
           "example": "せんせい",
-          "relation": "いっしょ"
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "apple",
+          "start": "りんご",
+          "slots": 5,
+          "example": "あか",
+          "relation": "かんけい"
         }
       ],
-      "page": 5
+      "page": 6
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "travel",
+          "start": "りょこう",
+          "slots": 5,
+          "example": "おみやげ",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "music",
+          "start": "おんがく",
+          "slots": 5,
+          "example": "ピアノ",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "curry",
+          "start": "カレー",
+          "slots": 5,
+          "example": "ごはん",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "train",
+          "start": "でんしゃ",
+          "slots": 5,
+          "example": "えき",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 8
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "red",
+          "start": "あか",
+          "slots": 5,
+          "example": "トマト",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "milk",
+          "start": "ぎゅうにゅう",
+          "slots": 5,
+          "example": "うし",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 9
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "sea",
+          "start": "うみ",
+          "slots": 5,
+          "example": "さかな",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "wind",
+          "start": "かぜ",
+          "slots": 5,
+          "example": "たこ",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 10
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "park",
+          "start": "こうえん",
+          "slots": 5,
+          "example": "ブランコ",
+          "relation": "かんけい"
+        },
+        {
+          "n": 2,
+          "id": "cake",
+          "start": "ケーキ",
+          "slots": 5,
+          "example": "いちご",
+          "relation": "かんけい"
+        }
+      ],
+      "page": 11
     },
     {
       "type": "V",
@@ -127,18 +259,18 @@
           "start": "おまつり",
           "slots": 5,
           "example": "たいこ",
-          "relation": "いっしょ"
+          "relation": "かんけい"
         },
         {
           "n": 2,
-          "id": "park",
-          "start": "こうえん",
+          "id": "shop",
+          "start": "おみせ",
           "slots": 5,
-          "example": "ブランコ",
-          "relation": "いっしょ"
+          "example": "おかね",
+          "relation": "かんけい"
         }
       ],
-      "page": 6
+      "page": 12
     }
   ],
   "warnings": [],

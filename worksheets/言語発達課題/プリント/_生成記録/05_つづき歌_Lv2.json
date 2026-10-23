@@ -13,10 +13,10 @@
       "problems": [
         {
           "n": 1,
-          "id": "t_dog",
-          "start": "いぬ",
+          "id": "t_elephant",
+          "start": "ぞう",
           "slots": 5,
-          "example": "ねこ",
+          "example": "きりん",
           "relation": "なかま"
         },
         {
@@ -43,10 +43,10 @@
         },
         {
           "n": 2,
-          "id": "t_apple",
-          "start": "りんご",
+          "id": "t_orange",
+          "start": "みかん",
           "slots": 5,
-          "example": "バナナ",
+          "example": "ぶどう",
           "relation": "なかま"
         }
       ],

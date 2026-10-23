@@ -13,7 +13,7 @@ DISPLAY_TITLE = "つづき歌をつくろう"    # 子ども向け表示タイ�
 INSTRUCTION = ("一番上のことばから始めて、やじるしの横に書いてあるつなぎ方で、"
                "ことばを1つずつ書きましょう。2ばんめは、れいです。")
 # 矢印の横に出すつなぎ方（relation ごと）。こうたい は なかま から始めて交互にする。
-LINK_LABEL = {"いっしょ": "いっしょにあるもの", "なかま": "おなじなかま"}
+LINK_LABEL = {"かんけい": "かんけいのあることば", "いっしょ": "いっしょにあるもの", "なかま": "おなじなかま"}
 HAS_ANSWER = False
 
 HALF_CX = [60.0, 150.0]
@@ -48,7 +48,7 @@ def _draw_problem(c, ctx, cx, top0, item):
             layout.text(c, cx - BOX_W / 2 + 2.5, top + 2.0, "れい", size=8, gray=0.45)
         if k < n_boxes - 1:
             layout.arrow_down(c, cx, top + BOX_H + 1.0, ARROW - 2.0)
-            label = _link(item.get("relation", "いっしょ"), k)
+            label = _link(item.get("relation", "かんけい"), k)
             layout.text(c, cx + 3.0, top + BOX_H + ARROW / 2 + 0.5, label, size=8, align="l",
                         vcenter=True, gray=0.3)
 
@@ -62,6 +62,6 @@ def draw_page(c, ctx, items, lrng, answers=False):
         mani["problems"].append({
             "n": n, "id": item["id"], "start": item["start"],
             "slots": int(item.get("slots", 5)), "example": item.get("example"),
-            "relation": item.get("relation", "いっしょ"),
+            "relation": item.get("relation", "かんけい"),
         })
     return mani
