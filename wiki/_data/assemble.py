@@ -10,7 +10,7 @@ import unicodedata
 HERE = os.path.dirname(os.path.abspath(__file__))
 PREFIX = {"前言語期": "PL", "語彙": "VO", "語意学習": "WL", "言語環境": "EN", "構音・音韻": "PH",
           "音韻意識": "PA", "読み書き": "RW", "文法": "GR", "語用・会話": "PR", "談話・ナラティブ": "NA",
-          "心の理論と言語": "TM", "学齢期の語彙・意味": "SV", "発達の道筋": "PW"}
+          "心の理論と言語": "TM", "学齢期の語彙・意味": "SV", "神経発達症と語彙・意味": "ND", "発達の道筋": "PW"}
 BANDS = [(0, 12, "0〜1歳"), (12, 24, "1〜2歳"), (24, 36, "2〜3歳"), (36, 48, "3〜4歳"), (48, 72, "4〜6歳"),
          (72, 999, "学齢期")]
 SCHOOL = re.compile(r"学齢|小学|小\d|中学|高校|学年|児童|青年|成人")
@@ -81,7 +81,7 @@ def norm(t):
 
 def main(src):
     raw = []
-    for k in "ABCDF":
+    for k in "ABCDFGH":
         p = os.path.join(src, f"wiki_{k}.json")
         if os.path.exists(p):
             raw += json.load(open(p, encoding="utf-8"))

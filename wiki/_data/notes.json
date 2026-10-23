@@ -7460,6 +7460,1306 @@
   ]
  },
  {
+  "id": "SV-27",
+  "title": "範疇語・頭音を手がかりにした連想語数は幼児期から小学4年まで増え続け、頭音ごとの語数はその音で始まる語の多さに強く左右される",
+  "domain": "学齢期の語彙・意味",
+  "age": "3歳〜小学4年（頭音連想は6歳・小2・小4）",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "範疇語連想",
+   "頭音連想",
+   "カテゴリー流暢性",
+   "語頭音",
+   "基準資料"
+  ],
+  "body": "国立国語研究所（1981）は、東京の3歳児〜小学4年生800名と成人53名に14の範疇語（動物・乗り物・着る物・道具・植物・家具・履物・花・果物・野菜・魚・鳥・楽器・虫）の成員を想起させた（幼児・小1は時間を区切らない個別の口頭テスト、小2以上は14範疇語に計42分を与える筆記の集団テスト）。平均想起数はどのカテゴリーも年齢とともに漸増し、「動物」はどの年齢でも他のカテゴリーを大きく上回ったが、幼児では「植物」「家具」で無反応が多く、この2つは小2でも約20%が無反応だった。頭音連想では小2（116名）・小4（91名）が清音44・濁音18・半濁音5の計67音で始まる語を筆記し（13〜14音ごとに39〜42分）、1頭音あたりの平均語数は幼児（10名、主に6歳）3.65、小2 4.91、小4 8.25と増え、どの年齢でも女児が男児をやや上回った。頭音ごとの連想量の順位は国語辞典でその音が見出しになる語の多さの順位と高く相関した（幼児rs=.809、小2 .864、小4 .894）。1970年代末の東京の資料であり、1分間などの時間制限を設ける現在の流暢性課題とは手続きが異なるため、数値をそのまま基準値として使うことはできない。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "国立国語研究所 (1981). 幼児・児童の連想語彙表（国立国語研究所報告69）. 東京書籍.",
+    "url": "https://doi.org/10.15084/00001260",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "カテゴリー（上位概念）の知識",
+    "evidence": "理論上の仮説",
+    "basis": "報告書は範疇語連想を概念カテゴリーの発達の指標として位置づけている（国立国語研究所, 1981）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "報告書には視覚障害児・聴覚障害児の範疇語連想の語彙表も収録されているが、今回はその数値を確認していない。知的障害のある生徒でも、語彙の多い語頭音（し・か）の方が少ない語頭音（る・ぬ）より想起が多いという同じ傾向が確認されている（惠羅ら, 2012）。",
+  "links": [
+   "SV-12",
+   "SV-11",
+   "ND-01",
+   "ND-10"
+  ]
+ },
+ {
+  "id": "SV-28",
+  "title": "語流暢性の年齢差は意味（カテゴリー）条件では学齢期中頃から縮まるが、文字条件と探索方略（スイッチング・カテゴリーの使い分け）は思春期以降まで伸びる",
+  "domain": "学齢期の語彙・意味",
+  "age": "7〜29歳（学齢期の中心は7〜16歳）",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "語流暢性",
+   "クラスタリング",
+   "スイッチング",
+   "青年期",
+   "実行機能"
+  ],
+  "body": "Sauzéon et al.（2004）はフランス語圏の7〜16歳140名に文字・音・意味・自由の4種類の流暢性課題を行った。7–8歳と9–10歳の差は意味流暢性の方が文字流暢性より大きかったが、意味流暢性では年齢差がその後しだいに消え、文字流暢性では差が続いた。文字流暢性では年齢とともにスイッチ数とクラスター数が、意味流暢性ではクラスターサイズのみが変化し、「スーパーマーケットにある物」課題で使われるカテゴリーの数は11〜12歳で増えたが、効率的な意味的探索は13〜14歳以降にみられた。Kavé et al.（2008）はヘブライ語話者8〜29歳180名で、文字課題の総数・スイッチ数・クラスター数は年齢とともに増えたがクラスターサイズは変わらず、意味課題ではすべての指標が増え、成人は青年より意味課題でスイッチが多かったことから、語検索の発達は語彙の増加より実行的な探索方略の成熟に依存すると論じた。いずれも抄録に基づく情報で、日本語の中学生・高校生の流暢性の基準値は今回の調査では見つからなかった。",
+  "debate": "流暢性の発達を語彙（意味ネットワーク）の拡大で説明するか、実行的な探索方略の成熟で説明するかには立場の違いがある。",
+  "sources": [
+   {
+    "cite": "Sauzéon, H., Lestage, P., Raboutet, C., N'Kaoua, B., & Claverie, B. (2004). Verbal fluency output in children aged 7-16 as a function of the production criterion: Qualitative analysis of clustering, switching processes, and semantic network exploitation. Brain and Language, 89(1), 192-202.",
+    "url": "https://doi.org/10.1016/S0093-934X(03)00367-5",
+    "level": "抄録"
+   },
+   {
+    "cite": "Kavé, G., Kigel, S., & Kochva, R. (2008). Switching and clustering in verbal fluency tasks throughout childhood. Journal of Clinical and Experimental Neuropsychology, 30(3), 349-359.",
+    "url": "https://doi.org/10.1080/13803390701416197",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "実行的な探索方略（切り替え）",
+    "evidence": "相関のみ",
+    "basis": "横断データでスイッチ数が年齢とともに増え、成人で青年より多かった（Kavé et al., 2008）。"
+   },
+   {
+    "skill": "カテゴリー知識の体系化",
+    "evidence": "相関のみ",
+    "basis": "使用カテゴリー数が11〜12歳で増え、効率的な意味的探索は13〜14歳以降とされた（Sauzéon et al., 2004）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "ADHD・ASD・DLDでは、総語数だけでなくクラスター・スイッチの指標で異なるプロフィールが報告されている（関連ノート参照）。",
+  "links": [
+   "SV-12",
+   "SV-27",
+   "ND-08",
+   "ND-06",
+   "ND-09"
+  ]
+ },
+ {
+  "id": "SV-29",
+  "title": "「反対」の概念は4歳までに成立し、5〜8歳では反対語課題が類義語課題より易しい",
+  "domain": "学齢期の語彙・意味",
+  "age": "3〜8歳",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "反対語",
+   "類義語",
+   "語の意味関係",
+   "メタ言語",
+   "言語的類推"
+  ],
+  "body": "Phillips & Pexman（2015）は3〜5歳児204名に新しい「反対」課題を行い、4・5歳児は反対の概念を示したが3歳児は示さなかった。子どもが成功したのは「反対のもの」を尋ねられたときだけで、刺激の性質だけでは反対関係は際立たず、正答は言語・作業記憶の得点や家庭での反対語の絵本・遊びの有無と有意に関連しなかった。セルビア語の5〜8歳の定型発達児61名に言語理解検査を行った研究（Ječmenica & Drljan, 2023）では、通過率は類義語30.92%、反対語49.27%、言語的類推57.81%、絵画語彙66.85%で、年齢の効果は反対語・類推・語彙で有意、類義語では有意でなかった（p=.055）。英語の4・5歳児67名の反対語類推課題では「反対」というラベルが5歳児の成績だけを高めたと報告されている（二次情報）。項目の難易度が揃っていないため「反対語は類義語より早い」と一般化するには限界があり、日本語児のデータは今回見つからなかった。",
+  "debate": "反対語が類義語より易しいという順序は、課題形式（選択か産出か）、語の頻度・具体性、問い方（「反対」「同じ意味」というラベルの理解）に左右される可能性がある。",
+  "sources": [
+   {
+    "cite": "Phillips, C. I., & Pexman, P. M. (2015). When do children understand \"opposite\"? Journal of Speech, Language, and Hearing Research, 58(4), 1233-1244.",
+    "url": "https://doi.org/10.1044/2015_JSLHR-L-14-0222",
+    "level": "抄録"
+   },
+   {
+    "cite": "Ječmenica, N., & Drljan, B. (2023). Leksičko razumevanje i obrada kod dece tipičnog razvoja [Lexical comprehension and processing in typically developing children]. Zbornik radova, 12. međunarodna naučna konferencija \"Specijalna edukacija i rehabilitacija danas\" (pp. 287-294). Univerzitet u Beogradu, Fakultet za specijalnu edukaciju i rehabilitaciju.",
+    "url": "https://hdl.handle.net/21.15107/rcub_rfasper_5340",
+    "level": "抄録"
+   },
+   {
+    "cite": "Ionescu, C., Lu, H., Holyoak, K. J., & Sandhofer, C. M. (2022). Children's acquisition of the concept of antonym across different lexical classes. Proceedings of the Annual Meeting of the Cognitive Science Society, 44.",
+    "url": "https://par.nsf.gov/biblio/10330139",
+    "level": "二次"
+   },
+   {
+    "cite": "Filipova, S., Krstevska Kokormanova, B., Bajraktarov, S., Galevska Jovčevski, V., & Ramadani Rasimi, T. (2023). Semantic development in children with mild intellectual disability. EDUCATION – Journal of Educational Research, 5(9-10), 81-91.",
+    "url": "https://www.ceeol.com/search/article-detail?id=1191736",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "「反対」という関係語（ラベル）の理解",
+    "evidence": "理論上の仮説",
+    "basis": "反対関係は「反対のもの」と問われたときにのみ示された（Phillips & Pexman, 2015）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "類義語（同義関係）の理解",
+    "evidence": "理論上の仮説",
+    "basis": "5〜8歳の横断データで反対語課題の通過率が類義語課題を上回ったことからの推測で、縦断的な証拠はない（Ječmenica & Drljan, 2023）。"
+   }
+  ],
+  "nd_note": "北マケドニアの12〜14歳の軽度知的障害児31名と定型発達児31名を比べた研究（抄録）では、知的障害群は同音異義語・反対語・類義語を部分的にしか獲得しておらず、反対語は具体語に限られ、換喩は獲得されていなかった（Filipova et al., 2023）。",
+  "links": [
+   "SV-31",
+   "SV-30",
+   "SV-32",
+   "SV-16"
+  ]
+ },
+ {
+  "id": "SV-30",
+  "title": "分類学的関係と主題的関係は6歳で既に概念を構造化しているが、分類学的関係を言葉で説明することは6歳では難しく8歳で容易になる",
+  "domain": "学齢期の語彙・意味",
+  "age": "6歳〜成人",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "英語圏",
+  "tags": [
+   "分類学的関係",
+   "主題的関係",
+   "意味プライミング",
+   "関係の説明",
+   "交差分類"
+  ],
+  "body": "Hashimoto, McGregor & Graham（2007）は6歳・8歳・成人に物体判断のプライミング課題を行い、分類学的プライミングは主題的プライミングと同程度で、プライミングの強さは年齢群で明確に違わなかったため、「幼いうちは主題的、年長になると分類学的」という移行仮説は支持されなかった。同じ刺激対の関係を説明させると、6歳児は主題的関係より分類学的関係の説明に苦労したが、8歳児はどちらも容易に説明した。Unger et al.（2016）は分類学的にも主題的にも交差分類できる項目の関連度判断（空間配置法と対比較）で、両方の関係で結びついた項目のつながりの認識が先に現れ、その後に一方の関係だけに基づくつながりの認識が増えることを示した（年齢は抄録に記載なし）。関係を「感じる・選ぶ」ことと「言葉で説明する」ことの間には発達的なずれがあると考えられる。",
+  "debate": "主題的→分類学的という発達的移行（shift）仮説と、両関係は早くから存在し課題要求によって見え方が変わるとする遂行（performance）仮説の対立がある。",
+  "sources": [
+   {
+    "cite": "Hashimoto, N., McGregor, K. K., & Graham, A. (2007). Conceptual organization at 6 and 8 years of age: Evidence from the semantic priming of object decisions. Journal of Speech, Language, and Hearing Research, 50(1), 161-176.",
+    "url": "https://doi.org/10.1044/1092-4388(2007/014)",
+    "level": "抄録"
+   },
+   {
+    "cite": "Unger, L., Fisher, A. V., Nugent, R., Ventura, S. L., & MacLellan, C. J. (2016). Developmental changes in semantic knowledge organization. Journal of Experimental Child Psychology, 146, 202-222.",
+    "url": "https://doi.org/10.1016/j.jecp.2016.01.005",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [
+   {
+    "skill": "分類学的関係の言語的説明",
+    "evidence": "理論上の仮説",
+    "basis": "6歳児では分類学的関係の表象が脆く、課題要求が高いと崩れやすいと解釈された（Hashimoto et al., 2007）。"
+   }
+  ],
+  "nd_note": "知的障害児（8〜11歳）は語彙年齢を揃えた4歳児と同程度に上位概念・関連性の絵を選べたが、上位概念の説明得点は両群とも低かった（佐藤・大伴, 2019）。ASD児では分類学的関係の活性化が定型児より強いとする報告がある（Hua et al., 2025）。",
+  "links": [
+   "SV-08",
+   "SV-09",
+   "SV-17",
+   "ND-05",
+   "ND-07",
+   "SV-32"
+  ]
+ },
+ {
+  "id": "SV-31",
+  "title": "A:B::C:D の類推は基になる関係を知っていれば3〜4歳でも解けるが、関係の複雑さと見た目の妨害に抗する力は13〜14歳まで伸びる",
+  "domain": "学齢期の語彙・意味",
+  "age": "3〜14歳",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "英語圏",
+  "tags": [
+   "類推",
+   "関係推論",
+   "因果関係",
+   "抑制制御",
+   "関係の複雑さ"
+  ],
+  "body": "Goswami & Brown（1990a）は3・4・6歳児に、溶ける・切るなどの物理的因果関係に基づく絵の類推（チョコレート：溶けたチョコレート＝雪だるま：溶けた雪だるま）を課し、その因果関係を理解している子どもは3歳でも古典的なA:B::C:Dの類推を解けることを示した。Goswami & Brown（1990b）は4・5・9歳児に、類推的な正答と主題的（連想的）な誤答を対立させた絵選択の類推を行い、どの年齢でも類推反応が主題反応より一貫して選ばれた。Richland, Morrison & Holyoak（2006）は3–4歳、6–7歳、9–11歳、13–14歳に場面類推問題を行い、関係の複雑さと見た目の似た妨害物の両方が成績に影響し、子どもは関係の誤りより妨害物を選ぶ誤りをしやすく、この傾向は年齢とともに減った。計算モデル研究（Morrison et al., 2011）は、この年齢変化を作業記憶内の抑制の発達で説明している。学齢期の類推課題の難しさは、関係そのものの知識、複数の関係の統合、見た目の類似の抑制の3点で決まると考えられる。",
+  "debate": "幼児の類推の成功を連想的な推論とみるか関係的な推論とみるかで論争があり、Goswami & Brown（1990b）は後者を支持した。",
+  "sources": [
+   {
+    "cite": "Goswami, U., & Brown, A. L. (1990). Melting chocolate and melting snowmen: Analogical reasoning and causal relations. Cognition, 35(1), 69-95.",
+    "url": "https://doi.org/10.1016/0010-0277(90)90037-k",
+    "level": "抄録"
+   },
+   {
+    "cite": "Goswami, U., & Brown, A. L. (1990). Higher-order structure and relational reasoning: Contrasting analogical and thematic relations. Cognition, 36(3), 207-226.",
+    "url": "https://doi.org/10.1016/0010-0277(90)90057-q",
+    "level": "抄録"
+   },
+   {
+    "cite": "Richland, L. E., Morrison, R. G., & Holyoak, K. J. (2006). Children's development of analogical reasoning: Insights from scene analogy problems. Journal of Experimental Child Psychology, 94(3), 249-273.",
+    "url": "https://doi.org/10.1016/j.jecp.2006.02.002",
+    "level": "抄録"
+   },
+   {
+    "cite": "Morrison, R. G., Doumas, L. A., & Richland, L. E. (2011). A computational account of children's analogical reasoning: Balancing inhibitory control in working memory and relational representation. Developmental Science, 14(3), 516-529.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2010.00999.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Morsanyi, K., & Holyoak, K. J. (2010). Analogical reasoning ability in autistic and typically developing children. Developmental Science, 13(4), 578-587.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2009.00915.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "Morsanyi, K., Hamilton, J., Stamenković, D., & Holyoak, K. J. (2022). Linking metaphor comprehension with analogical reasoning: Evidence from typical development and autism spectrum disorder. British Journal of Psychology, 113(2), 479-495.",
+    "url": "https://doi.org/10.1111/bjop.12542",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "基になる関係（因果など）の知識",
+    "evidence": "相関のみ",
+    "basis": "因果関係を理解している子どもが類推を解けた（Goswami & Brown, 1990a）。"
+   },
+   {
+    "skill": "抑制制御（見た目の類似への抵抗）",
+    "evidence": "理論上の仮説",
+    "basis": "妨害物選択の誤りが年齢とともに減り、計算モデルでは抑制の発達で説明された（Richland et al., 2006; Morrison et al., 2011）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "知的障害のないASD児は、年齢・IQ・作業記憶を揃えた定型児と同程度にレーヴン検査と絵の類推課題を解けた（Morsanyi & Holyoak, 2010）。言語能力の高いASD成人では言語的類推の正確さは定型群と同等だったが反応時間が長く、作業記憶との相関が強かった（Morsanyi et al., 2022）。",
+  "links": [
+   "SV-29",
+   "SV-30",
+   "SV-04"
+  ]
+ },
+ {
+  "id": "ND-01",
+  "title": "知的障害のある高等部生徒の語想起では、カテゴリー条件の成績はIQの影響を強く受けるが語頭音条件は受けにくく、カテゴリー逸脱の誤りが多い",
+  "domain": "神経発達症と語彙・意味",
+  "age": "特別支援学校高等部（15〜18歳頃）",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "知的障害",
+   "語想起",
+   "カテゴリー流暢性",
+   "語頭音",
+   "誤反応",
+   "上位概念"
+  ],
+  "body": "知的障害養護学校高等部の生徒59名（男42・女17、田中ビネーIQ平均52.4）に、語頭音（「か」「ぬ」）とカテゴリー（「魚」「国」）の語想起を各1分行い、前半・後半30秒に分けて記録した。2試行合計の平均は語頭音で前半6.5語・後半3.0語、カテゴリーで前半9.5語・後半3.2語で、条件・IQ・性別にかかわらず後半に急減した。高IQ群（23名、平均66.8）と低IQ群（21名、平均38.3）の差はカテゴリー条件で有意であり、語頭音条件では前半のみ差があって後半で消えた。カテゴリー条件の誤反応のほとんどはカテゴリー逸脱で、「魚」ではいか・くじら・たこ・かに・いるかなどの水の生き物、「国」ではアフリカ・ニューヨーク・東京などの地名が多く、著者は上位概念を分類学的カテゴリーとしてより意味的関連の集まりとして理解していると解釈した。「ぬ」では1語も言えない生徒が4名おり、単一校の横断データで定型発達群との比較はない。",
+  "debate": "語頭音条件がIQの影響を受けにくいという結果は、ダウン症児では音韻（英語の文字）条件の実施可能性が意味条件より低いとする報告（Smeyne et al., 2022）と食い違うようにみえ、提示方法（日本語の音節か英語の文字か）や対象の違いによる可能性がある。",
+  "sources": [
+   {
+    "cite": "恵羅修吉・大庭重治 (2008). 知的障害児における語想起課題の分析：知能と性差の影響. 香川大学教育実践総合研究, 16, 105-113.",
+    "url": "https://kagawa-u.repo.nii.ac.jp/record/4361/files/KJ00005090776.pdf",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "全般的知能（IQ）",
+    "evidence": "相関のみ",
+    "basis": "IQ高低群の比較でカテゴリー条件に有意差があった（恵羅・大庭, 2008）。"
+   },
+   {
+    "skill": "上位概念のカテゴリー境界の理解",
+    "evidence": "理論上の仮説",
+    "basis": "誤反応がカテゴリー逸脱に集中したことからの著者の推論（恵羅・大庭, 2008）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "IQ30台〜60台の知的障害のある生徒でも、時間の経過とともに想起効率が急減するという定型発達者と共通の現象がみられた。",
+  "links": [
+   "ND-02",
+   "SV-27",
+   "SV-12",
+   "ND-03"
+  ]
+ },
+ {
+  "id": "ND-02",
+  "title": "知的障害のある中学部・高等部生徒の受容語彙年齢は精神年齢と強く関連するが、語想起（表出）との関連は弱い",
+  "domain": "神経発達症と語彙・意味",
+  "age": "中学部2年〜高等部3年（平均16歳）",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "知的障害",
+   "受容語彙",
+   "語想起",
+   "精神年齢",
+   "PVT-R"
+  ],
+  "body": "特別支援学校中学部・高等部の生徒19名（平均生活年齢192か月、田中ビネーの精神年齢平均94か月、IQ平均55.7）に、PVT-R絵画語い発達検査と語頭音の語想起（「し」「か」「る」「ぬ」各1分）を実施した。PVT-Rの語彙年齢（平均104か月）は精神年齢と強く相関し（生活年齢を統制した偏相関r=0.68）、分布は語彙年齢10歳を最頻値とする集団と4〜5歳の小集団に分かれた。語想起の正反応は語彙の多い頭音（し・か）で多く、全員で前半30秒より後半に減り、IQ60以上の群と59以下の群に差はなかった。語彙年齢と語想起総数の相関は有意でなく（精神年齢を統制した偏相関r=0.20）、散布図の目視では語彙年齢9〜10歳を超えると語想起の個人差が急に広がるようにみえた。著者自身が予備的研究と位置づけており、対象者数が少ない。",
+  "debate": "受容語彙が生活年齢でなく知的能力に見合って発達するという本研究の解釈は、生活年齢（経験）が受容語彙に独自に寄与するとするFaconらの知見とあわせて検討する必要がある（本研究でも生活年齢と語彙年齢の相関は有意だった）。",
+  "sources": [
+   {
+    "cite": "惠羅修吉・伊賀友里奈・泉保由布子・香川大学教育学部附属特別支援学校 (2012). 知的障害のある生徒における受容言語能力と表出言語能力の関連：語彙レベルにおける予備的研究. 香川大学教育実践総合研究, 24, 111-118.",
+    "url": "https://kagawa-u.repo.nii.ac.jp/record/4466/files/AA1147009X_24_111-118.pdf",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "精神年齢（全般的な知的発達）",
+    "evidence": "相関のみ",
+    "basis": "生活年齢を統制しても語彙年齢と精神年齢の偏相関がr=0.68であった（惠羅ら, 2012）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "受容語彙の検査結果だけで語を思い出して言う力（表出・検索）を推定すると、課題の難易度を見誤る可能性がある。",
+  "links": [
+   "ND-01",
+   "ND-04",
+   "SV-27"
+  ]
+ },
+ {
+  "id": "ND-03",
+  "title": "知的障害児の語流暢性はおおむね精神年齢相当だが、抑制・計画は精神年齢一致群よりも低い",
+  "domain": "神経発達症と語彙・意味",
+  "age": "学齢期（ダウン症の意味流暢性は10歳以上で適用可能性）",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "知的障害",
+   "ダウン症",
+   "語流暢性",
+   "実行機能",
+   "精神年齢一致"
+  ],
+  "body": "Danielsson et al.（2012）は知的障害児22名を、精神年齢一致群・生活年齢一致群（各22名）と比べ、言語・非言語の要求を系統的に変えた実行機能課題を実施した。知的障害児は切り替え、言語的な実行負荷のある作業記憶、ほとんどの流暢性課題で精神年齢一致群と同等だったが、抑制、計画、非言語的な作業記憶では精神年齢一致群を下回り、生活年齢一致群にはすべての課題で下回った。ダウン症児85名に改変版NEPSY-IIの語生成課題を2時点で実施した研究（Smeyne et al., 2022）では、全体としては事前に定めた信頼性・実施可能性の基準に届かなかったが、意味（カテゴリー）試行は音韻試行より実施可能性が高く、成績は生活年齢・IQと相関し、意味流暢性の試行は10歳以上のダウン症児に適する可能性が示された。いずれも抄録に基づく情報で、対象児の年齢範囲の詳細は確認していない。",
+  "debate": "精神年齢一致デザインでは、精神年齢を言語性・非言語性のどちらで測るかによって「同等」「劣る」という結論が変わりうる。",
+  "sources": [
+   {
+    "cite": "Danielsson, H., Henry, L., Messer, D., & Rönnberg, J. (2012). Strengths and weaknesses in executive functioning in children with intellectual disability. Research in Developmental Disabilities, 33(2), 600-607.",
+    "url": "https://doi.org/10.1016/j.ridd.2011.11.004",
+    "level": "抄録"
+   },
+   {
+    "cite": "Smeyne, C. N., Esbensen, A. J., Schworer, E. K., Belizaire, S., Hoffman, E. K., Beebe, D. W., & Wiley, S. (2022). Evaluating verbal fluency outcome measures in children with Down syndrome. American Journal on Intellectual and Developmental Disabilities, 127(4), 328-344.",
+    "url": "https://doi.org/10.1352/1944-7558-127.4.328",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "精神年齢",
+    "evidence": "相関のみ",
+    "basis": "流暢性の成績は精神年齢一致群と同等だった（Danielsson et al., 2012）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "知的障害のある子どもでは、語の産出（流暢性）は精神年齢相当でも、抑制や計画の弱さが課題遂行に影響しうる。",
+  "links": [
+   "ND-01",
+   "ND-04",
+   "SV-28"
+  ]
+ },
+ {
+  "id": "ND-04",
+  "title": "知的障害のある子ども・青年の受容語彙には精神年齢を超えて生活年齢（経験）が寄与するが、統語理解には寄与しない",
+  "domain": "神経発達症と語彙・意味",
+  "age": "6〜18歳（2019年の研究は若年成人まで）",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "その他",
+  "tags": [
+   "知的障害",
+   "生活年齢",
+   "精神年齢",
+   "受容語彙",
+   "発達仮説と差異仮説"
+  ],
+  "body": "Facon, Facon-Bollengier & Grubar（2002）は知的障害のある子ども・青年に、3種類の非言語性知能検査で認知水準を推定したうえでPPVT-R（受容語彙）とTROG（統語理解）を実施した。知能検査の得点は統語の分散の55%、語彙の分散の29%を説明し、生活年齢を加えると語彙では説明率が17%有意に増えたが、統語では増えなかった。6.8〜18.2歳の知的障害者44名（Facon & Facon-Bollengier, 1997）や6.1〜13.0歳のダウン症者29名（Facon et al., 1998）でも生活年齢と語彙年齢の関連が報告され、受容語彙検査が知的障害者のIQを過大評価しがちな理由とされた。ダウン症62名と病因不特定の知的障害62名を比べた横断研究（Facon & Magis, 2019）では、語彙・統語の理解とも生活年齢と診断の効果が有意で交互作用はなく、ダウン症で早く頭打ちになるという証拠は得られなかった。いずれもフランス語圏の横断データで、抄録に基づく。",
+  "debate": "知的障害の言語は定型と同じ順序で遅れて進む（発達仮説）のか、領域によって精神年齢からずれる（差異仮説）のか。Weiss, Weisz & Bromfield（1986）のメタ分析は、器質的要因のない知的障害者でも情報処理課題では精神年齢一致の定型群より成績が低いと報告している（二次情報）。語彙は精神年齢を上回り、情報処理や統語は下回りうるなど、領域によって答えが異なる。",
+  "sources": [
+   {
+    "cite": "Facon, B., Facon-Bollengier, T., & Grubar, J.-C. (2002). Chronological age, receptive vocabulary, and syntax comprehension in children and adolescents with mental retardation. American Journal on Mental Retardation, 107(2), 91-98.",
+    "url": "https://doi.org/10.1352/0895-8017(2002)107<0091:CARVAS>2.0.CO;2",
+    "level": "抄録"
+   },
+   {
+    "cite": "Facon, B., & Facon-Bollengier, T. (1997). Chronological age and Peabody Picture Vocabulary Test performance of persons with mental retardation: New data. Psychological Reports, 81(3 Pt 2), 1232-1234.",
+    "url": "https://doi.org/10.2466/pr0.1997.81.3f.1232",
+    "level": "抄録"
+   },
+   {
+    "cite": "Facon, B., Grubar, J.-C., & Gardez, C. (1998). Chronological age and receptive vocabulary of persons with Down syndrome. Psychological Reports, 82(3 Pt 1), 723-726.",
+    "url": "https://doi.org/10.2466/pr0.1998.82.3.723",
+    "level": "抄録"
+   },
+   {
+    "cite": "Facon, B., & Magis, D. (2019). Does the development of syntax comprehension show a premature asymptote among persons with Down syndrome? A cross-sectional analysis. American Journal on Intellectual and Developmental Disabilities, 124(2), 131-144.",
+    "url": "https://doi.org/10.1352/1944-7558-124.2.131",
+    "level": "抄録"
+   },
+   {
+    "cite": "Weiss, B., Weisz, J. R., & Bromfield, R. (1986). Performance of retarded and nonretarded persons on information-processing tasks: Further tests of the similar structure hypothesis. Psychological Bulletin, 100(2), 157-175.",
+    "url": "https://doi.org/10.1037/0033-2909.100.2.157",
+    "level": "二次"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "生活経験（生活年齢）",
+    "evidence": "相関のみ",
+    "basis": "非言語性知能を統制しても生活年齢が受容語彙の分散を17%追加説明した（Facon et al., 2002）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "年長の知的障害生徒は、精神年齢が同じ年少の定型児より受容語彙が多い可能性がある。これは、精神年齢だけを根拠に語彙を幼児向けにする必要はないことを示唆する（推論）。",
+  "links": [
+   "ND-02",
+   "ND-03",
+   "ND-05"
+  ]
+ },
+ {
+  "id": "ND-05",
+  "title": "語彙年齢を揃えると、知的障害児は定型発達の4歳児と同程度に事物の上位概念・関連性を絵で選べるが、言葉での説明は語彙年齢に依存する",
+  "domain": "神経発達症と語彙・意味",
+  "age": "定型4歳／知的障害8〜11歳",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "知的障害",
+   "上位概念",
+   "関連性",
+   "因果",
+   "言語的説明",
+   "語彙年齢"
+  ],
+  "body": "8〜11歳の知的障害児7名（平均語彙年齢64.9か月）と4歳の定型発達児12名（同56.2か月）に、上位概念（例：みかん→いちご／ジュース／ボール）、関連性（例：かさ→ながぐつ、くじら→ふね）、時系列、因果の4課題を、絵の選択と理由・状況の言葉での説明の両方で実施した。選択課題・説明課題のいずれも平均点に群間差はなかったが、上位概念課題の説明得点は10点満点で定型群2.92・知的障害群3.71と、関連性課題（5.50・5.29）より低かった（この比較の統計的検定は報告されていない）。知的障害群でのみ、語彙年齢が状況説明の得点と強く相関し（ρ=0.954）、概念理解（選択）と状況理解（選択）の相関も高い傾向にあった。事例数が非常に少ない予備的研究で、知的障害群には課題数を減らして実施している。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "佐藤佳那・大伴潔 (2019). 事物の関連性や状況に関する視覚的理解と言語的説明との関連：定型発達児と知的障害児との比較を通して. 東京学芸大学教育実践研究支援センター紀要, 15, 127-132.",
+    "url": "https://u-gakugei.repo.nii.ac.jp/records/36672",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "語彙（語彙年齢）",
+    "evidence": "相関のみ",
+    "basis": "知的障害群で語彙年齢と状況説明の得点が相関した（佐藤・大伴, 2019）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "絵で関係を選べても、それを言葉で説明できるとは限らない。知的障害児では説明の質が語彙の豊かさに強く依存していた。",
+  "links": [
+   "SV-30",
+   "ND-04",
+   "ND-01",
+   "SV-08"
+  ]
+ },
+ {
+  "id": "ND-06",
+  "title": "ASDの子どもの語流暢性では総語数の差より方略の違い（スイッチが少なくクラスターが大きい等）が報告され、日本のASD児では語頭音流暢性の発達の遅れが報告されている",
+  "domain": "神経発達症と語彙・意味",
+  "age": "4〜14歳（研究により異なる）",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "自閉スペクトラム症",
+   "語流暢性",
+   "クラスタリング",
+   "スイッチング",
+   "語頭音流暢性"
+  ],
+  "body": "Begeer et al.（2014）はASDのある子ども・青年と比較群の計52名に動物名想起（60秒）を行い、方略を厳密な基準で符号化した結果、ASD群はスイッチが少なくクラスターがやや大きく、総語数は同等だった。5〜8歳のASD児47名と、性・年齢・非言語性IQを一致させた定型児53名の比較では、ASD群は意味流暢性の指標が低く、差はクラスタリングよりスイッチングで大きく、定型群では生活年齢が、ASD群では言語性IQが成績の最良の予測因子だった（Pastor-Cerezuela et al., 2016）。知的障害のないASD児20名と定型児20名の比較では、ASD群は意味・文字の両課題で正答数が少なかったが、クラスター・スイッチ・誤りには差がなく、著者は意味ネットワークの構造ではなく検索の遅さで説明した（Zarokanellou et al., 2023）。日本では4〜14歳のASD児89名で、語頭音流暢性の発達の遅れと、カテゴリー流暢性とWISC-IV類似問題との関連が報告されている（郡山, 2023、博士論文要旨のみ確認）。",
+  "debate": "ASDの流暢性の弱さを意味ネットワークの構造の違いとみるか、検索の遅さや切り替え（実行機能）の問題とみるかで、研究間の結論が分かれている。",
+  "sources": [
+   {
+    "cite": "Begeer, S., Wierda, M., Scheeren, A. M., Teunisse, J.-P., Koot, H. M., & Geurts, H. M. (2014). Verbal fluency in children with autism spectrum disorders: Clustering and switching strategies. Autism, 18(8), 1014-1018.",
+    "url": "https://doi.org/10.1177/1362361313500381",
+    "level": "抄録"
+   },
+   {
+    "cite": "Pastor-Cerezuela, G., Fernández-Andrés, M. I., Feo-Álvarez, M., & González-Sala, F. (2016). Semantic verbal fluency in children with and without autism spectrum disorder: Relationship with chronological age and IQ. Frontiers in Psychology, 7, 921.",
+    "url": "https://doi.org/10.3389/fpsyg.2016.00921",
+    "level": "抄録"
+   },
+   {
+    "cite": "Zarokanellou, V., Papanikolaou, K., Tafiadis, D., & Kolaitis, G. (2023). Qualitative analysis of verbal fluency in school-age children with high-functioning autism spectrum disorders: Associations with age and IQ. Applied Neuropsychology: Child, 12(3), 235-244.",
+    "url": "https://doi.org/10.1080/21622965.2022.2090255",
+    "level": "抄録"
+   },
+   {
+    "cite": "郡山翔平 (2023). 自閉症スペクトラム児における言語流暢性，デザイン流暢性の発達に関する検査成績に基づく研究：流暢性と言語機能，認知機能との関連および流暢性の共通基盤（博士論文内容の要旨）. 川崎医療福祉大学.",
+    "url": "https://kwmw.repo.nii.ac.jp/record/15096",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "言語性IQ",
+    "evidence": "相関のみ",
+    "basis": "ASD群では言語性IQが意味流暢性の最良の予測因子だった（Pastor-Cerezuela et al., 2016）。"
+   },
+   {
+    "skill": "語の類似性の理解（WISC-IV類似）",
+    "evidence": "相関のみ",
+    "basis": "ASD児でカテゴリー流暢性と類似問題の成績が関連した（郡山, 2023）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "総語数が同等でも方略が異なる場合があるため、流暢性の評価では語数だけでなく、クラスター（同じ下位カテゴリーの連続）とスイッチ（下位カテゴリー間の移動）を見る必要がある。",
+  "links": [
+   "ND-07",
+   "SV-28",
+   "SV-12",
+   "SV-25"
+  ]
+ },
+ {
+  "id": "ND-07",
+  "title": "ASD児は語の処理中に分類学的関係を定型児より強く活性化し、ASD成人の連想ネットワークはより区画化（高モジュール性）しているが、関係推論そのものは保たれうる",
+  "domain": "神経発達症と語彙・意味",
+  "age": "就学前〜成人",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "自閉スペクトラム症",
+   "分類学的関係",
+   "主題的関係",
+   "意味ネットワーク",
+   "自由連想"
+  ],
+  "body": "Hua et al.（2025）は就学前のASD児36名と、年齢・性・言語性IQを揃えた定型児35名に、目標語を聞かせながら目標物・主題的関連物・分類学的関連物・無関連物の絵を見せる視線計測課題を行った。両群とも主題的・分類学的関係が同じタイミングで活性化したが、ASD児は目標物全体への注視が少なく、分類学的関係の活性化とその競合効果が定型児より強く、主題的関係は定型児と同等だった。Kenett, Gold & Faust（2016）はアスペルガー症候群の人と統制群の自由連想から心的辞書のネットワークを構築し、AS群がより区画化された「高モジュール」構造をもつことを示し、思考の硬さとの関連を論じた。一方、知的障害のないASD児は年齢・IQ・作業記憶を揃えた定型児と同程度に類推課題を解けたという報告もあり（Morsanyi & Holyoak, 2010）、関係を推論する基本的な力は保たれていると考えられる。日本語のASD児者の語連想を調べる科研費課題（佐藤, 25K06459）は研究計画のみ確認でき、結果は未公表である。",
+  "debate": "ASDでは分類学的・知覚的なカテゴリーへの偏りを示す研究と、主題的関係も定型と同等に使えるとする研究があり、課題によって結果が分かれる。",
+  "sources": [
+   {
+    "cite": "Hua, Z., Li, T., Shi, R., Wei, R., & Yi, L. (2025). Activation of thematic and taxonomic relations during lexical-semantic processing in autistic children: Evidence from eye movements. Autism Research, 18(5), 1037-1049.",
+    "url": "https://doi.org/10.1002/aur.70023",
+    "level": "抄録"
+   },
+   {
+    "cite": "Kenett, Y. N., Gold, R., & Faust, M. (2016). The hyper-modular associative mind: A computational analysis of associative responses of persons with Asperger syndrome. Language and Speech, 59(3), 297-313.",
+    "url": "https://doi.org/10.1177/0023830915589397",
+    "level": "抄録"
+   },
+   {
+    "cite": "Morsanyi, K., & Holyoak, K. J. (2010). Analogical reasoning ability in autistic and typically developing children. Developmental Science, 13(4), 578-587.",
+    "url": "https://doi.org/10.1111/j.1467-7687.2009.00915.x",
+    "level": "抄録"
+   },
+   {
+    "cite": "佐藤妙子（研究代表者）. 自閉スペクトラム症児者の意味ネットワークの特徴：語連想からの検討（科学研究費助成事業 25K06459, 研究計画）.",
+    "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-25K06459/",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "ASDの子どもでは、分類学的な結びつきは強い一方、自由連想の広がり（離れた意味領域への移動）が限られる可能性がある（成人データからの推論を含む）。",
+  "links": [
+   "ND-06",
+   "SV-30",
+   "SV-31",
+   "SV-25"
+  ]
+ },
+ {
+  "id": "ND-08",
+  "title": "ADHDでは文字（音韻）・意味の両方の語流暢性に中程度の低下があり、クラスター間の切り替えの非効率が関わる",
+  "domain": "神経発達症と語彙・意味",
+  "age": "4〜55歳（メタ分析）、8〜12歳",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "ADHD",
+   "語流暢性",
+   "実行機能",
+   "スイッチング",
+   "メタ分析"
+  ],
+  "body": "1994〜2024年の横断研究16件（ADHD 566名・健常統制601名、4〜55歳）のメタ分析（Agahi & Nejati, 2026）では、ADHD群は音韻流暢性（g=−0.44）と意味流暢性（g=−0.51）の両方で中程度の低下を示し、意味流暢性の効果量がやや大きかった。効果は性別と併存症によって調整されたが、年齢による調整はなかった（ASDとの併存例は除外）。8〜12歳のADHD児22名と定型児22名を比べた研究（Takács et al., 2014）では、ADHD群は語彙的・実行的方略の適用に余地があり、意味流暢性の効率低下はクラスター間の切り替えの不十分さと新しいクラスターを作れないことに基づいていたが、語彙を広く探索する実行過程そのものは保たれていた。日本語のADHD児の語流暢性データは今回見つからなかった。",
+  "debate": "臨床では文字（音韻）流暢性の低下が強調されることがあるが、このメタ分析では意味流暢性の効果量がやや大きかった（両者の差は小さい）。",
+  "sources": [
+   {
+    "cite": "Agahi, Z., & Nejati, V. (2026). Verbal fluency in individuals with attention deficit-hyperactivity disorder (ADHD): A meta-analysis. Acta Psychologica, 270, 107638.",
+    "url": "https://doi.org/10.1016/j.actpsy.2026.107638",
+    "level": "抄録"
+   },
+   {
+    "cite": "Takács, Á., Kóbor, A., Tárnok, Z., & Csépe, V. (2014). Verbal fluency in children with ADHD: Strategy using and temporal properties. Child Neuropsychology, 20(4), 415-429.",
+    "url": "https://doi.org/10.1080/09297049.2013.799645",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "実行機能（切り替え・新しいクラスターの生成）",
+    "evidence": "相関のみ",
+    "basis": "ADHD児の意味流暢性の低下はクラスター間の切り替えの不十分さと結びついていた（Takács et al., 2014）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "ADHDでは語彙量よりも、検索方略の切り替えや持続が成績に影響しやすい。",
+  "links": [
+   "SV-28",
+   "ND-06",
+   "ND-09"
+  ]
+ },
+ {
+  "id": "ND-09",
+  "title": "読み書き障害・発達性言語障害（DLD）の子どもの意味流暢性の低さは、意味ネットワークの貧弱さよりも検索の遅さで説明される",
+  "domain": "神経発達症と語彙・意味",
+  "age": "6〜12歳",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "発達性ディスレクシア",
+   "発達性言語障害",
+   "語想起困難",
+   "意味流暢性",
+   "検索速度"
+  ],
+  "body": "Mengisidou, Marshall & Stavrakaki（2020）は、ギリシャ語を話すディスレクシアやDLD（またはその両方）のある7〜12歳66名と定型児83名（6〜12歳）に、「動物」「食べ物」「家にある物」の意味流暢性を実施した。両群とも産出数はクラスター数・スイッチ数と強く相関したが、平均クラスターサイズとは相関しなかった。障害群は正答数とクラスター数が少なかったが、スイッチ数と平均クラスターサイズは定型群と同等だったため、著者らは「意味構造が貧弱」モデルではなく「検索が遅い」モデルを支持した。言語・読み書き・音韻の力は、年齢の効果を超えて正答数を予測した。Messer & Dockrell（2006）のレビューは、意味を理解していても正しい語を言えない語想起困難（word-finding difficulties）の説明として、意味・音韻・処理速度の3つを整理している。日本語の学習障害児の語想起データは今回確認できなかった。",
+  "debate": "語想起困難の原因を、意味表象の弱さ、音韻表象の弱さ、処理速度のどれに求めるかは決着していない。",
+  "sources": [
+   {
+    "cite": "Mengisidou, M., Marshall, C. R., & Stavrakaki, S. (2020). Semantic fluency difficulties in developmental dyslexia and developmental language disorder (DLD): Poor semantic structure of the lexicon or slower retrieval processes? International Journal of Language & Communication Disorders, 55(2), 200-215.",
+    "url": "https://doi.org/10.1111/1460-6984.12512",
+    "level": "抄録"
+   },
+   {
+    "cite": "Messer, D., & Dockrell, J. E. (2006). Children's naming and word-finding difficulties: Descriptions and explanations. Journal of Speech, Language, and Hearing Research, 49(2), 309-324.",
+    "url": "https://doi.org/10.1044/1092-4388(2006/025)",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "言語・読み書き・音韻の力",
+    "evidence": "相関のみ",
+    "basis": "年齢を超えて意味流暢性の正答数を予測した（Mengisidou et al., 2020）。"
+   }
+  ],
+  "leads_to": [],
+  "nd_note": "時間制限のある産出課題での低得点を、語彙や概念の欠如と即断しないことが示唆される（推論）。",
+  "links": [
+   "ND-08",
+   "ND-06",
+   "SV-28"
+  ]
+ },
+ {
+  "id": "ND-10",
+  "title": "特別支援学級の児童に線結びと遅延再生を組み合わせたプリント学習で語を教えると、クラス名を手がかりとした連想語彙数が増えた",
+  "domain": "神経発達症と語彙・意味",
+  "age": "小学4〜6年（9〜12歳）",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "知的障害",
+   "自閉スペクトラム症",
+   "連想語彙",
+   "プリント教材",
+   "線結び",
+   "介入研究"
+  ],
+  "body": "特別支援学級の4〜6年生（研究1は5名、研究2は6名。自閉スペクトラム症、IQ46〜69の児童、重度感音性難聴の児童を含む）に、虫・魚・植物・動物の写真と名称を、手本を見たあと隠して書く遅延再生課題で教えた。1日だけの学習では書字が維持されにくかったが、研究2で写真と語の線結び（条件性弁別）と1〜2日前の語の復習を加えると書字が獲得・維持され、「テーマ　魚」のようにクラス名を示して時間制限なしで書かせる連想語彙数が、介入したクラスで増える傾向がみられた。抽出語での転移確認では、音声→写真の指さし、写真→命名、単語→音読を全員が全問正答した。研究1では、学習した語以外の音や形の似た虫の名前が続けて書かれることもあった。少数事例の行動間多重ベースラインデザインであり、連想語彙数の増加が学習語の再生をどこまで超えた一般化を含むかは限られた形でしか示されていない。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "河村優詞 (2022). 特別支援学級における条件性弁別・遅延再生課題を用いた語彙指導方法の検討：単語筆記行動の獲得と連想語彙数への影響. 自閉症スペクトラム研究, 19(2), 5-13.",
+    "url": "https://doi.org/10.32220/japanacademyofas.19.2_5",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [
+   {
+    "skill": "写真と語の対応づけ（条件性弁別）と書字",
+    "evidence": "介入で確認",
+    "basis": "線結びと復習を組み合わせると単語の書字が獲得・維持された（河村, 2022）。"
+   }
+  ],
+  "leads_to": [
+   {
+    "skill": "クラス名を手がかりとした語の想起（連想語彙）",
+    "evidence": "介入で確認",
+    "basis": "介入したクラスで連想語彙数が増える傾向がみられた（少数事例、河村, 2022）。"
+   }
+  ],
+  "nd_note": "知的障害・ASDのある児童でも、写真と語の対応学習と分散した復習によって、カテゴリーを手がかりとした語の産出が増えうる。",
+  "links": [
+   "SV-27",
+   "ND-01",
+   "ND-02"
+  ]
+ },
+ {
+  "id": "SV-32",
+  "title": "4〜7歳では機能関係・部分–全体関係が早くから使われ、上位（カテゴリー）関係はそれより遅れて伸びる",
+  "domain": "学齢期の語彙・意味",
+  "age": "3〜12歳（中心は4〜7歳）",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "多言語",
+  "tags": [
+   "意味関係",
+   "機能関係",
+   "部分–全体関係",
+   "上位概念",
+   "発達順序"
+  ],
+  "body": "Di Giacomo et al.（2012）は4〜7歳の100名に、言語的に符号化した5種類の連想関係を使う実験課題を行い、4歳でも5種類すべての関係を使えるが、関係の種類ごとに成績の伸びる時期が異なり、機能関係と部分–全体関係は早くに、上位（カテゴリー）関係はそれより遅れて発達することを示した（抄録には残る2種類の関係名の記載がない）。同じ研究グループは、子どもから高齢者・軽度アルツハイマー病までの254名で同じ5関係を比較し、発達的に遅く獲得される上位関係が軽度アルツハイマー病で最も損なわれやすいと報告している（抄録）。Litowitz & Novy（1984）は3〜12歳の2つの年齢群に、構造化された課題と自由回答の課題で部分–全体関係を表現させ、最年少の子どもでも部分–全体関係を表現できたが、年長群の方がこの関係を有意に多く選び、その言語形式（部分を表す表現・空間表現・所有表現）は年齢・課題形式・刺激の種類で変化した（抄録）。いずれも日本語のデータではなく、関係ごとの難しさは刺激語の具体性・熟知度にも左右されうる。",
+  "debate": "",
+  "sources": [
+   {
+    "cite": "Di Giacomo, D., De Federicis, L. S., Pistelli, M., Fiorenzi, D., & Passafiume, D. (2012). Semantic associative relations and conceptual processing. Cognitive Processing, 13(1), 55-62.",
+    "url": "https://doi.org/10.1007/s10339-011-0399-7",
+    "level": "抄録"
+   },
+   {
+    "cite": "Litowitz, B. E., & Novy, F. A. (1984). Expression of the part-whole semantic relation by 3- to 12-year-old children. Journal of Child Language, 11(1), 159-178.",
+    "url": "https://doi.org/10.1017/S030500090000564X",
+    "level": "抄録"
+   },
+   {
+    "cite": "Di Giacomo, D., De Federicis, L. S., Pistelli, M., Fiorenzi, D., Sodani, E., Carbone, G., & Passafiume, D. (2012). The loss of conceptual associations in mild Alzheimer's dementia. Journal of Clinical and Experimental Neuropsychology, 34(6), 643-653.",
+    "url": "https://doi.org/10.1080/13803395.2012.667393",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [
+   {
+    "skill": "上位（カテゴリー）関係の使用",
+    "evidence": "理論上の仮説",
+    "basis": "機能・部分–全体関係の後に上位関係が伸びるという横断データからの順序で、因果的なつながりは検証されていない（Di Giacomo et al., 2012）。"
+   }
+  ],
+  "nd_note": "",
+  "links": [
+   "SV-30",
+   "SV-29",
+   "SV-31",
+   "ND-05",
+   "SV-09"
+  ]
+ },
+ {
+  "id": "SV-33",
+  "title": "日本語5,736語の成人AoA評定（Mochizuki & Ota, 2025）は無料で使えるが、評定は7段階の年齢帯で、ワークシート語の照合率は低い",
+  "domain": "学齢期の語彙・意味",
+  "age": "評定者は成人。評定対象は0〜12歳以上の年齢帯",
+  "age_band": [
+   "0〜1歳",
+   "1〜2歳",
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "その他",
+  "tags": [
+   "獲得年齢",
+   "AoA",
+   "ノルム",
+   "オープンデータ",
+   "OSF",
+   "語彙評定"
+  ],
+  "body": "Mochizuki & Ota (2025) は、成人1,345名（18〜90歳、平均50.7歳、クラウドソーシング）に日本語5,736語の獲得年齢（AoA）を評定させた。尺度は7段階の年齢帯で、1=0〜1歳、2=2〜3歳、3=4〜5歳、4=6〜7歳、5=8〜9歳、6=10〜11歳、7=12歳以上（獲得年齢が分からない語も7）である。1語あたり約40〜60名が評定し、折半信頼性は0.924だった。英語などのAoAとの相関は r=0.396〜0.531と中程度で、語に漢字が多いほどAoAが高く評定される傾向があった（r=0.224）。データはOSF（https://osf.io/fawmq/）で公開されており、data_AoA.csv（列：Item, Word, Word_ENG, PartOfSpeech, nAoA, meanAoA, sdAoA, minAoA, maxAoA）を取得した。収録語は語彙判断課題用に選ばれたもの（名詞4,977・動詞648・形容詞111）で、平均AoAの最小は2.46なので最も早期の語はほとんど含まれない。ワークシートの1文字以外の文字列との照合率は約15%にとどまった。",
+  "debate": "成人が「何歳ごろ覚えたか」を思い出して答える主観評定であり、子どもの実際の既知率ではない。著者ら自身も、リッカート型の年齢帯評定や表記（漢字・かな）の影響を限界に挙げている。",
+  "sources": [
+   {
+    "cite": "Mochizuki, M., & Ota, N. (2025). Collection of age of acquisition ratings for over 5,000 Japanese words. Frontiers in Language Sciences, 4. https://doi.org/10.3389/flang.2025.1605224",
+    "url": "https://doi.org/10.3389/flang.2025.1605224",
+    "level": "本文"
+   },
+   {
+    "cite": "Mochizuki, M. (2025). OSF project: Japanese AoA ratings (data_AoA.csv, data_stimuli_list.csv ほか).",
+    "url": "https://osf.io/fawmq/",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "",
+  "links": [
+   "SV-35",
+   "SV-36",
+   "SV-34"
+  ]
+ },
+ {
+  "id": "SV-34",
+  "title": "国立国語研究所「教育基本語彙データベース」は7種の教育基本語彙27,234語に小学校低学年／高学年／中学校の語彙配当を付けており、CC BY 4.0で無料公開されている",
+  "domain": "学齢期の語彙・意味",
+  "age": "小学1年〜中学3年（学年配当）",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "教育基本語彙",
+   "学年別語彙",
+   "阪本一郎",
+   "田中久直",
+   "オープンデータ",
+   "語彙配当"
+  ],
+  "body": "国立国語研究所は『教育基本語彙の基本的研究―増補改訂版―』（2009）の付属CD-ROMのデータをウェブで公開しており、CC BY 4.0で利用できる。収録元は、阪本一郎『教育基本語彙』（1958）、『新教育基本語彙』（1984）、田中久直『学習基本語彙』（1956）、池原（1957）、児言研（1962）、中央教育研究所（1984）、国語研（1984）の7種である。語彙配当は、1=小学校低学年（6,865語）、2=小学校高学年（8,620語）、3=中学校（11,749語）、計27,234語。解説によると、2006年に熊谷市の小中学生を対象に100語の理解度（知っていると答えた割合）を調べたところ、低学年配当語の理解度は小1で60.3%、小4で79.5%、小6で90.6%だった（高学年配当語は小1で24.0%、小4で45.2%、小6で69.9%）。kyoikukihongoi_2009B.csv（Shift_JIS）を取得してUTF-8に変換した。列は、語彙配当, 通し番号, 見出し（かな）, 表記, 品詞, 阪本, 新阪本, 田中, 池原, 児言研, 中央, 国語研, 出現数, 語種, 分類番号1〜10。阪本の値は学習段階A/B/Cと優先順位（例：A1）、田中の値は指導学年①〜⑥である。",
+  "debate": "基になった語彙表の多くは1950〜80年代のものなので、外来語や新しい生活語は現在より高い段階に置かれていることがある（例：サッカー・シャンプー・レストランは配当3）。理解度の検証も1地域で100語にとどまる。",
+  "sources": [
+   {
+    "cite": "国立国語研究所 (2009). 教育基本語彙の基本的研究―増補改訂版―（国立国語研究所報告127）. 明治書院. データ公開ページ「教育基本語彙データベース・日本語教育基本語彙データベース」.",
+    "url": "https://mmsrv.ninjal.ac.jp/brfvep/",
+    "level": "本文"
+   },
+   {
+    "cite": "国立国語研究所. 増補改訂版解説（kaisetsu.pdf）.",
+    "url": "https://mmsrv.ninjal.ac.jp/brfvep/kaisetsu.pdf",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "",
+  "links": [
+   "SV-35",
+   "SV-33",
+   "SV-37"
+  ]
+ },
+ {
+  "id": "SV-35",
+  "title": "ワークシート語を既存ノルムに照合すると、教育基本語彙では約75%が照合できるが、Lv1〜3との対応は弱い（筆者による予備照合）",
+  "domain": "学齢期の語彙・意味",
+  "age": "精神年齢 4〜12歳を想定した語彙",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "予備照合",
+   "難易度レベル",
+   "獲得順序",
+   "教育基本語彙",
+   "AoA",
+   "ワークシート評価"
+  ],
+  "body": "筆者は、リポジトリのテンプレート（worksheets/言語発達課題/data/templates/*.yaml）から各項目の語を取り出し、表層形の完全一致で既存ノルムと照合した（異なり1,070文字列。「赤いもの」のような句も含む）。照合できた割合は、教育基本語彙DBが800（74.8%）、WLSP親密度が864（80.7%）、Mochizuki & Ota のAoAが160（15.0%）だった。1文字の文字列を除いて順位相関をとると、項目レベル（Lv1〜3）とAoAは ρ=0.32（n=160）、教育基本語彙の語彙配当とは ρ=0.10（n=720）、WLSPの「知っている」とは ρ=−0.08（n=784）だった。AoAの平均はLv1が3.79（n=62）、Lv2が3.95（n=42）、Lv3が4.24（n=56）で、尺度上はおおむね「4〜5歳」から「6〜7歳」の間にあたる。Lv3の語にも、低学年配当の語（うれしい・はずかしい・やくそく・勇気など）が多く含まれていた。Lvは語そのものの難しさより課題の抽象度で決まっている可能性があり、語の難易度は別の指標として付けるほうが妥当と考えられる。",
+  "debate": "この照合は予備的なものである。表層一致なので同音異義語の混同（かなの見出し）や表記ゆれによる取りこぼしがある。また、語が複数の項目に出る場合は最も低いレベルを採った。正式な評価では、語ごとの手作業による同定が必要。",
+  "sources": [
+   {
+    "cite": "国立国語研究所 (2009). 教育基本語彙データベース（2009年版B）kyoikukihongoi_2009B.csv.",
+    "url": "https://mmsrv.ninjal.ac.jp/brfvep/",
+    "level": "本文"
+   },
+   {
+    "cite": "Mochizuki, M., & Ota, N. (2025). data_AoA.csv. OSF.",
+    "url": "https://osf.io/fawmq/",
+    "level": "本文"
+   },
+   {
+    "cite": "国立国語研究所 (2024). WLSP-familiarity (ver. 4.0) bunruidb-fam.csv.",
+    "url": "https://github.com/masayu-a/WLSP-familiarity",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "",
+  "links": [
+   "SV-34",
+   "SV-33",
+   "SV-36"
+  ]
+ },
+ {
+  "id": "SV-36",
+  "title": "浅原（2020）の「分類語彙表」単語親密度（WLSP-familiarity）は約10万見出しに成人の「知っている」等の評定を付けた無料データだが、子どもの既知度の代用には限界がある",
+  "domain": "学齢期の語彙・意味",
+  "age": "評定者は成人",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "その他",
+  "tags": [
+   "単語親密度",
+   "分類語彙表",
+   "オープンデータ",
+   "GitHub",
+   "意味分野"
+  ],
+  "body": "WLSP-familiarity（ver. 4.0, 2024）は、『分類語彙表』増補改訂版の見出しに、クラウドソーシングで集めた「知っている」「書く」「読む」「話す」「聞く」の評定を付け、ベイズ線形混合モデルで推定したものである（平均0・分散1の標準化値）。GitHubで公開されており（CC BY-NC-SA 3.0）、bunruidb-fam.csv（約32MB、101,067データ行）を取得した。列は、レコードID, 見出し番号, レコード種別, 類, 部門, 中項目, 分類項目, 分類番号, 段落番号, 小段落番号, 語番号, 見出し, 見出し本体, 読み, 逆読み, 知っている, 書く, 読む, 話す, 聞く, 生産, 受容, 書記, 音声, 生産-受容, 書記-音声。分類番号から意味分野（抽象的関係・人間活動・自然など）が分かるので、語の抽象度をおおまかに分ける補助にも使える。評定者は成人なので、子どもの既知度にそのまま置き換えることはできない。藤田ら（2020）では、成人の親密度と小学生の既知率の相関は r=0.72で、親密度5〜6の語ではばらつきが大きかった。",
+  "debate": "NTTの「日本語の語彙特性」（天野・近藤, 1999）の単語親密度と、令和版単語親密度データベース（約16万語）は有償である。後者は2021年10月からNTT印刷が「NTT語彙データベース」として販売している。浅原版は無料だが、評定者のスクリーニングをしていない（藤田・小林, 2020 の記述による）。",
+  "sources": [
+   {
+    "cite": "浅原正幸 (2020). Bayesian Linear Mixed Model による単語親密度推定と位相情報付与. 自然言語処理, 27(1), 133–150.",
+    "url": "https://doi.org/10.5715/jnlp.27.133",
+    "level": "二次"
+   },
+   {
+    "cite": "国立国語研究所 (2024). WLSP-familiarity (ver. 4.0). README.",
+    "url": "https://github.com/masayu-a/WLSP-familiarity",
+    "level": "本文"
+   },
+   {
+    "cite": "藤田早苗・小林哲生 (2020). 単語親密度の再調査と過去のデータとの比較. 言語処理学会第26回年次大会発表論文集.",
+    "url": "https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F4-4.pdf",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "",
+  "links": [
+   "SV-37",
+   "SV-33",
+   "SV-35"
+  ]
+ },
+ {
+  "id": "SV-37",
+  "title": "小中高校生2,469名の語彙数推定では小6の中央値約1.9万語、高2で約3.8万語と、小6から高2でほぼ倍増した",
+  "domain": "学齢期の語彙・意味",
+  "age": "小学6年〜高校2年",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "語彙数推定",
+   "学年差",
+   "単語親密度",
+   "抽象語",
+   "自己申告"
+  ],
+  "body": "藤田ら（2020）は、単語親密度で選んだ50語（小学生用）・54語（中高生用）について「知っている」かどうかを答えさせ、語彙数を推定した。対象は2019年1〜2月の公立校14校、小6〜高2の2,469名である。推定語彙数の中央値は小6で19,267語、高2で38,395語だった。全問を知っていると答える男子が多かったため女子のみで見ると、小6で17,895語、高2で35,795語だった。成人の親密度と既知率の相関は小学生で r=0.72、中高生で r=0.868だった。同じ程度の親密度でも、抽象度の高い語や文語的な語は小学生の既知率が低かった（例：銀行99.3%、経済73.8%、大部分48.6%）。「比喩」のように、学校で漢字を習う学年に既知率が急に上がる語もあった。",
+  "debate": "自己申告（知っている／知らない）に基づく推定なので、過大評価の可能性を著者自身が指摘している。小1〜小5のデータはない。阪本（1955）の学年別語彙量調査（6〜20歳、約4万人、1937年実施）は古いため、現代には当てはめにくいとされる。",
+  "sources": [
+   {
+    "cite": "藤田早苗・小林哲生・山田武士・菅原真悟・新井庭子・新井紀子 (2020). 小・中・高校生の語彙数調査および単語親密度との関係分析. 言語処理学会第26回年次大会発表論文集, 355–358.",
+    "url": "https://anlp.jp/proceedings/annual_meeting/2020/pdf_dir/E1-3.pdf",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "",
+  "links": [
+   "SV-36",
+   "SV-34",
+   "SV-39"
+  ]
+ },
+ {
+  "id": "SV-38",
+  "title": "0〜3歳児の語彙チェックリストデータ（NTT 2,688語、JCDI）は存在するが、幼児期に限られ、無料の語単位データとしては公開されていない",
+  "domain": "学齢期の語彙・意味",
+  "age": "0〜3歳（一部4歳未満）",
+  "age_band": [
+   "0〜1歳",
+   "1〜2歳",
+   "2〜3歳",
+   "3〜4歳"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "幼児語彙",
+   "チェックリスト",
+   "JCDI",
+   "NTT",
+   "獲得月齢"
+  ],
+  "body": "NTTコミュニケーション科学基礎研究所は、2,688項目の電子的語彙チェックリスト（タブレットアプリ）で幼児の語彙を収集した。塚田ら（2018）はこのうち1,040名分のデータを用いており、月齢グループは37〜48か月までである。2016年の報道によると、0〜3歳児約1,300名の親の回答から語ごとの月齢別獲得率DBを作り、有償で提供する予定だった（価格未定）。日本語版マッカーサー乳幼児言語発達質問紙（JCDI）の標準化（小椋・綿巻, 科研 1998–1999）は、「語と身振り」が8〜18か月の1,047名、「語と文法」が1,838名である。どれも3歳台までのデータで、精神年齢4〜12歳の判定には直接使えない。ただし、ここに載っている語は精神年齢4歳ごろまでにほぼ獲得されているとみなす下限の目安にはなりうる。",
+  "debate": "NTTの幼児語彙DBが現在も入手できるかや価格は確認できなかった。JCDIの標準化人数は資料によって違う値が示されている（科研ページは1,047名／1,838名）。",
+  "sources": [
+   {
+    "cite": "塚田元春・南泰浩・小林哲生・奥村優子 (2018). 幼児の簡易語彙能力チェックリスト作成における幼児分類の効率化. 言語処理学会第24回年次大会発表論文集, 1257–.",
+    "url": "https://anlp.jp/proceedings/annual_meeting/2018/pdf_dir/B7-2.pdf",
+    "level": "本文"
+   },
+   {
+    "cite": "ニュースイッチ（日刊工業新聞）(2016年6月10日). 「ママ」を覚えるのは何カ月から？あかちゃん言葉2688語をデータベースに.",
+    "url": "https://newswitch.jp/p/4953",
+    "level": "二次"
+   },
+   {
+    "cite": "小椋たみ子 (研究代表). 日本語版マッカーサー乳幼児言語発達質問紙の標準化と研究（科研費 10610114, 1998–1999）.",
+    "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-10610114/",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "",
+  "links": [
+   "SV-33",
+   "SV-34"
+  ]
+ },
+ {
+  "id": "SV-39",
+  "title": "英語圏の調査では、感情語の理解語彙は4〜11歳で2年ごとにほぼ倍増し、12〜16歳で伸びが横ばいになった",
+  "domain": "学齢期の語彙・意味",
+  "age": "4〜16歳",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "英語圏",
+  "tags": [
+   "感情語",
+   "心的状態語",
+   "語彙発達",
+   "学齢期",
+   "規範データ"
+  ],
+  "body": "Baron-Cohen ら（2010）は、英語の感情語336語について、4〜16歳の377名を6つの年齢帯に分けて理解を調べた。12歳未満は親または教師が、青年は本人が、意味を知っている語にチェックした。感情語の語彙は4〜11歳で2年ごとにほぼ倍増し、12〜16歳では伸びが横ばいになった。この調査から語の難易度順も得られるとされ、著者らは感情語理解の遅れを見つけるための規範データとして提案している。日本語の学齢期について、感情語の理解を学年別に数値で示した近年の研究は、今回の検索では見つからなかった。",
+  "debate": "測定は他者または本人による「知っている」の報告であり、直接テストではない。12歳以降の横ばいは語の選び方による可能性があると著者らが述べている。語ごとの年齢帯データ（付表）は今回確認できていない。",
+  "sources": [
+   {
+    "cite": "Baron-Cohen, S., Golan, O., Wheelwright, S., Granader, Y., & Hill, J. (2010). Emotion word comprehension from 4 to 16 years old: A developmental survey. Frontiers in Evolutionary Neuroscience, 2, 109.",
+    "url": "https://doi.org/10.3389/fnevo.2010.00109",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "著者らはASD研究のグループ（Autism Research Centre）で、規範データの用途として神経発達的な原因による遅れの同定を挙げている。",
+  "links": [
+   "SV-40",
+   "SV-37",
+   "ND-13"
+  ]
+ },
+ {
+  "id": "SV-40",
+  "title": "日本の幼児では感情語を使い始めた後も意味範囲の再編が続き、5歳児は3・4歳児より感情を細かく区別する",
+  "domain": "学齢期の語彙・意味",
+  "age": "2〜5歳",
+  "age_band": [
+   "2〜3歳",
+   "3〜4歳",
+   "4〜6歳"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "感情語",
+   "意味範囲",
+   "語彙再編",
+   "幼児",
+   "日本語"
+  ],
+  "body": "浜名・針生（2015）は、2〜5歳児118名を対象に、物語課題（主人公の気持ちを問う）と表情課題を行った。2歳児クラスは年長の群より使う感情語が少なかったが、3〜5歳児の間では語数に差がなかった。どちらの課題でも、5歳児は3・4歳児より刺激を細かい感情カテゴリーに分けた。著者らは、感情語が語彙に入った後も、意味範囲の変化と語彙の再編が続くと結論している。ワークシートで感情語を扱うときは、語を知っているかどうかだけでなく、近い感情語の使い分け（例：くやしい／かなしい）を別の難しさとして考える必要がある。",
+  "debate": "幼児期の研究で、学齢期の学年差は扱っていない。",
+  "sources": [
+   {
+    "cite": "浜名真以・針生悦子 (2015). 幼児期における感情語の意味範囲の発達的変化. 発達心理学研究, 26(1), 46–55.",
+    "url": "https://doi.org/10.11201/jjdp.26.46",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "",
+  "links": [
+   "SV-39",
+   "ND-13"
+  ]
+ },
+ {
+  "id": "ND-11",
+  "title": "PVT-R（3歳0か月〜12歳3か月）とSCTAWは個人の語彙水準を測る検査であり、語ごとの獲得年齢ノルムとしては使えない",
+  "domain": "神経発達症と語彙・意味",
+  "age": "3歳0か月〜12歳3か月（PVT-R）",
+  "age_band": [
+   "3〜4歳",
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "PVT-R",
+   "SCTAW",
+   "受容語彙",
+   "語彙年齢",
+   "アセスメント"
+  ],
+  "body": "PVT-R絵画語い発達検査（上野・名越・小貫, 2008, 日本文化科学社）は、4枚の絵から検査者が言う語に合う絵を指さす受容語彙検査で、適用範囲は3歳0か月〜12歳3か月、実施時間は15分である。図版は15枚、提示語は89語で、語彙年齢（VA）を算出する（惠羅ら, 2012 の記述による）。標準抽象語理解力検査（SCTAW；春原・金子, 2002, インテルナ出版）は、抽象語の理解を測る検査として刊行されている。どちらも語ごとの通過率表を公開しているわけではなく、800語の一つひとつに獲得年齢を付ける資料にはならない。使い方としては、子ども個人の受容語彙年齢を測り、それを語の難易度（AoAや学年配当）と照らし合わせる「個人側の物差し」として位置づけるのが現実的である。",
+  "debate": "SCTAWの適用年齢・標準化の対象・項目数は、一次資料で確認できなかった。",
+  "sources": [
+   {
+    "cite": "上野一彦・名越斉子・小貫悟 (2008). PVT-R絵画語い発達検査. 日本文化科学社.",
+    "url": "https://www.nichibun.co.jp/seek/kensa/pvt_r.html",
+    "level": "二次"
+   },
+   {
+    "cite": "春原則子・金子真人 (2002). 標準抽象語理解力検査. インテルナ出版.",
+    "url": "https://ci.nii.ac.jp/books/search?q=%E6%A8%99%E6%BA%96%E6%8A%BD%E8%B1%A1%E8%AA%9E%E7%90%86%E8%A7%A3%E5%8A%9B%E6%A4%9C%E6%9F%BB",
+    "level": "二次"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "指さしで答える受容検査なので、書字や発話の負担が大きい子でも測りやすい。一方で、産出や説明の力は反映されない（ASDのノートを参照）。",
+  "links": [
+   "ND-12",
+   "ND-13",
+   "SV-35"
+  ]
+ },
+ {
+  "id": "ND-12",
+  "title": "知的障害特別支援学校の中高生19名では、PVT-Rの語彙年齢が精神年齢と強く相関し（CAを統制した偏相関 r=.68）、受容語彙と語想起の相関は弱かった",
+  "domain": "神経発達症と語彙・意味",
+  "age": "中学部・高等部（生活年齢は中高生）、精神年齢は概ね学齢期",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "知的障害",
+   "PVT-R",
+   "語彙年齢",
+   "精神年齢",
+   "受容と表出",
+   "語想起",
+   "特別支援学校"
+  ],
+  "body": "惠羅ら（2012）は、知的障害特別支援学校の中学部・高等部の生徒19名（平均IQ 55.7、範囲34〜78）に、PVT-Rと語頭音を手がかりにした語想起課題を行った。PVT-Rの語彙年齢（VA）と田中ビネーの精神年齢（MA）は強く相関し（CAを統制した偏相関 r=0.68）、VAはMAより平均で約10か月高かった（t(18)=2.33, p=.032）。VAの分布は10歳を最頻値とする大きな集団と、VA 4〜5歳の小さな集団に分かれた。VAと語想起数の相関は弱く（MAを統制した偏相関 r=0.20, ns）、VAが10歳を超えると語想起の個人差が大きくなった。語頭音の語彙量（日本語データベースに基づく）の効果は定型発達と同じように出ていた。",
+  "debate": "参加者は19名（語想起は17名）の予備的研究で、障害種別の分析はしていない。",
+  "sources": [
+   {
+    "cite": "惠羅修吉・伊賀友里奈・泉保由布子・香川大学教育学部附属特別支援学校 (2012). 知的障害のある生徒における受容言語能力と表出言語能力の関連―語彙レベルにおける予備的研究―. 香川大学教育実践総合研究, 24, 111–118.",
+    "url": "https://kagawa-u.repo.nii.ac.jp/record/4466/files/AA1147009X_24_111-118.pdf",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "軽度〜中等度の知的障害では、語の既知度を判定する基準として精神年齢（MA）を使う前提をおおむね支持する。ただし、受容語彙（VA）はMAよりやや高く出ることがあり、受容できても産出できるとは限らない。書いて答える課題では、受容語彙年齢より低めに見積もるのが安全と考えられる。",
+  "links": [
+   "ND-11",
+   "ND-13",
+   "SV-35"
+  ]
+ },
+ {
+  "id": "ND-13",
+  "title": "ASD児ではPVT-R（指さしで答える受容語彙）が年齢相応でも、語の説明・産出・意味関係を問う課題で成績が落ちることがある（小規模な日本の研究）",
+  "domain": "神経発達症と語彙・意味",
+  "age": "5〜12歳",
+  "age_band": [
+   "4〜6歳",
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "ASD",
+   "PVT-R",
+   "受容と表出",
+   "語の説明",
+   "カテゴリー化",
+   "語彙の偏り"
+  ],
+  "body": "堀田ら（2014）は、5〜6歳のASD児11名と定型発達児11名を比べた。PVT-Rの語彙（生活月齢との差）には群間差がなかったが、田中ビネーの3・4歳級の言語課題（物の用途・属性・身体の働きを説明する）はASD群で低かった。中田・小坂（2015, 抄録）は、6歳8か月〜12歳8か月で言語性IQまたは動作性IQが70以上のASD児14名を調べた。PVT-Rより田研式（呼称による表出語彙）の成績が低い例が5/6例、両方とも低い例が5例あり、学齢期にも語彙学習の歪みと遅れが残るとしている。吉岡（学会抄録）は、広汎性発達障害児8名（平均5歳11か月）と知的障害児5名（平均5歳4か月）を比べた。表出語彙年齢はそれぞれ4歳2か月と3歳0か月、理解語彙年齢は3歳2か月と3歳8か月だった。呼称の誤りは、広汎性発達障害児では等位語への誤りが多く、上位語・下位語への誤りは少なかった。ASDでは受容と表出のどちらが高いかが研究によって逆になっており、一つの語彙年齢だけで代表させにくい。",
+  "debate": "どれも10〜14名程度の小規模研究である。堀田らのASD群は知的・言語発達に遅れのない（DSM-IVでいうアスペルガー障害相当の）幼児で、中高生の知的障害を伴うASDにそのまま一般化はできない。",
+  "sources": [
+   {
+    "cite": "堀田千絵・八田武志・花咲宣子・堀田伊久子・十一元三・多鹿秀継 (2014). 自閉症スペクトラム障害リスク児への適切な指導のための発達アセスメント―アセスメントシートの作成と活用に関する基礎研究―. 関西福祉科学大学紀要, 18（頁未確認。PDF内の頁番号は15〜32頁）.",
+    "url": "https://fuksi-kagk-u.repo.nii.ac.jp/record/970/files/kagk2014866.pdf",
+    "level": "本文"
+   },
+   {
+    "cite": "中田薫・小坂美鶴 (2015). 学齢期の自閉症スペクトラム障害児における言語障害の特徴～K-ABCを用いた分析からの検討～（学会発表要旨）. 川崎医療福祉学会誌, 24(2).",
+    "url": "https://i.kawasaki-m.ac.jp/mwsoc/journal/jp/2015-j24-2/youshi12_nakata.pdf",
+    "level": "抄録"
+   },
+   {
+    "cite": "吉岡豊（年不明）. 言語発達障害児の呼称課題における誤答分析. 第15回新潟医療福祉学会学術集会 抄録 P-21, 42.",
+    "url": "https://nsg.repo.nii.ac.jp/record/4385/files/042_w1501.pdf",
+    "level": "抄録"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "連想・カテゴリー・説明を求めるワークシートでは、PVT-Rなどの受容語彙年齢が年齢相応でも、意味関係の産出でつまずくASD児がいることを前提にする。語の既知度とは別に、上位語・等位語を区別する力を評価する必要がある。",
+  "links": [
+   "ND-11",
+   "ND-12",
+   "SV-39",
+   "SV-40"
+  ]
+ },
+ {
+  "id": "ND-14",
+  "title": "学習困難のある児童生徒92名では語彙と読みが密接に関連したが、発達性dyslexia群ではこの関係のモデル適合が低かった",
+  "domain": "神経発達症と語彙・意味",
+  "age": "10〜15歳",
+  "age_band": [
+   "学齢期"
+  ],
+  "lang_data": "日本語児",
+  "tags": [
+   "LD",
+   "発達性dyslexia",
+   "語彙力",
+   "読み書き",
+   "KABC-II"
+  ],
+  "body": "水田ら（2020）は、学習困難を主訴としてセンターに来所した児童生徒92名（平均11.9±1.3歳、10〜15歳）を対象に、KABC-II習得検査の7下位検査の評価点で共分散構造分析を行った。全体では、語彙尺度と読み尺度の下位検査が密接に関連するモデルが得られた。発達性dyslexia群とそれ以外の群に分けると、dyslexia群ではモデルの適合度が低く、語彙力と読み書き到達度の関係が異なることが示唆された。著者らは、dyslexia群ではデコーディングの障害が前面に出るため、漢字を含む読みに語彙力を活かせていない可能性を考察している。",
+  "debate": "臨床来所例のデータで、群の人数の内訳などは本ノートでは確認していない。",
+  "sources": [
+   {
+    "cite": "水田めくみ・川﨑聡大・中西誠・若宮英司・玉井浩 (2020). 学習困難を呈する児童生徒の語彙力と読み書きスキルの関係性―日本版KABC-Ⅱ習得検査を指標としたモデル構築と妥当性の検討―. 東北大学大学院教育学研究科研究年報, 68(2), 89–104.",
+    "url": "https://tohoku.repo.nii.ac.jp/record/130990/files/1346-5740-2020-68%282%29-89.pdf",
+    "level": "本文"
+   }
+  ],
+  "builds_on": [],
+  "leads_to": [],
+  "nd_note": "ワークシートの語は、かな表記で提示し、読みの負担と語の知識を分けて評価するのが望ましい。dyslexiaの子では、読めないことが語を知らないことと誤認されやすい。",
+  "links": [
+   "ND-11",
+   "SV-37"
+  ]
+ },
+ {
   "id": "PW-01",
   "kind": "道筋",
   "domain": "発達の道筋",
