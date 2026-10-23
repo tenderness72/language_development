@@ -1,0 +1,28 @@
+# Ⅹ ベン図えらび（Ⅷ 属性交差の「書かない版」・正解あり）
+# left_attr / right_attr: 左右の円の条件
+# left: 左だけに合う語 / both: 両方に合う語 / right: 右だけに合う語（各2語）
+# none: どちらにも合わない語（2語。Lv2 のみ。円の外の四角に結ぶ）
+# 書かずに線で答える。2つの条件を同時に見ること・「だけ」（除外）の理解を、書字と切り離して見られる。
+# level: 1=3つの場所（左だけ・両方・右だけ） 2=どちらでもない を加えた4つの場所
+# どの語も、どの場所に入るかが1つに決まる組にすること（色・形・場所など、ものによって変わる条件は避ける）。
+type: X
+items:
+  # ---- Lv1（2026-10-23 追加・要確認） ----
+  - {id: v_vehicle_fly, left_attr: のりもの, right_attr: 空をとぶもの, level: 1,
+     left: [でんしゃ, じてんしゃ], both: [ひこうき, ヘリコプター], right: [とんぼ, ふうせん]}
+  - {id: v_round_eat, left_attr: 丸いもの, right_attr: 食べるもの, level: 1,
+     left: [ボール, ビーだま], both: [みかん, だんご], right: [バナナ, にんじん]}
+  - {id: v_wing_life, left_attr: はねがあるもの, right_attr: 生きもの, level: 1,
+     left: [ひこうき, せんぷうき], both: [すずめ, ちょうちょ], right: [いぬ, さかな]}
+  - {id: v_white_eat, left_attr: 白いもの, right_attr: 食べるもの, level: 1,
+     left: [ゆきだるま, はくちょう], both: [ごはん, とうふ], right: [バナナ, トマト]}
+  # ---- Lv2：どちらでもない を加える（2026-10-23 追加・要確認） ----
+  - {id: v_fly_life, left_attr: 空をとぶもの, right_attr: 生きもの, level: 2,
+     left: [ひこうき, ヘリコプター], both: [すずめ, とんぼ], right: [ねこ, きんぎょ], none: [つくえ, えんぴつ]}
+  - {id: v_elec_vehicle, left_attr: 電気で動くもの, right_attr: のりもの, level: 2,
+     left: [テレビ, せんたくき], both: [でんしゃ, しんかんせん], right: [じてんしゃ, いちりんしゃ], none: [えんぴつ, りんご]}
+  - {id: v_vehicle_water, left_attr: のりもの, right_attr: 水の上をすすむもの, level: 2,
+     left: [でんしゃ, バス], both: [ふね, ボート], right: [アヒル, はくちょう], none: [いす, りんご]}
+  # どんぐり・まつぼっくりは「食べるもの」に入れない前提（子どもがふだん食べない木の実）。要確認。
+  - {id: v_eat_tree, left_attr: 食べるもの, right_attr: 木になるもの, level: 2,
+     left: [パン, たまご], both: [りんご, みかん], right: [どんぐり, まつぼっくり], none: [くつ, いす]}

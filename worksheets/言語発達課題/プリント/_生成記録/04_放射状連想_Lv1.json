@@ -4,27 +4,10 @@
   "clinical_title": "放射状連想",
   "name": "04_放射状連想_Lv1_問題",
   "level": 1,
-  "seed": 83,
+  "seed": 41,
   "count": 9,
+  "overrides": {},
   "pages": [
-    {
-      "type": "IV",
-      "problems": [
-        {
-          "n": 1,
-          "id": "park",
-          "center": "公園",
-          "hint": "ブランコ"
-        },
-        {
-          "n": 2,
-          "id": "spring",
-          "center": "春",
-          "hint": "さくら"
-        }
-      ],
-      "page": 1
-    },
     {
       "type": "IV",
       "problems": [
@@ -36,9 +19,27 @@
         },
         {
           "n": 2,
-          "id": "iv_lv1_010",
-          "center": "おもちゃ",
-          "hint": "つみき"
+          "id": "school",
+          "center": "学校",
+          "hint": "先生"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "iv_lv1_007",
+          "center": "雪",
+          "hint": "ゆきだるま"
+        },
+        {
+          "n": 2,
+          "id": "iv_lv1_006",
+          "center": "花",
+          "hint": "ちょうちょ"
         }
       ],
       "page": 2
@@ -48,15 +49,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "zoo",
-          "center": "どうぶつえん",
-          "hint": "ぞう"
+          "id": "iv_lv1_003",
+          "center": "ねこ",
+          "hint": "ひげ"
         },
         {
           "n": 2,
-          "id": "summer",
-          "center": "夏",
-          "hint": "プール"
+          "id": "park",
+          "center": "公園",
+          "hint": "ブランコ"
         }
       ],
       "page": 3
@@ -72,9 +73,9 @@
         },
         {
           "n": 2,
-          "id": "winter",
-          "center": "冬",
-          "hint": "雪"
+          "id": "kitchen",
+          "center": "台所",
+          "hint": "なべ"
         }
       ],
       "page": 4
@@ -84,15 +85,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv1_006",
-          "center": "花",
-          "hint": "ちょうちょ"
+          "id": "iv_lv1_009",
+          "center": "おかし",
+          "hint": "チョコレート"
         },
         {
           "n": 2,
-          "id": "iv_lv1_008",
-          "center": "おべんとう",
-          "hint": "おにぎり"
+          "id": "zoo",
+          "center": "どうぶつえん",
+          "hint": "ぞう"
         }
       ],
       "page": 5
@@ -102,15 +103,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "school",
-          "center": "学校",
-          "hint": "先生"
+          "id": "iv_lv1_005",
+          "center": "でんしゃ",
+          "hint": "せんろ"
         },
         {
           "n": 2,
-          "id": "kitchen",
-          "center": "台所",
-          "hint": "なべ"
+          "id": "iv_lv1_010",
+          "center": "おもちゃ",
+          "hint": "つみき"
         }
       ],
       "page": 6
@@ -120,15 +121,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv1_007",
-          "center": "雪",
-          "hint": "ゆきだるま"
+          "id": "spring",
+          "center": "春",
+          "hint": "さくら"
         },
         {
           "n": 2,
-          "id": "iv_lv1_001",
-          "center": "秋",
-          "hint": "おちば"
+          "id": "iv_lv1_008",
+          "center": "おべんとう",
+          "hint": "おにぎり"
         }
       ],
       "page": 7
@@ -138,9 +139,9 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv1_003",
-          "center": "ねこ",
-          "hint": "ひげ"
+          "id": "iv_lv1_004",
+          "center": "くるま",
+          "hint": "タイヤ"
         },
         {
           "n": 2,
@@ -156,15 +157,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "iv_lv1_004",
-          "center": "くるま",
-          "hint": "タイヤ"
+          "id": "winter",
+          "center": "冬",
+          "hint": "雪"
         },
         {
           "n": 2,
-          "id": "iv_lv1_005",
-          "center": "でんしゃ",
-          "hint": "せんろ"
+          "id": "summer",
+          "center": "夏",
+          "hint": "プール"
         }
       ],
       "page": 9

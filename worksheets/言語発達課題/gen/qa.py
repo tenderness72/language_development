@@ -69,17 +69,50 @@ def check_item(type_key, item):
                 for i, ch in fx.items():
                     if not (0 < i < int(k)) or units[i] != ch:
                         return f"[VII:{item['id']}] 解答例 '{w}' の{i + 1}マス目が書いておく字「{ch}」と合わない"
+                # 拗長音（拗音＋のばす音）には、のばす音の字を書いておく
+                for j, u in enumerate(units[:-1]):
+                    if len(u) == 2 and u[1] in "ゃゅょ" and units[j + 1] in "うー" and fx.get(j + 1) != units[j + 1]:
+                        return (f"[VII:{item['id']}] 解答例 '{w}' の拗長音に支えがない："
+                                f"{k}音の行の{j + 2}マス目に「{units[j + 1]}」を書いておく（fixed）")
                 lv = int(item.get("level", 1))
                 if lv == 1 and any(ch in w for ch in "ゃゅょぁぃぅぇぉっんー"):
                     return f"[VII:{item['id']}] Lv1 の解答例 '{w}' に特殊音節がある"
                 if lv == 2 and any(ch in w for ch in "ゃゅょぁぃぅぇぉっ"):
                     return f"[VII:{item['id']}] Lv2 の解答例 '{w}' に拗音・促音がある"
+        for k, row in (item.get("fixed") or {}).items():
+            if len(row) + 1 >= int(k):
+                return f"[VII:{item['id']}] {k}音の行は、書いておく字で全部うまってしまう（書くマスが残らない）"
         lv = int(item.get("level", 1))
         fixed_chars = {ch for row in (item.get("fixed") or {}).values() for ch in row.values()}
         if lv == 2 and not fixed_chars:
             return f"[VII:{item['id']}] Lv2 は「ん」または長音の字を書いておく行（fixed）が必要"
         if lv == 3 and len(split_mora(item["initial"])[0]) < 2 and "っ" not in fixed_chars:
             return f"[VII:{item['id']}] Lv3 は語頭音が拗音か、「っ」を書いておく行が必要"
+    elif type_key == "V":
+        rel = item.get("relation")
+        expect = {"いっしょ": 1, "なかま": 2, "こうたい": 3}
+        if rel not in expect:
+            return f"[V:{item['id']}] relation は いっしょ／なかま／こうたい のいずれか"
+        if int(item.get("level", 1)) != expect[rel]:
+            return f"[V:{item['id']}] relation「{rel}」は Lv{expect[rel]}"
+    elif type_key == "IX":
+        mem, oth = item.get("members", []), item.get("others", [])
+        if len(mem) != 6 or len(oth) != 6:
+            return f"[IX:{item['id']}] members/others は各6語"
+        if len(set(mem + oth)) != 12:
+            return f"[IX:{item['id']}] 語に重複あり（仲間とそうでない語の衝突を含む）"
+    elif type_key == "X":
+        regions = ["left", "both", "right"] + (["none"] if int(item.get("level", 1)) >= 2 else [])
+        words = []
+        for r in regions:
+            ws = item.get(r, [])
+            if len(ws) != 2:
+                return f"[X:{item['id']}] {r} は2語（Lv2 は none も2語）"
+            words += ws
+        if int(item.get("level", 1)) == 1 and item.get("none"):
+            return f"[X:{item['id']}] Lv1 に none は置かない（3つの場所だけ）"
+        if len(set(words)) != len(words):
+            return f"[X:{item['id']}] 語が2つの場所に重複している"
     return None
 
 

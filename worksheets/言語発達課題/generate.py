@@ -26,7 +26,7 @@ def run_single(args):
     generate_set(
         type_key=args.type, count=args.count, level=args.level, seed=args.seed,
         out_dir=args.out, with_answers=args.with_answers, base_dir=args.base_dir,
-        name=args.name,
+        name=args.name, overrides={"lines": args.lines} if args.lines else None,
     )
 
 
@@ -74,14 +74,18 @@ def run_catalog(args):
                 print(f"[{tkey}] Lv{level}: 問題が{uniq}問のため1枚に満たず、作りません")
                 continue
             stem = f"{folder}_Lv{level}"
-            generate_set(
-                type_key=tkey, count=count, level=level,
-                seed=args.seed + n * 10 + level,
-                out_dir=os.path.join(out_root, folder, f"Lv{level}"),
-                with_answers=True, base_dir=args.base_dir,
-                name=f"{stem}_問題", answers_name=f"{stem}_解答",
-                manifest_path=os.path.join(log_dir, f"{stem}.json"),
-            )
+            # variants: 同じ問題を、行数などを変えた版でも作る（例：Ⅵ の5行版 → 〜_問題_5行.pdf）
+            for v in [None] + list(entry.get("variants") or []):
+                suffix = f"_{v['suffix']}" if v else ""
+                generate_set(
+                    type_key=tkey, count=count, level=level,
+                    seed=args.seed + n * 10 + level,
+                    out_dir=os.path.join(out_root, folder, f"Lv{level}"),
+                    with_answers=True, base_dir=args.base_dir,
+                    name=f"{stem}_問題{suffix}", answers_name=f"{stem}_解答{suffix}",
+                    manifest_path=os.path.join(log_dir, f"{stem}{suffix}.json"),
+                    overrides=(v or {}).get("set"),
+                )
 
 
 def main(argv=None):
@@ -96,6 +100,7 @@ def main(argv=None):
     ap.add_argument("--with-answers", action="store_true",
                     help="I/II/III/VII の解答PDFも出力")
     ap.add_argument("--name", default=None, help="出力ファイル名の幹")
+    ap.add_argument("--lines", type=int, default=None, help="Ⅵ の記入行の数を全問で上書き（例：5）")
     ap.add_argument("--pack", default=None, help="products.yaml の products（販売パック）を一括生成")
     ap.add_argument("--catalog", nargs="?", const="products.yaml", default=None,
                     help="products.yaml の catalog に従い、全課題・全レベルを プリント/ に作り直す")

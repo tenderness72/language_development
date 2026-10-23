@@ -4,25 +4,28 @@
   "clinical_title": "つづき歌",
   "name": "05_つづき歌_Lv2_問題",
   "level": 2,
-  "seed": 94,
+  "seed": 52,
   "count": 5,
+  "overrides": {},
   "pages": [
     {
       "type": "V",
       "problems": [
         {
           "n": 1,
-          "id": "flower",
-          "start": "はな",
+          "id": "t_dog",
+          "start": "いぬ",
           "slots": 5,
-          "example": "ちょうちょ"
+          "example": "ねこ",
+          "relation": "なかま"
         },
         {
           "n": 2,
-          "id": "milk",
-          "start": "ぎゅうにゅう",
+          "id": "t_shirt",
+          "start": "シャツ",
           "slots": 5,
-          "example": "うし"
+          "example": "ズボン",
+          "relation": "なかま"
         }
       ],
       "page": 1
@@ -32,17 +35,19 @@
       "problems": [
         {
           "n": 1,
-          "id": "summer",
-          "start": "なつ",
+          "id": "t_pencil",
+          "start": "えんぴつ",
           "slots": 5,
-          "example": "すいか"
+          "example": "けしゴム",
+          "relation": "なかま"
         },
         {
           "n": 2,
-          "id": "rain",
-          "start": "あめ",
+          "id": "t_apple",
+          "start": "りんご",
           "slots": 5,
-          "example": "かさ"
+          "example": "バナナ",
+          "relation": "なかま"
         }
       ],
       "page": 2
@@ -52,17 +57,19 @@
       "problems": [
         {
           "n": 1,
-          "id": "mountain",
-          "start": "やま",
+          "id": "t_sparrow",
+          "start": "すずめ",
           "slots": 5,
-          "example": "き"
+          "example": "からす",
+          "relation": "なかま"
         },
         {
           "n": 2,
-          "id": "morning",
-          "start": "あさ",
+          "id": "t_tulip",
+          "start": "チューリップ",
           "slots": 5,
-          "example": "たいよう"
+          "example": "ひまわり",
+          "relation": "なかま"
         }
       ],
       "page": 3
@@ -72,17 +79,19 @@
       "problems": [
         {
           "n": 1,
-          "id": "fire",
-          "start": "ひ",
+          "id": "t_spoon",
+          "start": "スプーン",
           "slots": 5,
-          "example": "ろうそく"
+          "example": "フォーク",
+          "relation": "なかま"
         },
         {
           "n": 2,
-          "id": "shop",
-          "start": "おみせ",
+          "id": "t_piano",
+          "start": "ピアノ",
           "slots": 5,
-          "example": "おかね"
+          "example": "たいこ",
+          "relation": "なかま"
         }
       ],
       "page": 4
@@ -92,17 +101,19 @@
       "problems": [
         {
           "n": 1,
-          "id": "park",
-          "start": "こうえん",
+          "id": "t_carrot",
+          "start": "にんじん",
           "slots": 5,
-          "example": "ブランコ"
+          "example": "だいこん",
+          "relation": "なかま"
         },
         {
           "n": 2,
-          "id": "festival",
-          "start": "おまつり",
+          "id": "t_bus",
+          "start": "バス",
           "slots": 5,
-          "example": "たいこ"
+          "example": "タクシー",
+          "relation": "なかま"
         }
       ],
       "page": 5

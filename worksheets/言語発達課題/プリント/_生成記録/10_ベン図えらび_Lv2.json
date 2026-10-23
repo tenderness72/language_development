@@ -1,0 +1,122 @@
+{
+  "type": "X",
+  "display_title": "合うところへ線でむすぼう",
+  "clinical_title": "属性交差（書かない版）",
+  "name": "10_ベン図えらび_Lv2_問題",
+  "level": 2,
+  "seed": 102,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "X",
+      "problems": [
+        {
+          "n": 1,
+          "id": "v_fly_life",
+          "left_attr": "空をとぶもの",
+          "right_attr": "生きもの",
+          "answer": {
+            "left": [
+              "ひこうき",
+              "ヘリコプター"
+            ],
+            "both": [
+              "すずめ",
+              "とんぼ"
+            ],
+            "right": [
+              "ねこ",
+              "きんぎょ"
+            ],
+            "none": [
+              "つくえ",
+              "えんぴつ"
+            ]
+          }
+        },
+        {
+          "n": 2,
+          "id": "v_eat_tree",
+          "left_attr": "食べるもの",
+          "right_attr": "木になるもの",
+          "answer": {
+            "left": [
+              "パン",
+              "たまご"
+            ],
+            "both": [
+              "りんご",
+              "みかん"
+            ],
+            "right": [
+              "どんぐり",
+              "まつぼっくり"
+            ],
+            "none": [
+              "くつ",
+              "いす"
+            ]
+          }
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "X",
+      "problems": [
+        {
+          "n": 1,
+          "id": "v_vehicle_water",
+          "left_attr": "のりもの",
+          "right_attr": "水の上をすすむもの",
+          "answer": {
+            "left": [
+              "でんしゃ",
+              "バス"
+            ],
+            "both": [
+              "ふね",
+              "ボート"
+            ],
+            "right": [
+              "アヒル",
+              "はくちょう"
+            ],
+            "none": [
+              "いす",
+              "りんご"
+            ]
+          }
+        },
+        {
+          "n": 2,
+          "id": "v_elec_vehicle",
+          "left_attr": "電気で動くもの",
+          "right_attr": "のりもの",
+          "answer": {
+            "left": [
+              "テレビ",
+              "せんたくき"
+            ],
+            "both": [
+              "でんしゃ",
+              "しんかんせん"
+            ],
+            "right": [
+              "じてんしゃ",
+              "いちりんしゃ"
+            ],
+            "none": [
+              "えんぴつ",
+              "りんご"
+            ]
+          }
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

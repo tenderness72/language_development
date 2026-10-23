@@ -3,7 +3,7 @@
 重なる2円。上に交差条件ラベル、左円・右円にそれぞれ属性ラベル。
 """
 from .. import layout
-from .base import start_page
+from .base import ORAL_NOTE, start_page
 
 KEY = "VIII"
 TITLE = "属性交差"                       # 内部の臨床名（PDFには出さない）
@@ -45,7 +45,7 @@ def _draw_problem(c, ctx, rtop, item):
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION, note=ORAL_NOTE)
     mani = {"type": KEY, "problems": []}
     tops = [body_y, body_y + 100]
     for n, (item, rtop) in enumerate(zip(items, tops), start=1):

@@ -1,0 +1,78 @@
+{
+  "type": "IX",
+  "display_title": "なかまに○をつけよう",
+  "clinical_title": "カテゴリー判断（流暢性の書かない版）",
+  "name": "09_仲間えらび_Lv2_問題",
+  "level": 2,
+  "seed": 92,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "IX",
+      "problems": [
+        {
+          "n": 1,
+          "id": "c_vegetable",
+          "category": "やさい",
+          "members": [
+            "にんじん",
+            "だいこん",
+            "キャベツ",
+            "たまねぎ",
+            "ピーマン",
+            "ほうれんそう"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "c_bird",
+          "category": "とり",
+          "members": [
+            "すずめ",
+            "からす",
+            "はと",
+            "にわとり",
+            "つばめ",
+            "ふくろう"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IX",
+      "problems": [
+        {
+          "n": 1,
+          "id": "c_instrument",
+          "category": "がっき",
+          "members": [
+            "ピアノ",
+            "たいこ",
+            "ふえ",
+            "ギター",
+            "カスタネット",
+            "トライアングル"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "c_insect",
+          "category": "むし",
+          "members": [
+            "とんぼ",
+            "ちょうちょ",
+            "せみ",
+            "かぶとむし",
+            "ばった",
+            "てんとうむし"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

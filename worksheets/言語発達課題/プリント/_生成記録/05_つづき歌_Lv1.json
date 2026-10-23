@@ -4,25 +4,28 @@
   "clinical_title": "つづき歌",
   "name": "05_つづき歌_Lv1_問題",
   "level": 1,
-  "seed": 93,
-  "count": 5,
+  "seed": 51,
+  "count": 6,
+  "overrides": {},
   "pages": [
     {
       "type": "V",
       "problems": [
         {
           "n": 1,
-          "id": "bath",
-          "start": "おふろ",
+          "id": "curry",
+          "start": "カレー",
           "slots": 5,
-          "example": "せっけん"
+          "example": "ごはん",
+          "relation": "いっしょ"
         },
         {
           "n": 2,
-          "id": "school",
-          "start": "がっこう",
+          "id": "cake",
+          "start": "ケーキ",
           "slots": 5,
-          "example": "せんせい"
+          "example": "いちご",
+          "relation": "いっしょ"
         }
       ],
       "page": 1
@@ -32,17 +35,19 @@
       "problems": [
         {
           "n": 1,
-          "id": "train",
-          "start": "でんしゃ",
-          "slots": 5,
-          "example": "えき"
-        },
-        {
-          "n": 2,
           "id": "snow",
           "start": "雪",
           "slots": 5,
-          "example": "ゆきだるま"
+          "example": "ゆきだるま",
+          "relation": "いっしょ"
+        },
+        {
+          "n": 2,
+          "id": "bath",
+          "start": "おふろ",
+          "slots": 5,
+          "example": "せっけん",
+          "relation": "いっしょ"
         }
       ],
       "page": 2
@@ -52,17 +57,19 @@
       "problems": [
         {
           "n": 1,
-          "id": "apple",
-          "start": "りんご",
+          "id": "rain",
+          "start": "あめ",
           "slots": 5,
-          "example": "あか"
+          "example": "かさ",
+          "relation": "いっしょ"
         },
         {
           "n": 2,
-          "id": "bird",
-          "start": "とり",
+          "id": "sea",
+          "start": "うみ",
           "slots": 5,
-          "example": "はね"
+          "example": "さかな",
+          "relation": "いっしょ"
         }
       ],
       "page": 3
@@ -72,17 +79,19 @@
       "problems": [
         {
           "n": 1,
-          "id": "curry",
-          "start": "カレー",
+          "id": "train",
+          "start": "でんしゃ",
           "slots": 5,
-          "example": "ごはん"
+          "example": "えき",
+          "relation": "いっしょ"
         },
         {
           "n": 2,
-          "id": "cake",
-          "start": "ケーキ",
+          "id": "flower",
+          "start": "はな",
           "slots": 5,
-          "example": "いちご"
+          "example": "ちょうちょ",
+          "relation": "いっしょ"
         }
       ],
       "page": 4
@@ -92,20 +101,44 @@
       "problems": [
         {
           "n": 1,
-          "id": "sea",
-          "start": "うみ",
+          "id": "mountain",
+          "start": "やま",
           "slots": 5,
-          "example": "さかな"
+          "example": "き",
+          "relation": "いっしょ"
         },
         {
           "n": 2,
-          "id": "dog",
-          "start": "いぬ",
+          "id": "school",
+          "start": "がっこう",
           "slots": 5,
-          "example": "さんぽ"
+          "example": "せんせい",
+          "relation": "いっしょ"
         }
       ],
       "page": 5
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "festival",
+          "start": "おまつり",
+          "slots": 5,
+          "example": "たいこ",
+          "relation": "いっしょ"
+        },
+        {
+          "n": 2,
+          "id": "park",
+          "start": "こうえん",
+          "slots": 5,
+          "example": "ブランコ",
+          "relation": "いっしょ"
+        }
+      ],
+      "page": 6
     }
   ],
   "warnings": [],

@@ -1,7 +1,8 @@
-"""8テンプレートの登録。"""
+"""テンプレートの登録（Ⅰ〜Ⅷ ＋ 書かない版 Ⅸ・Ⅹ）。"""
 from . import (
     t1_chain, t2_network, t3_pairs, t4_radial,
     t5_chain_song, t6_fluency, t7_mora, t8_venn,
+    t9_category_choice, t10_venn_choice,
 )
 
 REGISTRY = {
@@ -13,6 +14,8 @@ REGISTRY = {
     "VI": t6_fluency,
     "VII": t7_mora,
     "VIII": t8_venn,
+    "IX": t9_category_choice,
+    "X": t10_venn_choice,
 }
 
 

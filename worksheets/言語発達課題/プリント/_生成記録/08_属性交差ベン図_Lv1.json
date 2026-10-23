@@ -4,38 +4,19 @@
   "clinical_title": "属性交差",
   "name": "08_属性交差ベン図_Lv1_問題",
   "level": 1,
-  "seed": 123,
+  "seed": 81,
   "count": 4,
+  "overrides": {},
   "pages": [
     {
       "type": "VIII",
       "problems": [
         {
           "n": 1,
-          "id": "white_eat",
-          "left_attr": "白いもの",
-          "right_attr": "食べるもの",
-          "intersection": "白くて食べるもの"
-        },
-        {
-          "n": 2,
-          "id": "cold_eat",
-          "left_attr": "つめたいもの",
-          "right_attr": "食べるもの",
-          "intersection": "つめたくて食べるもの"
-        }
-      ],
-      "page": 1
-    },
-    {
-      "type": "VIII",
-      "problems": [
-        {
-          "n": 1,
-          "id": "round_eat",
-          "left_attr": "丸いもの",
-          "right_attr": "食べるもの",
-          "intersection": "丸くて食べるもの"
+          "id": "green_vege",
+          "left_attr": "みどりのもの",
+          "right_attr": "やさい",
+          "intersection": "みどりのやさい"
         },
         {
           "n": 2,
@@ -45,7 +26,7 @@
           "intersection": "赤くて食べるもの"
         }
       ],
-      "page": 2
+      "page": 1
     },
     {
       "type": "VIII",
@@ -59,13 +40,13 @@
         },
         {
           "n": 2,
-          "id": "green_vege",
-          "left_attr": "みどりのもの",
-          "right_attr": "やさい",
-          "intersection": "みどりのやさい"
+          "id": "white_eat",
+          "left_attr": "白いもの",
+          "right_attr": "食べるもの",
+          "intersection": "白くて食べるもの"
         }
       ],
-      "page": 3
+      "page": 2
     },
     {
       "type": "VIII",
@@ -76,6 +57,26 @@
           "left_attr": "あまいもの",
           "right_attr": "飲みもの",
           "intersection": "あまい飲みもの"
+        },
+        {
+          "n": 2,
+          "id": "round_eat",
+          "left_attr": "丸いもの",
+          "right_attr": "食べるもの",
+          "intersection": "丸くて食べるもの"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "cold_eat",
+          "left_attr": "つめたいもの",
+          "right_attr": "食べるもの",
+          "intersection": "つめたくて食べるもの"
         },
         {
           "n": 2,

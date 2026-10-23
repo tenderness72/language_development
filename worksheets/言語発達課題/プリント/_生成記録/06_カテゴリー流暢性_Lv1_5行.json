@@ -1,0 +1,160 @@
+{
+  "type": "VI",
+  "display_title": "仲間をたくさん探そう",
+  "clinical_title": "カテゴリー流暢性",
+  "name": "06_カテゴリー流暢性_Lv1_問題_5行",
+  "level": 1,
+  "seed": 61,
+  "count": 8,
+  "overrides": {
+    "lines": 5
+  },
+  "pages": [
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv1_004",
+          "category": "あさごはんにたべるもの",
+          "example": "パン"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv1_003",
+          "category": "たべるときに使うもの",
+          "example": "おはし"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "drink",
+          "category": "のみもの",
+          "example": "ぎゅうにゅう"
+        },
+        {
+          "n": 2,
+          "id": "color",
+          "category": "色",
+          "example": "あか"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "animal",
+          "category": "どうぶつ",
+          "example": "うさぎ"
+        },
+        {
+          "n": 2,
+          "id": "vegetable",
+          "category": "やさい",
+          "example": "にんじん"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv1_005",
+          "category": "おべんとうにはいっているもの",
+          "example": "たまごやき"
+        },
+        {
+          "n": 2,
+          "id": "vehicle",
+          "category": "のりもの",
+          "example": "でんしゃ"
+        }
+      ],
+      "page": 4
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_014a",
+          "category": "動物の鳴き声",
+          "example": "ワンワン"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv1_007",
+          "category": "どうぶつえんにいるどうぶつ",
+          "example": "ぞう"
+        }
+      ],
+      "page": 5
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv1_006",
+          "category": "おまつりにあるもの",
+          "example": "わたあめ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv1_008",
+          "category": "えをかくときに使うもの",
+          "example": "クレヨン"
+        }
+      ],
+      "page": 6
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv1_002",
+          "category": "ねるときに使うもの",
+          "example": "まくら"
+        },
+        {
+          "n": 2,
+          "id": "food",
+          "category": "たべもの",
+          "example": "ごはん"
+        }
+      ],
+      "page": 7
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fruit",
+          "category": "くだもの",
+          "example": "りんご"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv1_001",
+          "category": "ペット",
+          "example": "いぬ"
+        }
+      ],
+      "page": 8
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

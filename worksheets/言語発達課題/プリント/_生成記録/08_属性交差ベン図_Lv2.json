@@ -4,48 +4,29 @@
   "clinical_title": "属性交差",
   "name": "08_属性交差ベン図_Lv2_問題",
   "level": 2,
-  "seed": 124,
+  "seed": 82,
   "count": 6,
+  "overrides": {},
   "pages": [
     {
       "type": "VIII",
       "problems": [
         {
           "n": 1,
-          "id": "sound_toy",
-          "left_attr": "音が出るもの",
-          "right_attr": "おもちゃ",
-          "intersection": "音が出るおもちゃ"
+          "id": "white_flower",
+          "left_attr": "白いもの",
+          "right_attr": "花",
+          "intersection": "白い花"
         },
         {
           "n": 2,
-          "id": "fast_vehicle",
-          "left_attr": "はやいもの",
-          "right_attr": "のりもの",
-          "intersection": "はやいのりもの"
+          "id": "soft_eat",
+          "left_attr": "やわらかいもの",
+          "right_attr": "食べるもの",
+          "intersection": "やわらかくて食べるもの"
         }
       ],
       "page": 1
-    },
-    {
-      "type": "VIII",
-      "problems": [
-        {
-          "n": 1,
-          "id": "square_home",
-          "left_attr": "四角いもの",
-          "right_attr": "家にあるもの",
-          "intersection": "四角くて家にあるもの"
-        },
-        {
-          "n": 2,
-          "id": "long_tool",
-          "left_attr": "長いもの",
-          "right_attr": "道具",
-          "intersection": "長い道具"
-        }
-      ],
-      "page": 2
     },
     {
       "type": "VIII",
@@ -59,10 +40,30 @@
         },
         {
           "n": 2,
-          "id": "square_school",
-          "left_attr": "四角いもの",
-          "right_attr": "学校にあるもの",
-          "intersection": "四角くて学校にあるもの"
+          "id": "sound_toy",
+          "left_attr": "音が出るもの",
+          "right_attr": "おもちゃ",
+          "intersection": "音が出るおもちゃ"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "hot_drink",
+          "left_attr": "あついもの",
+          "right_attr": "飲みもの",
+          "intersection": "あつい飲みもの"
+        },
+        {
+          "n": 2,
+          "id": "soft_animal",
+          "left_attr": "ふわふわのもの",
+          "right_attr": "どうぶつ",
+          "intersection": "ふわふわのどうぶつ"
         }
       ],
       "page": 3
@@ -72,17 +73,17 @@
       "problems": [
         {
           "n": 1,
-          "id": "soft_animal",
-          "left_attr": "ふわふわのもの",
-          "right_attr": "どうぶつ",
-          "intersection": "ふわふわのどうぶつ"
+          "id": "square_school",
+          "left_attr": "四角いもの",
+          "right_attr": "学校にあるもの",
+          "intersection": "四角くて学校にあるもの"
         },
         {
           "n": 2,
-          "id": "round_school",
-          "left_attr": "丸いもの",
-          "right_attr": "学校にあるもの",
-          "intersection": "丸くて学校にあるもの"
+          "id": "fast_vehicle",
+          "left_attr": "はやいもの",
+          "right_attr": "のりもの",
+          "intersection": "はやいのりもの"
         }
       ],
       "page": 4
@@ -92,17 +93,17 @@
       "problems": [
         {
           "n": 1,
-          "id": "white_flower",
-          "left_attr": "白いもの",
-          "right_attr": "花",
-          "intersection": "白い花"
+          "id": "hard_kitchen",
+          "left_attr": "かたいもの",
+          "right_attr": "台所にあるもの",
+          "intersection": "かたくて台所にあるもの"
         },
         {
           "n": 2,
-          "id": "hot_drink",
-          "left_attr": "あついもの",
-          "right_attr": "飲みもの",
-          "intersection": "あつい飲みもの"
+          "id": "square_home",
+          "left_attr": "四角いもの",
+          "right_attr": "家にあるもの",
+          "intersection": "四角くて家にあるもの"
         }
       ],
       "page": 5
@@ -112,17 +113,17 @@
       "problems": [
         {
           "n": 1,
-          "id": "soft_eat",
-          "left_attr": "やわらかいもの",
-          "right_attr": "食べるもの",
-          "intersection": "やわらかくて食べるもの"
+          "id": "round_school",
+          "left_attr": "丸いもの",
+          "right_attr": "学校にあるもの",
+          "intersection": "丸くて学校にあるもの"
         },
         {
           "n": 2,
-          "id": "hard_kitchen",
-          "left_attr": "かたいもの",
-          "right_attr": "台所にあるもの",
-          "intersection": "かたくて台所にあるもの"
+          "id": "long_tool",
+          "left_attr": "長いもの",
+          "right_attr": "道具",
+          "intersection": "長い道具"
         }
       ],
       "page": 6

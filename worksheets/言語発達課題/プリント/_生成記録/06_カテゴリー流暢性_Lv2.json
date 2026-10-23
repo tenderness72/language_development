@@ -4,23 +4,24 @@
   "clinical_title": "カテゴリー流暢性",
   "name": "06_カテゴリー流暢性_Lv2_問題",
   "level": 2,
-  "seed": 104,
+  "seed": 62,
   "count": 24,
+  "overrides": {},
   "pages": [
     {
       "type": "VI",
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_010b",
-          "category": "スポーツ用具",
-          "example": "ボール"
+          "id": "vi_lv2_016a",
+          "category": "学校でする勉強",
+          "example": "算数"
         },
         {
           "n": 2,
-          "id": "vi_lv2_011a",
-          "category": "洋服",
-          "example": "Tシャツ"
+          "id": "vi_lv2_032",
+          "category": "空を飛ぶもの",
+          "example": "ひこうき"
         }
       ],
       "page": 1
@@ -30,15 +31,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_018a",
-          "category": "夏に関係することば",
-          "example": "海"
+          "id": "vi_lv2_039",
+          "category": "駅にあるもの",
+          "example": "きっぷ"
         },
         {
           "n": 2,
-          "id": "vi_lv2_005b",
-          "category": "外にあるもの",
-          "example": "木"
+          "id": "vi_lv2_019b",
+          "category": "甘いもの",
+          "example": "ケーキ"
         }
       ],
       "page": 2
@@ -48,288 +49,18 @@
       "problems": [
         {
           "n": 1,
-          "id": "insect",
-          "category": "むし",
-          "example": "ちょう"
+          "id": "vi_lv2_030",
+          "category": "赤いもの",
+          "example": "りんご"
         },
         {
           "n": 2,
-          "id": "vi_lv2_039",
-          "category": "駅にあるもの",
-          "example": "きっぷ"
-        }
-      ],
-      "page": 3
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "kitchen_item",
-          "category": "台所にあるもの",
-          "example": "なべ"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_015b",
-          "category": "お菓子",
-          "example": "チョコレート"
-        }
-      ],
-      "page": 4
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_020b",
-          "category": "職業で使う道具",
-          "example": "はさみ"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_013a",
-          "category": "形",
-          "example": "丸"
-        }
-      ],
-      "page": 5
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_025",
-          "category": "お店",
-          "example": "パンや"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_032",
-          "category": "空を飛ぶもの",
-          "example": "ひこうき"
-        }
-      ],
-      "page": 6
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_016b",
-          "category": "学校の場所",
-          "example": "体育館"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_026",
-          "category": "川の生き物",
-          "example": "めだか"
-        }
-      ],
-      "page": 7
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "school_item",
-          "category": "学校にあるもの",
-          "example": "こくばん"
-        },
-        {
-          "n": 2,
-          "id": "fish",
-          "category": "さかな",
-          "example": "さば"
-        }
-      ],
-      "page": 8
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_023",
-          "category": "おもちゃ",
-          "example": "つみき"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_005a",
-          "category": "家の中にあるもの",
-          "example": "テレビ"
-        }
-      ],
-      "page": 9
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_042",
-          "category": "キャンプで使うもの",
-          "example": "テント"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_010a",
-          "category": "楽器",
-          "example": "ピアノ"
-        }
-      ],
-      "page": 10
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_037",
-          "category": "山にあるもの",
-          "example": "木"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_016a",
-          "category": "学校でする勉強",
-          "example": "算数"
-        }
-      ],
-      "page": 11
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_022",
-          "category": "木",
-          "example": "さくら"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_041",
-          "category": "パンのしゅるい",
-          "example": "メロンパン"
-        }
-      ],
-      "page": 12
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_019b",
-          "category": "甘いもの",
-          "example": "ケーキ"
-        },
-        {
-          "n": 2,
-          "id": "flower",
-          "category": "花",
-          "example": "チューリップ"
-        }
-      ],
-      "page": 13
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_034",
-          "category": "おふろにあるもの",
-          "example": "せっけん"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_036",
-          "category": "スーパーで売っているもの",
-          "example": "たまご"
-        }
-      ],
-      "page": 14
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_008b",
-          "category": "顔の部分",
-          "example": "目"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_018b",
-          "category": "冬に関係することば",
-          "example": "こたつ"
-        }
-      ],
-      "page": 15
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
           "id": "body",
           "category": "からだのぶぶん",
           "example": "て"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_040",
-          "category": "たまごを使ったりょうり",
-          "example": "オムライス"
         }
       ],
-      "page": 16
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_009b",
-          "category": "都市",
-          "example": "東京"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_029",
-          "category": "冷たいもの",
-          "example": "こおり"
-        }
-      ],
-      "page": 17
-    },
-    {
-      "type": "VI",
-      "problems": [
-        {
-          "n": 1,
-          "id": "vi_lv2_033",
-          "category": "味つけに使うもの",
-          "example": "しお"
-        },
-        {
-          "n": 2,
-          "id": "vi_lv2_027",
-          "category": "雨の日に使うもの",
-          "example": "かっぱ"
-        }
-      ],
-      "page": 18
+      "page": 3
     },
     {
       "type": "VI",
@@ -342,12 +73,30 @@
         },
         {
           "n": 2,
-          "id": "vi_lv2_011b",
-          "category": "靴",
-          "example": "スニーカー"
+          "id": "vi_lv2_020b",
+          "category": "職業で使う道具",
+          "example": "はさみ"
         }
       ],
-      "page": 19
+      "page": 4
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_033",
+          "category": "味つけに使うもの",
+          "example": "しお"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_022",
+          "category": "木",
+          "example": "さくら"
+        }
+      ],
+      "page": 5
     },
     {
       "type": "VI",
@@ -360,48 +109,84 @@
         },
         {
           "n": 2,
-          "id": "vi_lv2_038",
-          "category": "病院にあるもの",
-          "example": "くすり"
+          "id": "stationery",
+          "category": "ぶんぼうぐ",
+          "example": "えんぴつ"
         }
       ],
-      "page": 20
+      "page": 6
     },
     {
       "type": "VI",
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_024",
-          "category": "公園にあるもの",
-          "example": "ブランコ"
+          "id": "vi_lv2_010b",
+          "category": "スポーツ用具",
+          "example": "ボール"
         },
         {
           "n": 2,
-          "id": "sport",
-          "category": "スポーツ",
-          "example": "やきゅう"
+          "id": "vi_lv2_028",
+          "category": "電気で動くもの",
+          "example": "せんぷうき"
         }
       ],
-      "page": 21
+      "page": 7
     },
     {
       "type": "VI",
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_015a",
-          "category": "料理",
-          "example": "ラーメン"
+          "id": "vi_lv2_010a",
+          "category": "楽器",
+          "example": "ピアノ"
         },
         {
           "n": 2,
-          "id": "vi_lv2_030",
-          "category": "赤いもの",
-          "example": "りんご"
+          "id": "vi_lv2_026",
+          "category": "川の生き物",
+          "example": "めだか"
         }
       ],
-      "page": 22
+      "page": 8
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_018b",
+          "category": "冬に関係することば",
+          "example": "こたつ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_041",
+          "category": "パンのしゅるい",
+          "example": "メロンパン"
+        }
+      ],
+      "page": 9
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_011b",
+          "category": "靴",
+          "example": "スニーカー"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_027",
+          "category": "雨の日に使うもの",
+          "example": "かっぱ"
+        }
+      ],
+      "page": 10
     },
     {
       "type": "VI",
@@ -414,9 +199,225 @@
         },
         {
           "n": 2,
-          "id": "stationery",
-          "category": "ぶんぼうぐ",
-          "example": "えんぴつ"
+          "id": "vi_lv2_040",
+          "category": "たまごを使ったりょうり",
+          "example": "オムライス"
+        }
+      ],
+      "page": 11
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_029",
+          "category": "冷たいもの",
+          "example": "こおり"
+        },
+        {
+          "n": 2,
+          "id": "school_item",
+          "category": "学校にあるもの",
+          "example": "こくばん"
+        }
+      ],
+      "page": 12
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fish",
+          "category": "さかな",
+          "example": "さば"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_005b",
+          "category": "外にあるもの",
+          "example": "木"
+        }
+      ],
+      "page": 13
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "insect",
+          "category": "むし",
+          "example": "ちょう"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_007b",
+          "category": "建物",
+          "example": "学校"
+        }
+      ],
+      "page": 14
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_011a",
+          "category": "洋服",
+          "example": "Tシャツ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_037",
+          "category": "山にあるもの",
+          "example": "木"
+        }
+      ],
+      "page": 15
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_038",
+          "category": "病院にあるもの",
+          "example": "くすり"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_018a",
+          "category": "夏に関係することば",
+          "example": "海"
+        }
+      ],
+      "page": 16
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_023",
+          "category": "おもちゃ",
+          "example": "つみき"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_016b",
+          "category": "学校の場所",
+          "example": "体育館"
+        }
+      ],
+      "page": 17
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_024",
+          "category": "公園にあるもの",
+          "example": "ブランコ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_025",
+          "category": "お店",
+          "example": "パンや"
+        }
+      ],
+      "page": 18
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_013a",
+          "category": "形",
+          "example": "丸"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_015b",
+          "category": "お菓子",
+          "example": "チョコレート"
+        }
+      ],
+      "page": 19
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "flower",
+          "category": "花",
+          "example": "チューリップ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_034",
+          "category": "おふろにあるもの",
+          "example": "せっけん"
+        }
+      ],
+      "page": 20
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "sport",
+          "category": "スポーツ",
+          "example": "やきゅう"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_015a",
+          "category": "料理",
+          "example": "ラーメン"
+        }
+      ],
+      "page": 21
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_008b",
+          "category": "顔の部分",
+          "example": "目"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_009b",
+          "category": "都市",
+          "example": "東京"
+        }
+      ],
+      "page": 22
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "kitchen_item",
+          "category": "台所にあるもの",
+          "example": "なべ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_042",
+          "category": "キャンプで使うもの",
+          "example": "テント"
         }
       ],
       "page": 23
@@ -426,15 +427,15 @@
       "problems": [
         {
           "n": 1,
-          "id": "vi_lv2_007b",
-          "category": "建物",
-          "example": "学校"
+          "id": "vi_lv2_005a",
+          "category": "家の中にあるもの",
+          "example": "テレビ"
         },
         {
           "n": 2,
-          "id": "vi_lv2_031",
-          "category": "遊び",
-          "example": "おにごっこ"
+          "id": "vi_lv2_036",
+          "category": "スーパーで売っているもの",
+          "example": "たまご"
         }
       ],
       "page": 24

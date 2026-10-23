@@ -4,25 +4,28 @@
   "clinical_title": "つづき歌",
   "name": "05_つづき歌_Lv3_問題",
   "level": 3,
-  "seed": 95,
-  "count": 2,
+  "seed": 53,
+  "count": 4,
+  "overrides": {},
   "pages": [
     {
       "type": "V",
       "problems": [
         {
           "n": 1,
-          "id": "music",
-          "start": "おんがく",
+          "id": "a_cat",
+          "start": "ねこ",
           "slots": 5,
-          "example": "ピアノ"
+          "example": "うさぎ",
+          "relation": "こうたい"
         },
         {
           "n": 2,
-          "id": "wind",
-          "start": "かぜ",
+          "id": "a_grape",
+          "start": "ぶどう",
           "slots": 5,
-          "example": "たこ"
+          "example": "もも",
+          "relation": "こうたい"
         }
       ],
       "page": 1
@@ -32,20 +35,66 @@
       "problems": [
         {
           "n": 1,
-          "id": "travel",
-          "start": "りょこう",
+          "id": "a_scissors",
+          "start": "はさみ",
           "slots": 5,
-          "example": "おみやげ"
+          "example": "のり",
+          "relation": "こうたい"
         },
         {
           "n": 2,
-          "id": "red",
-          "start": "あか",
+          "id": "a_plane",
+          "start": "ひこうき",
           "slots": 5,
-          "example": "トマト"
+          "example": "ヘリコプター",
+          "relation": "こうたい"
         }
       ],
       "page": 2
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "a_shoes",
+          "start": "くつ",
+          "slots": 5,
+          "example": "サンダル",
+          "relation": "こうたい"
+        },
+        {
+          "n": 2,
+          "id": "a_tomato",
+          "start": "トマト",
+          "slots": 5,
+          "example": "きゅうり",
+          "relation": "こうたい"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "V",
+      "problems": [
+        {
+          "n": 1,
+          "id": "a_drum",
+          "start": "ギター",
+          "slots": 5,
+          "example": "バイオリン",
+          "relation": "こうたい"
+        },
+        {
+          "n": 2,
+          "id": "a_cup",
+          "start": "コップ",
+          "slots": 5,
+          "example": "おさら",
+          "relation": "こうたい"
+        }
+      ],
+      "page": 4
     }
   ],
   "warnings": [],

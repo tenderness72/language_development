@@ -5,7 +5,7 @@
 import math
 
 from .. import layout
-from .base import start_page
+from .base import ORAL_NOTE, start_page
 
 KEY = "IV"
 TITLE = "放射状連想"                          # 内部の臨床名（PDFには出さない）
@@ -43,7 +43,7 @@ def _draw_problem(c, ctx, cx, item, lrng):
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION, note=ORAL_NOTE)
     mani = {"type": KEY, "problems": []}
     for n, (item, cx) in enumerate(zip(items, HALF_CX), start=1):
         layout.problem_label(c, cx - 38, body_y + 6, n)

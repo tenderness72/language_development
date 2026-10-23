@@ -249,14 +249,17 @@ def page_header(c):
     return 36.0
 
 
-def section_band(c, y_mm, roman, title, instruction):
-    """角丸帯（ローマ数字＋タイトル）＋直下の指示文。返り値: 本文開始 y(mm)。"""
+def section_band(c, y_mm, roman, title, instruction, note=None):
+    """角丸帯（ローマ数字＋タイトル）＋直下の指示文（＋任意の補足1行）。返り値: 本文開始 y(mm)。"""
     band_h = 8.5
     box(c, CONTENT_X, y_mm, CONTENT_W, band_h, r=2.5, line=0.9, fill=0.92)
     text(c, CONTENT_X + 4.0, y_mm + band_h / 2, f"{roman}　{title}",
          size=13, font=BOLD, align="l", vcenter=True)
     instr_y = y_mm + band_h + 4.5
     text(c, CONTENT_X, instr_y, instruction, size=9.5, font=REG, align="l")
+    if note:
+        instr_y += 6.0
+        text(c, CONTENT_X, instr_y, note, size=8.5, font=REG, align="l", gray=0.3)
     # 本文（「問題1」見出しとそのふりがな）が教示文に重ならないよう間をあける
     return instr_y + 7.0
 

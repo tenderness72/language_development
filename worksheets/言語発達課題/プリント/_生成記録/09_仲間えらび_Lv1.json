@@ -1,0 +1,78 @@
+{
+  "type": "IX",
+  "display_title": "なかまに○をつけよう",
+  "clinical_title": "カテゴリー判断（流暢性の書かない版）",
+  "name": "09_仲間えらび_Lv1_問題",
+  "level": 1,
+  "seed": 91,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "IX",
+      "problems": [
+        {
+          "n": 1,
+          "id": "c_fruit",
+          "category": "くだもの",
+          "members": [
+            "りんご",
+            "バナナ",
+            "みかん",
+            "ぶどう",
+            "もも",
+            "なし"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "c_clothes",
+          "category": "きるもの",
+          "members": [
+            "シャツ",
+            "ズボン",
+            "スカート",
+            "セーター",
+            "パジャマ",
+            "コート"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "IX",
+      "problems": [
+        {
+          "n": 1,
+          "id": "c_vehicle",
+          "category": "のりもの",
+          "members": [
+            "バス",
+            "でんしゃ",
+            "ふね",
+            "ひこうき",
+            "じてんしゃ",
+            "タクシー"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "c_animal",
+          "category": "どうぶつ",
+          "members": [
+            "いぬ",
+            "ねこ",
+            "ぞう",
+            "きりん",
+            "うさぎ",
+            "くま"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

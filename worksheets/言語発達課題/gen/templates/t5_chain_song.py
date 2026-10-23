@@ -5,19 +5,28 @@ item に example があれば、2番目の箱に手本の語を薄い字で入�
 何を書けばよいか（前のことばと関係のあることば）を示す。
 """
 from .. import layout
-from .base import start_page
+from .base import ORAL_NOTE, start_page
 
 KEY = "V"
 TITLE = "つづき歌"                      # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "つづき歌をつくろう"    # 子ども向け表示タイトル
-INSTRUCTION = ("一番上のことばから始めて、前のことばと関係があることばを"
-               "1つずつ書きましょう。2ばんめは、れいです。")
+INSTRUCTION = ("一番上のことばから始めて、やじるしの横に書いてあるつなぎ方で、"
+               "ことばを1つずつ書きましょう。2ばんめは、れいです。")
+# 矢印の横に出すつなぎ方（relation ごと）。こうたい は なかま から始めて交互にする。
+LINK_LABEL = {"いっしょ": "いっしょにあるもの", "なかま": "おなじなかま"}
 HAS_ANSWER = False
 
 HALF_CX = [60.0, 150.0]
 BOX_W, BOX_H = 58.0, 15.0
 ARROW = 11.0
 STEP = BOX_H + ARROW
+
+
+def _link(relation, k):
+    """k 番目（0始まり）の矢印のつなぎ方。"""
+    if relation == "こうたい":
+        return LINK_LABEL["なかま" if k % 2 == 0 else "いっしょ"]
+    return LINK_LABEL[relation]
 
 
 def _draw_problem(c, ctx, cx, top0, item):
@@ -39,10 +48,13 @@ def _draw_problem(c, ctx, cx, top0, item):
             layout.text(c, cx - BOX_W / 2 + 2.5, top + 2.0, "れい", size=8, gray=0.45)
         if k < n_boxes - 1:
             layout.arrow_down(c, cx, top + BOX_H + 1.0, ARROW - 2.0)
+            label = _link(item.get("relation", "いっしょ"), k)
+            layout.text(c, cx + 3.0, top + BOX_H + ARROW / 2 + 0.5, label, size=8, align="l",
+                        vcenter=True, gray=0.3)
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION, note=ORAL_NOTE)
     mani = {"type": KEY, "problems": []}
     for n, (item, cx) in enumerate(zip(items, HALF_CX), start=1):
         layout.problem_label(c, cx - BOX_W / 2, body_y + 4, n)
@@ -50,5 +62,6 @@ def draw_page(c, ctx, items, lrng, answers=False):
         mani["problems"].append({
             "n": n, "id": item["id"], "start": item["start"],
             "slots": int(item.get("slots", 5)), "example": item.get("example"),
+            "relation": item.get("relation", "いっしょ"),
         })
     return mani
