@@ -511,7 +511,7 @@ ROUND6 = [
         "items": [{"id": "r6-iii-" + k.replace("_", "-"), "label": f"{it['relation']}（Lv{it['level']}）",
                    "before": "", "after": f"あまることば：{it['extra']}", "ask": "",
                    "scene": sc_iii(it) + f" 右に「{it['extra']}」が加わり6語になる。"}
-                  for k, it in III.items()],
+                  for k, it in III.items() if k not in ("synonym_verb", "synonym_state", "synonym_noun")],
     },
 ]
 for sec in ROUND5:
@@ -562,7 +562,14 @@ _VIII_CHECK = {
     "白いもの/花": ("ゆき", "ひまわり", "ゆり"), "あついもの/飲みもの": ("ストーブ", "ジュース", "おちゃ"),
     "音が出るもの/おもちゃ": ("でんわ", "つみき", "ガラガラ"),
     "音が出るもの/丸いもの": ("ピアノ", "ボタン", "カスタネット"),
+    "火を使うもの/料理に使うもの": ("はなび", "ほうちょう", "コンロ"),
+    "時間がわかるもの/持ち歩けるもの": ("とけいだい", "かばん", "うでどけい"),
+    "人が作ったもの/空をとぶもの": ("いす", "とり", "ひこうき"),
 }
+
+
+R10_VIII = ("fire_cook", "time_carry", "made_fly")   # 第10回で追加（第8回の点検には入れない）
+R10_III = ("synonym_verb", "synonym_state", "synonym_noun")
 
 
 def sc_ii(it):
@@ -594,7 +601,8 @@ ROUND8 = [
         "lead": "左だけ・右だけ・両方の3つの領域すべてに答えがあるかを点検しました。全問に答えがありました。答えの例が成り立つかを見てください。",
         "items": [{"id": "r8-viii-" + k.replace("_", "-"), "label": f"{it['left_attr']} ／ {it['right_attr']}", "before": "",
                    "after": "左だけ：{0}　右だけ：{1}　両方：{2}".format(*_VIII_CHECK.get(f"{it['left_attr']}/{it['right_attr']}", ("？", "？", "？"))),
-                   "ask": ""} for k, it in VIII.items() if "削除" not in str(it.get("intersection", "")) and "変更" not in str(it.get("intersection", ""))],
+                   "ask": ""} for k, it in VIII.items() if k not in R10_VIII
+                   and "削除" not in str(it.get("intersection", "")) and "変更" not in str(it.get("intersection", ""))],
     },
 ]
 for sec in ROUND7:
@@ -676,6 +684,31 @@ for sec in ROUND8:
 SECTIONS[:0] = ROUND9
 SEC_TASK.update({"r9-ix": ["IX"], "r9-x": ["X"], "r9-v-levels": ["V"], "r9-vii-yochoon": ["VII"],
                  "r9-notes": ["IV", "V", "VI", "VIII", "IX", "X"]})
+# ---- 第10回：Ⅲ・Ⅷ の Lv3 を追加（先頭に表示） ----
+ROUND10 = [
+    {
+        "key": "r10-iii-lv3", "title": "Ⅲ ペア対応づけ Lv3（新規3問）",
+        "lead": "Lv3 が1問（似た意味のことば）しかなくプリントにできなかったので、同じ「似た意味」の型で3問足しました（うごき・ようす・もの／こと）。Lv3 は似た意味を結ぶ範列的・メタ言語的な判断で、語の定義の質は5〜11歳で伸びるとされます（Wiki SV-16）。左右が1対1に決まるか、あまることばがどれとも結ばないかを見てください。",
+        "items": [{"id": "r10-iii-" + k.replace("_", "-"), "label": III[k]["relation"], "before": "",
+                   "after": "　".join(f"{a}－{b}" for a, b in III[k]["pairs"]) + f"\nあまることば：{III[k]['extra']}", "ask": "",
+                   "scene": sc_iii(III[k])} for k in R10_III],
+    },
+    {
+        "key": "r10-viii-lv3", "title": "Ⅷ 属性交差 Lv3（新規3問）",
+        "lead": "Lv3 が1問（光るもの／空にあるもの）しかなかったので、見た目では決まらない、はたらき・なりたちの条件で3問足しました。2つの条件で分ける力は、自分で例を考える形では6〜8歳ごろまで難しいとされます（Wiki SV-18）。3つの場所すべてに答えがあるか、答えの例が成り立つかを見てください。",
+        "items": [{"id": "r10-viii-" + k.replace("_", "-"), "label": f"{VIII[k]['left_attr']} ／ {VIII[k]['right_attr']}", "before": "",
+                   "after": "左だけ：{0}　右だけ：{1}　両方：{2}".format(*_VIII_CHECK[f"{VIII[k]['left_attr']}/{VIII[k]['right_attr']}"]),
+                   "ask": "", "scene": sc_viii(VIII[k])} for k in R10_VIII],
+    },
+]
+for sec in ROUND9:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND10
+SEC_TASK.update({"r10-iii-lv3": ["III"], "r10-viii-lv3": ["VIII"]})
+FIGURES[:0] = [
+    ("Ⅲ ペア対応づけ Lv3（解答）", page_png(sheet("III", 3, True), 1)),
+    ("Ⅷ 属性交差 Lv3", page_png(sheet("VIII", 3), 1)),
+]
 FIGURES[:0] = [
     ("Ⅸ 仲間えらび Lv2（解答）", page_png(sheet("IX", 2, True), 1)),
     ("Ⅹ ベン図えらび Lv2（解答）", page_png(sheet("X", 2, True), 1)),

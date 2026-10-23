@@ -1,0 +1,54 @@
+{
+  "type": "VIII",
+  "display_title": "どんなものがあるかな",
+  "clinical_title": "属性交差",
+  "name": "08_属性交差ベン図_Lv3_問題",
+  "level": 3,
+  "seed": 83,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "time_carry",
+          "left_attr": "時間がわかるもの",
+          "right_attr": "持ち歩けるもの",
+          "intersection": "時間がわかって持ち歩けるもの"
+        },
+        {
+          "n": 2,
+          "id": "shine_sky",
+          "left_attr": "光るもの",
+          "right_attr": "空にあるもの",
+          "intersection": "光って空にあるもの"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "made_fly",
+          "left_attr": "人が作ったもの",
+          "right_attr": "空をとぶもの",
+          "intersection": "人が作って空をとぶもの"
+        },
+        {
+          "n": 2,
+          "id": "fire_cook",
+          "left_attr": "火を使うもの",
+          "right_attr": "料理に使うもの",
+          "intersection": "火を使って料理に使うもの"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}
