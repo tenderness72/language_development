@@ -5,7 +5,7 @@ item に example があれば、2番目の箱に手本の語を薄い字で入�
 何を書けばよいか（前のことばと関係のあることば）を示す。
 """
 from .. import layout
-from .base import ORAL_NOTE, start_page
+from .base import start_page
 
 KEY = "V"
 TITLE = "つづき歌"                      # 内部の臨床名（PDFには出さない）
@@ -54,7 +54,7 @@ def _draw_problem(c, ctx, cx, top0, item):
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION, note=ORAL_NOTE)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
     mani = {"type": KEY, "problems": []}
     for n, (item, cx) in enumerate(zip(items, HALF_CX), start=1):
         layout.problem_label(c, cx - BOX_W / 2, body_y + 4, n)

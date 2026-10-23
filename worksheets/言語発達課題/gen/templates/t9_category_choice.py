@@ -10,7 +10,6 @@ KEY = "IX"
 TITLE = "カテゴリー判断（流暢性の書かない版）"   # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "なかまに○をつけよう"            # 子ども向け表示タイトル
 INSTRUCTION = "上の四角のなかまに入ることばを見つけて、○でかこみましょう。"
-READ_NOTE = "字を読むのがたいへんなときは、大人が読んであげてもいいよ。"
 HAS_ANSWER = True
 
 LABEL_W, LABEL_H = 80.0, 10.0
@@ -35,7 +34,7 @@ def _draw_problem(c, ctx, top, item, lrng, answers):
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION, note=READ_NOTE)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
     mani = {"type": KEY, "problems": []}
     tops = [body_y + 8, body_y + 8 + PROBLEM_H + 10]
     for n, (item, top) in enumerate(zip(items, tops), start=1):

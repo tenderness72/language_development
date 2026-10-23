@@ -42,8 +42,8 @@
           "n": 2,
           "id": "sound_toy",
           "left_attr": "音が出るもの",
-          "right_attr": "おもちゃ",
-          "intersection": "音が出るおもちゃ"
+          "right_attr": "丸いもの",
+          "intersection": "音が出て丸いもの"
         }
       ],
       "page": 2

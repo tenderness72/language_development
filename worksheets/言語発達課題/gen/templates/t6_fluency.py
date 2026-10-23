@@ -3,13 +3,13 @@
 各問1カテゴリー。見出し(角ラベル)＋例語＋「それから…」＋記入罫線8〜10本。
 """
 from .. import layout
-from .base import ORAL_NOTE, start_page
+from .base import start_page
 
 KEY = "VI"
 TITLE = "カテゴリー流暢性"                 # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "仲間をたくさん探そう"     # 子ども向け表示タイトル
-INSTRUCTION = ("それぞれの仲間に入ることばを、思いつくだけ書きましょう。"
-               "はじめの1つは例です。全部うめなくてもだいじょうぶ。")
+INSTRUCTION = ("それぞれの仲間に入ることばを、書ける分だけ書いてみましょう。"
+               "はじめの1つは例です。")
 HAS_ANSWER = False
 
 # (列左端, 中心) — 問題1/問題2
@@ -47,7 +47,7 @@ def _draw_problem(c, ctx, col_left, cx, top, item):
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION, note=ORAL_NOTE)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
     mani = {"type": KEY, "problems": []}
     for n, (item, (col_left, cx)) in enumerate(zip(items, COLS), start=1):
         layout.problem_label(c, col_left, body_y + 2, n)

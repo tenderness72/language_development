@@ -12,7 +12,6 @@ TITLE = "属性交差（書かない版）"           # 内部の臨床名（PDF
 DISPLAY_TITLE = "合うところへ線でむすぼう"   # 子ども向け表示タイトル
 INSTRUCTION = "ことばを、合うところへ線でむすびましょう。"
 INSTRUCTION_NONE = "ことばを、合うところへ線でむすびましょう。どちらにも合わないことばは、まるの外の四角へ。"
-READ_NOTE = "字を読むのがたいへんなときは、大人が読んであげてもいいよ。"
 HAS_ANSWER = True
 
 CIRCLE_D = 58.0
@@ -68,7 +67,7 @@ def _draw_problem(c, ctx, top, item, lrng, answers):
 
 def draw_page(c, ctx, items, lrng, answers=False):
     instr = INSTRUCTION_NONE if any(it.get("none") for it in items) else INSTRUCTION
-    body_y = start_page(c, KEY, DISPLAY_TITLE, instr, note=READ_NOTE)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, instr)
     mani = {"type": KEY, "problems": []}
     tops = [body_y + 8, body_y + 8 + PROBLEM_H + 10]
     for n, (item, top) in enumerate(zip(items, tops), start=1):

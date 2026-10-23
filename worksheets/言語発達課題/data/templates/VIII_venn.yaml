@@ -27,4 +27,5 @@ items:
   - {id: square_school, left_attr: 四角いもの, right_attr: 学校にあるもの, intersection: 四角くて学校にあるもの, level: 2}
   - {id: white_flower, left_attr: 白いもの, right_attr: 花, intersection: 白い花, level: 2}
   - {id: hot_drink, left_attr: あついもの, right_attr: 飲みもの, intersection: あつい飲みもの, level: 2}
-  - {id: sound_toy, left_attr: 音が出るもの, right_attr: おもちゃ, intersection: 音が出るおもちゃ, level: 2}
+  # 2026-10-23 確認で変更（おもちゃ → 丸いもの）。答えの例：左だけ ピアノ／右だけ ボタン／両方 カスタネット
+  - {id: sound_toy, left_attr: 音が出るもの, right_attr: 丸いもの, intersection: 音が出て丸いもの, level: 2}
