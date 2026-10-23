@@ -20,7 +20,7 @@ items:
   - {id: hard_kitchen, left_attr: かたいもの, right_attr: 台所にあるもの, intersection: かたくて台所にあるもの, level: 2}
   - {id: soft_animal, left_attr: ふわふわのもの, right_attr: どうぶつ, intersection: ふわふわのどうぶつ, level: 2}
   - {id: shine_sky, left_attr: 光るもの, right_attr: 空にあるもの, intersection: 光って空にあるもの, level: 3}
-  # ---- 追加 Lv3：はたらき・なりたちの条件（見た目では決まらない）（2026-10-23 追加・要確認） ----
+  # ---- 追加 Lv3：はたらき・なりたちの条件（見た目では決まらない）（2026-10-23 追加・第10回で確認済み） ----
   # 答えの例（左だけ／右だけ／両方）は確認ページ（第10回）に記載。
   - {id: fire_cook, left_attr: 火を使うもの, right_attr: 料理に使うもの, intersection: 火を使って料理に使うもの, level: 3}
   - {id: time_carry, left_attr: 時間がわかるもの, right_attr: 持ち歩けるもの, intersection: 時間がわかって持ち歩けるもの, level: 3}
