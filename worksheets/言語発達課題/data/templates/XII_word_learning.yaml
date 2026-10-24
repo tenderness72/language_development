@@ -1,0 +1,38 @@
+# Ⅻ ことばをおぼえよう（語を覚える段）
+# 1枚に新しいことば2つ：ことば・いみ・れいぶん・絵・自分のことで文をつくる。
+# ページの下で、前のページのことば2つを思い出す（いみを読んで、3つのことばから選ぶ）。
+# 根拠（Wiki）：意味と使い方を定義と文脈の両方で示す（WL-18）、文字を見せながら教える（WL-15）、
+#   ただ聞かせるより、間に他の語をはさんで思い出させる（WL-17）、DLD 児で定義できるまで約36回の接触が要り、
+#   指導をやめると忘れやすい（WL-16）。1枚で覚えきるのではなく、何度も出会い、思い出す回数を重ねる前提で使う。
+# 語は、ほかの課題で使っていて時期の遅い語（evaluation/lexical の照合で小学校高学年以降）を中心に選んだ。
+# word: ことば（漢字の語はふりがな付きで表示） / meaning: いみ（ひらがな中心・短く） / example: れいぶん（word を含む）
+# level: 1=もの・ばしょ・しごと 2=うごき・ようす 3=抽象語
+type: XII
+items:
+  # ---- Lv1：もの・ばしょ・しごと（2026-10-24 追加・要確認） ----
+  - {id: w_stethoscope, word: 聴診器, meaning: おいしゃさんが、むねやせなかのおとをきくときにつかうどうぐ。, example: おいしゃさんが聴診器でむねのおとをきいた。, level: 1}
+  - {id: w_aquarium, word: 水族館, meaning: うみやかわのいきものを、すいそうに入れて見せるところ。, example: 水族館でイルカを見た。, level: 1}
+  - {id: w_librarian, word: 司書, meaning: 図書館で、本をかしたり、ならべたりするしごとの人。, example: 司書の人に、本のさがしかたをおしえてもらった。, level: 1}
+  - {id: w_faucet, word: じゃぐち, meaning: すいどうの水を出したり、とめたりするところ。, example: 手をあらったら、じゃぐちをしめよう。, level: 1}
+  - {id: w_thermometer, word: 体温計, meaning: からだのあつさ（たいおん）をはかるどうぐ。, example: かぜをひいたので、体温計でねつをはかった。, level: 1}
+  - {id: w_stamp, word: はんこ, meaning: 名前などがほってあって、かみにおしてしるしをつけるどうぐ。, example: にもつをうけとるとき、はんこをおした。, level: 1}
+  - {id: w_thermos, word: まほうびん, meaning: 中のものを、あたたかいまま、つめたいままにしておけるいれもの。, example: まほうびんにおちゃを入れて、出かけた。, level: 1}
+  - {id: w_pasture, word: 牧草, meaning: うしやうまなどのえさにする草。, example: うしが牧草を食べている。, level: 1}
+  # ---- Lv2：うごき・ようす（2026-10-24 追加・要確認） ----
+  - {id: w_decline, word: ことわる, meaning: たのまれたことや、さそわれたことを「しない」と言う。, example: ようじがあったので、さそいをことわった。, level: 2}
+  - {id: w_give_way, word: ゆずる, meaning: じぶんのものやばしょを、ほかの人にあげたり、つかわせたりする。, example: でんしゃで、おとしよりにせきをゆずった。, level: 2}
+  - {id: w_hesitate, word: まよう, meaning: どれにするか、きめられないでいる。, example: アイスをどれにするか、まよった。, level: 2}
+  - {id: w_try, word: ためす, meaning: うまくいくかどうか、やってみてたしかめる。, example: あたらしいペンがかけるか、ためしてみた。, level: 2}
+  - {id: w_rely, word: たよる, meaning: こまったときに、ほかの人にたすけてもらう。, example: わからないときは、先生にたよっていい。, level: 2}
+  - {id: w_embarrassed, word: てれくさい, meaning: ほめられたりして、はずかしいようなきもち。, example: みんなの前でほめられて、てれくさかった。, level: 2}
+  - {id: w_noisy, word: さわがしい, meaning: 人のこえやおとが大きくて、うるさい。, example: 休み時間のきょうしつは、さわがしい。, level: 2}
+  - {id: w_careful, word: ていねい, meaning: 気をつけて、きちんとするようす。, example: ていねいに字をかいた。, level: 2}
+  # ---- Lv3：抽象語（2026-10-24 追加・要確認） ----
+  - {id: w_cooperate, word: 協力, meaning: おなじことのために、みんなで力を合わせること。, example: みんなで協力して、きょうしつをそうじした。, level: 3}
+  - {id: w_responsibility, word: 責任, meaning: じぶんのやくめとして、さいごまでしなければならないこと。, example: かかりの責任として、まいにち花に水をやる。, level: 3}
+  - {id: w_challenge, word: 挑戦, meaning: むずかしいことを、思いきってやってみること。, example: さかあがりに挑戦した。, level: 3}
+  - {id: w_nervous, word: 緊張, meaning: 心やからだがかたくなって、おちつかないこと。, example: はっぴょうの前は、緊張する。, level: 3}
+  - {id: w_imagine, word: 想像, meaning: 見たことのないことを、あたまの中で思いうかべること。, example: 十年ごのじぶんを想像した。, level: 3}
+  - {id: w_patience, word: 我慢, meaning: したいことをしないで、こらえること。, example: おやつの時間まで我慢した。, level: 3}
+  - {id: w_gratitude, word: 感謝, meaning: 「ありがたい」と思うきもち。, example: てつだってくれた友だちに感謝した。, level: 3}
+  - {id: w_change, word: 変化, meaning: ようすがかわること。, example: 天気の変化に気をつけよう。, level: 3}

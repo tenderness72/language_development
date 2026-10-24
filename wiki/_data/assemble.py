@@ -79,9 +79,18 @@ def norm(t):
     return re.sub(r"[\s、。，．・「」（）()]", "", unicodedata.normalize("NFKC", t))
 
 
+def _fuzzy(t, title_id):
+    """関連ノートの表記ゆれ（「（既存ノート）」付き・短い題名）を、題名の前方一致・包含で1件に決められるときだけ解決する。"""
+    k = norm(re.sub(r"（既存ノート）$", "", t))
+    if k in title_id:
+        return title_id[k]
+    hits = [i for tt, i in title_id.items() if tt.startswith(k) or (len(k) >= 8 and k in tt)]
+    return hits[0] if len(set(hits)) == 1 else None
+
+
 def main(src):
     raw = []
-    for k in "ABCDFGH":
+    for k in "ABCDFGHI":
         p = os.path.join(src, f"wiki_{k}.json")
         if os.path.exists(p):
             raw += json.load(open(p, encoding="utf-8"))
@@ -120,7 +129,7 @@ def main(src):
     for n in notes:
         n["links"] = []
         for t in n.pop("_related"):
-            i = title_id.get(alias.get(norm(t), norm(t)))
+            i = title_id.get(alias.get(norm(t), norm(t))) or _fuzzy(t, title_id)
             if i and i != n["id"] and i not in n["links"]:
                 n["links"].append(i)
             elif not i:

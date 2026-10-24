@@ -1,0 +1,91 @@
+{
+  "type": "XII",
+  "display_title": "ことばをおぼえよう",
+  "clinical_title": "語彙学習（定義・文脈・想起練習）",
+  "name": "12_ことばをおぼえる_Lv1_問題",
+  "level": 1,
+  "seed": 121,
+  "count": 4,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "w_stamp",
+          "word": "はんこ"
+        },
+        {
+          "n": 2,
+          "id": "w_stethoscope",
+          "word": "聴診器"
+        }
+      ],
+      "review": [],
+      "page": 1
+    },
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "w_aquarium",
+          "word": "水族館"
+        },
+        {
+          "n": 2,
+          "id": "w_thermometer",
+          "word": "体温計"
+        }
+      ],
+      "review": [
+        "はんこ",
+        "聴診器"
+      ],
+      "page": 2
+    },
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "w_pasture",
+          "word": "牧草"
+        },
+        {
+          "n": 2,
+          "id": "w_faucet",
+          "word": "じゃぐち"
+        }
+      ],
+      "review": [
+        "水族館",
+        "体温計"
+      ],
+      "page": 3
+    },
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "w_thermos",
+          "word": "まほうびん"
+        },
+        {
+          "n": 2,
+          "id": "w_librarian",
+          "word": "司書"
+        }
+      ],
+      "review": [
+        "牧草",
+        "じゃぐち"
+      ],
+      "page": 4
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

@@ -1,0 +1,86 @@
+{
+  "type": "XI",
+  "display_title": "けいけんとむすぼう",
+  "clinical_title": "記号接地（経験・感覚・動作との結びつけ）",
+  "name": "11_けいけんとむすぶ_Lv3_問題",
+  "level": 3,
+  "seed": 113,
+  "count": 4,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_relieved",
+          "word": "ほっとする",
+          "kind": "きもち"
+        },
+        {
+          "n": 2,
+          "id": "g_excited",
+          "word": "わくわくする",
+          "kind": "きもち"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_shy",
+          "word": "はずかしい",
+          "kind": "きもち"
+        },
+        {
+          "n": 2,
+          "id": "g_surprised",
+          "word": "びっくりする",
+          "kind": "きもち"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_glad",
+          "word": "うれしい",
+          "kind": "きもち"
+        },
+        {
+          "n": 2,
+          "id": "g_irritated",
+          "word": "いらいらする",
+          "kind": "きもち"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_frustrated",
+          "word": "くやしい",
+          "kind": "きもち"
+        },
+        {
+          "n": 2,
+          "id": "g_disappointed",
+          "word": "がっかりする",
+          "kind": "きもち"
+        }
+      ],
+      "page": 4
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

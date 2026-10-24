@@ -1,0 +1,86 @@
+{
+  "type": "XI",
+  "display_title": "けいけんとむすぼう",
+  "clinical_title": "記号接地（経験・感覚・動作との結びつけ）",
+  "name": "11_けいけんとむすぶ_Lv1_問題",
+  "level": 1,
+  "seed": 111,
+  "count": 4,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_sand",
+          "word": "すな",
+          "kind": "もの"
+        },
+        {
+          "n": 2,
+          "id": "g_apple",
+          "word": "りんご",
+          "kind": "もの"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_ice",
+          "word": "こおり",
+          "kind": "もの"
+        },
+        {
+          "n": 2,
+          "id": "g_cat",
+          "word": "ねこ",
+          "kind": "もの"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_soap",
+          "word": "せっけん",
+          "kind": "もの"
+        },
+        {
+          "n": 2,
+          "id": "g_drum",
+          "word": "たいこ",
+          "kind": "もの"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "g_scissors",
+          "word": "はさみ",
+          "kind": "もの"
+        },
+        {
+          "n": 2,
+          "id": "g_towel",
+          "word": "タオル",
+          "kind": "もの"
+        }
+      ],
+      "page": 4
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}
