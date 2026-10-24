@@ -31,7 +31,7 @@ items:
   - {id: loud, center: 音がするもの, hint: たいこ, level: 2}
   - {id: fast, center: はやいもの, hint: 新幹線, level: 2}
   - {id: soft, center: やわらかいもの, hint: わたあめ, level: 2}
-  # ---- 追加 Lv2：属性（2026-10-24 追加・要確認） ----
+  # ---- 追加 Lv2：属性（2026-10-24 追加・第11回で確認済み） ----
   - {id: white, center: 白いもの, hint: ゆき, level: 2}
   - {id: cold, center: 冷たいもの, hint: こおり, level: 2}
   - {id: long, center: 長いもの, hint: へび, level: 2}
@@ -109,7 +109,7 @@ items:
   - {id: iv_lv3_024, center: 仲直り, hint: あくしゅ, level: 3}
   - {id: iv_lv3_025, center: 発見, hint: むしめがね, level: 3}
   - {id: iv_lv3_026, center: 想像, hint: イメージ, level: 3}
-  # ---- 追加 Lv1：年長の生徒の生活に合う題材（2026-10-24 追加・要確認）。語は易しいまま、題材を生活年齢に合わせる ----
+  # ---- 追加 Lv1：年長の生徒の生活に合う題材（2026-10-24 追加・第11回で確認済み）。語は易しいまま、題材を生活年齢に合わせる ----
   - {id: club, center: 部活, hint: れんしゅう, level: 1}
   - {id: convenience, center: コンビニ, hint: おにぎり, level: 1}
   - {id: smartphone, center: スマートフォン, hint: しゃしん, level: 1}
