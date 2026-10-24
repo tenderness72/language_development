@@ -1,20 +1,20 @@
 {
-  "type": "XII",
+  "type": "XI",
   "display_title": "ことばをおぼえよう",
   "clinical_title": "語彙学習（定義・文脈・想起練習）",
-  "name": "12_ことばをおぼえる_Lv3_問題",
+  "name": "11_ことばをおぼえる_Lv3_問題",
   "level": 3,
-  "seed": 123,
+  "seed": 113,
   "count": 4,
   "overrides": {},
   "pages": [
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_responsibility",
-          "word": "責任"
+          "id": "w_nervous",
+          "word": "緊張"
         },
         {
           "n": 2,
@@ -26,47 +26,7 @@
       "page": 1
     },
     {
-      "type": "XII",
-      "problems": [
-        {
-          "n": 1,
-          "id": "w_change",
-          "word": "変化"
-        },
-        {
-          "n": 2,
-          "id": "w_cooperate",
-          "word": "協力"
-        }
-      ],
-      "review": [
-        "責任",
-        "想像"
-      ],
-      "page": 2
-    },
-    {
-      "type": "XII",
-      "problems": [
-        {
-          "n": 1,
-          "id": "w_patience",
-          "word": "我慢"
-        },
-        {
-          "n": 2,
-          "id": "w_gratitude",
-          "word": "感謝"
-        }
-      ],
-      "review": [
-        "変化",
-        "協力"
-      ],
-      "page": 3
-    },
-    {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
@@ -75,12 +35,52 @@
         },
         {
           "n": 2,
-          "id": "w_nervous",
-          "word": "緊張"
+          "id": "w_change",
+          "word": "変化"
         }
       ],
       "review": [
-        "我慢",
+        "緊張",
+        "想像"
+      ],
+      "page": 2
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "w_cooperate",
+          "word": "協力"
+        },
+        {
+          "n": 2,
+          "id": "w_gratitude",
+          "word": "感謝"
+        }
+      ],
+      "review": [
+        "挑戦",
+        "変化"
+      ],
+      "page": 3
+    },
+    {
+      "type": "XI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "w_responsibility",
+          "word": "責任"
+        },
+        {
+          "n": 2,
+          "id": "w_patience",
+          "word": "我慢"
+        }
+      ],
+      "review": [
+        "協力",
         "感謝"
       ],
       "page": 4

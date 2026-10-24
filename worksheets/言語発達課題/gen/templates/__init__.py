@@ -1,8 +1,8 @@
-"""テンプレートの登録（Ⅰ〜Ⅷ ＋ 書かない版 Ⅸ・Ⅹ ＋ 記号接地 Ⅺ ＋ 語の学習 Ⅻ）。"""
+"""テンプレートの登録（Ⅰ〜Ⅷ ＋ 書かない版 Ⅸ・Ⅹ ＋ 語の学習 Ⅺ）。"""
 from . import (
     t1_chain, t2_network, t3_pairs, t4_radial,
     t5_chain_song, t6_fluency, t7_mora, t8_venn,
-    t9_category_choice, t10_venn_choice, t11_grounding, t12_word_learning,
+    t9_category_choice, t10_venn_choice, t11_word_learning,
 )
 
 REGISTRY = {
@@ -16,8 +16,7 @@ REGISTRY = {
     "VIII": t8_venn,
     "IX": t9_category_choice,
     "X": t10_venn_choice,
-    "XI": t11_grounding,
-    "XII": t12_word_learning,
+    "XI": t11_word_learning,
 }
 
 

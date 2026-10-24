@@ -1,4 +1,4 @@
-"""Ⅻ ことばをおぼえよう（語を覚える段・上に新しいことば2つ、下に前のページのことばの思い出し）。
+"""Ⅺ ことばをおぼえよう（語を覚える段・上に新しいことば2つ、下に前のページのことばの思い出し）。
 
 新しいことば：ことば・いみ・れいぶん・絵をかく枠・自分のことで文をつくる行。
 思い出し：前のページの2語について、いみを読み、3つのことば（前のページの2語＋このページの1語）から○で選ぶ。
@@ -7,7 +7,7 @@
 from .. import layout
 from .base import start_page
 
-KEY = "XII"
+KEY = "XI"
 TITLE = "語彙学習（定義・文脈・想起練習）"   # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "ことばをおぼえよう"          # 子ども向け表示タイトル
 INSTRUCTION = "あたらしいことばの、いみとつかいかたをおぼえよう。下では、前のページのことばを思い出そう。"
@@ -29,12 +29,12 @@ def _text_left(c, ctx, x, y, s, max_w, max_size, where):
 def _learn(c, ctx, top, item):
     layout.box(c, layout.CONTENT_X, top, WORD_W, WORD_H, r=2.5, line=1.1, fill=0.93)
     layout.text_fit(c, layout.CONTENT_X + WORD_W / 2, top + WORD_H / 2, item["word"], WORD_W - 6, max_size=17,
-                    font=layout.BOLD, ctx=ctx, where="XII.word")
+                    font=layout.BOLD, ctx=ctx, where="XI.word")
     x0 = layout.CONTENT_X
     y = top + WORD_H + 6
     for lab, txt in (("いみ", item["meaning"]), ("れい", item["example"])):
         layout.text(c, x0, y, lab, size=9, font=layout.BOLD, gray=0.3)
-        _text_left(c, ctx, x0 + 11, y - 1.0, txt, 120, 11, "XII.text")
+        _text_left(c, ctx, x0 + 11, y - 1.0, txt, 120, 11, "XI.text")
         y += 11
     layout.text(c, x0, y + 2, "じぶんのことで、このことばをつかって文をつくろう", size=9, gray=0.3)
     for k in range(2):
@@ -53,7 +53,7 @@ def _review(c, ctx, top, prev, cur, lrng, answers):
     lrng.shuffle(options)
     y = top + 13
     for it in prev:
-        _text_left(c, ctx, layout.CONTENT_X, y - 1.0, "いみ：" + it["meaning"], 112, 10.5, "XII.review")
+        _text_left(c, ctx, layout.CONTENT_X, y - 1.0, "いみ：" + it["meaning"], 112, 10.5, "XI.review")
         for k, w in enumerate(options):
             cx = 133 + k * 22
             layout.text(c, cx, y + 2.5, w, size=11, align="c", vcenter=True)
@@ -64,7 +64,7 @@ def _review(c, ctx, top, prev, cur, lrng, answers):
 
 def draw_page(c, ctx, items, lrng, answers=False):
     # 前のページの語は、この版（問題・解答）ごとに覚えておく。解答面は問題面と同じページ順で描かれる。
-    hist = ctx.__dict__.setdefault("xii_hist", {})
+    hist = ctx.__dict__.setdefault("xi_hist", {})
     seq = hist.setdefault(answers, [])
     prev = seq[-1] if seq else None
     seq.append(items)

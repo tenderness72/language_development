@@ -1,87 +1,87 @@
 {
-  "type": "XII",
+  "type": "XI",
   "display_title": "ことばをおぼえよう",
   "clinical_title": "語彙学習（定義・文脈・想起練習）",
-  "name": "12_ことばをおぼえる_Lv2_問題",
-  "level": 2,
-  "seed": 122,
+  "name": "11_ことばをおぼえる_Lv1_問題",
+  "level": 1,
+  "seed": 111,
   "count": 4,
   "overrides": {},
   "pages": [
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_careful",
-          "word": "ていねい"
+          "id": "w_thermos",
+          "word": "まほうびん"
         },
         {
           "n": 2,
-          "id": "w_give_way",
-          "word": "ゆずる"
+          "id": "w_stethoscope",
+          "word": "聴診器"
         }
       ],
       "review": [],
       "page": 1
     },
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_try",
-          "word": "ためす"
+          "id": "w_stamp",
+          "word": "はんこ"
         },
         {
           "n": 2,
-          "id": "w_rely",
-          "word": "たよる"
+          "id": "w_aquarium",
+          "word": "水族館"
         }
       ],
       "review": [
-        "ていねい",
-        "ゆずる"
+        "まほうびん",
+        "聴診器"
       ],
       "page": 2
     },
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_hesitate",
-          "word": "まよう"
+          "id": "w_librarian",
+          "word": "司書"
         },
         {
           "n": 2,
-          "id": "w_decline",
-          "word": "ことわる"
+          "id": "w_pasture",
+          "word": "牧草"
         }
       ],
       "review": [
-        "ためす",
-        "たよる"
+        "はんこ",
+        "水族館"
       ],
       "page": 3
     },
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_embarrassed",
-          "word": "てれくさい"
+          "id": "w_faucet",
+          "word": "じゃぐち"
         },
         {
           "n": 2,
-          "id": "w_noisy",
-          "word": "さわがしい"
+          "id": "w_thermometer",
+          "word": "体温計"
         }
       ],
       "review": [
-        "まよう",
-        "ことわる"
+        "司書",
+        "牧草"
       ],
       "page": 4
     }

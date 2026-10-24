@@ -6,7 +6,7 @@ import yaml
 ROMAN = {
     "I": "Ⅰ", "II": "Ⅱ", "III": "Ⅲ", "IV": "Ⅳ",
     "V": "Ⅴ", "VI": "Ⅵ", "VII": "Ⅶ", "VIII": "Ⅷ",
-    "IX": "Ⅸ", "X": "Ⅹ", "XI": "Ⅺ", "XII": "Ⅻ",
+    "IX": "Ⅸ", "X": "Ⅹ", "XI": "Ⅺ",
 }
 
 TEMPLATE_FILE = {
@@ -20,8 +20,7 @@ TEMPLATE_FILE = {
     "VIII": "VIII_venn",
     "IX": "IX_category_choice",   # Ⅵ の書かない版
     "X": "X_venn_choice",         # Ⅷ の書かない版
-    "XI": "XI_grounding",         # 記号接地の段
-    "XII": "XII_word_learning",   # 語を覚える段
+    "XI": "XI_word_learning",     # 語を覚える段
 }
 
 TYPES = list(TEMPLATE_FILE.keys())
@@ -70,7 +69,6 @@ KEY_FIELDS = {
     "IX": ("category",),
     "X": ("left_attr", "right_attr"),
     "XI": ("word",),
-    "XII": ("word",),
 }
 
 

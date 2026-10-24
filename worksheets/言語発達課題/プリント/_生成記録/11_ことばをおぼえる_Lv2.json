@@ -1,87 +1,87 @@
 {
-  "type": "XII",
+  "type": "XI",
   "display_title": "ことばをおぼえよう",
   "clinical_title": "語彙学習（定義・文脈・想起練習）",
-  "name": "12_ことばをおぼえる_Lv1_問題",
-  "level": 1,
-  "seed": 121,
+  "name": "11_ことばをおぼえる_Lv2_問題",
+  "level": 2,
+  "seed": 112,
   "count": 4,
   "overrides": {},
   "pages": [
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_stamp",
-          "word": "はんこ"
+          "id": "w_decline",
+          "word": "ことわる"
         },
         {
           "n": 2,
-          "id": "w_stethoscope",
-          "word": "聴診器"
+          "id": "w_give_way",
+          "word": "ゆずる"
         }
       ],
       "review": [],
       "page": 1
     },
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_aquarium",
-          "word": "水族館"
+          "id": "w_careful",
+          "word": "ていねい"
         },
         {
           "n": 2,
-          "id": "w_thermometer",
-          "word": "体温計"
+          "id": "w_noisy",
+          "word": "さわがしい"
         }
       ],
       "review": [
-        "はんこ",
-        "聴診器"
+        "ことわる",
+        "ゆずる"
       ],
       "page": 2
     },
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_pasture",
-          "word": "牧草"
+          "id": "w_rely",
+          "word": "たよる"
         },
         {
           "n": 2,
-          "id": "w_faucet",
-          "word": "じゃぐち"
+          "id": "w_embarrassed",
+          "word": "てれくさい"
         }
       ],
       "review": [
-        "水族館",
-        "体温計"
+        "ていねい",
+        "さわがしい"
       ],
       "page": 3
     },
     {
-      "type": "XII",
+      "type": "XI",
       "problems": [
         {
           "n": 1,
-          "id": "w_thermos",
-          "word": "まほうびん"
+          "id": "w_hesitate",
+          "word": "まよう"
         },
         {
           "n": 2,
-          "id": "w_librarian",
-          "word": "司書"
+          "id": "w_try",
+          "word": "ためす"
         }
       ],
       "review": [
-        "牧草",
-        "じゃぐち"
+        "たよる",
+        "てれくさい"
       ],
       "page": 4
     }

@@ -96,19 +96,12 @@ def check_item(type_key, item):
         if int(item.get("level", 1)) != expect[rel]:
             return f"[V:{item['id']}] relation「{rel}」は Lv{expect[rel]}"
     elif type_key == "XI":
-        from .templates.t11_grounding import CHECKS
-        if item.get("kind") not in CHECKS:
-            return f"[XI:{item['id']}] kind は {'・'.join(CHECKS)} のいずれか"
-        expect = {"もの": 1, "うごき": 2, "ようす": 2, "きもち": 3}[item["kind"]]
-        if int(item.get("level", 1)) != expect:
-            return f"[XI:{item['id']}] kind「{item['kind']}」は Lv{expect}"
-    elif type_key == "XII":
         for f in ("word", "meaning", "example"):
             if not item.get(f):
-                return f"[XII:{item['id']}] {f} が必要"
+                return f"[XI:{item['id']}] {f} が必要"
         w = item["word"]
         if w not in item["example"] and w[:-1] not in item["example"]:   # うごき・ようすは活用するので語幹で見る
-            return f"[XII:{item['id']}] れいぶんに「{w}」が入っていない"
+            return f"[XI:{item['id']}] れいぶんに「{w}」が入っていない"
     elif type_key == "IX":
         mem, oth = item.get("members", []), item.get("others", [])
         if len(mem) != 6 or len(oth) != 6:
