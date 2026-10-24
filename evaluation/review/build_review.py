@@ -24,7 +24,7 @@ def load(name):
 
 _DIRS = {"I": "01_連想チェーン", "II": "02_意味ネットワーク照合", "III": "03_ペア対応づけ", "IV": "04_放射状連想",
          "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図",
-         "IX": "09_仲間えらび", "X": "10_ベン図えらび", "XI": "11_ことばをおぼえる"}
+         "IX": "09_仲間えらび", "X": "10_ベン図えらび"}
 
 
 def sheet(k, level, answers=False):
@@ -392,11 +392,10 @@ import sys
 sys.path.insert(0, WS)
 _MOD = {"I": "t1_chain", "II": "t2_network", "III": "t3_pairs", "IV": "t4_radial",
         "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn",
-        "IX": "t9_category_choice", "X": "t10_venn_choice", "XI": "t11_word_learning"}
+        "IX": "t9_category_choice", "X": "t10_venn_choice"}
 _NAME = {"I": "Ⅰ 連想チェーン", "II": "Ⅱ 意味ネットワーク照合", "III": "Ⅲ ペア対応づけ", "IV": "Ⅳ 放射状連想",
          "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）",
-         "IX": "Ⅸ 仲間えらび（Ⅵ の書かない版）", "X": "Ⅹ ベン図えらび（Ⅷ の書かない版）",
-         "XI": "Ⅺ ことばをおぼえる（語を覚える段）"}
+         "IX": "Ⅸ 仲間えらび（Ⅵ の書かない版）", "X": "Ⅹ ベン図えらび（Ⅷ の書かない版）"}
 _FORMAT = {
     "I": "左のスタート語から右のゴール語まで、2〜4列目の楕円（各列に正解1つ＋ダミー3つ）から1つずつ選び、線でつなぐ。1枚に2問。",
     "III": "見出しに関係名（例：動物→鳴き声）。左に5語、右に順番を入れかえた5語。左右の語を線で結ぶ。1枚に2問。",
@@ -410,8 +409,7 @@ _FORMAT["II"] = "中央の円に中心語。まわりに10の楕円（関係す�
 _FORMAT["V"] = "いちばん上の箱に開始語。下へ矢印でつながる箱に、矢印の横に書いたつなぎ方（Lv1 関係のあることば／Lv2 おなじなかま／Lv3 なかまといっしょを交互）でことばを1つずつ書く。2番目の箱は手本。1枚に2問。"
 _FORMAT["IX"] = "上の四角にカテゴリー名。下に12語（仲間6語＋仲間でない6語、順不同）。仲間の語を○でかこむ。書かずに答える。1枚に2問。"
 _FORMAT["X"] = "左右の円に条件。左右の列の語の箱から、合う場所（ひだりだけ・りょうほう・みぎだけ、Lv2 は外の四角＝どちらでもない）へ線を引く。書かずに答える。1枚に2問。"
-_FORMAT["XI"] = "新しいことば2つ（ことば・いみ・れいぶん・絵をかく枠・自分のことで文をつくる行）。ページの下で、前のページの2語を、いみを読んで3つのことばから○で選ぶ。"
-for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI"):
+for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"):
     m = importlib.import_module("gen.templates." + _MOD[k])
     TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
                 "format": _FORMAT[k], "img": page_png(sheet(k, 1), 1, dpi=48)}
@@ -743,24 +741,7 @@ for sec in ROUND10:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND11
 SEC_TASK.update({"r11-vii-initial": ["VII"], "r11-iii-level": ["III"], "r11-iv-level": ["IV"], "r11-teen": ["IV", "VI"]})
-# ---- 第12回：記号接地の段（Ⅺ）と語を覚える段（Ⅻ）（先頭に表示） ----
-WL_D = load("XI_word_learning.yaml")
-ROUND12 = [
-    {
-        "key": "r12-wl", "title": "Ⅺ ことばをおぼえる（語を覚える段・新規24語）",
-        "lead": "新しいことばを、いみ・れいぶん・絵・自分の文で覚え、次のページで思い出す段です。語は、ほかの課題で使っていて時期の遅い語（語彙表で小学校高学年以降）から選びました。根拠：定義と文脈の両方を示す、文字を見せながら教える、間に他の語をはさんで思い出させる、DLD 児で定義できるまで約36回の接触が要る（Wiki WL-15〜WL-18）。いみが正確で分かりやすいか、れいぶんが自然かを見てください。",
-        "items": [{"id": "r12-wl-" + k.replace("_", "-"), "label": f"{it['word']}（Lv{it['level']}）", "before": "",
-                   "after": f"いみ：{it['meaning']}\nれい：{it['example']}", "ask": "",
-                   "scene": f"ことば「{it['word']}」の、いみ・れいぶんを読み、絵をかき、自分のことで文をつくる。次のページの下で、いみからこの語を選ぶ（Lv{it['level']}）。"}
-                  for k, it in WL_D.items()],
-    },
-]
-for sec in ROUND11:
-    sec["title"] = "［前回］" + sec["title"]
-SECTIONS[:0] = ROUND12
-SEC_TASK.update({"r12-wl": ["XI"]})
 FIGURES[:0] = [
-    ("Ⅺ ことばをおぼえる Lv1（2枚目・解答）", page_png(sheet("XI", 1, True), 2)),
 ]
 FIGURES[:0] = [
     ("Ⅲ ペア対応づけ Lv3（解答）", page_png(sheet("III", 3, True), 1)),
