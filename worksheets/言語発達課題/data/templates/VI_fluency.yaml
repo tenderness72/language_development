@@ -129,3 +129,7 @@ items:
   - {id: vi_lv3_019b, category: 人が社会で生きるために必要なもの, example: お金, lines: 10, level: 3}
   - {id: vi_lv3_020a, category: 未来に関係することば, example: 目標, lines: 10, level: 3}
   - {id: vi_lv3_020b, category: 過去に関係することば, example: 思い出, lines: 10, level: 3}
+  # ---- 追加 Lv2：年長の生徒の生活に合う題材（2026-10-24 追加・要確認） ----
+  - {id: club_types, category: 部活の種類, example: やきゅうぶ, lines: 10, level: 2}
+  - {id: phone_can, category: スマートフォンでできること, example: でんわ, lines: 10, level: 2}
+  - {id: conv_sell, category: コンビニで売っているもの, example: おにぎり, lines: 10, level: 2}

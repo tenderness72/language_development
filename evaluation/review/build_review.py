@@ -705,6 +705,42 @@ for sec in ROUND9:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND10
 SEC_TASK.update({"r10-iii-lv3": ["III"], "r10-viii-lv3": ["VIII"]})
+# ---- 第11回：発達の順序に沿ったレベルの見直しと、年長の生徒向けの題材（先頭に表示） ----
+_R11_VII = {"ka": "Lv2 → Lv1", "a": "Lv2 → Lv1", "ha": "Lv2 → Lv1", "ni_lv2": "Lv1 → Lv2", "ne_lv2": "Lv1 → Lv2", "wa_lv2": "Lv1 → Lv2"}
+_R11_III = {"tool_action": "Lv2 → Lv1", "part_use": "Lv2 → Lv1", "job_tool": "Lv1 → Lv2", "food_ingredient": "Lv1 → Lv2"}
+ROUND11 = [
+    {
+        "key": "r11-vii-initial", "title": "Ⅶ 語頭音の語の多さでレベルを入れ替え（6問）",
+        "lead": "頭音を手がかりに思い出せる語の数は、その音で始まる語の多さに強く左右されます（国立国語研究所 1981、rs=.81〜.89）。教育基本語彙（低学年配当）でその音から始まる語を数えると、Lv1 に語の少ない ね(71)・わ(83)・に(92)、Lv2 に語の多い か(406)・あ(288)・は(276) がありました。そこで入れ替え、か・あ・は は直音だけの Lv1 に、ね・わ・に は「ん」を書いておく行のある Lv2 にしました。答えの例が成り立つかを見てください。あわせて Lv1 の答えの例のうち時期の遅い語（なまず・すきやき・みずたま）を差し替えました。",
+        "items": [{"id": "r11-vii-" + k.replace("_", "-"), "label": f"「{VII[k]['initial']}」（{v}）", "before": "",
+                   "after": _rows(VII[k]) + "\n答えの例：" + "・".join(w for ws in VII[k]["answers"].values() for w in ws), "ask": "",
+                   "scene": sc_vii(VII[k])} for k, v in _R11_VII.items()],
+    },
+    {
+        "key": "r11-iii-level", "title": "Ⅲ 関係の種類の順にレベルをそろえる（4問の移動）",
+        "lead": "機能・部分と全体の関係は早くから使われ、上位カテゴリーの関係はそれより遅れます（Wiki SV-32）。反対語は類義語より易しいとされます（SV-29）。そこで、Lv1 を機能・場面の関係と反対のことば（ようす）、Lv2 を知識の要る関係（すみか・こども・材料・職業の道具）と反対のことば（うごき）、Lv3 を似た意味のことばにそろえました。「職業→道具」は「聴診器」「写真家」など時期の遅い語を含むので Lv2 にしました。",
+        "items": [{"id": "r11-iii-" + k.replace("_", "-"), "label": f"{III[k]['relation']}（{v}）", "before": v.split(" → ")[0],
+                   "after": v.split(" → ")[1], "ask": "", "scene": sc_iii(III[k])} for k, v in _R11_III.items()],
+    },
+    {
+        "key": "r11-iv-level", "title": "Ⅳ 放射状連想：Lv1 は場面、Lv2 は属性に（新規6問）",
+        "lead": "これまで Lv2 に、場面の題（病院・駅など）と属性の題（赤いものなど）が混ざっていました。場面の連想（そこにあるもの・すること）は最も早く使える主題的な関係です。属性の連想は、別々の場面から同じ性質のものを集める範列的な連想です。そこで場面の題をすべて Lv1 に、属性の題を Lv2 にしました（属性を上に置くのは、主題的関係が最も早いことからの推論です）。Lv2 が6問になるので、属性の題を6問足しました。ヒントの語が合っているかを見てください。",
+        "items": [{"id": "r11-iv-" + k, "label": IV[k]["center"], "before": "", "after": f"中心：{IV[k]['center']}　ヒント：{IV[k]['hint']}",
+                   "ask": "", "scene": sc_iv(IV[k])} for k in ("white", "cold", "long", "sweet", "big", "shiny")],
+    },
+    {
+        "key": "r11-teen", "title": "年長の生徒の生活に合う題材（新規9問）",
+        "lead": "対象は小学4年〜高校3年なので、語は易しいまま、題材を生活年齢に合わせたものを足しました（受容語彙には生活年齢・経験も寄与する：Wiki ND-04）。題材とヒント・例の語が合っているか、生徒にとって身近かを見てください。",
+        "items": [{"id": "r11-teen-" + k.replace("_", "-"), "label": IV[k]["center"], "before": "", "after": f"中心：{IV[k]['center']}　ヒント：{IV[k]['hint']}",
+                   "ask": "", "scene": sc_iv(IV[k])} for k in ("club", "convenience", "smartphone", "school_trip", "school_festival", "junior_high")]
+                 + [{"id": "r11-teen-" + k.replace("_", "-"), "label": VI[k]["category"], "before": "", "after": f"カテゴリー：{VI[k]['category']}　例：{VI[k]['example']}",
+                     "ask": "", "scene": sc_vi(VI[k])} for k in ("club_types", "phone_can", "conv_sell")],
+    },
+]
+for sec in ROUND10:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND11
+SEC_TASK.update({"r11-vii-initial": ["VII"], "r11-iii-level": ["III"], "r11-iv-level": ["IV"], "r11-teen": ["IV", "VI"]})
 FIGURES[:0] = [
     ("Ⅲ ペア対応づけ Lv3（解答）", page_png(sheet("III", 3, True), 1)),
     ("Ⅷ 属性交差 Lv3", page_png(sheet("VIII", 3), 1)),
