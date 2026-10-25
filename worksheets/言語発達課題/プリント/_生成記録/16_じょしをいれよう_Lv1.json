@@ -1,0 +1,40 @@
+{
+  "type": "XVI",
+  "display_title": "じょしをいれよう",
+  "clinical_title": "構文（格助詞が・を）",
+  "name": "16_じょしをいれよう_Lv1_問題",
+  "level": 1,
+  "seed": 161,
+  "count": 1,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XVI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "p1b",
+          "answers": [
+            "ゆきがふる",
+            "ドアをあける",
+            "いぬがはしる",
+            "みずをのむ"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "p1a",
+          "answers": [
+            "とりがとぶ",
+            "りんごをたべる",
+            "はながさく",
+            "ほんをよむ"
+          ]
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

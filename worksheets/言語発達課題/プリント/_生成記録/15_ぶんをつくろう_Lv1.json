@@ -1,0 +1,62 @@
+{
+  "type": "XV",
+  "display_title": "ぶんをつくろう",
+  "clinical_title": "構文（二語文・三語文の生成）",
+  "name": "15_ぶんをつくろう_Lv1_問題",
+  "level": 1,
+  "seed": 151,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b1b",
+          "sentences": [
+            "りんご たべる",
+            "ジュース のむ",
+            "えほん よむ"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b1a",
+          "sentences": [
+            "とり とぶ",
+            "さかな およぐ",
+            "いぬ ほえる"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b1c",
+          "sentences": [
+            "はな さく",
+            "ゆき ふる",
+            "かぜ ふく"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b1d",
+          "sentences": [
+            "ボール なげる",
+            "ドア あける",
+            "でんき つける"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

@@ -151,6 +151,42 @@ def check_item(type_key, item):
                 return f"[XIV:{item['id']}] start は「ん」・のばす音・小さい ゃゅょ でおわらないことばにする"
             if lv == 1 and not lvl_ok(w):
                 return f"[XIV:{item['id']}] Lv1 は清音だけのことば"
+    elif type_key == "XV":
+        from .templates.t15_sentence_build import ROLES
+        lv = int(item.get("level", 1))
+        sents = item.get("sentences", [])
+        if len(sents) != 3:
+            return f"[XV:{item['id']}] sentences は3文"
+        for st in sents:
+            roles = [r for r, _ in st]
+            if any(r not in ROLES for r in roles) or roles[-1] != "どうする" or roles.count("どうする") != 1:
+                return f"[XV:{item['id']}] 役割が不正（最後は どうする を1つ）: {roles}"
+            if lv == 1 and len(st) != 2:
+                return f"[XV:{item['id']}] Lv1 は2語の文"
+            if lv == 2 and roles != ["だれが", "なにを", "どうする"]:
+                return f"[XV:{item['id']}] Lv2 は だれが＋なにを＋どうする"
+            if lv == 3 and not ({"どこで", "なにで"} & set(roles)):
+                return f"[XV:{item['id']}] Lv3 は どこで か なにで を含める"
+        words = [w for st in sents for _, w in st]
+        if len(set(words)) != len(words):
+            return f"[XV:{item['id']}] ことばばこの語が重なっている"
+    elif type_key == "XVI":
+        from .templates.t16_particles import parse
+        lv = int(item.get("level", 1))
+        sents = item.get("sentences", [])
+        if len(sents) != 4:
+            return f"[XVI:{item['id']}] sentences は4文"
+        for st in sents:
+            parts = st["parts"] if isinstance(st, dict) else st
+            blanks = [parse(p)[0] for p in parts if parse(p)[1]]
+            if any(b not in ("が", "を") for b in blanks):
+                return f"[XVI:{item['id']}] 空欄は が か を"
+            if lv == 1 and len(blanks) != 1:
+                return f"[XVI:{item['id']}] Lv1 は助詞1つ"
+            if lv >= 2 and sorted(blanks) != ["が", "を"]:
+                return f"[XVI:{item['id']}] Lv2・3 は が と を を1つずつ"
+            if lv == 3 and not (isinstance(st, dict) and st.get("context")):
+                return f"[XVI:{item['id']}] Lv3 は状況の説明（context）を付ける"
     elif type_key == "IX":
         mem, oth = item.get("members", []), item.get("others", [])
         if len(mem) != 6 or len(oth) != 6:

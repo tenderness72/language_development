@@ -90,7 +90,7 @@ def _fuzzy(t, title_id):
 
 def main(src):
     raw = []
-    for k in "ABCDFGHI":
+    for k in "ABCDFGHIJ":
         p = os.path.join(src, f"wiki_{k}.json")
         if os.path.exists(p):
             raw += json.load(open(p, encoding="utf-8"))

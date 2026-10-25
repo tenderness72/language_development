@@ -4,6 +4,7 @@ from . import (
     t5_chain_song, t6_fluency, t7_mora, t8_venn,
     t9_category_choice, t10_venn_choice,
     t11_mora_count, t12_sound_search, t13_sound_manipulation, t14_shiritori,
+    t15_sentence_build, t16_particles,
 )
 
 REGISTRY = {
@@ -21,6 +22,8 @@ REGISTRY = {
     "XII": t12_sound_search,
     "XIII": t13_sound_manipulation,
     "XIV": t14_shiritori,
+    "XV": t15_sentence_build,
+    "XVI": t16_particles,
 }
 
 

@@ -25,7 +25,7 @@ def load(name):
 _DIRS = {"I": "01_連想チェーン", "II": "02_意味ネットワーク照合", "III": "03_ペア対応づけ", "IV": "04_放射状連想",
          "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図",
          "IX": "09_仲間えらび", "X": "10_ベン図えらび", "XI": "11_おとのかず", "XII": "12_おとさがし",
-         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_しりとり"}
+         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_しりとり", "XV": "15_ぶんをつくろう", "XVI": "16_じょしをいれよう"}
 
 
 def sheet(k, level, answers=False):
@@ -394,11 +394,12 @@ sys.path.insert(0, WS)
 _MOD = {"I": "t1_chain", "II": "t2_network", "III": "t3_pairs", "IV": "t4_radial",
         "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn",
         "IX": "t9_category_choice", "X": "t10_venn_choice", "XI": "t11_mora_count", "XII": "t12_sound_search",
-        "XIII": "t13_sound_manipulation", "XIV": "t14_shiritori"}
+        "XIII": "t13_sound_manipulation", "XIV": "t14_shiritori", "XV": "t15_sentence_build", "XVI": "t16_particles"}
 _NAME = {"I": "Ⅰ 連想チェーン", "II": "Ⅱ 意味ネットワーク照合", "III": "Ⅲ ペア対応づけ", "IV": "Ⅳ 放射状連想",
          "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）",
          "IX": "Ⅸ 仲間えらび（Ⅵ の書かない版）", "X": "Ⅹ ベン図えらび（Ⅷ の書かない版）",
-         "XI": "Ⅺ おとのかず", "XII": "Ⅻ おとさがし", "XIII": "ⅩⅢ おとけし・ぎゃくよみ", "XIV": "ⅩⅣ しりとり"}
+         "XI": "Ⅺ おとのかず", "XII": "Ⅻ おとさがし", "XIII": "ⅩⅢ おとけし・ぎゃくよみ", "XIV": "ⅩⅣ しりとり",
+         "XV": "ⅩⅤ ぶんをつくろう", "XVI": "ⅩⅥ じょしをいれよう"}
 _FORMAT = {
     "I": "左のスタート語から右のゴール語まで、2〜4列目の楕円（各列に正解1つ＋ダミー3つ）から1つずつ選び、線でつなぐ。1枚に2問。",
     "III": "見出しに関係名（例：動物→鳴き声）。左に5語、右に順番を入れかえた5語。左右の語を線で結ぶ。1枚に2問。",
@@ -416,7 +417,9 @@ _FORMAT["XI"] = "左にことば、右に○が7つ。ことばを声に出し�
 _FORMAT["XII"] = "見出しに「『か』ではじまることば」などの条件。6語（当たり3語・はずれ3語）から、あてはまることばを○でかこむ。1枚に2問。"
 _FORMAT["XIII"] = "「『さかな』をぎゃくからいうと？」「『つくえ』から『つ』をとると？」の右に、こたえの音の数だけマス。1枚に8つ。"
 _FORMAT["XIV"] = "いちばん上のことばから、おしまいの音を小さいマスに書き、その音ではじまることばを書く。これを3〜5回くり返す。1枚に2問。"
-for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV"):
+_FORMAT["XV"] = "上に「ことばばこ」（その問題の語をまぜて並べる）。下に3文ぶんの枠。だれが＝楕円・なにを＝四角・どうする＝六角形・どこで／なにで＝破線の枠に語を書いて文をつくる。Lv3 は枠のあとに助詞を印刷。"
+_FORMAT["XVI"] = "文の中の（　）に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）。1枚に8文。"
+for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI"):
     m = importlib.import_module("gen.templates." + _MOD[k])
     TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
                 "format": _FORMAT[k], "img": page_png(sheet(k, 1), 1, dpi=48)}
@@ -783,6 +786,42 @@ for sec in ROUND11:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND12
 SEC_TASK.update({"r12-xi": ["XI"], "r12-xii": ["XII"], "r12-xiii": ["XIII"], "r12-xiv": ["XIV"]})
+# ---- 第13回：二語文・三語文（ⅩⅤ）と格助詞（ⅩⅥ）（先頭に表示） ----
+from gen.templates.t16_particles import parse as _parse
+SB = load("XV_sentence_build.yaml"); PT = load("XVI_particles.yaml")
+_PART = {"だれが": "が", "なにが": "が", "なにを": "を", "どこで": "で", "なにで": "で"}
+
+
+def _sent_txt(st, lv):
+    return " ".join(w + (_PART.get(r, "") if lv >= 3 else "") for r, w in st)
+
+
+def _pt_txt(st):
+    parts = st["parts"] if isinstance(st, dict) else st
+    t = "".join(("（" + _parse(p)[0] + "）") if _parse(p)[1] else _parse(p)[0] for p in parts)
+    return (f"［{st['context']}］" if isinstance(st, dict) else "") + t
+
+
+ROUND13 = [
+    {"key": "r13-xv", "title": "ⅩⅤ ぶんをつくろう（新規12問・36文）",
+     "lead": "ことばばこの語を、役割の形の枠にならべて文をつくる課題です。枠の形は Shape Coding（Ebbels, 2007）をモノクロにしたもので、だれが・なにが＝楕円、なにを＝四角、どうする＝六角形、どこで・なにで＝破線。Lv1 は2語（助詞なし）、Lv2 は3語（助詞なし・非可逆）、Lv3 はどこで・なにでを加え、助詞を印刷しておきます。根拠：2語連鎖 → 3語連鎖 → 助詞の順（〈S-S法〉飯塚ら 1998、村尾 2022。Wiki GR-31・GR-35〜GR-37）。語の組み合わせが意味の上でほぼ1つに決まるか、題材が生徒に身近かを見てください。",
+     "items": [{"id": "r13-xv-" + k, "label": f"Lv{it['level']}", "before": "",
+                "after": "\n".join(_sent_txt(st, it["level"]) for st in it["sentences"]), "ask": "",
+                "scene": f"ことばばこの語を、3文ぶんの役割の枠に書いて文をつくる（Lv{it['level']}）。"} for k, it in SB.items()]},
+    {"key": "r13-xvi", "title": "ⅩⅥ じょしをいれよう（新規6問・24文）",
+     "lead": "文の（　）に「が」か「を」を書く課題です。Lv1 は助詞1つ、Lv2 は「が」「を」の2つで意味で決まる文（非可逆・基本語順）、Lv3 は状況の説明を読んでから入れる可逆文で、語順を入れかえた文を含みます。知的障害のある中高生では、非可逆・基本語順は正答80%以上、可逆・非基本語順は40%未満でした（村尾, 2022。Wiki GR-35）。文と状況の説明が自然かを見てください。",
+     "items": [{"id": "r13-xvi-" + k, "label": f"Lv{it['level']}", "before": "",
+                "after": "\n".join(_pt_txt(st) for st in it["sentences"]), "ask": "",
+                "scene": f"4つの文の（　）に「が」か「を」を書く（Lv{it['level']}）。"} for k, it in PT.items()]},
+]
+for sec in ROUND12:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND13
+SEC_TASK.update({"r13-xv": ["XV"], "r13-xvi": ["XVI"]})
+FIGURES[:0] = [
+    ("ⅩⅤ ぶんをつくろう Lv3（解答例）", page_png(sheet("XV", 3, True), 1)),
+    ("ⅩⅥ じょしをいれよう Lv3（解答）", page_png(sheet("XVI", 3, True), 1)),
+]
 FIGURES[:0] = [
     ("Ⅺ おとのかず Lv2（解答）", page_png(sheet("XI", 2, True), 1)),
     ("ⅩⅢ おとけし・ぎゃくよみ Lv2（解答）", page_png(sheet("XIII", 2, True), 1)),
