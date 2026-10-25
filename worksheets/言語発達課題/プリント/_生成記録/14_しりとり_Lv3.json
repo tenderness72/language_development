@@ -1,0 +1,68 @@
+{
+  "type": "XIV",
+  "display_title": "しりとりをしよう",
+  "clinical_title": "音韻意識（語尾音の抽出・しりとり）",
+  "name": "14_しりとり_Lv3_問題",
+  "level": 3,
+  "seed": 143,
+  "count": 3,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "r3f",
+          "start": "とびばこ",
+          "steps": 5
+        },
+        {
+          "n": 2,
+          "id": "r3c",
+          "start": "かたつむり",
+          "steps": 5
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "r3d",
+          "start": "はぶらし",
+          "steps": 5
+        },
+        {
+          "n": 2,
+          "id": "r3e",
+          "start": "おにぎり",
+          "steps": 5
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "r3a",
+          "start": "ひまわり",
+          "steps": 5
+        },
+        {
+          "n": 2,
+          "id": "r3b",
+          "start": "にわとり",
+          "steps": 5
+        }
+      ],
+      "page": 3
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

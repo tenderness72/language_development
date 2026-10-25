@@ -95,6 +95,62 @@ def check_item(type_key, item):
             return f"[V:{item['id']}] relation は かんけい／なかま／こうたい のいずれか"
         if int(item.get("level", 1)) != expect[rel]:
             return f"[V:{item['id']}] relation「{rel}」は Lv{expect[rel]}"
+    elif type_key in ("XI", "XII", "XIII", "XIV"):
+        from .templates.t7_mora import split_mora
+        lv = int(item.get("level", 1))
+        special = set("ゃゅょっんーぁぃぅぇぉ")
+        dakuon = set("がぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ")
+
+        def lvl_ok(w):
+            if lv == 1 and (set(w) & (special | dakuon)):
+                return False
+            if lv == 2 and type_key == "XI" and set(w) & special:
+                return False
+            return True
+        if type_key == "XI":
+            ws = item.get("words", [])
+            if len(ws) != 4:
+                return f"[XI:{item['id']}] words は4語"
+            for w in ws:
+                if not lvl_ok(w):
+                    return f"[XI:{item['id']}] '{w}' がレベル{lv}の条件（Lv1 清音のみ・Lv2 特殊音節なし）に合わない"
+                if len(split_mora(w)) > 7:
+                    return f"[XI:{item['id']}] '{w}' の音の数が○の数（7）をこえる"
+            if lv == 2 and not any(set(w) & dakuon for w in ws):
+                return f"[XI:{item['id']}] Lv2 は濁音・半濁音の語を含める"
+            if lv == 3 and not all(set(w) & special for w in ws):
+                return f"[XI:{item['id']}] Lv3 はどの語にも特殊音節を含める"
+        elif type_key == "XII":
+            from .templates.t12_sound_search import hit
+            ws = item.get("words", [])
+            if len(ws) != 6 or len(set(ws)) != 6:
+                return f"[XII:{item['id']}] words は重ならない6語"
+            n = sum(hit(w, item["target"], item["position"]) for w in ws)
+            if n != 3:
+                return f"[XII:{item['id']}] 当たりが{n}語（3語にする）"
+            if lv == 1 and not all(lvl_ok(w) for w in ws):
+                return f"[XII:{item['id']}] Lv1 は清音だけの語にする"
+        elif type_key == "XIII":
+            es = item.get("entries", [])
+            if len(es) != 4:
+                return f"[XIII:{item['id']}] entries は4つ"
+            for e in es:
+                u = split_mora(e["w"])
+                if set(e["w"]) & special:
+                    return f"[XIII:{item['id']}] '{e['w']}' に特殊音節がある（使わない）"
+                if e["op"] == "けす" and u.count(e.get("t")) != 1:
+                    return f"[XIII:{item['id']}] '{e['w']}' にけす音「{e.get('t')}」が1回だけ出てくるようにする"
+                if e["op"] not in ("ぎゃく", "けす"):
+                    return f"[XIII:{item['id']}] op は ぎゃく／けす"
+                if lv == 1 and (len(u) != 2 or not lvl_ok(e["w"])):
+                    return f"[XIII:{item['id']}] Lv1 は清音の2音のことば"
+        else:
+            w = item.get("start", "")
+            u = split_mora(w)
+            if not u or u[-1] in ("ん", "ー") or len(u[-1]) > 1:
+                return f"[XIV:{item['id']}] start は「ん」・のばす音・小さい ゃゅょ でおわらないことばにする"
+            if lv == 1 and not lvl_ok(w):
+                return f"[XIV:{item['id']}] Lv1 は清音だけのことば"
     elif type_key == "IX":
         mem, oth = item.get("members", []), item.get("others", [])
         if len(mem) != 6 or len(oth) != 6:

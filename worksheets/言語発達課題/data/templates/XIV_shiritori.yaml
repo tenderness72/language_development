@@ -1,0 +1,29 @@
+# ⅩⅣ しりとり（音韻意識：語尾音の抽出と、音を手がかりにした語の検索）
+# start のことばから、おしまいの音を小さいマスに書き出し、その音ではじまることばを書く。これをくり返す。
+# しりとりを自分で続けるには、語尾音の抽出と、音を手がかりにした語の検索が要る（高橋 1997。Wiki PA-02）。
+# 答えは1つに決まらないので解答面は作らない。「ん」でおわることばは使わない（ページに表示）。
+# level: 1 = 清音でおわることばから3回 2 = 濁音でおわることばから4回 3 = 長いことばから5回
+# のばす音・小さい ゃゅょ でおわることばは、しりとりの決まりが分かれるので start にしない。
+type: XIV
+items:
+  # ---- Lv1：清音でおわる（2026-10-25 追加・要確認） ----
+  - {id: r1a, start: さる, steps: 3, level: 1}
+  - {id: r1b, start: くつ, steps: 3, level: 1}
+  - {id: r1c, start: いす, steps: 3, level: 1}
+  - {id: r1d, start: ねこ, steps: 3, level: 1}
+  - {id: r1e, start: すいか, steps: 3, level: 1}
+  - {id: r1f, start: かもめ, steps: 3, level: 1}
+  # ---- Lv2：濁音でおわる（2026-10-25 追加・要確認） ----
+  - {id: r2a, start: りんご, steps: 4, level: 2}
+  - {id: r2b, start: たまご, steps: 4, level: 2}
+  - {id: r2c, start: うさぎ, steps: 4, level: 2}
+  - {id: r2d, start: かぎ, steps: 4, level: 2}
+  - {id: r2e, start: ひつじ, steps: 4, level: 2}
+  - {id: r2f, start: からだ, steps: 4, level: 2}
+  # ---- Lv3：長いことばから5回（2026-10-25 追加・要確認） ----
+  - {id: r3a, start: ひまわり, steps: 5, level: 3}
+  - {id: r3b, start: にわとり, steps: 5, level: 3}
+  - {id: r3c, start: かたつむり, steps: 5, level: 3}
+  - {id: r3d, start: はぶらし, steps: 5, level: 3}
+  - {id: r3e, start: おにぎり, steps: 5, level: 3}
+  - {id: r3f, start: とびばこ, steps: 5, level: 3}

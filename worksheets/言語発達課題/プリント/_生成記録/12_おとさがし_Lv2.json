@@ -1,0 +1,70 @@
+{
+  "type": "XII",
+  "display_title": "おとをさがそう",
+  "clinical_title": "音韻意識（音の抽出・同定）",
+  "name": "12_おとさがし_Lv2_問題",
+  "level": 2,
+  "seed": 122,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "s2a",
+          "target": "こ",
+          "position": "おしまい",
+          "hits": [
+            "ねこ",
+            "たこ",
+            "はこ"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "s2d",
+          "target": "し",
+          "position": "おしまい",
+          "hits": [
+            "うし",
+            "いし",
+            "ほし"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "s2c",
+          "target": "た",
+          "position": "おしまい",
+          "hits": [
+            "うた",
+            "ふた",
+            "ぶた"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "s2b",
+          "target": "き",
+          "position": "おしまい",
+          "hits": [
+            "たぬき",
+            "えき",
+            "ゆき"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

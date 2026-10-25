@@ -6,7 +6,7 @@ import yaml
 ROMAN = {
     "I": "Ⅰ", "II": "Ⅱ", "III": "Ⅲ", "IV": "Ⅳ",
     "V": "Ⅴ", "VI": "Ⅵ", "VII": "Ⅶ", "VIII": "Ⅷ",
-    "IX": "Ⅸ", "X": "Ⅹ",
+    "IX": "Ⅸ", "X": "Ⅹ", "XI": "Ⅺ", "XII": "Ⅻ", "XIII": "ⅩⅢ", "XIV": "ⅩⅣ",
 }
 
 TEMPLATE_FILE = {
@@ -20,6 +20,10 @@ TEMPLATE_FILE = {
     "VIII": "VIII_venn",
     "IX": "IX_category_choice",   # Ⅵ の書かない版
     "X": "X_venn_choice",         # Ⅷ の書かない版
+    "XI": "XI_mora_count",        # 音韻意識：音の数（○をぬる）
+    "XII": "XII_sound_search",    # 音韻意識：音さがし
+    "XIII": "XIII_sound_manipulation",  # 音韻意識：音の削除・逆唱
+    "XIV": "XIV_shiritori",       # 音韻意識：しりとり
 }
 
 TYPES = list(TEMPLATE_FILE.keys())
@@ -67,6 +71,10 @@ KEY_FIELDS = {
     "VIII": ("left_attr", "right_attr"),
     "IX": ("category",),
     "X": ("left_attr", "right_attr"),
+    "XI": ("words",),
+    "XII": ("target", "position"),
+    "XIII": ("id",),
+    "XIV": ("start",),
 }
 
 

@@ -1,0 +1,40 @@
+{
+  "type": "XIII",
+  "display_title": "おとをけしたり ぎゃくから言ったりしよう",
+  "clinical_title": "音韻意識（音の削除・逆唱）",
+  "name": "13_おとけしとぎゃくよみ_Lv3_問題",
+  "level": 3,
+  "seed": 133,
+  "count": 1,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "m3a",
+          "answers": [
+            "りわまひ",
+            "このけた",
+            "はみ",
+            "にわり"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "m3b",
+          "answers": [
+            "りぎにお",
+            "こばびと",
+            "めね",
+            "かたむり"
+          ]
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

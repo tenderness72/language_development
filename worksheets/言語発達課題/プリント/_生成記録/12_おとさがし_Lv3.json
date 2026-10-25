@@ -1,0 +1,70 @@
+{
+  "type": "XII",
+  "display_title": "おとをさがそう",
+  "clinical_title": "音韻意識（音の抽出・同定）",
+  "name": "12_おとさがし_Lv3_問題",
+  "level": 3,
+  "seed": 123,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "s3c",
+          "target": "ど",
+          "position": "どこか",
+          "hits": [
+            "まど",
+            "ぶどう",
+            "こども"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "s3d",
+          "target": "じ",
+          "position": "どこか",
+          "hits": [
+            "にじ",
+            "ひつじ",
+            "じてんしゃ"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "s3a",
+          "target": "か",
+          "position": "どこか",
+          "hits": [
+            "すいか",
+            "さかな",
+            "みかん"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "s3b",
+          "target": "ぱ",
+          "position": "どこか",
+          "hits": [
+            "はっぱ",
+            "らっぱ",
+            "いっぱい"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}
