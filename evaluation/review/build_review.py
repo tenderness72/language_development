@@ -5,6 +5,7 @@
   python evaluation/review/build_review.py
 """
 import base64
+import re
 import html
 import json
 import os
@@ -833,6 +834,29 @@ for sec in ROUND13:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND14
 SEC_TASK.update({"r14-xvii": ["XVII"]})
+# ---- 第15回：漢字表記（ルビ付き）と言葉箱の形（先頭に表示） ----
+with open(os.path.join(WS, "data", "kanji.yaml"), encoding="utf-8") as _f:
+    KJ = yaml.safe_load(_f)
+_ROWS = [("あ行", "あいうえお"), ("か行", "かきくけこがぎぐげご"), ("さ行", "さしすせそざじずぜぞ"), ("た行", "たちつてとだぢづでど"),
+         ("な行", "なにぬねの"), ("は行", "はひふへほばびぶべぼぱぴぷぺぽ"), ("ま行", "まみむめも"), ("や・ら・わ行", "やゆよらりるれろわ")]
+ROUND15 = [
+    {"key": "r15-kanji", "title": "漢字表記（ルビ付き）への変更：語の辞書（394語）",
+     "lead": "データでひらがなで書いていた語を、プリントでは漢字＋ルビで表示するようにしました（data/kanji.yaml）。常用漢字で、ふだん漢字で書く語だけを漢字にしています。意味が文脈で分かれる語（かえる・かき・かみ・たこ・はし・さく・め・かわ 等）、常用漢字にない字の語（りんご・うさぎ・かに 等）、ふつう かなで書く語（おもちゃ・こたつ 等）は かなのままです。マスに1音ずつ書く字（Ⅶ・ⅩⅢ・ⅩⅦ の答え）は かなのままです。漢字の選び方と読みを見てください。",
+     "items": [{"id": "r15-kanji-" + str(i), "label": name, "before": "",
+                "after": "、".join(f"{k}→{re.sub(r'《[^》]*》', '', v)}" for k, v in KJ.items() if k[0] in chars), "ask": "",
+                "scene": "語の箱・楕円・枠など、語をひとつ描くところで、漢字＋ルビで表示する（全課題）。"} for i, (name, chars) in enumerate(_ROWS)]},
+    {"key": "r15-design", "title": "題・教示文の漢字表記と、言葉箱の形",
+     "lead": "題と教示文も漢字＋ルビにしました（例：「音《おと》の数《かず》だけ塗《ぬ》ろう」「言葉《ことば》を声《こえ》に出《だ》して言《い》いながら…」）。ⅩⅤ の言葉箱は、ふたの見える箱の正面に、語のカードを並べる形にしました。",
+     "items": [{"id": "r15-design-titles", "label": "題・教示文", "before": "ひらがな中心", "after": "漢字＋ルビ（全課題）", "ask": "",
+                "scene": "全課題の題の帯と教示文。"},
+               {"id": "r15-design-box", "label": "ⅩⅤ 言葉箱", "before": "うすい灰色の帯に語を並べる", "after": "ふたと側面の見える箱（名札「言葉箱」）の正面に、語を1つずつカードにして並べる",
+                "ask": "", "scene": "ⅩⅤ の各問題の上。"}]},
+]
+for sec in ROUND14:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND15
+SEC_TASK.update({"r15-kanji": ["I", "II", "III", "IV", "V", "VI", "VIII", "IX", "X", "XI", "XII", "XV", "XVI"], "r15-design": ["XV"]})
+FIGURES[:0] = [("ⅩⅤ 文を作ろう Lv3（言葉箱）", page_png(sheet("XV", 3), 1)), ("ⅩⅥ 助詞を入れよう Lv3", page_png(sheet("XVI", 3), 1))]
 FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [
     ("ⅩⅤ ぶんをつくろう Lv3（解答例）", page_png(sheet("XV", 3, True), 1)),

@@ -11,8 +11,8 @@ from .t7_mora import split_mora
 
 KEY = "XVII"
 TITLE = "音韻操作（指示に従って音を変える）"   # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "ことばへんしん"                 # 子ども向け表示タイトル
-INSTRUCTION = "ことばを声に出して言いながら、おとをかえて、べつのことばにしましょう。こたえを□に1つずつ書きます。"
+DISPLAY_TITLE = "言葉へんしん"                 # 子ども向け表示タイトル
+INSTRUCTION = "言葉を声に出して言いながら、音を変えて、別の言葉にしましょう。答えを□に1つずつ書きます。"
 HAS_ANSWER = True
 
 SQ = 11.0
@@ -55,14 +55,14 @@ def _phrase(word, op, te=False):
     (k, v), = op.items()
     u = split_mora(word)
     base, verb = {
-        "rep_head": (f"さいしょの おとを「{v}」に ", ("かえる", "かえて")),
-        "rep_tail": (f"さいごの おとを「{v}」に ", ("かえる", "かえて")),
-        "rev": ("ぎゃくから ", ("いう", "いって")),
-        "add_head": (f"さいしょに「{v}」を ", ("つける", "つけて")),
-        "add_tail": (f"さいごに「{v}」を ", ("つける", "つけて")),
-        "insert_mid": (f"まんなかに「{v}」を ", ("いれる", "いれて")),
-        "daku_add": (f"「{u[int(v)]}」に「゛」を " if k == "daku_add" else "", ("つける", "つけて")),
-        "daku_del": (f"「{u[int(v)]}」の「゛」を " if k == "daku_del" else "", ("とる", "とって")),
+        "rep_head": (f"最初《さいしょ》の音《おと》を「{v}」に", ("変《か》える", "変《か》えて")),
+        "rep_tail": (f"最後《さいご》の音《おと》を「{v}」に", ("変《か》える", "変《か》えて")),
+        "rev": ("逆《ぎゃく》から", ("言《い》う", "言《い》って")),
+        "add_head": (f"最初《さいしょ》に「{v}」を", ("付《つ》ける", "付《つ》けて")),
+        "add_tail": (f"最後《さいご》に「{v}」を", ("付《つ》ける", "付《つ》けて")),
+        "insert_mid": (f"真《ま》ん中《なか》に「{v}」を", ("入《い》れる", "入《い》れて")),
+        "daku_add": (f"「{u[int(v)]}」に「゛」を" if k == "daku_add" else "", ("付《つ》ける", "付《つ》けて")),
+        "daku_del": (f"「{u[int(v)]}」の「゛」を" if k == "daku_del" else "", ("取《と》る", "取《と》って")),
     }[k]
     return base + verb[1 if te else 0]
 
@@ -74,7 +74,7 @@ def instruction_lines(entry):
         return [_phrase(w, ops[0]) + "と？"]
     # 2つめの操作は、1つめの結果のことばに対して行う
     mid = "".join(apply_ops(w, ops[:1]))
-    return [_phrase(w, ops[0], te=True) + "、", "それから " + _phrase(mid, ops[1]) + "と？"]
+    return [_phrase(w, ops[0], te=True) + "、", "それから" + _phrase(mid, ops[1]) + "と？"]
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
@@ -99,7 +99,7 @@ def draw_page(c, ctx, items, lrng, answers=False):
             for k, ch in enumerate(ans):
                 layout.grid_cell(c, x0 + k * SQ, y, SQ)
                 if answers:
-                    layout.text(c, x0 + k * SQ + SQ / 2, y + SQ / 2, ch, size=13, align="c", vcenter=True)
+                    layout.text(c, x0 + k * SQ + SQ / 2, y + SQ / 2, ch, size=13, align="c", vcenter=True, conv=False)
             res.append("".join(ans))
             y += ROW_STEP
         y += 2

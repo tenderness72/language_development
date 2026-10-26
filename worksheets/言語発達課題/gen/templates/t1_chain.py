@@ -8,9 +8,8 @@ from .base import start_page
 
 KEY = "I"
 TITLE = "連想チェーン"            # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "ことばつなぎ"    # 子ども向け表示タイトル（PDF上部・帯に使用）
-INSTRUCTION = ("左のことばから始めて、関係が深いと思うことばを順番に線で結び、"
-               "右のゴールまでつなげましょう。")
+DISPLAY_TITLE = "言葉つなぎ"    # 子ども向け表示タイトル（PDF上部・帯に使用）
+INSTRUCTION = "左の言葉から始めて、関係が深いと思う言葉を順番に線で結び、右のゴールまでつなげましょう。"
 HAS_ANSWER = True
 
 OVAL_W, OVAL_H = 30.0, 12.0

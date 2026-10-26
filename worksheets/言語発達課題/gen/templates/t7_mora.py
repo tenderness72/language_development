@@ -9,8 +9,8 @@ from .base import start_page
 KEY = "VII"
 TITLE = "語頭音＋モーラ数"                        # 内部の臨床名（PDFには出さない）
 # 子ども向け表示タイトル。問題ごとに語頭音が変わるため特定の音は入れず固定文言。
-DISPLAY_TITLE = "決めた音からはじまることば"
-INSTRUCTION = "決められた音から始まり、マスの数に合うことばを考えて書きましょう。"
+DISPLAY_TITLE = "決めた音から始まる言葉"
+INSTRUCTION = "決められた音から始まり、マスの数に合う言葉を考えて書きましょう。"
 # マスの書き方（1マス＝1拍）。拗音は2文字で1拍なので前の字と同じマスに入れる。
 # 促音・長音・撥音はそれぞれ1拍＝1マス（原, 2001 の拍の定義に準拠）。
 # レベル別の【マスの書き方】（ページ内の最も高いレベルに合わせて表示）
@@ -71,7 +71,7 @@ def _draw_problem(c, ctx, half, top, item, answers):
         printed.update({int(k): v for k, v in (item.get("fixed") or {}).get(mora, {}).items()})
         for j, ch in printed.items():
             layout.text_fit(c, half["sq_x0"] + j * SQ + SQ / 2, ry + SQ / 2, ch, SQ - 4,
-                            max_size=13, font=layout.BOLD, ctx=ctx, where="VII.printed")
+                            max_size=13, font=layout.BOLD, ctx=ctx, where="VII.printed", conv=False)
         if answers:
             examples = ans.get(mora) or ans.get(str(mora)) or []
             if examples:
@@ -82,7 +82,7 @@ def _draw_problem(c, ctx, half, top, item, answers):
                     cx = half["sq_x0"] + j * SQ
                     layout.text_fit(c, cx + SQ / 2, ry + SQ / 2, u, SQ - 3,
                                     max_size=12, font=layout.REG,
-                                    ctx=ctx, where="VII.ans")
+                                    ctx=ctx, where="VII.ans", conv=False)
 
 
 def _draw_notes(c, answers, level=3):

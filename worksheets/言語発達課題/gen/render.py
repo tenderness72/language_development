@@ -31,6 +31,7 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
     fonts.register(data.load_config(base_dir).get("font"), base_dir=base_dir)
     from . import layout
     layout.set_furigana(data.load_furigana(base_dir))
+    layout.set_kanji(data.load_kanji(base_dir))
     layout.MISSING_FURIGANA.clear()
     mod = templates.get(type_key)
 

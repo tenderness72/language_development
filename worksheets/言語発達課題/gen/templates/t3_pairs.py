@@ -8,8 +8,8 @@ from .base import start_page
 
 KEY = "III"
 TITLE = "ペア対応づけ"                       # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "ことばのペアをつくろう"     # 子ども向け表示タイトル
-INSTRUCTION = "左のことばと関係が深いことばを右から選んで、線で結びましょう。右には、あまることばが1つあります。"
+DISPLAY_TITLE = "言葉のペアを作ろう"     # 子ども向け表示タイトル
+INSTRUCTION = "左の言葉と関係が深い言葉を右から選んで、線で結びましょう。右には、余る言葉が1つあります。"
 HAS_ANSWER = True
 
 BOX_W, BOX_H = 42.0, 12.0

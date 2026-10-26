@@ -8,8 +8,8 @@ from .base import start_page
 
 KEY = "II"
 TITLE = "意味ネットワーク照合"                  # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "関係のあることばを結ぼう"      # 子ども向け表示タイトル
-INSTRUCTION = "まん中のことばと関係が深いものを、まわりのことばから選んで線で結びましょう。"
+DISPLAY_TITLE = "関係のある言葉を結ぼう"      # 子ども向け表示タイトル
+INSTRUCTION = "真ん中の言葉と関係が深いものを、まわりの言葉から選んで線で結びましょう。"
 HAS_ANSWER = True
 
 REGION_SPAN = 82.0

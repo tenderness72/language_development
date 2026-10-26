@@ -3,12 +3,14 @@
 文の中の（　）に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）を出す。
 解答面では（　）に助詞を書く。
 """
+from reportlab.lib.units import mm
+
 from .. import layout
 from .base import start_page
 
 KEY = "XVI"
 TITLE = "構文（格助詞が・を）"         # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "じょしをいれよう"      # 子ども向け表示タイトル
+DISPLAY_TITLE = "助詞を入れよう"      # 子ども向け表示タイトル
 INSTRUCTION = "（　）に「が」か「を」を書きましょう。"
 HAS_ANSWER = True
 
@@ -40,7 +42,8 @@ def _sentence(c, ctx, y, sent, answers):
             x += BLANK + 3
         else:
             layout.text(c, x, y + BLANK / 2, tok, size=15, vcenter=True)
-            x += len(tok) * 5.6 + 2
+            shown = layout.plain(layout.annotate(tok))   # 漢字表記にしたあとの幅で次の位置を決める
+            x += layout.pdfmetrics.stringWidth(shown, layout.REG, 15) / mm + 2
     layout.text(c, x, y + BLANK / 2, "。", size=15, vcenter=True)
 
 

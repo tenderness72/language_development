@@ -44,7 +44,7 @@ def _draw_problem(c, ctx, rtop, item):
     layout.circle(c, RIGHT_CX, cy, CIRCLE_D, line=1.1)
     # 場所の名前を薄く書く（「だけ」を文で読ませず、図のラベルで示す：Matsuoka, 2007。Wiki SV-23）
     # 重なり（レンズ形）は下へ行くほど細いので、「りょうほう」だけ少し上に置く
-    for x, dy, lab in ((LEFT_CX - 10, 18, "ひだりだけ"), (105.0, 4, "りょうほう"), (RIGHT_CX + 10, 18, "みぎだけ")):
+    for x, dy, lab in ((LEFT_CX - 10, 18, "左《ひだり》だけ"), (105.0, 4, "両方《りょうほう》"), (RIGHT_CX + 10, 18, "右《みぎ》だけ")):
         layout.text(c, x, cy + dy, lab, size=7, align="c", gray=0.5)
 
 

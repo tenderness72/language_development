@@ -9,8 +9,8 @@ from .t7_mora import split_mora
 
 KEY = "XIII"
 TITLE = "音韻意識（音の削除・逆唱）"     # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "おとをけしたり ぎゃくから言ったりしよう"   # 子ども向け表示タイトル
-INSTRUCTION = "ことばを声に出して言ってから、こたえを□に1つずつ書きましょう。"
+DISPLAY_TITLE = "音を消したり逆から言ったりしよう"   # 子ども向け表示タイトル
+INSTRUCTION = "言葉を声に出して言ってから、答えを□に1つずつ書きましょう。"
 HAS_ANSWER = True
 
 SQ = 12.0
@@ -27,9 +27,10 @@ def answer(entry):
 
 
 def question(entry):
+    w = layout.kanji(entry["w"])
     if entry["op"] == "ぎゃく":
-        return f"「{entry['w']}」を ぎゃくから いうと？"
-    return f"「{entry['w']}」から「{entry['t']}」を とると？"
+        return f"「{w}」を逆《ぎゃく》から言《い》うと？"
+    return f"「{w}」から「{entry['t']}」を取《と》ると？"
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
@@ -47,7 +48,7 @@ def draw_page(c, ctx, items, lrng, answers=False):
             for k, ch in enumerate(ans):
                 layout.grid_cell(c, x0 + k * SQ, y, SQ)
                 if answers:
-                    layout.text(c, x0 + k * SQ + SQ / 2, y + SQ / 2, ch, size=13, align="c", vcenter=True)
+                    layout.text(c, x0 + k * SQ + SQ / 2, y + SQ / 2, ch, size=13, align="c", vcenter=True, conv=False)
             res.append("".join(ans))
             y += ROW_STEP
         y += 2

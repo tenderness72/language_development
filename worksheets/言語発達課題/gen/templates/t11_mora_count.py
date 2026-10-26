@@ -9,8 +9,8 @@ from .t7_mora import split_mora
 
 KEY = "XI"
 TITLE = "音韻意識（モーラの分解）"          # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "おとのかずだけ ぬろう"      # 子ども向け表示タイトル
-INSTRUCTION = "ことばを声に出して言いながら、おとの数だけ○をぬりましょう。"
+DISPLAY_TITLE = "音の数だけ塗ろう"      # 子ども向け表示タイトル
+INSTRUCTION = "言葉を声に出して言いながら、音の数だけ○を塗りましょう。"
 HAS_ANSWER = True
 
 N_CIRCLES = 7

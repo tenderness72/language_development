@@ -8,8 +8,7 @@ from .base import start_page
 KEY = "VI"
 TITLE = "カテゴリー流暢性"                 # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "仲間をたくさん探そう"     # 子ども向け表示タイトル
-INSTRUCTION = ("それぞれの仲間に入ることばを、書ける分だけ書いてみましょう。"
-               "はじめの1つは例です。")
+INSTRUCTION = "それぞれの仲間に入る言葉を、書ける分だけ書いてみましょう。初めの1つは例です。"
 HAS_ANSWER = False
 
 # (列左端, 中心) — 問題1/問題2

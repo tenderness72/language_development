@@ -53,6 +53,20 @@ RUBY_RATIO = 0.5          # ルビの大きさ（親文字比）
 _RUBY_RE = re.compile(r"([^《》]+?)《([^》]*)》")
 
 
+_KANJI = {}
+
+
+def set_kanji(mapping):
+    """data/kanji.yaml（キー: データ上のひらがなの語 → 値: 漢字《よみ》 形式）。語ひとつを描くときに漢字＋ルビにする。"""
+    _KANJI.clear()
+    _KANJI.update(mapping or {})
+
+
+def kanji(word):
+    """語の表示形（漢字《よみ》 形式。辞書になければそのまま）。文の中に語を埋めこむときに使う。"""
+    return _KANJI.get(word, word)
+
+
 def set_furigana(mapping):
     _FURI.clear()
     _FURI_BY_HEAD.clear()
@@ -65,8 +79,13 @@ def _is_kanji(ch):
     return "\u4e00" <= ch <= "\u9fff" or ch in "々〆"
 
 
-def annotate(s):
-    """文字列中の登録語を、いちばん長く一致するものから 漢字《よみ》 形式に置き換える。"""
+def annotate(s, conv=True):
+    """文字列中の登録語を、いちばん長く一致するものから 漢字《よみ》 形式に置き換える。
+
+    conv=True のとき、文字列全体が漢字表記辞書の語なら、その漢字＋ルビの形にする（マスに書く1音などは conv=False）。
+    """
+    if conv and s in _KANJI:
+        return _KANJI[s]
     if not _FURI or "《" in s:
         return s
     out, i = [], 0
@@ -102,7 +121,7 @@ def plain(s):
     return re.sub(r"《[^》]*》", "", s)
 
 
-def text(c, x_mm, y_mm, s, size=11, font=REG, align="l", vcenter=False, gray=0.0):
+def text(c, x_mm, y_mm, s, size=11, font=REG, align="l", vcenter=False, gray=0.0, conv=True):
     """文字を描画。align: l/c/r。vcenter=True なら y_mm を縦中央とみなす。
 
     ふりがな辞書に登録された語には、自動でルビ（親文字の上）を付ける。
@@ -114,7 +133,7 @@ def text(c, x_mm, y_mm, s, size=11, font=REG, align="l", vcenter=False, gray=0.0
         yb -= size * _VC
     else:
         yb -= size  # y_mm を上端とみなしてベースラインを下げる
-    segs = _segments(annotate(s))
+    segs = _segments(annotate(s, conv))
     if any(r for _, r in segs):
         _draw_ruby_line(c, _x(x_mm), yb, segs, size, font, align, vcenter)
         c.setFillGray(0.0)
@@ -153,15 +172,15 @@ def _draw_ruby_line(c, x, yb, segs, size, font, align, vcenter):
 
 
 def text_fit(c, cx_mm, cy_mm, s, max_w_mm, max_size=12, min_size=6.0,
-             font=REG, ctx=None, where="", gray=0.0):
+             font=REG, ctx=None, where="", gray=0.0, conv=True):
     """枠(幅 max_w_mm)の中央(cx,cy)に収まるよう自動縮小して描画。
 
     最小サイズでも収まらなければ ctx.warnings に記録（QAで検出）。
     """
-    size, ok = fit_size(s, font, max_size, max_w_mm, min_size)
+    size, ok = fit_size(plain(annotate(s, conv)), font, max_size, max_w_mm, min_size)
     if not ok and ctx is not None:
         ctx.warnings.append(f"overflow: {s!r} ({where}) max_w={max_w_mm}mm")
-    text(c, cx_mm, cy_mm, s, size=size, font=font, align="c", vcenter=True, gray=gray)
+    text(c, cx_mm, cy_mm, s, size=size, font=font, align="c", vcenter=True, gray=gray, conv=conv)
     return size, ok
 
 

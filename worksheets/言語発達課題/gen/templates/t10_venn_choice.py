@@ -9,9 +9,9 @@ from .base import start_page
 
 KEY = "X"
 TITLE = "属性交差（書かない版）"           # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "合うところへ線でむすぼう"   # 子ども向け表示タイトル
-INSTRUCTION = "ことばを、合うところへ線でむすびましょう。"
-INSTRUCTION_NONE = "ことばを、合うところへ線でむすびましょう。どちらにも合わないことばは、まるの外の四角へ。"
+DISPLAY_TITLE = "合うところへ線で結ぼう"   # 子ども向け表示タイトル
+INSTRUCTION = "言葉を、合うところへ線で結びましょう。"
+INSTRUCTION_NONE = "言葉を、合うところへ線で結びましょう。どちらにも合わない言葉は、丸の外の四角へ。"
 HAS_ANSWER = True
 
 CIRCLE_D = 58.0
@@ -42,7 +42,7 @@ def _draw_problem(c, ctx, top, item, lrng, answers):
         layout.text(c, RECT_X0 + 2.5, cy + 31, "どちらでもない", size=7.5, gray=0.45)
     layout.circle(c, LEFT_CX, cy, CIRCLE_D, line=1.1)
     layout.circle(c, RIGHT_CX, cy, CIRCLE_D, line=1.1)
-    for x, lab in ((LEFT_CX - 15, "ひだりだけ"), (105.0, "りょうほう"), (RIGHT_CX + 15, "みぎだけ")):
+    for x, lab in ((LEFT_CX - 15, "左《ひだり》だけ"), (105.0, "両方《りょうほう》"), (RIGHT_CX + 15, "右《みぎ》だけ")):
         layout.text(c, x, cy + 1, lab, size=7.5, align="c", gray=0.45)
 
     regions = ["left", "both", "right"] + (["none"] if has_none else [])

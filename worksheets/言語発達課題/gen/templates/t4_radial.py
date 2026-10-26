@@ -9,9 +9,8 @@ from .base import start_page
 
 KEY = "IV"
 TITLE = "放射状連想"                          # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "思いつくことばを集めよう"    # 子ども向け表示タイトル
-INSTRUCTION = ("まん中のことばから思いつくことばを、まわりの丸に書きましょう。"
-               "1つはヒントとして書いてあります。")
+DISPLAY_TITLE = "思いつく言葉を集めよう"    # 子ども向け表示タイトル
+INSTRUCTION = "真ん中の言葉から思いつく言葉を、まわりの丸に書きましょう。1つはヒントとして書いてあります。"
 HAS_ANSWER = False
 
 HALF_CX = [60.0, 150.0]

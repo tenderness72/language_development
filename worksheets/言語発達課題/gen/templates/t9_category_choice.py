@@ -8,8 +8,8 @@ from .base import start_page
 
 KEY = "IX"
 TITLE = "カテゴリー判断（流暢性の書かない版）"   # 内部の臨床名（PDFには出さない）
-DISPLAY_TITLE = "なかまに○をつけよう"            # 子ども向け表示タイトル
-INSTRUCTION = "上の四角のなかまに入ることばを見つけて、○でかこみましょう。"
+DISPLAY_TITLE = "仲間に○を付けよう"            # 子ども向け表示タイトル
+INSTRUCTION = "上の四角の仲間に入る言葉を見つけて、○で囲みましょう。"
 HAS_ANSWER = True
 
 LABEL_W, LABEL_H = 80.0, 10.0

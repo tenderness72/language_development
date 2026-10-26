@@ -9,7 +9,7 @@ from .base import start_page
 KEY = "XIV"
 TITLE = "音韻意識（語尾音の抽出・しりとり）"   # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "しりとりをしよう"               # 子ども向け表示タイトル
-INSTRUCTION = "おしまいの音を□に書いてから、その音ではじまることばを書きましょう。「ん」でおわることばは、つかいません。"
+INSTRUCTION = "おしまいの音を□に書いてから、その音で始まる言葉を書きましょう。「ん」で終わる言葉は、使いません。"
 HAS_ANSWER = False
 
 HALF_CX = [60.0, 150.0]
@@ -25,7 +25,7 @@ def _draw_problem(c, ctx, cx, top, item):
     y = top + BOX_H
     for _ in range(int(item["steps"])):
         layout.arrow_down(c, cx, y + 1.0, 5.0)
-        layout.text(c, cx - BOX_W / 2, y + 9.5, "おしまいの おと", size=8, gray=0.35, vcenter=True)
+        layout.text(c, cx - BOX_W / 2, y + 9.5, "おしまいの音《おと》", size=8, gray=0.35, vcenter=True)
         layout.grid_cell(c, cx - SQ / 2, y + 7.0, SQ)
         layout.arrow_down(c, cx, y + 7.0 + SQ + 0.5, 3.5)
         layout.box(c, cx - BOX_W / 2, y + 21.0, BOX_W, BOX_H, r=2.0, line=1.0)
