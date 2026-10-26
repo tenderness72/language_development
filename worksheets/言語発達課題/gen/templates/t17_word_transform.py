@@ -55,8 +55,8 @@ def _phrase(word, op, te=False):
     (k, v), = op.items()
     u = split_mora(word)
     base, verb = {
-        "rep_head": (f"最初《さいしょ》の音《おと》を「{v}」に", ("変《か》える", "変《か》えて")),
-        "rep_tail": (f"最後《さいご》の音《おと》を「{v}」に", ("変《か》える", "変《か》えて")),
+        "rep_head": (f"最初《さいしょ》の文字《もじ》を「{v}」に", ("変《か》える", "変《か》えて")),
+        "rep_tail": (f"最後《さいご》の文字《もじ》を「{v}」に", ("変《か》える", "変《か》えて")),
         "rev": ("逆《ぎゃく》から", ("言《い》う", "言《い》って")),
         "add_head": (f"最初《さいしょ》に「{v}」を", ("付《つ》ける", "付《つ》けて")),
         "add_tail": (f"最後《さいご》に「{v}」を", ("付《つ》ける", "付《つ》けて")),
@@ -87,7 +87,7 @@ def draw_page(c, ctx, items, lrng, answers=False):
         res = []
         for e in item["entries"]:
             layout.box(c, layout.CONTENT_X, y, WORD_W, SQ, r=2.0, line=1.0, fill=0.93)
-            layout.text_fit(c, layout.CONTENT_X + WORD_W / 2, y + SQ / 2, e["w"], WORD_W - 4, max_size=14,
+            layout.text_fit(c, layout.CONTENT_X + WORD_W / 2, y + SQ / 2, e.get("disp") or e["w"], WORD_W - 4, max_size=14,
                             font=layout.BOLD, ctx=ctx, where="XVII.word")
             lines = instruction_lines(e)
             for i, ln in enumerate(lines):

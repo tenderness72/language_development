@@ -27,7 +27,7 @@ def answer(entry):
 
 
 def question(entry):
-    w = layout.kanji(entry["w"])
+    w = entry.get("disp") or layout.kanji(entry["w"])
     if entry["op"] == "ぎゃく":
         return f"「{w}」を逆《ぎゃく》から言《い》うと？"
     return f"「{w}」から「{entry['t']}」を取《と》ると？"

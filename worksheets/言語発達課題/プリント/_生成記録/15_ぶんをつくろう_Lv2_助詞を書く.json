@@ -1,0 +1,64 @@
+{
+  "type": "XV",
+  "display_title": "文を作ろう",
+  "clinical_title": "構文（二語文・三語文の生成）",
+  "name": "15_ぶんをつくろう_Lv2_問題_助詞を書く",
+  "level": 2,
+  "seed": 152,
+  "count": 2,
+  "overrides": {
+    "particle_blank": true
+  },
+  "pages": [
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b2b",
+          "sentences": [
+            "おとうさん くるま あらう",
+            "いぬ ほね かじる",
+            "おばあさん おちゃ いれる"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b2a",
+          "sentences": [
+            "おかあさん りんご きる",
+            "ねこ さかな たべる",
+            "あかちゃん ミルク のむ"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b2c",
+          "sentences": [
+            "おじいさん しんぶん よむ",
+            "うさぎ にんじん たべる",
+            "おにいさん ボール なげる"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b2d",
+          "sentences": [
+            "せんせい なまえ よぶ",
+            "おねえさん かみ とかす",
+            "ぼく くつ はく"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

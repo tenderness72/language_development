@@ -13,6 +13,9 @@ KEY = "XV"
 TITLE = "構文（二語文・三語文の生成）"   # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "文を作ろう"          # 子ども向け表示タイトル
 INSTRUCTION = "言葉箱の言葉を、合う枠に書いて、文を作りましょう。"
+# 助詞を自分で書く版（products.yaml の variants で particle_blank: true）。枠のあとの□に が・を・で を書く。
+INSTRUCTION_PARTICLE = "言葉箱の言葉を、合う枠に書いて、□に「が」「を」「で」を入れて、文を作りましょう。"
+PBOX = 8.0
 HAS_ANSWER = True
 
 ROLES = ("だれが", "なにが", "なにを", "どうする", "どこで", "なにで")
@@ -98,7 +101,12 @@ def _draw_problem(c, ctx, top, item, lrng, answers):
                 layout.text_fit(c, x + SHAPE_W / 2, y + 4 + SHAPE_H / 2, w, SHAPE_W - 5, max_size=12,
                                 ctx=ctx, where="XV.ans")
             x += SHAPE_W
-            if lv >= 3 and role in PARTICLE:
+            if role in PARTICLE and item.get("particle_blank"):
+                bx, by = x + (GAP - PBOX) / 2, y + 4 + (SHAPE_H - PBOX) / 2
+                layout.box(c, bx, by, PBOX, PBOX, line=0.9)
+                if answers:
+                    layout.text(c, bx + PBOX / 2, by + PBOX / 2, PARTICLE[role], size=12, align="c", vcenter=True)
+            elif lv >= 3 and role in PARTICLE:
                 layout.text(c, x + GAP / 2, y + 4 + SHAPE_H / 2, PARTICLE[role], size=13, align="c", vcenter=True)
             x += GAP
         y += ROW_STEP
@@ -108,7 +116,8 @@ def _draw_problem(c, ctx, top, item, lrng, answers):
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
+    instr = INSTRUCTION_PARTICLE if any(it.get("particle_blank") for it in items) else INSTRUCTION
+    body_y = start_page(c, KEY, DISPLAY_TITLE, instr)
     mani = {"type": KEY, "problems": []}
     tops = [body_y + 8, body_y + 8 + PROBLEM_H + 4]
     for n, (item, top) in enumerate(zip(items, tops), start=1):

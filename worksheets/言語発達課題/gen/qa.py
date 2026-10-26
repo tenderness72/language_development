@@ -136,14 +136,17 @@ def check_item(type_key, item):
                 return f"[XIII:{item['id']}] entries は4つ"
             for e in es:
                 u = split_mora(e["w"])
-                if set(e["w"]) & special:
-                    return f"[XIII:{item['id']}] '{e['w']}' に特殊音節がある（使わない）"
+                if set(e["w"]) & special and lv < 3:
+                    return f"[XIII:{item['id']}] '{e['w']}' に特殊音節がある（Lv1・2 では使わない）"
+                from .templates.t13_sound_manipulation import answer as _ans
+                if "".join(_ans(e)) != e.get("answer"):
+                    return f"[XIII:{item['id']}] '{e['w']}' のこたえ '{''.join(_ans(e))}' が answer '{e.get('answer')}' と合わない"
                 if e["op"] == "けす" and u.count(e.get("t")) != 1:
                     return f"[XIII:{item['id']}] '{e['w']}' にけす音「{e.get('t')}」が1回だけ出てくるようにする"
                 if e["op"] not in ("ぎゃく", "けす"):
                     return f"[XIII:{item['id']}] op は ぎゃく／けす"
-                if lv == 1 and (len(u) != 2 or not lvl_ok(e["w"])):
-                    return f"[XIII:{item['id']}] Lv1 は清音の2音のことば"
+                if lv == 1 and (len(u) != 2 or e["op"] != "ぎゃく"):
+                    return f"[XIII:{item['id']}] Lv1 は2音のことばの逆唱"
         else:
             from .templates.t12_sound_search import hit
             import unicodedata

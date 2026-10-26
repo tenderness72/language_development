@@ -866,6 +866,25 @@ for sec in ROUND15:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND16
 SEC_TASK.update({"r16-xiv": ["XIV"]})
+# ---- 第17回：第12〜16回の修正の反映（先頭に表示） ----
+PA3b = load("XIII_sound_manipulation.yaml")
+ROUND17 = [
+    {"key": "r17-xiii", "title": "ⅩⅢ 音を消したり逆から言ったり：こたえを意味のある言葉に（6問・24題）",
+     "lead": "「逆から読んだら別の意味のある言葉になるように」とのご指摘を受け、逆唱も削除も、こたえが意味のある言葉になる問題に作り直しました。Lv1 は2音の逆唱、Lv2 は3音の逆唱とはじめ／おしまいの音の削除、Lv3 はまんなかの音の削除（3〜4音）。こたえはデータに書き、自動で作ったこたえと一致するかを検査しています。",
+     "items": [{"id": "r17-xiii-" + k, "label": f"Lv{it['level']}", "before": "",
+                "after": "\n".join(f"{re.sub(r'《[^》]*》', '', _q(e))} → {''.join(_ans(e))}" for e in it["entries"]), "ask": "",
+                "scene": f"4つの問い。こたえを音の数のマスに1つずつ書く（Lv{it['level']}）。"} for k, it in PA3b.items()]},
+    {"key": "r17-fixes", "title": "ⅩⅤ 助詞を自分で書く版／ⅩⅦ「最初の文字」",
+     "lead": "ⅩⅤ は、全レベルで「助詞を書く」版（_問題_助詞を書く.pdf）も作るようにしました。枠のあとの□に が・を・で を書きます。ⅩⅦ は「最初の音」「最後の音」を「最初の文字」「最後の文字」に変え、意味が分かれる語（橋・柿 など）も問題ごとに漢字＋ルビで示すようにしました。",
+     "items": [{"id": "r17-xv-particle", "label": "ⅩⅤ 助詞を書く版", "before": "Lv3 だけ助詞を印刷", "after": "全レベルで、枠のあとの□に助詞（が・を・で）を書く版を追加", "ask": "",
+                "scene": "ⅩⅤ の各レベルの _問題_助詞を書く.pdf。"},
+               {"id": "r17-xvii-moji", "label": "ⅩⅦ 指示の言い方", "before": "最初の音を「あ」に変えると？", "after": "最初の文字を「あ」に変えると？（漢字＋ルビ）", "ask": "",
+                "scene": "ⅩⅦ の「かえる」の指示。"}]},
+]
+for sec in ROUND16:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND17
+SEC_TASK.update({"r17-xiii": ["XIII"], "r17-fixes": ["XV", "XVII"]})
 FIGURES[:0] = [("ⅩⅤ 文を作ろう Lv3（言葉箱）", page_png(sheet("XV", 3), 1)), ("ⅩⅥ 助詞を入れよう Lv3", page_png(sheet("XVI", 3), 1))]
 FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [

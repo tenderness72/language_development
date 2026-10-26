@@ -6,6 +6,7 @@
 #   rep_head: X 最初の音を X にかえる／rep_tail: X 最後の音を X にかえる／rev: 1 ぎゃくから言う
 #   add_head: X 最初に X をつける／add_tail: X 最後に X をつける／insert_mid: X 2つの音のあいだに X を入れる
 #   daku_add: i  i 番目（0始まり）の音に「゛」をつける／daku_del: i  i 番目の音の「゛」「゜」をとる
+# disp: 表示の形（漢字《よみ》）。意味が分かれて辞書で漢字にしない語を、この問題では漢字で示したいときに書く。
 # level: 1 = 2音 → 2音（かえる・ぎゃく・「゛」）
 #        2 = 2音 → 3音（つける・入れる）
 #        3 = 2音 → 3〜4音（2音をつける・2段階の指示）
@@ -22,8 +23,8 @@ items:
               {w: いた, ops: [{rev: 1}], answer: たい}, {w: ごま, ops: [{daku_del: 0}], answer: こま}]
     level: 1
   - id: t1c
-    entries: [{w: なす, ops: [{rep_tail: べ}], answer: なべ}, {w: はし, ops: [{rep_head: う}], answer: うし},
-              {w: かき, ops: [{daku_add: 1}], answer: かぎ}, {w: ばら, ops: [{daku_del: 0}], answer: はら}]
+    entries: [{w: なす, ops: [{rep_tail: べ}], answer: なべ}, {w: はし, disp: 橋《はし》, ops: [{rep_head: う}], answer: うし},
+              {w: かき, disp: 柿《かき》, ops: [{daku_add: 1}], answer: かぎ}, {w: ばら, ops: [{daku_del: 0}], answer: はら}]
     level: 1
   - id: t1d
     entries: [{w: かめ, ops: [{rep_head: あ}], answer: あめ}, {w: いす, ops: [{rep_head: り}], answer: りす},
@@ -40,7 +41,7 @@ items:
     level: 2
   - id: t2c
     entries: [{w: さら, ops: [{insert_mid: く}], answer: さくら}, {w: いち, ops: [{add_tail: ご}], answer: いちご},
-              {w: はし, ops: [{insert_mid: な}], answer: はなし}, {w: ねこ, ops: [{add_head: こ}], answer: こねこ}]
+              {w: はし, disp: 橋《はし》, ops: [{insert_mid: な}], answer: はなし}, {w: ねこ, ops: [{add_head: こ}], answer: こねこ}]
     level: 2
   # ---- Lv3：2音をつける・2段階の指示（2026-10-26 追加・要確認） ----
   - id: t3a
