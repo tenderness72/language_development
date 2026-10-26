@@ -1,0 +1,86 @@
+{
+  "type": "XIV",
+  "display_title": "音から言葉を集めよう",
+  "clinical_title": "音韻（語頭音・語尾音を手がかりにした語の想起）",
+  "name": "14_おとからことばあつめ_Lv1_問題",
+  "level": 1,
+  "seed": 141,
+  "count": 4,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f1c",
+          "target": "あ",
+          "position": "はじめ"
+        },
+        {
+          "n": 2,
+          "id": "f1g",
+          "target": "い",
+          "position": "はじめ"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f1e",
+          "target": "こ",
+          "position": "はじめ"
+        },
+        {
+          "n": 2,
+          "id": "f1b",
+          "target": "お",
+          "position": "はじめ"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f1f",
+          "target": "ま",
+          "position": "はじめ"
+        },
+        {
+          "n": 2,
+          "id": "f1d",
+          "target": "は",
+          "position": "はじめ"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f1a",
+          "target": "か",
+          "position": "はじめ"
+        },
+        {
+          "n": 2,
+          "id": "f1h",
+          "target": "と",
+          "position": "はじめ"
+        }
+      ],
+      "page": 4
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

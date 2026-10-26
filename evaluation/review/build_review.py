@@ -26,7 +26,7 @@ def load(name):
 _DIRS = {"I": "01_連想チェーン", "II": "02_意味ネットワーク照合", "III": "03_ペア対応づけ", "IV": "04_放射状連想",
          "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図",
          "IX": "09_仲間えらび", "X": "10_ベン図えらび", "XI": "11_おとのかず", "XII": "12_おとさがし",
-         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_しりとり", "XV": "15_ぶんをつくろう", "XVI": "16_じょしをいれよう", "XVII": "17_ことばへんしん"}
+         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_おとからことばあつめ", "XV": "15_ぶんをつくろう", "XVI": "16_じょしをいれよう", "XVII": "17_ことばへんしん"}
 
 
 def sheet(k, level, answers=False):
@@ -395,11 +395,11 @@ sys.path.insert(0, WS)
 _MOD = {"I": "t1_chain", "II": "t2_network", "III": "t3_pairs", "IV": "t4_radial",
         "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn",
         "IX": "t9_category_choice", "X": "t10_venn_choice", "XI": "t11_mora_count", "XII": "t12_sound_search",
-        "XIII": "t13_sound_manipulation", "XIV": "t14_shiritori", "XV": "t15_sentence_build", "XVI": "t16_particles", "XVII": "t17_word_transform"}
+        "XIII": "t13_sound_manipulation", "XIV": "t14_sound_fluency", "XV": "t15_sentence_build", "XVI": "t16_particles", "XVII": "t17_word_transform"}
 _NAME = {"I": "Ⅰ 連想チェーン", "II": "Ⅱ 意味ネットワーク照合", "III": "Ⅲ ペア対応づけ", "IV": "Ⅳ 放射状連想",
          "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）",
          "IX": "Ⅸ 仲間えらび（Ⅵ の書かない版）", "X": "Ⅹ ベン図えらび（Ⅷ の書かない版）",
-         "XI": "Ⅺ おとのかず", "XII": "Ⅻ おとさがし", "XIII": "ⅩⅢ おとけし・ぎゃくよみ", "XIV": "ⅩⅣ しりとり",
+         "XI": "Ⅺ おとのかず", "XII": "Ⅻ おとさがし", "XIII": "ⅩⅢ おとけし・ぎゃくよみ", "XIV": "ⅩⅣ 音から言葉を集めよう",
          "XV": "ⅩⅤ ぶんをつくろう", "XVI": "ⅩⅥ じょしをいれよう", "XVII": "ⅩⅦ ことばへんしん"}
 _FORMAT = {
     "I": "左のスタート語から右のゴール語まで、2〜4列目の楕円（各列に正解1つ＋ダミー3つ）から1つずつ選び、線でつなぐ。1枚に2問。",
@@ -417,7 +417,7 @@ _FORMAT["X"] = "左右の円に条件。左右の列の語の箱から、合う�
 _FORMAT["XI"] = "左にことば、右に○が7つ。ことばを声に出して言いながら、音の数だけ○をぬる（シールでもよい）。1枚に8語。"
 _FORMAT["XII"] = "見出しに「『か』ではじまることば」などの条件。6語（当たり3語・はずれ3語）から、あてはまることばを○でかこむ。1枚に2問。"
 _FORMAT["XIII"] = "「『さかな』をぎゃくからいうと？」「『つくえ』から『つ』をとると？」の右に、こたえの音の数だけマス。1枚に8つ。"
-_FORMAT["XIV"] = "いちばん上のことばから、おしまいの音を小さいマスに書き、その音ではじまることばを書く。これを3〜5回くり返す。1枚に2問。"
+_FORMAT["XIV"] = "見出しに「『か』から始まる言葉」（Lv3 は「『こ』で終わる言葉」）。例を1つ書いておき、続く8本の線に思いつく言葉を書く。1枚に2問。"
 _FORMAT["XV"] = "上に「ことばばこ」（その問題の語をまぜて並べる）。下に3文ぶんの枠。だれが＝楕円・なにを＝四角・どうする＝六角形・どこで／なにで＝破線の枠に語を書いて文をつくる。Lv3 は枠のあとに助詞を印刷。"
 _FORMAT["XVI"] = "文の中の（　）に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）。1枚に8文。"
 _FORMAT["XVII"] = "左に2音のことば、まん中に指示（さいしょの おとを「あ」に かえると？ など。2段階の指示は2行）、右にこたえの音の数だけマス。1枚に8つ。"
@@ -760,7 +760,7 @@ import gen.templates.t7_mora as _t7
 from gen.templates.t12_sound_search import hit as _hit
 from gen.templates.t13_sound_manipulation import answer as _ans, question as _q
 PA1 = load("XI_mora_count.yaml"); PA2 = load("XII_sound_search.yaml")
-PA3 = load("XIII_sound_manipulation.yaml"); PA4 = load("XIV_shiritori.yaml")
+PA3 = load("XIII_sound_manipulation.yaml")
 _PA_BASIS = "根拠：モーラの分解（天野 1970、原 2012）、語頭音 → 語尾音の抽出（高橋 1997）、特殊拍の分節化（伊藤・辰巳 1997）、削除・逆唱の通過年齢（原 2001・2012）。Wiki PA-01〜PA-06。"
 ROUND12 = [
     {"key": "r12-xi", "title": "Ⅺ おとのかず（新規12問・48語）",
@@ -779,15 +779,11 @@ ROUND12 = [
      "items": [{"id": "r12-xiii-" + k, "label": f"Lv{it['level']}", "before": "",
                 "after": "\n".join(f"{_q(e)} → {''.join(_ans(e))}" for e in it["entries"]), "ask": "",
                 "scene": f"4つの問い。こたえを音の数のマスに1つずつ書く（Lv{it['level']}）。"} for k, it in PA3.items()]},
-    {"key": "r12-xiv", "title": "ⅩⅣ しりとり（新規18問）",
-     "lead": "おしまいの音を小さいマスに書き出してから、その音ではじまることばを書く形にしました（語尾音の抽出を見えるようにする）。Lv1 は清音でおわる語から3回、Lv2 は濁音でおわる語から4回、Lv3 は長い語から5回。のばす音・小さい ゃゅょ でおわる語は、しりとりの決まりが分かれるので最初の語にしていません。",
-     "items": [{"id": "r12-xiv-" + k, "label": f"{it['start']}（Lv{it['level']}）", "before": "", "after": f"はじめのことば：{it['start']}　{it['steps']}回",
-                "ask": "", "scene": f"いちばん上に「{it['start']}」。おしまいの音を書いてから、ことばを書く（Lv{it['level']}）。"} for k, it in PA4.items()]},
 ]
 for sec in ROUND11:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND12
-SEC_TASK.update({"r12-xi": ["XI"], "r12-xii": ["XII"], "r12-xiii": ["XIII"], "r12-xiv": ["XIV"]})
+SEC_TASK.update({"r12-xi": ["XI"], "r12-xii": ["XII"], "r12-xiii": ["XIII"]})
 # ---- 第13回：二語文・三語文（ⅩⅤ）と格助詞（ⅩⅥ）（先頭に表示） ----
 from gen.templates.t16_particles import parse as _parse
 SB = load("XV_sentence_build.yaml"); PT = load("XVI_particles.yaml")
@@ -856,6 +852,20 @@ for sec in ROUND14:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND15
 SEC_TASK.update({"r15-kanji": ["I", "II", "III", "IV", "V", "VI", "VIII", "IX", "X", "XI", "XII", "XV", "XVI"], "r15-design": ["XV"]})
+# ---- 第16回：音から言葉を集めよう（ⅩⅣ、しりとりの代わり）（先頭に表示） ----
+SF = load("XIV_sound_fluency.yaml")
+ROUND16 = [
+    {"key": "r16-xiv", "title": "ⅩⅣ 音から言葉を集めよう（新規24問。しりとりは削除）",
+     "lead": "「『か』から始まる言葉」「『こ』で終わる言葉」を思いつくだけ書く自由回答の課題です（例を1つ書いておく）。Lv1 は語の多い音で始まる言葉、Lv2 は語の少ない音・濁音・半濁音で始まる言葉、Lv3 は「〇で終わる言葉」。根拠：頭音での想起語数はその音で始まる語の多さに強く左右される（国立国語研究所 1981：Wiki SV-27）、語尾音の抽出は語頭音より遅い（高橋 1997：PA-02）、語頭音による想起は思春期まで伸びる（SV-28）。音と例の組を見てください。",
+     "items": [{"id": "r16-xiv-" + k, "label": f"「{it['target']}」（{it['position']}・Lv{it['level']}）", "before": "",
+                "after": f"例：{it['example']}", "ask": "",
+                "scene": f"見出し「『{it['target']}』{'から始まる' if it['position'] == 'はじめ' else 'で終わる'}言葉」。思いつく言葉を8本の線に書く（Lv{it['level']}）。"}
+               for k, it in SF.items()]},
+]
+for sec in ROUND15:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND16
+SEC_TASK.update({"r16-xiv": ["XIV"]})
 FIGURES[:0] = [("ⅩⅤ 文を作ろう Lv3（言葉箱）", page_png(sheet("XV", 3), 1)), ("ⅩⅥ 助詞を入れよう Lv3", page_png(sheet("XVI", 3), 1))]
 FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [

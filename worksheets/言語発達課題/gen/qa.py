@@ -145,12 +145,16 @@ def check_item(type_key, item):
                 if lv == 1 and (len(u) != 2 or not lvl_ok(e["w"])):
                     return f"[XIII:{item['id']}] Lv1 は清音の2音のことば"
         else:
-            w = item.get("start", "")
-            u = split_mora(w)
-            if not u or u[-1] in ("ん", "ー") or len(u[-1]) > 1:
-                return f"[XIV:{item['id']}] start は「ん」・のばす音・小さい ゃゅょ でおわらないことばにする"
-            if lv == 1 and not lvl_ok(w):
-                return f"[XIV:{item['id']}] Lv1 は清音だけのことば"
+            from .templates.t12_sound_search import hit
+            import unicodedata
+            ex = unicodedata.normalize("NFKC", item.get("example", ""))
+            ex = "".join(chr(ord(ch) - 0x60) if "ァ" <= ch <= "ヶ" else ch for ch in ex)
+            if item.get("position") not in ("はじめ", "おしまい"):
+                return f"[XIV:{item['id']}] position は はじめ／おしまい"
+            if not ex or not hit(ex, item["target"], item["position"]):
+                return f"[XIV:{item['id']}] 例 '{item.get('example')}' が条件（{item['target']}・{item['position']}）に合わない"
+            if (lv == 3) != (item["position"] == "おしまい"):
+                return f"[XIV:{item['id']}] Lv3 は「〇で終わる言葉」、Lv1・2 は「〇から始まる言葉」"
     elif type_key == "XV":
         from .templates.t15_sentence_build import ROLES
         lv = int(item.get("level", 1))

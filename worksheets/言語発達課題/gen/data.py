@@ -23,7 +23,7 @@ TEMPLATE_FILE = {
     "XI": "XI_mora_count",        # 音韻意識：音の数（○をぬる）
     "XII": "XII_sound_search",    # 音韻意識：音さがし
     "XIII": "XIII_sound_manipulation",  # 音韻意識：音の削除・逆唱
-    "XIV": "XIV_shiritori",       # 音韻意識：しりとり
+    "XIV": "XIV_sound_fluency",   # 音から言葉を集める（自由回答）
     "XV": "XV_sentence_build",    # 構文：二語文・三語文
     "XVI": "XVI_particles",       # 構文：格助詞が・を
     "XVII": "XVII_word_transform",  # 音韻操作：ことばへんしん
@@ -86,7 +86,7 @@ KEY_FIELDS = {
     "XI": ("words",),
     "XII": ("target", "position"),
     "XIII": ("id",),
-    "XIV": ("start",),
+    "XIV": ("target", "position"),
     "XV": ("id",),
     "XVI": ("id",),
     "XVII": ("id",),

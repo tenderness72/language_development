@@ -1,0 +1,86 @@
+{
+  "type": "XIV",
+  "display_title": "音から言葉を集めよう",
+  "clinical_title": "音韻（語頭音・語尾音を手がかりにした語の想起）",
+  "name": "14_おとからことばあつめ_Lv3_問題",
+  "level": 3,
+  "seed": 143,
+  "count": 4,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f3d",
+          "target": "す",
+          "position": "おしまい"
+        },
+        {
+          "n": 2,
+          "id": "f3h",
+          "target": "い",
+          "position": "おしまい"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f3b",
+          "target": "り",
+          "position": "おしまい"
+        },
+        {
+          "n": 2,
+          "id": "f3c",
+          "target": "き",
+          "position": "おしまい"
+        }
+      ],
+      "page": 2
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f3g",
+          "target": "ね",
+          "position": "おしまい"
+        },
+        {
+          "n": 2,
+          "id": "f3e",
+          "target": "ま",
+          "position": "おしまい"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "type": "XIV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "f3a",
+          "target": "こ",
+          "position": "おしまい"
+        },
+        {
+          "n": 2,
+          "id": "f3f",
+          "target": "ら",
+          "position": "おしまい"
+        }
+      ],
+      "page": 4
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

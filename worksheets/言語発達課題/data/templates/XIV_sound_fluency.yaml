@@ -1,0 +1,39 @@
+# ⅩⅣ 音から言葉を集めよう（音を手がかりにした語の想起・自由回答）
+# 「『か』から始まる言葉」「『こ』で終わる言葉」を、思いつくだけ書く。1問＝1つの音。例（example）を1つ書いておく。
+# 答えは1つに決まらないので解答面は作らない。
+# level（頭音での想起語数はその音で始まる語の多さに強く左右される：国立国語研究所 1981、Wiki SV-27。
+#        語尾音の抽出は語頭音より遅い：高橋 1997、Wiki PA-02。語頭音による想起と探し方は思春期まで伸びる：SV-28）:
+#   1 = 語の多い音で始まる言葉（教育基本語彙の低学年配当で、その音から始まる語がおおむね190語以上）
+#   2 = 語の少ない音・濁音・半濁音で始まる言葉
+#   3 = 「〇で終わる言葉」（語尾音）
+# position: はじめ／おしまい。example は、その条件に合う語にする（生成時に検査）。
+# 「い」「う」で終わる語は、のばす音（とけい＝とけー）と区別しにくいので、例には長音でない語を使う。
+type: XIV
+items:
+  # ---- Lv1：語の多い音で始まる（2026-10-26 追加・要確認） ----
+  - {id: f1a, target: か, position: はじめ, example: かさ, level: 1}
+  - {id: f1b, target: お, position: はじめ, example: おにぎり, level: 1}
+  - {id: f1c, target: あ, position: はじめ, example: あめ, level: 1}
+  - {id: f1d, target: は, position: はじめ, example: はさみ, level: 1}
+  - {id: f1e, target: こ, position: はじめ, example: こま, level: 1}
+  - {id: f1f, target: ま, position: はじめ, example: まど, level: 1}
+  - {id: f1g, target: い, position: はじめ, example: いぬ, level: 1}
+  - {id: f1h, target: と, position: はじめ, example: とり, level: 1}
+  # ---- Lv2：語の少ない音・濁音・半濁音で始まる（2026-10-26 追加・要確認） ----
+  - {id: f2a, target: ね, position: はじめ, example: ねこ, level: 2}
+  - {id: f2b, target: わ, position: はじめ, example: わに, level: 2}
+  - {id: f2c, target: め, position: はじめ, example: めがね, level: 2}
+  - {id: f2d, target: へ, position: はじめ, example: へび, level: 2}
+  - {id: f2e, target: が, position: はじめ, example: がっこう, level: 2}
+  - {id: f2f, target: ぶ, position: はじめ, example: ぶた, level: 2}
+  - {id: f2g, target: ご, position: はじめ, example: ごま, level: 2}
+  - {id: f2h, target: ぱ, position: はじめ, example: パン, level: 2}
+  # ---- Lv3：〇で終わる（2026-10-26 追加・要確認） ----
+  - {id: f3a, target: こ, position: おしまい, example: ねこ, level: 3}
+  - {id: f3b, target: り, position: おしまい, example: とり, level: 3}
+  - {id: f3c, target: き, position: おしまい, example: ゆき, level: 3}
+  - {id: f3d, target: す, position: おしまい, example: いす, level: 3}
+  - {id: f3e, target: ま, position: おしまい, example: くま, level: 3}
+  - {id: f3f, target: ら, position: おしまい, example: さくら, level: 3}
+  - {id: f3g, target: ね, position: おしまい, example: ふね, level: 3}
+  - {id: f3h, target: い, position: おしまい, example: かい, level: 3}
