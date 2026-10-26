@@ -187,6 +187,18 @@ def check_item(type_key, item):
                 return f"[XVI:{item['id']}] Lv2・3 は が と を を1つずつ"
             if lv == 3 and not (isinstance(st, dict) and st.get("context")):
                 return f"[XVI:{item['id']}] Lv3 は状況の説明（context）を付ける"
+    elif type_key == "XVII":
+        from .templates.t17_word_transform import apply_ops
+        es = item.get("entries", [])
+        if len(es) != 4:
+            return f"[XVII:{item['id']}] entries は4つ"
+        lv = int(item.get("level", 1))
+        for e in es:
+            got = "".join(apply_ops(e["w"], e["ops"]))
+            if got != e.get("answer"):
+                return f"[XVII:{item['id']}] '{e['w']}' の操作の結果 '{got}' が answer '{e.get('answer')}' と合わない"
+            if len(e["ops"]) > 1 and lv < 3:
+                return f"[XVII:{item['id']}] 2段階の指示は Lv3"
     elif type_key == "IX":
         mem, oth = item.get("members", []), item.get("others", [])
         if len(mem) != 6 or len(oth) != 6:

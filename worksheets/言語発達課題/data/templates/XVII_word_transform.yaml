@@ -1,0 +1,53 @@
+# ⅩⅦ ことばへんしん（音韻操作：指示どおりに音を変えて、別のことばにする）
+# 2音のことばを、指示（ops）どおりに操作して、別の実在することばにする。こたえは自動で作り、answer と一致するか検査する。
+# 言語聴覚士の公開教材「音韻操作（口頭命令に従う）」（縁の下の言語聴覚士）と同じ構成（2→2音・2→3音・2→4音）の類似課題。
+#   問題は子どもに身近な語で新しく作った（公開教材の問題は使っていない）。
+# ops（順に行う。2つあれば2段階の指示）:
+#   rep_head: X 最初の音を X にかえる／rep_tail: X 最後の音を X にかえる／rev: 1 ぎゃくから言う
+#   add_head: X 最初に X をつける／add_tail: X 最後に X をつける／insert_mid: X 2つの音のあいだに X を入れる
+#   daku_add: i  i 番目（0始まり）の音に「゛」をつける／daku_del: i  i 番目の音の「゛」「゜」をとる
+# level: 1 = 2音 → 2音（かえる・ぎゃく・「゛」）
+#        2 = 2音 → 3音（つける・入れる）
+#        3 = 2音 → 3〜4音（2音をつける・2段階の指示）
+# 声に出して言いながら考える。文字を見ずに、大人が読み上げて口頭で答える使い方もできる（README）。
+type: XVII
+items:
+  # ---- Lv1：2音 → 2音（2026-10-26 追加・要確認） ----
+  - id: t1a
+    entries: [{w: かさ, ops: [{rep_head: あ}], answer: あさ}, {w: ねこ, ops: [{rep_tail: ぎ}], answer: ねぎ},
+              {w: かお, ops: [{rev: 1}], answer: おか}, {w: ふた, ops: [{daku_add: 0}], answer: ぶた}]
+    level: 1
+  - id: t1b
+    entries: [{w: かに, ops: [{rep_head: わ}], answer: わに}, {w: いぬ, ops: [{rep_tail: し}], answer: いし},
+              {w: いた, ops: [{rev: 1}], answer: たい}, {w: ごま, ops: [{daku_del: 0}], answer: こま}]
+    level: 1
+  - id: t1c
+    entries: [{w: なす, ops: [{rep_tail: べ}], answer: なべ}, {w: はし, ops: [{rep_head: う}], answer: うし},
+              {w: かき, ops: [{daku_add: 1}], answer: かぎ}, {w: ばら, ops: [{daku_del: 0}], answer: はら}]
+    level: 1
+  - id: t1d
+    entries: [{w: かめ, ops: [{rep_head: あ}], answer: あめ}, {w: いす, ops: [{rep_head: り}], answer: りす},
+              {w: はね, ops: [{daku_add: 0}], answer: ばね}, {w: つき, ops: [{rep_head: ゆ}], answer: ゆき}]
+    level: 1
+  # ---- Lv2：2音 → 3音（2026-10-26 追加・要確認） ----
+  - id: t2a
+    entries: [{w: いか, ops: [{add_head: す}], answer: すいか}, {w: たま, ops: [{add_tail: ご}], answer: たまご},
+              {w: たこ, ops: [{insert_mid: い}], answer: たいこ}, {w: いぬ, ops: [{add_head: こ}], answer: こいぬ}]
+    level: 2
+  - id: t2b
+    entries: [{w: みみ, ops: [{add_tail: ず}], answer: みみず}, {w: かめ, ops: [{insert_mid: も}], answer: かもめ},
+              {w: うし, ops: [{add_head: こ}], answer: こうし}, {w: くま, ops: [{insert_mid: る}], answer: くるま}]
+    level: 2
+  - id: t2c
+    entries: [{w: さら, ops: [{insert_mid: く}], answer: さくら}, {w: いち, ops: [{add_tail: ご}], answer: いちご},
+              {w: はし, ops: [{insert_mid: な}], answer: はなし}, {w: ねこ, ops: [{add_head: こ}], answer: こねこ}]
+    level: 2
+  # ---- Lv3：2音をつける・2段階の指示（2026-10-26 追加・要確認） ----
+  - id: t3a
+    entries: [{w: ひま, ops: [{add_tail: わり}], answer: ひまわり}, {w: たけ, ops: [{add_tail: のこ}], answer: たけのこ},
+              {w: いか, ops: [{rev: 1}, {add_tail: だん}], answer: かいだん}, {w: かさ, ops: [{rev: 1}, {add_tail: な}], answer: さかな}]
+    level: 3
+  - id: t3b
+    entries: [{w: にわ, ops: [{add_tail: とり}], answer: にわとり}, {w: あさ, ops: [{add_tail: がお}], answer: あさがお},
+              {w: かめ, ops: [{rep_head: あ}, {add_tail: だま}], answer: あめだま}, {w: いぬ, ops: [{rep_tail: し}, {add_head: こ}], answer: こいし}]
+    level: 3

@@ -1,0 +1,40 @@
+{
+  "type": "XVII",
+  "display_title": "ことばへんしん",
+  "clinical_title": "音韻操作（指示に従って音を変える）",
+  "name": "17_ことばへんしん_Lv3_問題",
+  "level": 3,
+  "seed": 173,
+  "count": 1,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XVII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "t3a",
+          "answers": [
+            "ひまわり",
+            "たけのこ",
+            "かいだん",
+            "さかな"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "t3b",
+          "answers": [
+            "にわとり",
+            "あさがお",
+            "あめだま",
+            "こいし"
+          ]
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}

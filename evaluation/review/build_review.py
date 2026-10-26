@@ -25,7 +25,7 @@ def load(name):
 _DIRS = {"I": "01_連想チェーン", "II": "02_意味ネットワーク照合", "III": "03_ペア対応づけ", "IV": "04_放射状連想",
          "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図",
          "IX": "09_仲間えらび", "X": "10_ベン図えらび", "XI": "11_おとのかず", "XII": "12_おとさがし",
-         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_しりとり", "XV": "15_ぶんをつくろう", "XVI": "16_じょしをいれよう"}
+         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_しりとり", "XV": "15_ぶんをつくろう", "XVI": "16_じょしをいれよう", "XVII": "17_ことばへんしん"}
 
 
 def sheet(k, level, answers=False):
@@ -394,12 +394,12 @@ sys.path.insert(0, WS)
 _MOD = {"I": "t1_chain", "II": "t2_network", "III": "t3_pairs", "IV": "t4_radial",
         "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn",
         "IX": "t9_category_choice", "X": "t10_venn_choice", "XI": "t11_mora_count", "XII": "t12_sound_search",
-        "XIII": "t13_sound_manipulation", "XIV": "t14_shiritori", "XV": "t15_sentence_build", "XVI": "t16_particles"}
+        "XIII": "t13_sound_manipulation", "XIV": "t14_shiritori", "XV": "t15_sentence_build", "XVI": "t16_particles", "XVII": "t17_word_transform"}
 _NAME = {"I": "Ⅰ 連想チェーン", "II": "Ⅱ 意味ネットワーク照合", "III": "Ⅲ ペア対応づけ", "IV": "Ⅳ 放射状連想",
          "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）",
          "IX": "Ⅸ 仲間えらび（Ⅵ の書かない版）", "X": "Ⅹ ベン図えらび（Ⅷ の書かない版）",
          "XI": "Ⅺ おとのかず", "XII": "Ⅻ おとさがし", "XIII": "ⅩⅢ おとけし・ぎゃくよみ", "XIV": "ⅩⅣ しりとり",
-         "XV": "ⅩⅤ ぶんをつくろう", "XVI": "ⅩⅥ じょしをいれよう"}
+         "XV": "ⅩⅤ ぶんをつくろう", "XVI": "ⅩⅥ じょしをいれよう", "XVII": "ⅩⅦ ことばへんしん"}
 _FORMAT = {
     "I": "左のスタート語から右のゴール語まで、2〜4列目の楕円（各列に正解1つ＋ダミー3つ）から1つずつ選び、線でつなぐ。1枚に2問。",
     "III": "見出しに関係名（例：動物→鳴き声）。左に5語、右に順番を入れかえた5語。左右の語を線で結ぶ。1枚に2問。",
@@ -419,7 +419,8 @@ _FORMAT["XIII"] = "「『さかな』をぎゃくからいうと？」「『つ�
 _FORMAT["XIV"] = "いちばん上のことばから、おしまいの音を小さいマスに書き、その音ではじまることばを書く。これを3〜5回くり返す。1枚に2問。"
 _FORMAT["XV"] = "上に「ことばばこ」（その問題の語をまぜて並べる）。下に3文ぶんの枠。だれが＝楕円・なにを＝四角・どうする＝六角形・どこで／なにで＝破線の枠に語を書いて文をつくる。Lv3 は枠のあとに助詞を印刷。"
 _FORMAT["XVI"] = "文の中の（　）に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）。1枚に8文。"
-for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI"):
+_FORMAT["XVII"] = "左に2音のことば、まん中に指示（さいしょの おとを「あ」に かえると？ など。2段階の指示は2行）、右にこたえの音の数だけマス。1枚に8つ。"
+for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII"):
     m = importlib.import_module("gen.templates." + _MOD[k])
     TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
                 "format": _FORMAT[k], "img": page_png(sheet(k, 1), 1, dpi=48)}
@@ -818,6 +819,21 @@ for sec in ROUND12:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND13
 SEC_TASK.update({"r13-xv": ["XV"], "r13-xvi": ["XVI"]})
+# ---- 第14回：ことばへんしん（ⅩⅦ）（先頭に表示） ----
+from gen.templates.t17_word_transform import instruction_lines as _il
+WT = load("XVII_word_transform.yaml")
+ROUND14 = [
+    {"key": "r14-xvii", "title": "ⅩⅦ ことばへんしん（新規9問・36題）",
+     "lead": "2音のことばを指示どおりに変えて、別の実在することばにする課題です。言語聴覚士の公開教材「音韻操作（口頭命令に従う）」（縁の下の言語聴覚士）と同じ構成（Lv1 2音→2音、Lv2 2音→3音、Lv3 2音→4音・2段階の指示）の類似課題で、問題は子どもに身近な語で新しく作りました（公開教材の問題は使っていません）。こたえのことばが子どもに身近か、指示の言い方が分かりやすいかを見てください。",
+     "items": [{"id": "r14-xvii-" + k, "label": f"Lv{it['level']}", "before": "",
+                "after": "\n".join(f"{e['w']}：{''.join(_il(e))} → {e['answer']}" for e in it["entries"]), "ask": "",
+                "scene": f"4つの問い。指示どおりに音を変えて、こたえを音の数のマスに書く（Lv{it['level']}）。"} for k, it in WT.items()]},
+]
+for sec in ROUND13:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND14
+SEC_TASK.update({"r14-xvii": ["XVII"]})
+FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [
     ("ⅩⅤ ぶんをつくろう Lv3（解答例）", page_png(sheet("XV", 3, True), 1)),
     ("ⅩⅥ じょしをいれよう Lv3（解答）", page_png(sheet("XVI", 3, True), 1)),

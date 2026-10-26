@@ -6,7 +6,7 @@ import yaml
 ROMAN = {
     "I": "Ⅰ", "II": "Ⅱ", "III": "Ⅲ", "IV": "Ⅳ",
     "V": "Ⅴ", "VI": "Ⅵ", "VII": "Ⅶ", "VIII": "Ⅷ",
-    "IX": "Ⅸ", "X": "Ⅹ", "XI": "Ⅺ", "XII": "Ⅻ", "XIII": "ⅩⅢ", "XIV": "ⅩⅣ", "XV": "ⅩⅤ", "XVI": "ⅩⅥ",
+    "IX": "Ⅸ", "X": "Ⅹ", "XI": "Ⅺ", "XII": "Ⅻ", "XIII": "ⅩⅢ", "XIV": "ⅩⅣ", "XV": "ⅩⅤ", "XVI": "ⅩⅥ", "XVII": "ⅩⅦ",
 }
 
 TEMPLATE_FILE = {
@@ -26,6 +26,7 @@ TEMPLATE_FILE = {
     "XIV": "XIV_shiritori",       # 音韻意識：しりとり
     "XV": "XV_sentence_build",    # 構文：二語文・三語文
     "XVI": "XVI_particles",       # 構文：格助詞が・を
+    "XVII": "XVII_word_transform",  # 音韻操作：ことばへんしん
 }
 
 TYPES = list(TEMPLATE_FILE.keys())
@@ -79,6 +80,7 @@ KEY_FIELDS = {
     "XIV": ("start",),
     "XV": ("id",),
     "XVI": ("id",),
+    "XVII": ("id",),
 }
 
 

@@ -1,0 +1,66 @@
+{
+  "type": "XVII",
+  "display_title": "ことばへんしん",
+  "clinical_title": "音韻操作（指示に従って音を変える）",
+  "name": "17_ことばへんしん_Lv1_問題",
+  "level": 1,
+  "seed": 171,
+  "count": 2,
+  "overrides": {},
+  "pages": [
+    {
+      "type": "XVII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "t1c",
+          "answers": [
+            "なべ",
+            "うし",
+            "かぎ",
+            "はら"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "t1a",
+          "answers": [
+            "あさ",
+            "ねぎ",
+            "おか",
+            "ぶた"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XVII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "t1b",
+          "answers": [
+            "わに",
+            "いし",
+            "たい",
+            "こま"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "t1d",
+          "answers": [
+            "あめ",
+            "りす",
+            "ばね",
+            "ゆき"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": true
+}
