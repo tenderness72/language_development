@@ -1,0 +1,53 @@
+{
+  "type": "VI",
+  "display_title": "仲間をたくさん探そう",
+  "clinical_title": "カテゴリー流暢性",
+  "name": "06_カテゴリー流暢性_Lv2_問題_頭の文字ヒント",
+  "level": 2,
+  "seed": 62,
+  "count": 2,
+  "overrides": {
+    "show_hints": true
+  },
+  "only": "hints",
+  "pages": [
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "vi_lv2_011a",
+          "category": "洋服",
+          "example": "Tシャツ"
+        },
+        {
+          "n": 2,
+          "id": "vi_lv2_010a",
+          "category": "楽器",
+          "example": "ピアノ"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "bird",
+          "category": "とり",
+          "example": "すずめ"
+        },
+        {
+          "n": 2,
+          "id": "insect",
+          "category": "むし",
+          "example": "ちょう"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

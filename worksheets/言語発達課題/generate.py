@@ -66,17 +66,20 @@ def run_catalog(args):
     for n, entry in enumerate(doc.get("catalog", []), start=1):
         tkey = str(entry["type"])
         folder = f"{n:02d}_{entry['name']}"
-        items = data.load_items(tkey, args.base_dir)
-        for level in sorted({int(it.get("level", 1)) for it in items}):
-            uniq = data.count_unique(tkey, [it for it in items if int(it.get("level", 1)) == level])
-            count = uniq // 2
-            if count == 0:
-                print(f"[{tkey}] Lv{level}: 問題が{uniq}問のため1枚に満たず、作りません")
-                continue
-            stem = f"{folder}_Lv{level}"
-            # variants: 同じ問題を、行数などを変えた版でも作る（例：Ⅵ の5行版 → 〜_問題_5行.pdf）
-            for v in [None] + list(entry.get("variants") or []):
-                suffix = f"_{v['suffix']}" if v else ""
+        all_items = data.load_items(tkey, args.base_dir)
+        # variants: 同じ問題を、行数などを変えた版でも作る（例：Ⅵ の5行版 → 〜_問題_5行.pdf）
+        # only を書いた版は、その値を持つ item だけで作る（枚数もその item 数から決める）
+        for v in [None] + list(entry.get("variants") or []):
+            suffix = f"_{v['suffix']}" if v else ""
+            only = (v or {}).get("only")
+            items = [it for it in all_items if it.get(only)] if only else all_items
+            for level in sorted({int(it.get("level", 1)) for it in items}):
+                uniq = data.count_unique(tkey, [it for it in items if int(it.get("level", 1)) == level])
+                count = uniq // 2
+                if count == 0:
+                    print(f"[{tkey}{suffix}] Lv{level}: 問題が{uniq}問のため1枚に満たず、作りません")
+                    continue
+                stem = f"{folder}_Lv{level}"
                 generate_set(
                     type_key=tkey, count=count, level=level,
                     seed=args.seed + n * 10 + level,
@@ -84,14 +87,14 @@ def run_catalog(args):
                     with_answers=True, base_dir=args.base_dir,
                     name=f"{stem}_問題{suffix}", answers_name=f"{stem}_解答{suffix}",
                     manifest_path=os.path.join(log_dir, f"{stem}{suffix}.json"),
-                    overrides=(v or {}).get("set"),
+                    overrides=(v or {}).get("set"), only=only,
                 )
 
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="関連語の想起課題プリント生成")
     ap.add_argument("--type", help="I〜VIII から1つ")
-    ap.add_argument("--level", type=int, choices=[1, 2, 3], default=None,
+    ap.add_argument("--level", type=int, choices=[1, 2, 3, 4], default=None,
                     help="難易度 1〜3（省略時は全item対象）")
     ap.add_argument("--count", type=int, default=10, help="生成する枚数(=商品数)")
     ap.add_argument("--seed", type=int, default=0, help="乱数シード（再現性）")

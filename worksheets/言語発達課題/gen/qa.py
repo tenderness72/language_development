@@ -170,10 +170,10 @@ def check_item(type_key, item):
                 return f"[XV:{item['id']}] 役割が不正（最後は どうする を1つ）: {roles}"
             if lv == 1 and len(st) != 2:
                 return f"[XV:{item['id']}] Lv1 は2語の文"
-            if lv == 2 and roles != ["だれが", "なにを", "どうする"]:
-                return f"[XV:{item['id']}] Lv2 は だれが＋なにを＋どうする"
-            if lv == 3 and not ({"どこで", "なにで"} & set(roles)):
-                return f"[XV:{item['id']}] Lv3 は どこで か なにで を含める"
+            if lv == 2 and roles not in (["だれが", "なにを", "どうする"], ["どんな", "なにを", "どうする"]):
+                return f"[XV:{item['id']}] Lv2 は だれが＋なにを＋どうする か どんな＋なにを＋どうする"
+            if lv == 3 and not ({"どこで", "なにで", "どこに"} & set(roles)):
+                return f"[XV:{item['id']}] Lv3 は どこで・なにで・どこに のどれかを含める"
         words = [w for st in sents for _, w in st]
         if len(set(words)) != len(words):
             return f"[XV:{item['id']}] ことばばこの語が重なっている"
@@ -186,11 +186,15 @@ def check_item(type_key, item):
         for st in sents:
             parts = st["parts"] if isinstance(st, dict) else st
             blanks = [parse(p)[0] for p in parts if parse(p)[1]]
-            if any(b not in ("が", "を") for b in blanks):
-                return f"[XVI:{item['id']}] 空欄は が か を"
+            if any(b not in ("が", "を", "に") for b in blanks):
+                return f"[XVI:{item['id']}] 空欄は が・を・に"
+            if ("に" in blanks) != (lv == 4):
+                return f"[XVI:{item['id']}] に を使うのは Lv4 だけ（Lv4 は どの文にも に を入れる）"
+            if lv == 4 and (blanks.count("が") != 1 or len(set(blanks)) != len(blanks)):
+                return f"[XVI:{item['id']}] Lv4 は が＋に（＋を）を1つずつ"
             if lv == 1 and len(blanks) != 1:
                 return f"[XVI:{item['id']}] Lv1 は助詞1つ"
-            if lv >= 2 and sorted(blanks) != ["が", "を"]:
+            if lv in (2, 3) and sorted(blanks) != ["が", "を"]:
                 return f"[XVI:{item['id']}] Lv2・3 は が と を を1つずつ"
             if lv == 3 and not (isinstance(st, dict) and st.get("context")):
                 return f"[XVI:{item['id']}] Lv3 は状況の説明（context）を付ける"

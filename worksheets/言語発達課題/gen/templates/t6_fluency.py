@@ -9,6 +9,8 @@ KEY = "VI"
 TITLE = "カテゴリー流暢性"                 # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "仲間をたくさん探そう"     # 子ども向け表示タイトル
 INSTRUCTION = "それぞれの仲間に入る言葉を、書ける分だけ書いてみましょう。初めの1つは例です。"
+# 頭の文字ヒント版（variants で show_hints: true。hints のあるカテゴリーだけ）。線の初めに言葉の最初の文字を印刷する。
+NOTE_HINT = "線の初めの字は、言葉の最初の文字です。"
 HAS_ANSWER = False
 
 # (列左端, 中心) — 問題1/問題2
@@ -40,13 +42,17 @@ def _draw_problem(c, ctx, col_left, cx, top, item):
     span = LINE_END_Y - start_y
     # 行の間隔は10行のときと同じにする（5行版は行が少ないだけで、1行の高さは変えない）
     step = span / max(n_lines, 10)
+    hints = list(item.get("hints") or []) if item.get("show_hints") else []
     for i in range(1, n_lines + 1):
         y = start_y + i * step
         layout.line(c, col_left, y, col_left + COL_W, y, width=0.6, gray=0.35)
+        if i <= len(hints):
+            layout.text(c, col_left + 1.5, y - 4.0, hints[i - 1], size=13, vcenter=True, conv=False)
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
+    hint = any(it.get("show_hints") and it.get("hints") for it in items)
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION, note=NOTE_HINT if hint else None)
     mani = {"type": KEY, "problems": []}
     for n, (item, (col_left, cx)) in enumerate(zip(items, COLS), start=1):
         layout.problem_label(c, col_left, body_y + 2, n)

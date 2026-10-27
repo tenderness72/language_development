@@ -1,4 +1,4 @@
-"""ⅩⅥ じょしをいれよう（格助詞「が」「を」 / 1ページ8文）。
+"""ⅩⅥ じょしをいれよう（格助詞「が」「を」、Lv4 は「に」も / 1ページ8文）。
 
 文の中の（　）に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）を出す。
 解答面では（　）に助詞を書く。
@@ -12,6 +12,8 @@ KEY = "XVI"
 TITLE = "構文（格助詞が・を）"         # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "助詞を入れよう"      # 子ども向け表示タイトル
 INSTRUCTION = "（　）に「が」か「を」を書きましょう。"
+# Lv4（に を加える）のページ。（　）に の「に」と答えの「に」が並ばないよう、選ぶ語を先に出す。
+INSTRUCTION_NI = "「が」「を」「に」から1つ選んで、（　）に書きましょう。"
 HAS_ANSWER = True
 
 BLANK = 10.0
@@ -48,7 +50,9 @@ def _sentence(c, ctx, y, sent, answers):
 
 
 def draw_page(c, ctx, items, lrng, answers=False):
-    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION)
+    ni = any(parse(p) == ("に", True) for it in items for st in it["sentences"]
+             for p in (st["parts"] if isinstance(st, dict) else st))
+    body_y = start_page(c, KEY, DISPLAY_TITLE, INSTRUCTION_NI if ni else INSTRUCTION)
     mani = {"type": KEY, "problems": []}
     y = body_y + 8
     for n, item in enumerate(items, start=1):

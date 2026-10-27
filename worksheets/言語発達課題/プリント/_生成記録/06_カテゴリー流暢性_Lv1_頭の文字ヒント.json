@@ -1,0 +1,53 @@
+{
+  "type": "VI",
+  "display_title": "仲間をたくさん探そう",
+  "clinical_title": "カテゴリー流暢性",
+  "name": "06_カテゴリー流暢性_Lv1_問題_頭の文字ヒント",
+  "level": 1,
+  "seed": 61,
+  "count": 2,
+  "overrides": {
+    "show_hints": true
+  },
+  "only": "hints",
+  "pages": [
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "fruit",
+          "category": "くだもの",
+          "example": "りんご"
+        },
+        {
+          "n": 2,
+          "id": "vehicle",
+          "category": "のりもの",
+          "example": "でんしゃ"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "VI",
+      "problems": [
+        {
+          "n": 1,
+          "id": "animal",
+          "category": "どうぶつ",
+          "example": "うさぎ"
+        },
+        {
+          "n": 2,
+          "id": "vegetable",
+          "category": "やさい",
+          "example": "にんじん"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "has_answers": false
+}

@@ -885,6 +885,62 @@ for sec in ROUND16:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND17
 SEC_TASK.update({"r17-xiii": ["XIII"], "r17-fixes": ["XV", "XVII"]})
+# ---- 第18回：§20.3 の改善（優先度順）。理由は evaluation/改善記録.md（先頭に表示） ----
+SB18 = load("XV_sentence_build.yaml")
+PT18 = load("XVI_particles.yaml")
+PA18 = load("XIII_sound_manipulation.yaml")
+VI18 = {k: v for k, v in load("VI_fluency.yaml").items() if v.get("hints")}
+
+
+def _xv_sent(st):
+    return "　".join(f"{r}：{w}" for r, w in st)
+
+
+def _xvi_sent(st):
+    parts = st["parts"] if isinstance(st, dict) else st
+    body = "".join(p for p in parts)
+    return (f"［{st['context']}］" if isinstance(st, dict) else "") + body
+
+
+ROUND18 = [
+    {"key": "r18-xv-free", "title": "ⅩⅤ 文を作ろう：言葉箱なし版（改善記録 §1）",
+     "lead": "言葉箱を出さず、「どうする」の枠に動詞だけを印刷し、ほかの語は自分で思い出して書く版（_問題_言葉箱なし.pdf）を全レベルで作りました。問題は言葉箱あり版と同じです。2語文を作る力の「語の喚起」の側面（Wiki ND-24）を練習するためです。教示：「書いてある言葉に合う言葉を考えて、あいている枠に書き、文を作りましょう。」",
+     "items": [{"id": "r18-xv-free", "label": "言葉箱なし版", "before": "言葉箱から選んで書く版だけ",
+                "after": "「どうする」だけ印刷し、ほかの枠は自分で考えて書く版を追加（解答は例）", "ask": "",
+                "scene": "ⅩⅤ の各レベルの _問題_言葉箱なし.pdf。"}]},
+    {"key": "r18-xvi", "title": "ⅩⅥ 助詞を入れよう：問題の追加（Lv1〜3 各2問。改善記録 §2）",
+     "lead": "各レベル2問しかなかったので、Lv1〜3 に2問ずつ足しました。Lv3 の p3c・p3d は同じ4つの場面を、語順を入れかえて出します。「妹がお兄さんを助ける」「子どもがお母さんを起こす」は、ありそうな方とは逆の場面にして、説明を読まずに常識で当てていないかを見られるようにしています。",
+     "items": [{"id": "r18-xvi-" + k, "label": f"{k}（Lv{it['level']}）", "before": "",
+                "after": "\n".join(_xvi_sent(st) for st in it["sentences"]), "ask": "",
+                "scene": f"（　）に助詞を書く4文（Lv{it['level']}）。"}
+               for k, it in PT18.items() if k in ("p1c", "p1d", "p2c", "p2d", "p3c", "p3d")]},
+    {"key": "r18-ni", "title": "「どんな」（属性＋事物）と助詞「に」（改善記録 §3）",
+     "lead": "〈S-S法〉の2語連鎖の型の1つ「属性＋事物」を、ⅩⅤ Lv2 に「どんな＋なにを＋どうする」として入れました（「どんな」は平行四辺形。Shape Coding の原典にない、このプリントで決めた形です）。助詞「に」は、ⅩⅤ Lv3 に「どこに」（破線）、ⅩⅥ に Lv4（が＋に／が＋に＋を）として入れました。「に」が「が」「を」より後に身につくという根拠は確認できていないので、README では Lv3 と Lv4 はどちらが先でもよいとしています。",
+     "items": [{"id": "r18-ni-" + k, "label": f"ⅩⅤ {k}（Lv{it['level']}）", "before": "",
+                "after": "\n".join(_xv_sent(st) for st in it["sentences"]), "ask": "",
+                "scene": f"ⅩⅤ Lv{it['level']}。言葉箱の語を役割の枠に書く。"}
+               for k, it in SB18.items() if k in ("b2e", "b2f", "b3e", "b3f")]
+              + [{"id": "r18-ni-" + k, "label": f"ⅩⅥ {k}（Lv4）", "before": "",
+                  "after": "\n".join(_xvi_sent(st) for st in it["sentences"]), "ask": "",
+                  "scene": "ⅩⅥ Lv4。教示「『が』『を』『に』から1つ選んで、（　）に書きましょう。」"}
+                 for k, it in PT18.items() if it["level"] == 4]},
+    {"key": "r18-vi-hint", "title": "Ⅵ 頭の文字ヒント版（Ⅸ と同じカテゴリー8つ。改善記録 §4）",
+     "lead": "Ⅸ 仲間えらびと同じカテゴリーについて、線の初めに言葉の最初の文字を書いた版（_問題_頭の文字ヒント.pdf）を作りました。文字は Ⅸ で仲間だった語の最初の文字です（例の語は除く）。README に、同じテーマで「選ぶ（Ⅸ・Ⅱ）→ 手がかりつきで書く → 自由に書く（Ⅵ・Ⅳ）」の組み合わせ表を足しました。カテゴリーだけの想起は知能の影響を強く受け、語頭音の想起は受けにくいという報告（Wiki ND-01）から、2つの手がかりを重ねる段を間に置いています。",
+     "items": [{"id": "r18-vi-" + k, "label": f"{it['category']}（Lv{it['level']}）", "before": "",
+                "after": "線の初め：" + "・".join(it["hints"]) + f"（例：{it['example']}）", "ask": "",
+                "scene": "Ⅵ の頭の文字ヒント版。10本の線のうち5本の初めに文字を印刷。"}
+               for k, it in VI18.items()]},
+    {"key": "r18-xiii-lv4", "title": "ⅩⅢ Lv4：っ・ん・のばす音をとる（2問・8題。改善記録 §5）",
+     "lead": "特殊音節（促音・撥音・長音の う）を1つの音としてとる問題を Lv4 として足しました。特殊音節をモーラ単位で分けられるのは仮名読みの習得に伴ってで、促音が最も遅いとされます（Wiki PA-05）。こたえは意味のある言葉にしています。",
+     "items": [{"id": "r18-xiii-" + k, "label": f"{k}（Lv4）", "before": "",
+                "after": "\n".join(f"{re.sub(r'《[^》]*》', '', _q(e))} → {''.join(_ans(e))}" for e in it["entries"]), "ask": "",
+                "scene": "4つの問い。こたえを音の数のマスに1つずつ書く（Lv4）。"}
+               for k, it in PA18.items() if it["level"] == 4]},
+]
+for sec in ROUND17:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND18
+SEC_TASK.update({"r18-xv-free": ["XV"], "r18-xvi": ["XVI"], "r18-ni": ["XV", "XVI"], "r18-vi-hint": ["VI"], "r18-xiii-lv4": ["XIII"]})
 FIGURES[:0] = [("ⅩⅤ 文を作ろう Lv3（言葉箱）", page_png(sheet("XV", 3), 1)), ("ⅩⅥ 助詞を入れよう Lv3", page_png(sheet("XVI", 3), 1))]
 FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [
@@ -904,6 +960,12 @@ FIGURES[:0] = [
     ("Ⅹ ベン図えらび Lv2（解答）", page_png(sheet("X", 2, True), 1)),
     ("Ⅴ つづき歌 Lv3（なかま・いっしょを交互）", page_png(sheet("V", 3), 1)),
     ("Ⅵ カテゴリー流暢性 Lv1（5行版）", page_png(sheet("VI", 1).replace("_問題.pdf", "_問題_5行.pdf"), 1)),
+]
+FIGURES[:0] = [
+    ("ⅩⅤ 文を作ろう Lv3（言葉箱なし版）", page_png(sheet("XV", 3).replace("_問題.pdf", "_問題_言葉箱なし.pdf"), 1)),
+    ("ⅩⅥ 助詞を入れよう Lv4（解答）", page_png(sheet("XVI", 4, True), 1)),
+    ("Ⅵ カテゴリー流暢性 Lv2（頭の文字ヒント版）", page_png(sheet("VI", 2).replace("_問題.pdf", "_問題_頭の文字ヒント.pdf"), 1)),
+    ("ⅩⅢ 音を消したり逆から言ったり Lv4（解答）", page_png(sheet("XIII", 4, True), 1)),
 ]
 for sec in SECTIONS:
     key = sec["key"]
