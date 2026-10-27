@@ -7,7 +7,7 @@
 # どの語も、どの場所に入るかが1つに決まる組にすること（色・形・場所など、ものによって変わる条件は避ける）。
 type: X
 items:
-  # ---- Lv1（2026-10-23 追加・要確認） ----
+  # ---- Lv1（2026-10-23 追加・第9回で確認済み） ----
   - {id: v_vehicle_fly, left_attr: のりもの, right_attr: 空をとぶもの, level: 1,
      left: [でんしゃ, じてんしゃ], both: [ひこうき, ヘリコプター], right: [とんぼ, ふうせん]}
   - {id: v_round_eat, left_attr: 丸いもの, right_attr: 食べるもの, level: 1,
@@ -16,7 +16,7 @@ items:
      left: [ひこうき, せんぷうき], both: [すずめ, ちょうちょ], right: [いぬ, さかな]}
   - {id: v_white_eat, left_attr: 白いもの, right_attr: 食べるもの, level: 1,
      left: [ゆきだるま, はくちょう], both: [ごはん, とうふ], right: [バナナ, トマト]}
-  # ---- Lv2：どちらでもない を加える（2026-10-23 追加・要確認） ----
+  # ---- Lv2：どちらでもない を加える（2026-10-23 追加・第9回で確認済み） ----
   - {id: v_fly_life, left_attr: 空をとぶもの, right_attr: 生きもの, level: 2,
      left: [ひこうき, ヘリコプター], both: [すずめ, とんぼ], right: [ねこ, きんぎょ], none: [つくえ, えんぴつ]}
   - {id: v_elec_vehicle, left_attr: 電気で動くもの, right_attr: のりもの, level: 2,

@@ -13,7 +13,7 @@
 # 声に出して言いながら考える。文字を見ずに、大人が読み上げて口頭で答える使い方もできる（README）。
 type: XVII
 items:
-  # ---- Lv1：2音 → 2音（2026-10-26 追加・要確認） ----
+  # ---- Lv1：2音 → 2音（2026-10-26 追加・第12〜17回で確認済み） ----
   - id: t1a
     entries: [{w: かさ, ops: [{rep_head: あ}], answer: あさ}, {w: ねこ, ops: [{rep_tail: ぎ}], answer: ねぎ},
               {w: かお, ops: [{rev: 1}], answer: おか}, {w: ふた, ops: [{daku_add: 0}], answer: ぶた}]
@@ -30,7 +30,7 @@ items:
     entries: [{w: かめ, ops: [{rep_head: あ}], answer: あめ}, {w: いす, ops: [{rep_head: り}], answer: りす},
               {w: はね, ops: [{daku_add: 0}], answer: ばね}, {w: つき, ops: [{rep_head: ゆ}], answer: ゆき}]
     level: 1
-  # ---- Lv2：2音 → 3音（2026-10-26 追加・要確認） ----
+  # ---- Lv2：2音 → 3音（2026-10-26 追加・第12〜17回で確認済み） ----
   - id: t2a
     entries: [{w: いか, ops: [{add_head: す}], answer: すいか}, {w: たま, ops: [{add_tail: ご}], answer: たまご},
               {w: たこ, ops: [{insert_mid: い}], answer: たいこ}, {w: いぬ, ops: [{add_head: こ}], answer: こいぬ}]
@@ -43,7 +43,7 @@ items:
     entries: [{w: さら, ops: [{insert_mid: く}], answer: さくら}, {w: いち, ops: [{add_tail: ご}], answer: いちご},
               {w: はし, disp: 橋《はし》, ops: [{insert_mid: な}], answer: はなし}, {w: ねこ, ops: [{add_head: こ}], answer: こねこ}]
     level: 2
-  # ---- Lv3：2音をつける・2段階の指示（2026-10-26 追加・要確認） ----
+  # ---- Lv3：2音をつける・2段階の指示（2026-10-26 追加・第12〜17回で確認済み） ----
   - id: t3a
     entries: [{w: ひま, ops: [{add_tail: わり}], answer: ひまわり}, {w: たけ, ops: [{add_tail: のこ}], answer: たけのこ},
               {w: いか, ops: [{rev: 1}, {add_tail: だん}], answer: かいだん}, {w: かさ, ops: [{rev: 1}, {add_tail: な}], answer: さかな}]

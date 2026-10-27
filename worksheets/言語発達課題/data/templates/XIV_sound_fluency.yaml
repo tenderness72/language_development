@@ -10,7 +10,7 @@
 # 「い」「う」で終わる語は、のばす音（とけい＝とけー）と区別しにくいので、例には長音でない語を使う。
 type: XIV
 items:
-  # ---- Lv1：語の多い音で始まる（2026-10-26 追加・要確認） ----
+  # ---- Lv1：語の多い音で始まる（2026-10-26 追加・第12〜17回で確認済み） ----
   - {id: f1a, target: か, position: はじめ, example: かさ, level: 1}
   - {id: f1b, target: お, position: はじめ, example: おにぎり, level: 1}
   - {id: f1c, target: あ, position: はじめ, example: あめ, level: 1}
@@ -19,7 +19,7 @@ items:
   - {id: f1f, target: ま, position: はじめ, example: まど, level: 1}
   - {id: f1g, target: い, position: はじめ, example: いぬ, level: 1}
   - {id: f1h, target: と, position: はじめ, example: とり, level: 1}
-  # ---- Lv2：語の少ない音・濁音・半濁音で始まる（2026-10-26 追加・要確認） ----
+  # ---- Lv2：語の少ない音・濁音・半濁音で始まる（2026-10-26 追加・第12〜17回で確認済み） ----
   - {id: f2a, target: ね, position: はじめ, example: ねこ, level: 2}
   - {id: f2b, target: わ, position: はじめ, example: わに, level: 2}
   - {id: f2c, target: め, position: はじめ, example: めがね, level: 2}
@@ -28,7 +28,7 @@ items:
   - {id: f2f, target: ぶ, position: はじめ, example: ぶた, level: 2}
   - {id: f2g, target: ご, position: はじめ, example: ごま, level: 2}
   - {id: f2h, target: ぱ, position: はじめ, example: パン, level: 2}
-  # ---- Lv3：〇で終わる（2026-10-26 追加・要確認） ----
+  # ---- Lv3：〇で終わる（2026-10-26 追加・第12〜17回で確認済み） ----
   - {id: f3a, target: こ, position: おしまい, example: ねこ, level: 3}
   - {id: f3b, target: り, position: おしまい, example: とり, level: 3}
   - {id: f3c, target: き, position: おしまい, example: ゆき, level: 3}
