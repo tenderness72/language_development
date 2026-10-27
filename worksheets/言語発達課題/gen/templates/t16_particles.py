@@ -1,7 +1,8 @@
 """ⅩⅥ じょしをいれよう（格助詞「が」「を」、Lv4 は「に」も / 1ページ8文）。
 
-文の中の（　）に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）を出す。
-解答面では（　）に助詞を書く。
+文の中の□に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）を出す。
+解答面では□に助詞を書く。
+1問の4文は、ページごとの乱数で順を入れかえて出す（データの並びで「が・を・が・を」と当てられないように。改善記録 §11）。
 """
 from reportlab.lib.units import mm
 
@@ -11,9 +12,9 @@ from .base import start_page
 KEY = "XVI"
 TITLE = "構文（格助詞が・を）"         # 内部の臨床名（PDFには出さない）
 DISPLAY_TITLE = "助詞を入れよう"      # 子ども向け表示タイトル
-INSTRUCTION = "（　）に「が」か「を」を書きましょう。"
-# Lv4（に を加える）のページ。（　）に の「に」と答えの「に」が並ばないよう、選ぶ語を先に出す。
-INSTRUCTION_NI = "「が」「を」「に」から1つ選んで、（　）に書きましょう。"
+INSTRUCTION = "□に「が」か「を」を書きましょう。"
+# Lv4（に を加える）のページ。「□に」の「に」と答えの「に」が並ばないよう、選ぶ語を先に出す。
+INSTRUCTION_NI = "「が」「を」「に」から1つ選んで、□に書きましょう。"
 HAS_ANSWER = True
 
 BLANK = 10.0
@@ -59,7 +60,9 @@ def draw_page(c, ctx, items, lrng, answers=False):
         layout.problem_label(c, layout.CONTENT_X, y, n)
         y += 12
         ans = []
-        for sent in item["sentences"]:
+        sents = list(item["sentences"])
+        lrng.shuffle(sents)   # 問題面と解答面は同じ乱数なので、同じ順になる
+        for sent in sents:
             _sentence(c, ctx, y, sent, answers)
             parts = sent["parts"] if isinstance(sent, dict) else sent
             ans.append("".join(parse(p)[0] for p in parts))

@@ -91,7 +91,7 @@ def run_catalog(args):
 def main(argv=None):
     ap = argparse.ArgumentParser(description="関連語の想起課題プリント生成")
     ap.add_argument("--type", help="I〜VIII から1つ")
-    ap.add_argument("--level", type=int, choices=[1, 2, 3, 4], default=None,
+    ap.add_argument("--level", type=int, choices=[1, 2, 3, 4, 5], default=None,
                     help="難易度 1〜3（省略時は全item対象）")
     ap.add_argument("--count", type=int, default=10, help="生成する枚数(=商品数)")
     ap.add_argument("--seed", type=int, default=0, help="乱数シード（再現性）")

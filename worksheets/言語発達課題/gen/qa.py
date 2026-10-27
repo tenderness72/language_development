@@ -116,6 +116,8 @@ def check_item(type_key, item):
                     return f"[XI:{item['id']}] '{w}' がレベル{lv}の条件（Lv1 清音のみ・Lv2 特殊音節なし）に合わない"
                 if len(split_mora(w)) > 7:
                     return f"[XI:{item['id']}] '{w}' の音の数が○の数（7）をこえる"
+                if lv == 1 and not 2 <= len(split_mora(w)) <= 4:
+                    return f"[XI:{item['id']}] '{w}' は Lv1 の音の数（2〜4音）に合わない"
             if lv == 2 and not any(set(w) & dakuon for w in ws):
                 return f"[XI:{item['id']}] Lv2 は濁音・半濁音の語を含める"
             if lv == 3 and not all(set(w) & special for w in ws):
@@ -213,16 +215,24 @@ def check_item(type_key, item):
             blanks = [parse(p)[0] for p in parts if parse(p)[1]]
             if any(b not in ("が", "を", "に") for b in blanks):
                 return f"[XVI:{item['id']}] 空欄は が・を・に"
-            if ("に" in blanks) != (lv == 4):
-                return f"[XVI:{item['id']}] に を使うのは Lv4 だけ（Lv4 は どの文にも に を入れる）"
-            if lv == 4 and (blanks.count("が") != 1 or len(set(blanks)) != len(blanks)):
-                return f"[XVI:{item['id']}] Lv4 は が＋に（＋を）を1つずつ"
+            if "に" in blanks and lv != 4:
+                return f"[XVI:{item['id']}] に を使うのは Lv4 だけ"
+            if lv == 4 and (blanks.count("が") != 1 or len(set(blanks)) != len(blanks) or len(blanks) < 2):
+                return f"[XVI:{item['id']}] Lv4 は が を1つと、に・を（1つずつ）"
             if lv == 1 and len(blanks) != 1:
                 return f"[XVI:{item['id']}] Lv1 は助詞1つ"
             if lv in (2, 3) and sorted(blanks) != ["が", "を"]:
                 return f"[XVI:{item['id']}] Lv2・3 は が と を を1つずつ"
             if lv == 3 and not (isinstance(st, dict) and st.get("context")):
                 return f"[XVI:{item['id']}] Lv3 は状況の説明（context）を付ける"
+        # 助詞の並びだけで解けないようにする（改善記録 §11）
+        seqs = [tuple(parse(p)[0] for p in (st["parts"] if isinstance(st, dict) else st) if parse(p)[1]) for st in sents]
+        if lv == 1 and sorted(seqs).count(("が",)) in (0, 4):
+            return f"[XVI:{item['id']}] Lv1 は が と を の両方を入れる"
+        if lv == 2 and not any(sq[0] == "を" for sq in seqs):
+            return f"[XVI:{item['id']}] Lv2 は語順を入れかえた文（を が先）を1つ以上入れる"
+        if lv == 4 and (len(set(seqs)) < 3 or sum("に" in sq for sq in seqs) < 2):
+            return f"[XVI:{item['id']}] Lv4 は助詞の並びを3種類以上にし、に のある文を2つ以上入れる"
     elif type_key == "XVII":
         from .templates.t17_word_transform import apply_ops
         es = item.get("entries", [])

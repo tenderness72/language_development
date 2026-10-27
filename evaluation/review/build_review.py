@@ -960,6 +960,30 @@ for sec in ROUND18:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND19
 SEC_TASK.update({"r19-xv-long": ["XV"], "r19-xviii": ["XVIII"]})
+# ---- 第20回：ペルソナ評価（§24）の指摘の修正。理由は evaluation/改善記録.md §11（先頭に表示） ----
+PT20 = load("XVI_particles.yaml")
+PA20 = load("XIII_sound_manipulation.yaml")
+MC20 = load("XI_mora_count.yaml")
+ROUND20 = [
+    {"key": "r20-xvi", "title": "ⅩⅥ 助詞を入れよう：助詞の並びだけで解けないように（改善記録 §11）",
+     "lead": "言語聴覚士のペルソナから「助詞の位置が決まっていて、選ばなくても解ける」との指摘がありました（Lv1 は が・を・が・を の交互、Lv2 は全文 が…を、Lv4 も並びが固定）。次のように直しました。①4文の順をページごとに入れかえる。②Lv1 は が と を の数を問ごとに変える（3:1・1:3 など）。③Lv2 は各問に1文、語順を入れかえた非可逆文（さかなを ねこが たべる。村尾 2022 で正答80%以上の型）を入れる。④Lv4 は同じ名詞で に と を が入れかわる文（いすに すわる／いすを はこぶ）と、を が に より前の文を入れる。⑤教示を「（　）に」から「□に」に直す。⑥Lv3 p3a の非可逆文（お母さんが赤ちゃんをだっこする）と、研究の例文と同じ文（男の子が女の子を押す）を差しかえる。",
+     "items": [{"id": "r20-xvi-" + k, "label": f"{k}（Lv{it['level']}）", "before": "",
+                "after": "\n".join(_xvi_sent(st) for st in it["sentences"]), "ask": "",
+                "scene": f"□に助詞を書く4文（Lv{it['level']}。順はページごとに入れかわる）。"}
+               for k, it in PT20.items() if k in ("p1a", "p1b", "p1d", "p2a", "p2b", "p2c", "p2d", "p3a", "p4a", "p4b")]},
+    {"key": "r20-pa", "title": "Ⅺ・ⅩⅢ：音と表記がずれる語の差しかえ（改善記録 §11）",
+     "lead": "①ⅩⅢ「道路から う をとる」は、お段の長音の う が発音されないので、表記の操作になる → 風船（う段の長音）に。②Ⅺ Lv1 の かたつむり（5音）が Lv1 の条件（2〜4音）をこえ、すいか は二重母音を含む → きのこ・かまきり に。③ⅩⅢ Lv3 の たいこ・かいだん は「い」が二重母音の第二要素（伊藤・辰巳 1997 では特殊拍として調べている）→ Lv3 は 積み木・机 に替え、たいこ・かいだん は Lv4 の新しい問（二重母音の い をとる）に移しました。",
+     "items": [{"id": "r20-xi-c1d", "label": "Ⅺ c1d（Lv1）", "before": "たこ・すいか・さくら・かたつむり",
+                "after": "・".join(MC20["c1d"]["words"]), "ask": "", "scene": "Ⅺ Lv1。4語の音の数だけ○をぬる。"}]
+              + [{"id": "r20-xiii-" + k, "label": f"ⅩⅢ {k}（Lv{it['level']}）", "before": "",
+                  "after": "\n".join(f"{re.sub(r'《[^》]*》', '', _q(e))} → {''.join(_ans(e))}" for e in it["entries"]), "ask": "",
+                  "scene": f"4つの問い。こたえを音の数のマスに1つずつ書く（Lv{it['level']}）。"}
+                 for k, it in PA20.items() if k in ("m3a", "m3b", "m4b", "m4c")]},
+]
+for sec in ROUND19:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND20
+SEC_TASK.update({"r20-xvi": ["XVI"], "r20-pa": ["XI", "XIII"]})
 FIGURES[:0] = [("ⅩⅤ 文を作ろう Lv3（言葉箱）", page_png(sheet("XV", 3), 1)), ("ⅩⅥ 助詞を入れよう Lv3", page_png(sheet("XVI", 3), 1))]
 FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [
