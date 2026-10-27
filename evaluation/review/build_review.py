@@ -893,7 +893,6 @@ SEC_TASK.update({"r17-xiii": ["XIII"], "r17-fixes": ["XV", "XVII"]})
 SB18 = load("XV_sentence_build.yaml")
 PT18 = load("XVI_particles.yaml")
 PA18 = load("XIII_sound_manipulation.yaml")
-VI18 = {k: v for k, v in load("VI_fluency.yaml").items() if v.get("hints")}
 
 
 def _xv_sent(st):
@@ -928,12 +927,7 @@ ROUND18 = [
                   "after": "\n".join(_xvi_sent(st) for st in it["sentences"]), "ask": "",
                   "scene": "ⅩⅥ Lv4。教示「『が』『を』『に』から1つ選んで、（　）に書きましょう。」"}
                  for k, it in PT18.items() if it["level"] == 4]},
-    {"key": "r18-vi-hint", "title": "Ⅵ 頭の文字ヒント版（Ⅸ と同じカテゴリー8つ。改善記録 §4）",
-     "lead": "Ⅸ 仲間えらびと同じカテゴリーについて、線の初めに言葉の最初の文字を書いた版（_問題_頭の文字ヒント.pdf）を作りました。文字は Ⅸ で仲間だった語の最初の文字です（例の語は除く）。README に、同じテーマで「選ぶ（Ⅸ・Ⅱ）→ 手がかりつきで書く → 自由に書く（Ⅵ・Ⅳ）」の組み合わせ表を足しました。カテゴリーだけの想起は知能の影響を強く受け、語頭音の想起は受けにくいという報告（Wiki ND-01）から、2つの手がかりを重ねる段を間に置いています。",
-     "items": [{"id": "r18-vi-" + k, "label": f"{it['category']}（Lv{it['level']}）", "before": "",
-                "after": "線の初め：" + "・".join(it["hints"]) + f"（例：{it['example']}）", "ask": "",
-                "scene": "Ⅵ の頭の文字ヒント版。10本の線のうち5本の初めに文字を印刷。"}
-               for k, it in VI18.items()]},
+    # r18-vi-hint（Ⅵ 頭の文字ヒント版）は第18回の確認で「直す：そこまでのヒントは要らない」となり、版ごと削除した（改善記録 §9）
     {"key": "r18-xiii-lv4", "title": "ⅩⅢ Lv4：っ・ん・のばす音をとる（2問・8題。改善記録 §5）",
      "lead": "特殊音節（促音・撥音・長音の う）を1つの音としてとる問題を Lv4 として足しました。特殊音節をモーラ単位で分けられるのは仮名読みの習得に伴ってで、促音が最も遅いとされます（Wiki PA-05）。こたえは意味のある言葉にしています。",
      "items": [{"id": "r18-xiii-" + k, "label": f"{k}（Lv4）", "before": "",
@@ -944,7 +938,7 @@ ROUND18 = [
 for sec in ROUND17:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND18
-SEC_TASK.update({"r18-xv-free": ["XV"], "r18-xvi": ["XVI"], "r18-ni": ["XV", "XVI"], "r18-vi-hint": ["VI"], "r18-xiii-lv4": ["XIII"]})
+SEC_TASK.update({"r18-xv-free": ["XV"], "r18-xvi": ["XVI"], "r18-ni": ["XV", "XVI"], "r18-xiii-lv4": ["XIII"]})
 # ---- 第19回：文を作る問題の難易度を上げる（ⅩⅤ Lv4・Lv5、ⅩⅧ）。理由は evaluation/改善記録.md §7・§8（先頭に表示） ----
 SB19 = load("XV_sentence_build.yaml")
 PS19 = load("XVIII_picture_sentence.yaml")
@@ -989,7 +983,6 @@ FIGURES[:0] = [
 FIGURES[:0] = [
     ("ⅩⅤ 文を作ろう Lv3（言葉箱なし版）", page_png(sheet("XV", 3).replace("_問題.pdf", "_問題_言葉箱なし.pdf"), 1)),
     ("ⅩⅥ 助詞を入れよう Lv4（解答）", page_png(sheet("XVI", 4, True), 1)),
-    ("Ⅵ カテゴリー流暢性 Lv2（頭の文字ヒント版）", page_png(sheet("VI", 2).replace("_問題.pdf", "_問題_頭の文字ヒント.pdf"), 1)),
     ("ⅩⅢ 音を消したり逆から言ったり Lv4（解答）", page_png(sheet("XIII", 4, True), 1)),
 ]
 FIGURES[:0] = [

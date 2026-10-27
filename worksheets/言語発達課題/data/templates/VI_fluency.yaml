@@ -7,24 +7,21 @@
 # ことばの種類そのもの（動作を表すことば 等）はメタ言語的なので Lv3。
 # 同じカテゴリーを重複させないこと（漢字/かなの書き分けも同じものとみなす）。
 # 自動判定できない書き分けは `key:` に同じ値を入れると重複として検出される。
-# hints: 頭の文字ヒント版（products.yaml の variants「頭の文字ヒント」）で、線の初めに印刷する文字。
-#   同じカテゴリーの Ⅸ 仲間えらび（hint_from）の仲間の語の最初の文字（例の語と同じ語は除く）。
-#   Ⅸ で選んだ語を、カテゴリーと最初の文字の2つを手がかりに自分で思い出して書く（選ぶ → 手がかりつきで出す → 自由に出す。改善記録 §4）。
 type: VI
 items:
-  - {id: animal, category: どうぶつ, example: うさぎ, lines: 10, level: 1, hints: [い, ね, ぞ, き, く], hint_from: c_animal}
-  - {id: fruit, category: くだもの, example: りんご, lines: 10, level: 1, hints: [バ, み, ぶ, も, な], hint_from: c_fruit}
-  - {id: vehicle, category: のりもの, example: でんしゃ, lines: 10, level: 1, hints: [バ, ふ, ひ, じ, タ], hint_from: c_vehicle}
-  - {id: vegetable, category: やさい, example: にんじん, lines: 10, level: 1, hints: [だ, キャ, た, ピ, ほ], hint_from: c_vegetable}
+  - {id: animal, category: どうぶつ, example: うさぎ, lines: 10, level: 1}
+  - {id: fruit, category: くだもの, example: りんご, lines: 10, level: 1}
+  - {id: vehicle, category: のりもの, example: でんしゃ, lines: 10, level: 1}
+  - {id: vegetable, category: やさい, example: にんじん, lines: 10, level: 1}
   - {id: flower, category: 花, example: チューリップ, lines: 10, level: 2}
-  - {id: bird, category: とり, example: すずめ, lines: 10, level: 2, hints: [か, は, に, つ, ふ], hint_from: c_bird}
+  - {id: bird, category: とり, example: すずめ, lines: 10, level: 2}
   - {id: fish, category: さかな, example: さば, lines: 10, level: 2}
   - {id: sport, category: スポーツ, example: やきゅう, lines: 9, level: 2}
   - {id: color, category: 色, example: あか, lines: 9, level: 1}
   - {id: food, category: たべもの, example: ごはん, lines: 10, level: 1}
   - {id: country, category: 国, example: にほん, lines: 9, level: 3}
   - {id: job, category: しごと, example: せんせい, lines: 9, level: 3}
-  - {id: insect, category: むし, example: ちょう, lines: 10, level: 2, hints: [と, せ, か, ば, て], hint_from: c_insect}
+  - {id: insect, category: むし, example: ちょう, lines: 10, level: 2}
   - {id: stationery, category: ぶんぼうぐ, example: えんぴつ, lines: 10, level: 2}
   - {id: kitchen_item, category: 台所にあるもの, example: なべ, lines: 10, level: 2}
   - {id: round_things, category: まるいもの, example: ボール, lines: 9, level: 3}
@@ -49,9 +46,9 @@ items:
   - {id: vi_lv2_007b, category: 建物, example: 学校, lines: 10, level: 2}
   - {id: vi_lv2_008b, category: 顔の部分, example: 目, lines: 10, level: 2}
   - {id: vi_lv2_009b, category: 都市, example: 東京, lines: 10, level: 2}
-  - {id: vi_lv2_010a, category: 楽器, example: ピアノ, lines: 10, level: 2, hints: [た, ふ, ギ, カ, ト], hint_from: c_instrument}
+  - {id: vi_lv2_010a, category: 楽器, example: ピアノ, lines: 10, level: 2}
   - {id: vi_lv2_010b, category: スポーツ用具, example: ボール, lines: 10, level: 2}
-  - {id: vi_lv2_011a, category: 洋服, example: Tシャツ, lines: 10, level: 2, hints: [ズ, ス, セ, パ, コ], hint_from: c_clothes}
+  - {id: vi_lv2_011a, category: 洋服, example: Tシャツ, lines: 10, level: 2}
   - {id: vi_lv2_011b, category: 靴, example: スニーカー, lines: 10, level: 2}
   - {id: vi_lv2_013a, category: 形, example: 丸, lines: 10, level: 2}
   - {id: vi_lv2_013b, category: 大きさを表すことば, example: 大きい, lines: 10, level: 3}

@@ -23,11 +23,10 @@ def _page_rng(seed, type_key, page_idx):
 
 def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
                  base_dir=".", name=None, sampler=None, verbose=True,
-                 answers_name=None, manifest_path=None, overrides=None, only=None):
+                 answers_name=None, manifest_path=None, overrides=None):
     """1テンプレートを count 枚生成。manifest(dict) を返す。
 
     overrides: 全 item に上書きする値（例 {"lines": 5}：Ⅵ の5行版）。
-    only: この名前の値を持つ item だけを使う（例 "hints"：Ⅵ の頭の文字ヒント版は hints のあるカテゴリーだけ）。
     """
     fonts.register(data.load_config(base_dir).get("font"), base_dir=base_dir)
     from . import layout
@@ -37,8 +36,6 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
     mod = templates.get(type_key)
 
     items = data.load_items(type_key, base_dir)
-    if only:
-        items = [it for it in items if it.get(only)]
     if overrides:
         items = [dict(it, **overrides) for it in items]
     errs = validate_items(type_key, items)
@@ -72,7 +69,7 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
     # manifest は手元管理用ファイル。臨床名(clinical_title)はここにのみ残す。
     manifest = {"type": type_key, "display_title": mod.DISPLAY_TITLE,
                 "clinical_title": mod.TITLE, "name": stem,
-                "level": level, "seed": seed, "count": count, "overrides": overrides or {}, "only": only, "pages": []}
+                "level": level, "seed": seed, "count": count, "overrides": overrides or {}, "pages": []}
 
     for page_idx in range(count):
         page_items = sampler.take(2)

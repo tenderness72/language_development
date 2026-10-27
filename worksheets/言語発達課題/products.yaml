@@ -4,7 +4,7 @@
 #   プリント/01_連想チェーン/Lv1/01_連想チェーン_Lv1_問題.pdf（＋ _解答.pdf）
 # 各レベルの PDF には、そのレベルの問題を1回ずつ収める（1枚2問。奇数のときは1問あまる）。
 # name はフォルダ名・ファイル名に使う（記号は使わない）。
-# variants: 同じ問題を別の形でも作る（suffix がファイル名の末尾に付く。set の値で全問を上書き。only: キー名 を書くと、そのキーを持つ問題だけで作る）。
+# variants: 同じ問題を別の形でも作る（suffix がファイル名の末尾に付く。set の値で全問を上書き）。
 # 番号は課題の通し番号で、取り組む順ではない。取り組む順は README の「はじめる順」を参照。
 catalog:
   - { type: I,    name: 連想チェーン }
@@ -12,7 +12,7 @@ catalog:
   - { type: III,  name: ペア対応づけ }
   - { type: IV,   name: 放射状連想 }
   - { type: V,    name: つづき歌 }
-  - { type: VI,   name: カテゴリー流暢性, variants: [ { suffix: 5行, set: { lines: 5 } }, { suffix: 頭の文字ヒント, set: { show_hints: true }, only: hints } ] }   # ヒント版は Ⅸ と同じカテゴリーだけ（README「選ぶ → 書く」）
+  - { type: VI,   name: カテゴリー流暢性, variants: [ { suffix: 5行, set: { lines: 5 } } ] }
   - { type: VII,  name: 語頭音とモーラ数 }
   - { type: VIII, name: 属性交差ベン図 }
   # 書かない版（○や線で答える）。書字が育ちきっていない子でも、意味の力を取り出して見られる。

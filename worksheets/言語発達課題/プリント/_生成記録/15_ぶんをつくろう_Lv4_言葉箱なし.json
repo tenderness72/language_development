@@ -9,7 +9,6 @@
   "overrides": {
     "no_bank": true
   },
-  "only": null,
   "pages": [
     {
       "type": "XV",

@@ -9,7 +9,6 @@
   "overrides": {
     "particle_blank": true
   },
-  "only": null,
   "pages": [
     {
       "type": "XV",

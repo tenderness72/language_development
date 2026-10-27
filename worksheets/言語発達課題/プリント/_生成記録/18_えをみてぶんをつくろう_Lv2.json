@@ -7,7 +7,6 @@
   "seed": 182,
   "count": 2,
   "overrides": {},
-  "only": null,
   "pages": [
     {
       "type": "XVIII",
@@ -49,6 +48,7 @@
   "warnings": [],
   "missing_images": [
     "e2c.png",
+    "e2a.png",
     "e2d.png",
     "e2b.png"
   ],
