@@ -1,0 +1,57 @@
+{
+  "type": "XVIII",
+  "display_title": "絵を見て文を作ろう",
+  "clinical_title": "構文（絵からの文の生成）",
+  "name": "18_えをみてぶんをつくろう_Lv3_問題",
+  "level": 3,
+  "seed": 183,
+  "count": 2,
+  "overrides": {},
+  "only": null,
+  "pages": [
+    {
+      "type": "XVIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "e3b",
+          "image": "e3b.png",
+          "sentence": "おかあさん ほうちょう やさい きる"
+        },
+        {
+          "n": 2,
+          "id": "e3c",
+          "image": "e3c.png",
+          "sentence": "おんなのこ じてんしゃ のる"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XVIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "e3a",
+          "image": "e3a.png",
+          "sentence": "おとこのこ うみ およぐ"
+        },
+        {
+          "n": 2,
+          "id": "e3d",
+          "image": "e3d.png",
+          "sentence": "おばあさん はな みず やる"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "missing_images": [
+    "e3b.png",
+    "e3c.png",
+    "e3a.png",
+    "e3d.png"
+  ],
+  "has_answers": true
+}

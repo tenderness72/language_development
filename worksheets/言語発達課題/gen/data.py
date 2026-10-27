@@ -7,6 +7,7 @@ ROMAN = {
     "I": "Ⅰ", "II": "Ⅱ", "III": "Ⅲ", "IV": "Ⅳ",
     "V": "Ⅴ", "VI": "Ⅵ", "VII": "Ⅶ", "VIII": "Ⅷ",
     "IX": "Ⅸ", "X": "Ⅹ", "XI": "Ⅺ", "XII": "Ⅻ", "XIII": "ⅩⅢ", "XIV": "ⅩⅣ", "XV": "ⅩⅤ", "XVI": "ⅩⅥ", "XVII": "ⅩⅦ",
+    "XVIII": "ⅩⅧ",
 }
 
 TEMPLATE_FILE = {
@@ -27,6 +28,7 @@ TEMPLATE_FILE = {
     "XV": "XV_sentence_build",    # 構文：二語文・三語文
     "XVI": "XVI_particles",       # 構文：格助詞が・を
     "XVII": "XVII_word_transform",  # 音韻操作：ことばへんしん
+    "XVIII": "XVIII_picture_sentence",  # 構文：絵を見て文を作る
 }
 
 TYPES = list(TEMPLATE_FILE.keys())
@@ -90,6 +92,7 @@ KEY_FIELDS = {
     "XV": ("id",),
     "XVI": ("id",),
     "XVII": ("id",),
+    "XVIII": ("id",),
 }
 
 

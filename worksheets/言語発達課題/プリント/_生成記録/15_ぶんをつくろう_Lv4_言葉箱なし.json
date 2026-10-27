@@ -1,0 +1,62 @@
+{
+  "type": "XV",
+  "display_title": "文を作ろう",
+  "clinical_title": "構文（二語文・三語文の生成）",
+  "name": "15_ぶんをつくろう_Lv4_問題_言葉箱なし",
+  "level": 4,
+  "seed": 154,
+  "count": 2,
+  "overrides": {
+    "no_bank": true
+  },
+  "only": null,
+  "pages": [
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b4a",
+          "sentences": [
+            "あさ ぼく パン たべる",
+            "よる おとうさん テレビ みる"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b4c",
+          "sentences": [
+            "ゆうがた おかあさん スーパー やさい かう",
+            "いもうと おばあさん クッキー つくる"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b4d",
+          "sentences": [
+            "あした ぼく うみ およぐ",
+            "おねえさん おとうと ゲーム する"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b4b",
+          "sentences": [
+            "わたし ともだち こうえん あそぶ",
+            "まいにち おにいさん いぬ かわ さんぽする"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "missing_images": [],
+  "has_answers": true
+}

@@ -1,0 +1,57 @@
+{
+  "type": "XVIII",
+  "display_title": "絵を見て文を作ろう",
+  "clinical_title": "構文（絵からの文の生成）",
+  "name": "18_えをみてぶんをつくろう_Lv1_問題",
+  "level": 1,
+  "seed": 181,
+  "count": 2,
+  "overrides": {},
+  "only": null,
+  "pages": [
+    {
+      "type": "XVIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "e1c",
+          "image": "e1c.png",
+          "sentence": "ジュース のむ"
+        },
+        {
+          "n": 2,
+          "id": "e1b",
+          "image": "e1b.png",
+          "sentence": "あかちゃん なく"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XVIII",
+      "problems": [
+        {
+          "n": 1,
+          "id": "e1a",
+          "image": "e1a.png",
+          "sentence": "いぬ はしる"
+        },
+        {
+          "n": 2,
+          "id": "e1d",
+          "image": "e1d.png",
+          "sentence": "ほん よむ"
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "missing_images": [
+    "e1c.png",
+    "e1b.png",
+    "e1a.png",
+    "e1d.png"
+  ],
+  "has_answers": true
+}

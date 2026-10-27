@@ -1,0 +1,60 @@
+{
+  "type": "XV",
+  "display_title": "文を作ろう",
+  "clinical_title": "構文（二語文・三語文の生成）",
+  "name": "15_ぶんをつくろう_Lv5_問題",
+  "level": 5,
+  "seed": 155,
+  "count": 2,
+  "overrides": {},
+  "only": null,
+  "pages": [
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b5a",
+          "sentences": [
+            "おかあさん たまご わって フライパン いれる",
+            "ぼく て あらって ごはん たべる"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b5b",
+          "sentences": [
+            "おとうさん くるま のって うみ いく",
+            "わたし ほん かりて いえ よむ"
+          ]
+        }
+      ],
+      "page": 1
+    },
+    {
+      "type": "XV",
+      "problems": [
+        {
+          "n": 1,
+          "id": "b5c",
+          "sentences": [
+            "いもうと くつ はいて そと でる",
+            "おばあさん おちゃ いれて おじいさん のむ"
+          ]
+        },
+        {
+          "n": 2,
+          "id": "b5d",
+          "sentences": [
+            "おにいさん ボール ひろって なげる",
+            "ねこ おきて ミルク のむ"
+          ]
+        }
+      ],
+      "page": 2
+    }
+  ],
+  "warnings": [],
+  "missing_images": [],
+  "has_answers": true
+}

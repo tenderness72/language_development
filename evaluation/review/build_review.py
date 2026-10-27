@@ -26,7 +26,8 @@ def load(name):
 _DIRS = {"I": "01_連想チェーン", "II": "02_意味ネットワーク照合", "III": "03_ペア対応づけ", "IV": "04_放射状連想",
          "V": "05_つづき歌", "VI": "06_カテゴリー流暢性", "VII": "07_語頭音とモーラ数", "VIII": "08_属性交差ベン図",
          "IX": "09_仲間えらび", "X": "10_ベン図えらび", "XI": "11_おとのかず", "XII": "12_おとさがし",
-         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_おとからことばあつめ", "XV": "15_ぶんをつくろう", "XVI": "16_じょしをいれよう", "XVII": "17_ことばへんしん"}
+         "XIII": "13_おとけしとぎゃくよみ", "XIV": "14_おとからことばあつめ", "XV": "15_ぶんをつくろう", "XVI": "16_じょしをいれよう", "XVII": "17_ことばへんしん",
+         "XVIII": "18_えをみてぶんをつくろう"}
 
 
 def sheet(k, level, answers=False):
@@ -395,12 +396,14 @@ sys.path.insert(0, WS)
 _MOD = {"I": "t1_chain", "II": "t2_network", "III": "t3_pairs", "IV": "t4_radial",
         "V": "t5_chain_song", "VI": "t6_fluency", "VII": "t7_mora", "VIII": "t8_venn",
         "IX": "t9_category_choice", "X": "t10_venn_choice", "XI": "t11_mora_count", "XII": "t12_sound_search",
-        "XIII": "t13_sound_manipulation", "XIV": "t14_sound_fluency", "XV": "t15_sentence_build", "XVI": "t16_particles", "XVII": "t17_word_transform"}
+        "XIII": "t13_sound_manipulation", "XIV": "t14_sound_fluency", "XV": "t15_sentence_build", "XVI": "t16_particles", "XVII": "t17_word_transform",
+        "XVIII": "t18_picture_sentence"}
 _NAME = {"I": "Ⅰ 連想チェーン", "II": "Ⅱ 意味ネットワーク照合", "III": "Ⅲ ペア対応づけ", "IV": "Ⅳ 放射状連想",
          "V": "Ⅴ つづき歌", "VI": "Ⅵ カテゴリー流暢性", "VII": "Ⅶ 語頭音＋モーラ数", "VIII": "Ⅷ 属性交差（ベン図）",
          "IX": "Ⅸ 仲間えらび（Ⅵ の書かない版）", "X": "Ⅹ ベン図えらび（Ⅷ の書かない版）",
          "XI": "Ⅺ おとのかず", "XII": "Ⅻ おとさがし", "XIII": "ⅩⅢ おとけし・ぎゃくよみ", "XIV": "ⅩⅣ 音から言葉を集めよう",
-         "XV": "ⅩⅤ ぶんをつくろう", "XVI": "ⅩⅥ じょしをいれよう", "XVII": "ⅩⅦ ことばへんしん"}
+         "XV": "ⅩⅤ ぶんをつくろう", "XVI": "ⅩⅥ じょしをいれよう", "XVII": "ⅩⅦ ことばへんしん",
+         "XVIII": "ⅩⅧ 絵を見て文を作ろう"}
 _FORMAT = {
     "I": "左のスタート語から右のゴール語まで、2〜4列目の楕円（各列に正解1つ＋ダミー3つ）から1つずつ選び、線でつなぐ。1枚に2問。",
     "III": "見出しに関係名（例：動物→鳴き声）。左に5語、右に順番を入れかえた5語。左右の語を線で結ぶ。1枚に2問。",
@@ -420,8 +423,9 @@ _FORMAT["XIII"] = "「『さかな』をぎゃくからいうと？」「『つ�
 _FORMAT["XIV"] = "見出しに「『か』から始まる言葉」（Lv3 は「『こ』で終わる言葉」）。例を1つ書いておき、続く8本の線に思いつく言葉を書く。1枚に2問。"
 _FORMAT["XV"] = "上に「ことばばこ」（その問題の語をまぜて並べる）。下に3文ぶんの枠。だれが＝楕円・なにを＝四角・どうする＝六角形・どこで／なにで＝破線の枠に語を書いて文をつくる。Lv3 は枠のあとに助詞を印刷。"
 _FORMAT["XVI"] = "文の中の（　）に「が」か「を」を書く。Lv3 は文の上に状況の説明（だれがしているか）。1枚に8文。"
+_FORMAT["XVIII"] = "上に絵の枠（先生が用意した絵。ないときは枠だけ）。下に1文ぶんの枠（ⅩⅤ と同じ形とラベル）と助詞。語は印刷せず、絵を見て全部自分で書く。1枚に2問。"
 _FORMAT["XVII"] = "左に2音のことば、まん中に指示（さいしょの おとを「あ」に かえると？ など。2段階の指示は2行）、右にこたえの音の数だけマス。1枚に8つ。"
-for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII"):
+for k in ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII"):
     m = importlib.import_module("gen.templates." + _MOD[k])
     TASKS[k] = {"name": _NAME[k], "title": m.DISPLAY_TITLE, "instruction": m.INSTRUCTION,
                 "format": _FORMAT[k], "img": page_png(sheet(k, 1), 1, dpi=48)}
@@ -941,6 +945,27 @@ for sec in ROUND17:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND18
 SEC_TASK.update({"r18-xv-free": ["XV"], "r18-xvi": ["XVI"], "r18-ni": ["XV", "XVI"], "r18-vi-hint": ["VI"], "r18-xiii-lv4": ["XIII"]})
+# ---- 第19回：文を作る問題の難易度を上げる（ⅩⅤ Lv4・Lv5、ⅩⅧ）。理由は evaluation/改善記録.md §7・§8（先頭に表示） ----
+SB19 = load("XV_sentence_build.yaml")
+PS19 = load("XVIII_picture_sentence.yaml")
+ROUND19 = [
+    {"key": "r19-xv-long", "title": "ⅩⅤ Lv4（いつ・だれと）・Lv5（「〜て、〜」）（8問・16文。改善記録 §7）",
+     "lead": "Lv4 は「いつ」（助詞なし）と「だれと」を加えた4〜5語の文、Lv5 は「〜て、〜」で2つの動作をつなぐ文です。1問2文。幼児期の複文は「て」による連鎖が中心なので、つなぐ形は「〜て」から入れました（Wiki GR-25）。「〜て」の動詞の枠のラベルは「どうする」（「どうして」は理由の意味にも読めるため）、枠のあとに「、」を印刷します。文として自然か、語の組み合わせを見てください。",
+     "items": [{"id": "r19-xv-" + k, "label": f"{k}（Lv{it['level']}）", "before": "",
+                "after": "\n".join(_xv_sent(st) for st in it["sentences"]), "ask": "",
+                "scene": f"ⅩⅤ Lv{it['level']}。言葉箱の語を役割の枠に書く（言葉箱なし版は動詞だけ印刷）。"}
+               for k, it in SB19.items() if it["level"] >= 4]},
+    {"key": "r19-xviii", "title": "ⅩⅧ 絵を見て文を作ろう（新規12問。改善記録 §8）",
+     "lead": "絵だけを見て、枠に語をすべて自分で書く課題です（参考：関西発達臨床研究会の課題。横書き）。助詞と枠の形・ラベルだけを印刷します。絵は先生が用意した画像を data/images/ に置くと差しこまれ、ないときは枠だけを印刷します。下の「絵の内容」が、用意していただく絵の指示になります。絵の内容と、こたえの例を見てください。",
+     "items": [{"id": "r19-xviii-" + k, "label": f"{k}（Lv{it['level']}・{it['image']}）", "before": "",
+                "after": f"絵：{it['scene']}\nこたえの例：{_xv_sent(it['sentence'])}", "ask": "",
+                "scene": f"絵の枠（{it['image']}）の下に、{len(it['sentence'])}語の枠と助詞（Lv{it['level']}）。"}
+               for k, it in PS19.items()]},
+]
+for sec in ROUND18:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND19
+SEC_TASK.update({"r19-xv-long": ["XV"], "r19-xviii": ["XVIII"]})
 FIGURES[:0] = [("ⅩⅤ 文を作ろう Lv3（言葉箱）", page_png(sheet("XV", 3), 1)), ("ⅩⅥ 助詞を入れよう Lv3", page_png(sheet("XVI", 3), 1))]
 FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [
@@ -966,6 +991,10 @@ FIGURES[:0] = [
     ("ⅩⅥ 助詞を入れよう Lv4（解答）", page_png(sheet("XVI", 4, True), 1)),
     ("Ⅵ カテゴリー流暢性 Lv2（頭の文字ヒント版）", page_png(sheet("VI", 2).replace("_問題.pdf", "_問題_頭の文字ヒント.pdf"), 1)),
     ("ⅩⅢ 音を消したり逆から言ったり Lv4（解答）", page_png(sheet("XIII", 4, True), 1)),
+]
+FIGURES[:0] = [
+    ("ⅩⅤ 文を作ろう Lv5（「〜て、〜」・解答例）", page_png(sheet("XV", 5, True), 1)),
+    ("ⅩⅧ 絵を見て文を作ろう Lv2（絵がまだないときの問題面）", page_png(sheet("XVIII", 2), 1)),
 ]
 for sec in SECTIONS:
     key = sec["key"]

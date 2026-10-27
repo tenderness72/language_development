@@ -162,12 +162,20 @@ def check_item(type_key, item):
         from .templates.t15_sentence_build import ROLES
         lv = int(item.get("level", 1))
         sents = item.get("sentences", [])
-        if len(sents) != 3:
-            return f"[XV:{item['id']}] sentences は3文"
+        if len(sents) != (3 if lv <= 3 else 2):
+            return f"[XV:{item['id']}] sentences は Lv1〜3 で3文、Lv4・5 で2文"
         for st in sents:
             roles = [r for r, _ in st]
             if any(r not in ROLES for r in roles) or roles[-1] != "どうする" or roles.count("どうする") != 1:
                 return f"[XV:{item['id']}] 役割が不正（最後は どうする を1つ）: {roles}"
+            if len(st) > 5:
+                return f"[XV:{item['id']}] 1文は5語まで（1行に収める）"
+            if ("どうして" in roles) != (lv == 5) or roles.count("どうして") > 1:
+                return f"[XV:{item['id']}] 「〜て」の動詞（どうして）は Lv5 だけで、1文に1つ"
+            if ({"いつ", "だれと"} & set(roles)) and lv < 4:
+                return f"[XV:{item['id']}] いつ・だれと は Lv4 から"
+            if lv == 4 and (len(st) < 4 or not ({"いつ", "だれと"} & set(roles))):
+                return f"[XV:{item['id']}] Lv4 は いつ か だれと を含む4〜5語の文"
             if lv == 1 and len(st) != 2:
                 return f"[XV:{item['id']}] Lv1 は2語の文"
             if lv == 2 and roles not in (["だれが", "なにを", "どうする"], ["どんな", "なにを", "どうする"]):
@@ -177,6 +185,23 @@ def check_item(type_key, item):
         words = [w for st in sents for _, w in st]
         if len(set(words)) != len(words):
             return f"[XV:{item['id']}] ことばばこの語が重なっている"
+    elif type_key == "XVIII":
+        from .templates.t15_sentence_build import ROLES
+        lv = int(item.get("level", 1))
+        st = item.get("sentence", [])
+        roles = [r for r, _ in st]
+        if not item.get("image") or not item.get("scene"):
+            return f"[XVIII:{item['id']}] image（絵のファイル名）と scene（絵の内容）を書く"
+        if any(r not in ROLES for r in roles) or not roles or roles[-1] != "どうする" or roles.count("どうする") != 1:
+            return f"[XVIII:{item['id']}] 役割が不正（最後は どうする を1つ）: {roles}"
+        if {"いつ", "だれと", "どうして"} & set(roles):
+            return f"[XVIII:{item['id']}] いつ・だれと・どうして は使わない（絵1枚で決まらない）"
+        if lv == 1 and len(st) != 2:
+            return f"[XVIII:{item['id']}] Lv1 は2語の文"
+        if lv == 2 and roles != ["だれが", "なにを", "どうする"]:
+            return f"[XVIII:{item['id']}] Lv2 は だれが＋なにを＋どうする"
+        if lv == 3 and not ({"どこで", "なにで", "どこに"} & set(roles)):
+            return f"[XVIII:{item['id']}] Lv3 は どこで・なにで・どこに のどれかを含める"
     elif type_key == "XVI":
         from .templates.t16_particles import parse
         lv = int(item.get("level", 1))

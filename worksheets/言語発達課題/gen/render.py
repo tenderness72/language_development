@@ -68,6 +68,7 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
         ac.setTitle(f"{disp}（{stem}）解答")
 
     ctx = Ctx(titles=data.load_config(base_dir).get("titles"))
+    ctx.base_dir = base_dir          # ⅩⅧ の絵（data/images/）を探す場所
     # manifest は手元管理用ファイル。臨床名(clinical_title)はここにのみ残す。
     manifest = {"type": type_key, "display_title": mod.DISPLAY_TITLE,
                 "clinical_title": mod.TITLE, "name": stem,
@@ -93,6 +94,7 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
         ac.save()
 
     manifest["warnings"] = ctx.warnings
+    manifest["missing_images"] = getattr(ctx, "missing_images", [])
     manifest["has_answers"] = do_answers
     manifest_path = manifest_path or os.path.join(out_dir, f"{stem}_manifest.json")
     os.makedirs(os.path.dirname(manifest_path), exist_ok=True)
@@ -108,5 +110,7 @@ def generate_set(type_key, count, level, seed, out_dir, with_answers=False,
             msg += f"  ※level={level}のitemが不足のため全levelから出題"
         if ctx.warnings:
             msg += f"  ⚠ はみ出し {len(ctx.warnings)}件"
+        if getattr(ctx, "missing_images", None):
+            msg += f"  （絵がまだない問題 {len(ctx.missing_images)}件：枠だけ印刷）"
         print(msg)
     return manifest
