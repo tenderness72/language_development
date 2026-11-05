@@ -984,6 +984,66 @@ for sec in ROUND19:
     sec["title"] = "［前回］" + sec["title"]
 SECTIONS[:0] = ROUND20
 SEC_TASK.update({"r20-xvi": ["XVI"], "r20-pa": ["XI", "XIII"]})
+# ---- 第21回：第20回の確認結果と、残っていた指摘の修正（改善記録 §12）（先頭に表示） ----
+PT21 = load("XVI_particles.yaml")
+PA21 = load("XIII_sound_manipulation.yaml")
+MC21 = load("XI_mora_count.yaml")
+TW21 = load("XVII_word_transform.yaml")
+SB21 = load("XV_sentence_build.yaml")
+PS21 = load("XVIII_picture_sentence.yaml")
+
+
+def _xiii(it):
+    return "\n".join(f"{re.sub(r'《[^》]*》', '', _q(e))} → {''.join(_ans(e))}" for e in it["entries"])
+
+
+from gen.templates.t17_word_transform import instruction_lines as _il17, apply_ops as _ao17
+
+
+def _xvii(it):
+    return "\n".join(f"{re.sub(r'《[^》]*》', '', e.get('disp') or e['w'])}：{re.sub(r'《[^》]*》', '', ''.join(_il17(e)))} → {''.join(_ao17(e['w'], e['ops']))}"
+                     for e in it["entries"])
+
+
+ROUND21 = [
+    {"key": "r21-fix", "title": "第20回の「直す」2件",
+     "lead": "ⅩⅢ m2a「くるま→まるく」は不適切とのご指摘で、カタカナで書く「クルミ→ミルク」に替えました。ⅩⅥ p2d「かお（を）ぼく（が）あらう」は不自然とのご指摘で、「ぼく（が）かお（を）あらう」に戻し、語順を入れかえた文は「ミルク（を）ねこ（が）なめる」にしました。",
+     "items": [{"id": "r21-xiii-m2a", "label": "ⅩⅢ m2a（Lv2）", "before": "「くるま」を逆から言うと？ → まるく", "after": _xiii(PA21["m2a"]), "ask": "",
+                "scene": "ⅩⅢ Lv2。4つの問い。"},
+               {"id": "r21-xvi-p2d", "label": "ⅩⅥ p2d（Lv2）", "before": "かお(を)ぼく(が)あらう", "after": "\n".join(_xvi_sent(st) for st in PT21["p2d"]["sentences"]), "ask": "",
+                "scene": "ⅩⅥ Lv2。□に助詞を書く4文。"}]},
+    {"key": "r21-xvi", "title": "ⅩⅥ：Lv3 の状況の説明を短い文に／Lv4 の追加（改善記録 §12）",
+     "lead": "Lv3 の状況の説明を、「〜しているのは犬。〜されているのは猫。」（分裂文・受け身で、答える文より読むのが難しい）から、「犬は追いかけている。猫は逃げている。」のような短い能動文に変えました（答えになる「が」「を」は書かない）。「子どもがお母さんを起こす」は、親の世話をしている子には身近すぎることがあるので「弟がお兄さんを起こす」にしました。Lv4 を2ページにするため p4c・p4d を足しました（電車を待つ／家を出る・家に帰る など、に と を の入れかわり）。",
+     "items": [{"id": "r21-xvi-" + k, "label": f"{k}（Lv{it['level']}）", "before": "",
+                "after": "\n".join(_xvi_sent(st) for st in it["sentences"]), "ask": "",
+                "scene": f"□に助詞を書く4文（Lv{it['level']}）。"}
+               for k, it in PT21.items() if it["level"] == 3 or k in ("p4c", "p4d")]},
+    {"key": "r21-pa", "title": "音韻：Ⅺ Lv3 を2段に分ける／ⅩⅢ・ⅩⅦ の問題の追加（改善記録 §12）",
+     "lead": "Ⅺ Lv3 を、Lv3 撥音・長音（ん・のばす音）と Lv4 促音・拗音（っ・小さい ゃゅょ）に分けました（撥音・長音は4〜5歳、促音は5歳以降にモーラ単位になる：PA-05）。Lv4 の各問には拗音の語を入れ、文字を数えると多く数えてしまうので、音で数えているかが分かるようにしました。ⅩⅢ は各レベル2ページ、ⅩⅦ の Lv2・Lv3 も2ページになるよう問題を足しました。こたえはどれも意味のある言葉です。",
+     "items": [{"id": "r21-xi-" + k, "label": f"Ⅺ {k}（Lv{it['level']}）", "before": "", "after": "・".join(it["words"]), "ask": "",
+                "scene": f"Ⅺ Lv{it['level']}。4語の音の数だけ○をぬる。"} for k, it in MC21.items() if it["level"] >= 3]
+              + [{"id": "r21-xiii-" + k, "label": f"ⅩⅢ {k}（Lv{it['level']}）", "before": "", "after": _xiii(it), "ask": "",
+                  "scene": f"ⅩⅢ Lv{it['level']}。4つの問い。"} for k, it in PA21.items() if k in ("m1c", "m1d", "m2c", "m2d", "m3c", "m3d", "m4d")]
+              + [{"id": "r21-xvii-" + k, "label": f"ⅩⅦ {k}（Lv{it['level']}）", "before": "", "after": _xvii(it), "ask": "",
+                  "scene": f"ⅩⅦ Lv{it['level']}。指示どおりに音を変えて、こたえをマスに書く。"} for k, it in TW21.items() if k in ("t2d", "t3c", "t3d")]},
+    {"key": "r21-sent", "title": "文：「なにに」・中高生の場面・家族の役割・ⅩⅧ の助詞（改善記録 §12）",
+     "lead": "①場所でない語に「どこに」を使っていたのを「なにに」に分けました（バスに乗る・花に水をやる → なにに。学校に行く・いすに座る → どこに）。②中高生の生活の場面（写真を撮る・コンビニでおにぎりを買う・電車で学校に通う・部室でギターを弾く など）の問題を ⅩⅤ Lv2・Lv3 に足しました。③お母さんの文が食事の支度と買い物ばかりだったので、b4a・b4c の人物を入れかえ、お父さんがカレーを煮る・皿を洗う文を足しました。④ⅩⅧ の助詞を、ⅩⅤ と同じく Lv3 から印刷するようにしました（Lv1・Lv2 は助詞なしの語連鎖の段：GR-31）。",
+     "items": [{"id": "r21-xv-" + k, "label": f"ⅩⅤ {k}（Lv{it['level']}）", "before": "",
+                "after": "\n".join(_xv_sent(st) for st in it["sentences"]), "ask": "",
+                "scene": f"ⅩⅤ Lv{it['level']}。言葉箱の語を役割の枠に書く。"}
+               for k, it in SB21.items() if k in ("b2g", "b2h", "b3g", "b3h", "b3e", "b4a", "b4c", "b5b")]
+              + [{"id": "r21-xviii-" + k, "label": f"ⅩⅧ {k}（Lv{it['level']}）", "before": "",
+                  "after": f"絵：{it['scene']}\nこたえの例：{_xv_sent(it['sentence'])}", "ask": "",
+                  "scene": "ⅩⅧ Lv3。絵の枠の下に枠と助詞。"} for k, it in PS21.items() if k in ("e3c", "e3d")]},
+    {"key": "r21-readme", "title": "README：はじめに・検査からの選び方・検査との関係",
+     "lead": "README の冒頭に、現場で使う方向けの「はじめに」（3つのねらいごとの最初の1枚・次・うまくいかないとき）を置きました。「検査の結果・様子から始めるプリント（目安）」の表（〈S-S法〉・原の音韻課題・語想起の様子など、Wiki で確かめられた範囲。WISC の指標との対応は根拠がないので載せない）、「次へ進む・前に戻る目安（仮。根拠なし）」、「検査との関係」（検査の前に形の似たプリントを集中して使わない、使ったことを検査者に伝える、検査の代わりにしない）を足しました。ⅩⅧ の絵には、子ども本人や家族の顔が写った写真は使わないと書きました。",
+     "items": [{"id": "r21-readme", "label": "README の追加", "before": "", "after": "はじめに／検査の結果・様子から始めるプリント（目安）／次へ進む・前に戻る目安（仮）／検査との関係", "ask": "",
+                "scene": "worksheets/言語発達課題/README.md（支援者向け。プリントには書かない）。"}]},
+]
+for sec in ROUND20:
+    sec["title"] = "［前回］" + sec["title"]
+SECTIONS[:0] = ROUND21
+SEC_TASK.update({"r21-fix": ["XIII", "XVI"], "r21-xvi": ["XVI"], "r21-pa": ["XI", "XIII", "XVII"], "r21-sent": ["XV", "XVIII"], "r21-readme": []})
 FIGURES[:0] = [("ⅩⅤ 文を作ろう Lv3（言葉箱）", page_png(sheet("XV", 3), 1)), ("ⅩⅥ 助詞を入れよう Lv3", page_png(sheet("XVI", 3), 1))]
 FIGURES[:0] = [("ⅩⅦ ことばへんしん Lv3（解答）", page_png(sheet("XVII", 3, True), 1))]
 FIGURES[:0] = [

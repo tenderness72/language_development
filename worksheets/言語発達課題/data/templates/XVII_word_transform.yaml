@@ -43,6 +43,11 @@ items:
     entries: [{w: さら, ops: [{insert_mid: く}], answer: さくら}, {w: いち, ops: [{add_tail: ご}], answer: いちご},
               {w: はし, disp: 橋《はし》, ops: [{insert_mid: な}], answer: はなし}, {w: ねこ, ops: [{add_head: こ}], answer: こねこ}]
     level: 2
+  # （2026-11-05 追加・未確認。改善記録 §12）
+  - id: t2d
+    entries: [{w: さか, ops: [{add_tail: な}], answer: さかな}, {w: とり, ops: [{add_head: こ}], answer: ことり},
+              {w: たき, ops: [{insert_mid: ぬ}], answer: たぬき}, {w: すず, disp: 鈴《すず》, ops: [{add_tail: め}], answer: すずめ}]
+    level: 2
   # ---- Lv3：2音をつける・2段階の指示（2026-10-26 追加・第12〜17回で確認済み） ----
   - id: t3a
     entries: [{w: ひま, ops: [{add_tail: わり}], answer: ひまわり}, {w: たけ, ops: [{add_tail: のこ}], answer: たけのこ},
@@ -51,4 +56,13 @@ items:
   - id: t3b
     entries: [{w: にわ, ops: [{add_tail: とり}], answer: にわとり}, {w: あさ, ops: [{add_tail: がお}], answer: あさがお},
               {w: かめ, ops: [{rep_head: あ}, {add_tail: だま}], answer: あめだま}, {w: いぬ, ops: [{rep_tail: し}, {add_head: こ}], answer: こいし}]
+    level: 3
+  # （2026-11-05 追加・未確認。改善記録 §12）
+  - id: t3c
+    entries: [{w: くつ, ops: [{add_tail: した}], answer: くつした}, {w: はな, ops: [{add_tail: たば}], answer: はなたば},
+              {w: たい, disp: 鯛《たい》, ops: [{rev: 1}, {add_tail: ち}], answer: いたち}, {w: くま, ops: [{rep_head: し}, {add_tail: うま}], answer: しまうま}]
+    level: 3
+  - id: t3d
+    entries: [{w: たま, ops: [{add_tail: ねぎ}], answer: たまねぎ}, {w: おに, disp: 鬼《おに》, ops: [{add_tail: ぎり}], answer: おにぎり},
+              {w: たこ, ops: [{rep_tail: け}, {add_tail: うま}], answer: たけうま}, {w: さる, ops: [{rep_tail: か}, {add_tail: みち}], answer: さかみち}]
     level: 3

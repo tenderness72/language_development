@@ -120,8 +120,13 @@ def check_item(type_key, item):
                     return f"[XI:{item['id']}] '{w}' は Lv1 の音の数（2〜4音）に合わない"
             if lv == 2 and not any(set(w) & dakuon for w in ws):
                 return f"[XI:{item['id']}] Lv2 は濁音・半濁音の語を含める"
-            if lv == 3 and not all(set(w) & special for w in ws):
-                return f"[XI:{item['id']}] Lv3 はどの語にも特殊音節を含める"
+            small = set("っゃゅょッャュョ")
+            yoon = set("ゃゅょャュョ")
+            if lv == 3 and (any(set(w) & small for w in ws) or not all(set(w) & set("んンー") or "う" in w[1:] for w in ws)):
+                return f"[XI:{item['id']}] Lv3 は どの語にも ん・のばす音 を含め、っ・小さい ゃゅょ は使わない"
+            if lv == 4 and (not all(set(w) & small for w in ws) or not any(set(w) & yoon for w in ws)
+                            or not any(set(w) & set("っッ") for w in ws)):
+                return f"[XI:{item['id']}] Lv4 は どの語にも っ か 小さい ゃゅょ を含め、拗音の語と促音の語を両方入れる"
         elif type_key == "XII":
             from .templates.t12_sound_search import hit
             ws = item.get("words", [])
@@ -182,8 +187,8 @@ def check_item(type_key, item):
                 return f"[XV:{item['id']}] Lv1 は2語の文"
             if lv == 2 and roles not in (["だれが", "なにを", "どうする"], ["どんな", "なにを", "どうする"]):
                 return f"[XV:{item['id']}] Lv2 は だれが＋なにを＋どうする か どんな＋なにを＋どうする"
-            if lv == 3 and not ({"どこで", "なにで", "どこに"} & set(roles)):
-                return f"[XV:{item['id']}] Lv3 は どこで・なにで・どこに のどれかを含める"
+            if lv == 3 and not ({"どこで", "なにで", "どこに", "なにに"} & set(roles)):
+                return f"[XV:{item['id']}] Lv3 は どこで・なにで・どこに・なにに のどれかを含める"
         words = [w for st in sents for _, w in st]
         if len(set(words)) != len(words):
             return f"[XV:{item['id']}] ことばばこの語が重なっている"
@@ -202,8 +207,8 @@ def check_item(type_key, item):
             return f"[XVIII:{item['id']}] Lv1 は2語の文"
         if lv == 2 and roles != ["だれが", "なにを", "どうする"]:
             return f"[XVIII:{item['id']}] Lv2 は だれが＋なにを＋どうする"
-        if lv == 3 and not ({"どこで", "なにで", "どこに"} & set(roles)):
-            return f"[XVIII:{item['id']}] Lv3 は どこで・なにで・どこに のどれかを含める"
+        if lv == 3 and not ({"どこで", "なにで", "どこに", "なにに"} & set(roles)):
+            return f"[XVIII:{item['id']}] Lv3 は どこで・なにで・どこに・なにに のどれかを含める"
     elif type_key == "XVI":
         from .templates.t16_particles import parse
         lv = int(item.get("level", 1))

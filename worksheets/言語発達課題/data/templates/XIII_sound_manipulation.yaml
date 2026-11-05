@@ -10,6 +10,7 @@
 #       音としては /u/ がないので使わない。二重母音の第二要素（たいこ の い）は伊藤・辰巳 1997 で特殊拍として調べられている（PA-03）。特殊音節をモーラ単位で分けられるのは仮名読みの
 #       習得に伴ってで、促音が最も遅い（Wiki PA-05）。Ⅺ Lv3（特殊音節を含む語の音の数）のあとに使う。
 # けす音は、そのことばに1回だけ出てくる音にする（生成時に検査）。
+# 外来語になるこたえ（ミルク）は、語をカタカナで書く（クルミ → ミルク）。2026-11-05：くるま→まるく（活用形）を差しかえ。
 # disp: 表示の形（漢字《よみ》）。意味が分かれて辞書で漢字にしない語を、この問題では漢字で示したいときに書く。
 type: XIII
 items:
@@ -20,12 +21,26 @@ items:
   - id: m1b
     entries: [{w: くさ, op: ぎゃく, answer: さく}, {w: きく, disp: 菊《きく》, op: ぎゃく, answer: くき}, {w: いた, op: ぎゃく, answer: たい}, {w: なか, op: ぎゃく, answer: かな}]
     level: 1
+  # （2026-11-05 追加・未確認。各レベル2ページにするための追加。改善記録 §12）
+  - id: m1c
+    entries: [{w: いか, op: ぎゃく, answer: かい}, {w: すな, op: ぎゃく, answer: なす}, {w: みせ, op: ぎゃく, answer: せみ}, {w: かさ, op: ぎゃく, answer: さか}]
+    level: 1
+  - id: m1d
+    entries: [{w: さけ, disp: 鮭《さけ》, op: ぎゃく, answer: けさ}, {w: かた, disp: 肩《かた》, op: ぎゃく, answer: たか}, {w: かし, disp: 菓子《かし》, op: ぎゃく, answer: しか}, {w: まつ, disp: 松《まつ》, op: ぎゃく, answer: つま}]
+    level: 1
   # ---- Lv2：3音の逆唱・はじめ／おしまいの削除（2026-10-26 改訂・第12〜17回で確認済み） ----
   - id: m2a
-    entries: [{w: いるか, op: ぎゃく, answer: かるい}, {w: くるま, op: ぎゃく, answer: まるく}, {w: すいか, op: けす, t: す, answer: いか}, {w: たまご, op: けす, t: ご, answer: たま}]
+    entries: [{w: いるか, op: ぎゃく, answer: かるい}, {w: クルミ, op: ぎゃく, answer: ミルク}, {w: すいか, op: けす, t: す, answer: いか}, {w: たまご, op: けす, t: ご, answer: たま}]
     level: 2
   - id: m2b
     entries: [{w: こいぬ, op: けす, t: こ, answer: いぬ}, {w: あひる, op: けす, t: あ, answer: ひる}, {w: はなび, op: けす, t: び, answer: はな}, {w: しかく, op: けす, t: く, answer: しか}]
+    level: 2
+  # （2026-11-05 追加・未確認。改善記録 §12）
+  - id: m2c
+    entries: [{w: ことり, op: けす, t: こ, answer: とり}, {w: あさひ, op: けす, t: ひ, answer: あさ}, {w: すずめ, op: けす, t: め, answer: すず}, {w: いかだ, op: けす, t: だ, answer: いか}]
+    level: 2
+  - id: m2d
+    entries: [{w: おかし, op: けす, t: お, answer: かし}, {w: さかな, op: けす, t: な, answer: さか}, {w: あたま, op: けす, t: あ, answer: たま}, {w: からだ, op: けす, t: だ, answer: から}]
     level: 2
   # ---- Lv3：まんなかの音の削除（2026-10-26 改訂・第12〜17回で確認済み） ----
   - id: m3a
@@ -33,6 +48,13 @@ items:
     level: 3
   - id: m3b
     entries: [{w: ひつじ, op: けす, t: つ, answer: ひじ}, {w: たぬき, op: けす, t: ぬ, answer: たき}, {w: いるか, op: けす, t: る, answer: いか}, {w: つくえ, op: けす, t: く, answer: つえ}]
+    level: 3
+  # （2026-11-05 追加・未確認。改善記録 §12）
+  - id: m3c
+    entries: [{w: かがみ, op: けす, t: が, answer: かみ}, {w: あしか, op: けす, t: し, answer: あか}, {w: とかげ, op: けす, t: か, answer: とげ}, {w: ふくろ, op: けす, t: く, answer: ふろ}]
+    level: 3
+  - id: m3d
+    entries: [{w: かたな, disp: 刀《かたな》, op: けす, t: た, answer: かな}, {w: なかま, op: けす, t: か, answer: なま}, {w: かみなり, disp: 雷《かみなり》, op: けす, t: み, answer: かなり}, {w: おなか, op: けす, t: な, answer: おか}]
     level: 3
   # ---- Lv4：特殊音節（っ・ん・う）をとる（2026-10-27 追加・第18・19回で確認済み。改善記録 §5） ----
   - id: m4a
@@ -44,4 +66,8 @@ items:
   # （2026-10-27 追加。旧 Lv3 の たいこ・かいだん を移し、二重母音の い をとる問題にした。改善記録 §11）
   - id: m4c
     entries: [{w: たいこ, op: けす, t: い, answer: たこ}, {w: かいだん, op: けす, t: い, answer: かだん}, {w: まいご, op: けす, t: い, answer: まご}, {w: こいし, op: けす, t: い, answer: こし}]
+    level: 4
+  # （2026-11-05 追加・未確認。改善記録 §12）
+  - id: m4d
+    entries: [{w: はんこ, op: けす, t: ん, answer: はこ}, {w: こんぶ, disp: 昆布《こんぶ》, op: けす, t: ん, answer: こぶ}, {w: すうじ, disp: 数字《すうじ》, op: けす, t: う, answer: すじ}, {w: おっと, disp: 夫《おっと》, op: けす, t: っ, answer: おと}]
     level: 4

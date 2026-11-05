@@ -1,6 +1,7 @@
 """ⅩⅧ 絵を見て文を作ろう（絵だけを手がかりに、二語文・三語文・四語文を自分で作る / 上下2問・1問1文）。
 
-上に絵の枠、下に1文ぶんの枠（ⅩⅤ と同じ形とラベル）。語は1つも印刷せず、助詞（が・を・で・に）だけを印刷する。
+上に絵の枠、下に1文ぶんの枠（ⅩⅤ と同じ形とラベル）。語は1つも印刷しない。助詞は ⅩⅤ と同じく Lv3 から印刷する
+（Lv1・Lv2 は〈S-S法〉の助詞なしの語連鎖の段：GR-31。2026-11-05 改訂。改善記録 §12）。
 絵は先生が用意した画像を data/images/ に置き、データの image: にファイル名を書く。ないときは枠だけを印刷する
 （絵カードを貼るか、その場で描く）。解答面は、絵の枠に絵の内容（scene:）、文の枠に こたえの例 を書く。
 """
@@ -52,8 +53,8 @@ def _draw_problem(c, ctx, top, item, answers):
     sw = shape_width([sent])
     total = len(sent) * sw + (len(sent) - 1) * 9.0
     x = layout.CONTENT_X + (layout.CONTENT_W - total) / 2
-    # 助詞は全レベルで印刷する（ねらいは語を思い出して文にすること。助詞の選択は ⅩⅥ で扱う）
-    draw_row(c, ctx, x, top + PIC_H + 8, sent, answers, lv=3, w=sw, where="XVIII.ans")
+    # 助詞は ⅩⅤ と同じく Lv3 から印刷する（同じ語の数のレベルで「言葉箱あり → なし → ⅩⅧ」と進むとき、手がかりが増えないように）
+    draw_row(c, ctx, x, top + PIC_H + 8, sent, answers, lv=int(item.get("level", 1)), w=sw, where="XVIII.ans")
     if answers:
         layout.text(c, 195, top + PIC_H + 8 + 4 + SHAPE_H + 8, "こたえの例（絵に合う自然な文なら正答）", size=7.5,
                     align="r", gray=0.4)
